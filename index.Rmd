@@ -7,7 +7,7 @@ documentclass: book
 bibliography: [book.bib]
 biblio-style: apalike
 link-citations: yes
-github-repo: https://github.com/pratheesh3780/lecture_notes
+github-repo: https://github.com/KAUMELON/stat3202
 description: "A BOOK FOR UNDERGRADUATE PROGRAMME IN AGRICULTURE"
 cover-image: images/coverpage.PNG
 ---  
