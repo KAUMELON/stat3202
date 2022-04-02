@@ -31,6 +31,10 @@ Welcome to the book **LECTURE NOTES ON STATISTICAL METHODS AND APPLICATIONS**.
 
 <p>This book is a collection of all lecture notes covering the syllabus of statistics course in B.Sc.(Hons.) Agriculture under Kerala Agricultural University </p>  
 
+```{r logo, echo=FALSE,out.width="30%", fig.align='center'}
+knitr::include_graphics(rep("docs/logo.png"))
+```
+
 
 
 
