@@ -344,8 +344,19 @@ is the frequency of class / total observation. Relative frequencies all add up t
 | 15.5 -- 18.5 | 9         | 38           | 9            | 0.236842  |
 +--------------+-----------+--------------+--------------+-----------+
 
+&nbsp;  
+&nbsp;  
+&nbsp;  
+
+
+::: {#hello .greeting .message style="color: #c9c6c5;"}  
+<center>  
+
+Hello **Data is the sword of the 21st century, those who wield it well, the Samurai.” - Jonathan Rosenberg, former Google SVP**!  
+
+</center>
+:::
 
 
 
 
-_“Data is the sword of the 21st century, those who wield it well, the Samurai.” - Jonathan Rosenberg, former Google SVP._

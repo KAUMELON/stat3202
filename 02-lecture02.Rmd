@@ -178,8 +178,18 @@ A housewife spent the following sums of money on buying ingredients for a family
 knitr::include_graphics(rep("images/image17.jpeg"))
 ```  
 
+&nbsp;  
+&nbsp;  
+&nbsp;  
 
 
-_"Statistics is the grammar of science." - Karl Pearson_
+::: {#hello .greeting .message style="color: #c9c6c5;"}  
+<center>  
+
+Hello **Statistics is the grammar of science." - Karl Pearson**!  
+
+</center>
+:::
+
 
 
