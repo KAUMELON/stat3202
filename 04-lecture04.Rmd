@@ -22,7 +22,7 @@ $$\mathbf{=}\frac{\mathbf{1}}{\mathbf{n}}\left( \mathbf{\log}\mathbf{x}_{\mathbf
 
 $$\mathbf{=}\frac{\sum_{\mathbf{i = 1}}^{\mathbf{n}}{\mathbf{\log}\mathbf{x}_{\mathbf{i}}}}{\mathbf{n}}$$
 
-$$\mathbf{Geometric\ mean,\ GM = Antilog}\left( \frac{\sum_{\mathbf{i = 1}}^{\mathbf{n}}{\mathbf{\log}\mathbf{x}_{\mathbf{i}}}}{\mathbf{n}} \right)$$
+$$\mathbf{\ GM = Antilog}\left( \frac{\sum_{\mathbf{i = 1}}^{\mathbf{n}}{\mathbf{\log}\mathbf{x}_{\mathbf{i}}}}{\mathbf{n}} \right)$$
 
 ### Geometric mean for grouped frequency table data
 $$\mathbf{GM = \ Antilog}\left( \frac{\sum_{\mathbf{i = 1}}^{\mathbf{k}}{{\mathbf{f}_{\mathbf{i}}\mathbf{\log}}\mathbf{x}_{\mathbf{i}}}}{\mathbf{n}} \right)$$
@@ -46,10 +46,12 @@ number of classes
 
 Here *n* =5
 
-Geometric
-mean=$\text{Antilog}\left( \frac{\sum_{i = 1}^{n}{\log x_{i}}}{n} \right) = Antilog\left( \frac{8.926}{5} \right) = Antilog(1.785) = 60.95$
+Geometric mean=  
+$$\text{Antilog}\left( \frac{\sum_{i = 1}^{n}{\log x_{i}}}{n} \right) =$$  
+$$Antilog\left( \frac{8.926}{5} \right) =$$  
+$$ Antilog(1.785) = 60.95$$
 (note: here $\text{Antilog}\left( x \right) = 10^{x}$ *i*.*e*.
-$\text{Antilog}\left( 1.785 \right) = \ 10^{1.785} = 60.95$
+$$\text{Antilog}\left( 1.785 \right) = \ 10^{1.785} = 60.95$$
 
 **Example 4.2**: Geometric mean of a Frequency Distribution
 
@@ -68,8 +70,9 @@ Here *n* =32
 $$GM = \ Antilog\left( \frac{\sum_{i = 1}^{k}{{f_{i}\log}x_{i}}}{n} \right)$$
 
 $${\sum_{i = 1}^{k}{{f_{i}\log}x_{i}} = 57.782
-}{\text{GM} = \ Antilog\left( \frac{57.782}{32} \right) = Antilog\left( 1.8056 \right) = 10^{1.8056} = 63.92}$$
-
+}$$  
+$${\text{GM} = \ Antilog\left( \frac{57.782}{32} \right)  }$$  
+$${= Antilog\left( 1.8056 \right)= 10^{1.8056} = 63.92}$$
 **Example 4.3**: Geometric mean of a Grouped Frequency Distribution
 
   Class     Mid value (*x*)   Frequency(*f*)   log(*x*)   *f*\[log(*x*)\]
@@ -87,8 +90,9 @@ Here *n* =32
 
 $$GM = \ Antilog\left( \frac{\sum_{i = 1}^{k}{{f_{i}\log}x_{i}}}{n} \right)$$
 
-$${\sum_{i = 1}^{k}{{f_{i}\log}x_{i}} = 65.787
-}{\text{GM} = \ Antilog\left( \frac{65.787}{32} \right) = Antilog\left( 2.0558 \right) = 10^{2.0558} = 113.72}$$
+$${\sum_{i = 1}^{k}{{f_{i}\log}x_{i}} = 65.787}$$
+$${\text{GM} = \ Antilog\left( \frac{65.787}{32} \right)}$$
+$${= Antilog\left( 2.0558 \right) = 10^{2.0558} = 113.72}$$
 
 ## Merits and Demerits of Geometric mean
 

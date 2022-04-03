@@ -261,7 +261,7 @@ items, the geometric mean multiplies items.</p>
 <p><span class="math display">\[\mathbf{\log}\mathbf{\text{GM}}\mathbf{=}\frac{\mathbf{1}}{\mathbf{n}}\mathbf{\log}\left( \mathbf{x}_{\mathbf{1}}\mathbf{x}_{\mathbf{2}}\mathbf{\ldots}\mathbf{x}_{\mathbf{n}} \right)\]</span></p>
 <p><span class="math display">\[\mathbf{=}\frac{\mathbf{1}}{\mathbf{n}}\left( \mathbf{\log}\mathbf{x}_{\mathbf{1}}\mathbf{+}\mathbf{\log}\mathbf{x}_{\mathbf{2}}\mathbf{\ldots +}\mathbf{\log}\mathbf{x}_{\mathbf{n}} \right)\]</span></p>
 <p><span class="math display">\[\mathbf{=}\frac{\sum_{\mathbf{i = 1}}^{\mathbf{n}}{\mathbf{\log}\mathbf{x}_{\mathbf{i}}}}{\mathbf{n}}\]</span></p>
-<p><span class="math display">\[\mathbf{Geometric\ mean,\ GM = Antilog}\left( \frac{\sum_{\mathbf{i = 1}}^{\mathbf{n}}{\mathbf{\log}\mathbf{x}_{\mathbf{i}}}}{\mathbf{n}} \right)\]</span></p>
+<p><span class="math display">\[\mathbf{\ GM = Antilog}\left( \frac{\sum_{\mathbf{i = 1}}^{\mathbf{n}}{\mathbf{\log}\mathbf{x}_{\mathbf{i}}}}{\mathbf{n}} \right)\]</span></p>
 <div id="geometric-mean-for-grouped-frequency-table-data" class="section level3" number="4.1.1">
 <h3><span class="header-section-number">4.1.1</span> Geometric mean for grouped frequency table data</h3>
 <p><span class="math display">\[\mathbf{GM = \ Antilog}\left( \frac{\sum_{\mathbf{i = 1}}^{\mathbf{k}}{{\mathbf{f}_{\mathbf{i}}\mathbf{\log}}\mathbf{x}_{\mathbf{i}}}}{\mathbf{n}} \right)\]</span></p>
@@ -305,10 +305,12 @@ number of classes</p>
 </table>
 <p><strong>Solution 4.1</strong>:</p>
 <p>Here <em>n</em> =5</p>
-<p>Geometric
-mean=<span class="math inline">\(\text{Antilog}\left( \frac{\sum_{i = 1}^{n}{\log x_{i}}}{n} \right) = Antilog\left( \frac{8.926}{5} \right) = Antilog(1.785) = 60.95\)</span>
+<p>Geometric mean=<br />
+<span class="math display">\[\text{Antilog}\left( \frac{\sum_{i = 1}^{n}{\log x_{i}}}{n} \right) =\]</span><br />
+<span class="math display">\[Antilog\left( \frac{8.926}{5} \right) =\]</span><br />
+<span class="math display">\[ Antilog(1.785) = 60.95\]</span>
 (note: here <span class="math inline">\(\text{Antilog}\left( x \right) = 10^{x}\)</span> <em>i</em>.<em>e</em>.
-<span class="math inline">\(\text{Antilog}\left( 1.785 \right) = \ 10^{1.785} = 60.95\)</span></p>
+<span class="math display">\[\text{Antilog}\left( 1.785 \right) = \ 10^{1.785} = 60.95\]</span></p>
 <p><strong>Example 4.2</strong>: Geometric mean of a Frequency Distribution</p>
 <table>
 <thead>
@@ -362,8 +364,10 @@ mean=<span class="math inline">\(\text{Antilog}\left( \frac{\sum_{i = 1}^{n}{\lo
 Here <em>n</em> =32</p>
 <p><span class="math display">\[GM = \ Antilog\left( \frac{\sum_{i = 1}^{k}{{f_{i}\log}x_{i}}}{n} \right)\]</span></p>
 <p><span class="math display">\[{\sum_{i = 1}^{k}{{f_{i}\log}x_{i}} = 57.782
-}{\text{GM} = \ Antilog\left( \frac{57.782}{32} \right) = Antilog\left( 1.8056 \right) = 10^{1.8056} = 63.92}\]</span></p>
-<p><strong>Example 4.3</strong>: Geometric mean of a Grouped Frequency Distribution</p>
+}\]</span><br />
+<span class="math display">\[{\text{GM} = \ Antilog\left( \frac{57.782}{32} \right)  }\]</span><br />
+<span class="math display">\[{= Antilog\left( 1.8056 \right)= 10^{1.8056} = 63.92}\]</span>
+<strong>Example 4.3</strong>: Geometric mean of a Grouped Frequency Distribution</p>
 <table>
 <thead>
 <tr class="header">
@@ -422,8 +426,9 @@ Here <em>n</em> =32</p>
 <p><strong>Solution 4.4</strong>:<br />
 Here <em>n</em> =32</p>
 <p><span class="math display">\[GM = \ Antilog\left( \frac{\sum_{i = 1}^{k}{{f_{i}\log}x_{i}}}{n} \right)\]</span></p>
-<p><span class="math display">\[{\sum_{i = 1}^{k}{{f_{i}\log}x_{i}} = 65.787
-}{\text{GM} = \ Antilog\left( \frac{65.787}{32} \right) = Antilog\left( 2.0558 \right) = 10^{2.0558} = 113.72}\]</span></p>
+<p><span class="math display">\[{\sum_{i = 1}^{k}{{f_{i}\log}x_{i}} = 65.787}\]</span>
+<span class="math display">\[{\text{GM} = \ Antilog\left( \frac{65.787}{32} \right)}\]</span>
+<span class="math display">\[{= Antilog\left( 2.0558 \right) = 10^{2.0558} = 113.72}\]</span></p>
 </div>
 </div>
 <div id="merits-and-demerits-of-geometric-mean" class="section level2" number="4.2">
@@ -945,7 +950,7 @@ that <span class="math inline">\(P_{25} = Q_{1}\)</span> &amp; <span class="math
 
 <div class="rmdnote">
 Assignment 1: Find <span class="math inline">\(\text{P}_{25}\)</span>, <span class="math inline">\(P_{50}\)</span>&amp; <span class="math inline">\(P_{75}\)</span>for Example
-<strong>4.7</strong> &amp; <strong>4.8</strong>; verify that<span class="math inline">\(P_{50} = Q_{2}\)</span>, <span class="math inline">\(P_{25} = Q_{1}\)</span> &amp;
+<strong>4.7</strong> &amp; <strong>4.8</strong>; verify that <span class="math inline">\(P_{50} = Q_{2}\)</span>, <span class="math inline">\(P_{25} = Q_{1}\)</span> &amp;
 <span class="math inline">\(P_{75} = Q_{3}\)</span>
 </div>
 </div>
