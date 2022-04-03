@@ -559,7 +559,7 @@ knitr::include_graphics(rep("images/l2m1.jpeg"))
 ::: {#hello .greeting .message style="color: #c9c6c5;"}  
 <center>  
 
-Hello **If the statistics are boring, you’ve got the wrong numbers**!  
+**If the statistics are boring, you’ve got the wrong numbers**!  
 
 </center>
 :::

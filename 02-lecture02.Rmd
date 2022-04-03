@@ -186,7 +186,7 @@ knitr::include_graphics(rep("images/image17.jpeg"))
 ::: {#hello .greeting .message style="color: #c9c6c5;"}  
 <center>  
 
-Hello **Statistics is the grammar of science." - Karl Pearson**!  
+**Statistics is the grammar of science." - Karl Pearson**!  
 
 </center>
 :::

@@ -83,7 +83,7 @@ grouped-bar-chart
 histogram-and-bar-chart
 pie-charts
 steps-for-constructing-a-pie-chart
-measures-of-central-tendency
+measures-of-central-tendency---i
 arithmetic-mean
 the-mean-of-a-frequency-distribution
 direct-method
