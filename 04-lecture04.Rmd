@@ -357,7 +357,6 @@ $\mathbf{Q}_{\mathbf{3}}\mathbf{=}\left( \frac{\mathbf{3(n + 1)}}{\mathbf{4}} \r
   19      5     18
   24      2     20
   30      4     24
-          24               
   
 Here *n* =24
 
@@ -571,4 +570,13 @@ $\mathbf{n}$ = total number of observations
 Assignment 2: Find $\text{D}_{5}$ for Example **4.6**, **4.7** &
 **4.8**; verify that
 $\text{D}_{5} = \text{Q}_{2} = \text{P}_{50} = median$
-```
+```  
+
+::: {#hello .greeting .message style="color: #c9c6c5;"}  
+<center>  
+
+**The best thing about being a statistician is that you get to play in everybody else's backyard.
+-- John Tukey**  
+
+</center>
+:::
