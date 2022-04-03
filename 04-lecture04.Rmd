@@ -523,7 +523,7 @@ that $P_{25} = Q_{1}$ & $P_{75} = Q_{3}$ always
 
 ```{block2 assignment-2, type='rmdnote'}
 Assignment 1: Find $\text{P}_{25}$, $P_{50}$& $P_{75}$for Example
-**4.7** & **4.8**; verify that$P_{50} = Q_{2}$, $P_{25} = Q_{1}$ &
+**4.7** & **4.8**; verify that $P_{50} = Q_{2}$, $P_{25} = Q_{1}$ &
 $P_{75} = Q_{3}$
 ```
 
