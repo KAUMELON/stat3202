@@ -53,33 +53,9 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-<script src="libs/kePrint-0.0.1/kePrint.js"></script>
-<link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 
 
 
-<style type="text/css">
-/* Used with Pandoc 2.11+ new --citeproc when CSL is used */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
-</style>
 
 <link rel="stylesheet" href="custom.css" type="text/css" />
 </head>
@@ -98,7 +74,6 @@ div.csl-indent {
 
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Welcome</a></li>
-<li class="chapter" data-level="" data-path="preface.html"><a href="preface.html"><i class="fa fa-check"></i>Preface</a></li>
 <li class="chapter" data-level="1" data-path="introduction.html"><a href="introduction.html"><i class="fa fa-check"></i><b>1</b> Introduction</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="introduction.html"><a href="introduction.html#origin-of-the-word-statistics"><i class="fa fa-check"></i><b>1.1</b> Origin of the word “Statistics”</a></li>
@@ -239,7 +214,12 @@ div.csl-indent {
 <ul>
 <li class="chapter" data-level="5.4.1" data-path="measures-of-dispersion.html"><a href="measures-of-dispersion.html#merits-and-demerits-of-mad"><i class="fa fa-check"></i><b>5.4.1</b> Merits and Demerits of MAD</a></li>
 </ul></li>
-<li class="chapter" data-level="5.5" data-path="measures-of-dispersion.html"><a href="measures-of-dispersion.html#the-variance-and-standard-deviation"><i class="fa fa-check"></i><b>5.5</b> The variance and standard deviation</a></li>
+<li class="chapter" data-level="5.5" data-path="measures-of-dispersion.html"><a href="measures-of-dispersion.html#the-variance-and-standard-deviation"><i class="fa fa-check"></i><b>5.5</b> The variance and standard deviation</a>
+<ul>
+<li class="chapter" data-level="5.5.1" data-path="measures-of-dispersion.html"><a href="measures-of-dispersion.html#variance-and-standard-deviation-for-grouped-data"><i class="fa fa-check"></i><b>5.5.1</b> Variance and standard deviation for grouped data</a></li>
+<li class="chapter" data-level="5.5.2" data-path="measures-of-dispersion.html"><a href="measures-of-dispersion.html#merits-and-demerits-of-standard-deviation"><i class="fa fa-check"></i><b>5.5.2</b> Merits and Demerits of Standard Deviation</a></li>
+</ul></li>
+<li class="chapter" data-level="5.6" data-path="measures-of-dispersion.html"><a href="measures-of-dispersion.html#coefficient-of-variation-relative-measure-of-dispersion"><i class="fa fa-check"></i><b>5.6</b> Coefficient of Variation (relative measure of dispersion)</a></li>
 </ul></li>
 <li class="chapter" data-level="6" data-path="skewness-and-kurtosis.html"><a href="skewness-and-kurtosis.html"><i class="fa fa-check"></i><b>6</b> Skewness and Kurtosis</a>
 <ul>
@@ -444,7 +424,7 @@ difference between the upper and lower quartiles of the data. Thus,</p>
 <p>The inter-quartile range of a set of data is therefore not affected by
 values of the data outside <em>Q</em><sub>1</sub> and <em>Q</em><sub>3</sub>. The inter-quartile range
 is sometimes used as a measure of dispersion.</p>
-<p><strong>Example 3</strong>: Consider the two sets of data below, find IQR</p>
+<p><strong>Example 5.3</strong>: Consider the two sets of data below, find IQR</p>
 <p><strong>A</strong>: 3, 4, 5, 6, 8, 9, 10, 12, 15</p>
 <p><strong>B</strong>: 3, 8, 8, 9, 9, 9, 10, 10, 15</p>
 <p>For data set A, <em>Q</em><sub>1</sub> = 5, <em>Q</em><sub>3</sub> = 10; so Inter-Quartile Range =10 –
@@ -474,7 +454,7 @@ absolute deviation</p></li>
 <li><p>Divide the sum by the number of data points.</p></li>
 </ol>
 <p><span class="math display">\[MAD = \frac{\sum_{i = 1}^{n}\left| x_{i} - \overline{x} \right|}{n}\]</span></p>
-<p>Example : 5.1 find the mean absolute deviation of the following 10, 15,
+<p><strong>Example 5.4</strong>: find the mean absolute deviation of the following 10, 15,
 15, 17, 18, 21</p>
 <table>
 <thead>
@@ -557,7 +537,7 @@ absolute deviation</p></li>
 the sample standard deviation. If <em>x</em><sub>1</sub>, <em>x</em><sub>2</sub>… <em>x</em><sub>n</sub> is a sample
 of <em>n</em> observations, then the <strong>sample variance</strong> is denoted by <em>s</em>² and
 is defined by the equation.</p>
-<p><span class="math display">\[{\mathbf{\text{sample\ variance}},\ \mathbf{s}}^{\mathbf{2}}\mathbf{=}\frac{\sum_{\mathbf{i = 1}}^{\mathbf{n}}\left( \mathbf{x}_{\mathbf{i}}\mathbf{-}\overline{\mathbf{x}} \right)^{\mathbf{2}}}{\mathbf{n - 1}}\]</span></p>
+<p><span class="math display">\[{\mathbf{\text{sample variance}},\ \mathbf{s}}^{\mathbf{2}}\mathbf{=}\frac{\sum_{\mathbf{i = 1}}^{\mathbf{n}}\left( \mathbf{x}_{\mathbf{i}}\mathbf{-}\overline{\mathbf{x}} \right)^{\mathbf{2}}}{\mathbf{n - 1}}\]</span></p>
 <p>The sample <strong>standard deviation</strong>, <em>s</em>, is the positive square root of
 the sample variance.</p>
 <p><span class="math display">\[\mathbf{variance =}\left( \mathbf{\text{standard deviation}} \right)^{\mathbf{2}}\]</span></p>
@@ -566,7 +546,7 @@ the sample variance.</p>
 than <em>s</em><sub>B</sub>, the standard deviation of data set B, then data set A is
 more dispersed than data set B. It should be noted that the standard
 deviation of a set of data is a non-negative number.</p>
-<p><strong>Example 4</strong>: Consider the two sets of data A &amp; B below; find standard
+<p><strong>Example 5.4</strong>: Consider the two sets of data A &amp; B below; find standard
 deviation?</p>
 <table>
 <thead>
@@ -592,6 +572,7 @@ deviation?</p>
 </tr>
 </tbody>
 </table>
+<p><strong>Solution</strong>:</p>
 <table>
 <thead>
 <tr class="header">
@@ -654,7 +635,7 @@ deviation?</p>
 </table>
 <p>Mean (<span class="math inline">\(\overline{x}\)</span>) =<span class="math inline">\(\ \frac{18}{6} = 3\)</span></p>
 <p><span class="math display">\[{Sample\ variane,\ s}_{A}^{2} = \frac{\sum_{i = 1}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n - 1} = \frac{10}{5} = 2\]</span></p>
-<p><span class="math display">\[\text{sample\ standard\ deviat}ion,\ s_{A} = \ \sqrt{s_{A}^{2}} = \ \sqrt{2} = 1.414\]</span></p>
+<p><span class="math display">\[\text{sample standard deviation,}\ s_{A} = \ \sqrt{s_{A}^{2}} = \ \sqrt{2} = 1.414\]</span></p>
 <table>
 <thead>
 <tr class="header">
@@ -720,6 +701,7 @@ deviation?</p>
 <p><span class="math display">\[sample\ standard\ deviation,\ s_{B} = \ \sqrt{s_{B}^{2}} = \ \sqrt{10.8} = 3.29\]</span></p>
 <p>It can be seen that <span class="math inline">\(s_{B} &gt; s_{A}\ \)</span>, confirming that data set B is
 more dispersed than data set A (see the dot diagrams)</p>
+<blockquote>
 <p><strong>Note</strong>: The unit of measurement of the sample variance is the square
 of the unit of measurement of the data. Sample standard deviation has
 same unit of measurement as of the data. Thus, if <em>x</em> is measured in
@@ -727,6 +709,7 @@ centimetres (cm), then the unit of measurement of the sample variance is
 cm<sup>2</sup> and that of sample standard deviation is cm. The standard
 deviation has the desirable property of measuring variability in the
 same unit as the data.</p>
+</blockquote>
 <p><strong>An alternative formula for computing the variance</strong></p>
 <p>The computation of <em>s</em>² requires calculations of <span class="math inline">\(\overline{x}\)</span>, <em>n</em>
 subtractions and <em>n</em> squaring and adding operations. If the original
@@ -736,7 +719,7 @@ be difficult to work with, and several decimals may have to be carried
 to ensure numerical accuracy. A more efficient computational formula for
 <em>s</em>² is given by</p>
 <p><span class="math inline">\(s^{2} = \frac{1}{n - 1}\left\{ \sum_{i = 1}^{n}{x_{i}^{2} - \frac{1}{n}}\left( \sum_{i = 1}^{n}x_{i} \right)^{2} \right\}\)</span></p>
-<p><strong>Example 5</strong>: Consider the data set below; find standard deviation?</p>
+<p><strong>Example 5.5</strong>: Consider the data set below; find standard deviation?</p>
 <table>
 <tbody>
 <tr class="odd">
@@ -752,6 +735,7 @@ to ensure numerical accuracy. A more efficient computational formula for
 </tr>
 </tbody>
 </table>
+<p><strong>Solution</strong>:</p>
 <table>
 <thead>
 <tr class="header">
@@ -818,11 +802,13 @@ to ensure numerical accuracy. A more efficient computational formula for
 <p><span class="math inline">\(s^{2} = \frac{1}{8}\left\{ 700 - {\frac{1}{9}\left( 72 \right)}^{2} \right\}\)</span>
 =15.5</p>
 <p><span class="math inline">\(s = \ \sqrt{15.5} = 3.94\)</span></p>
-<p>7. <strong>Variance and standard deviation for grouped data</strong></p>
-<p>For discrete grouped data</p>
+<div id="variance-and-standard-deviation-for-grouped-data" class="section level3" number="5.5.1">
+<h3><span class="header-section-number">5.5.1</span> Variance and standard deviation for grouped data</h3>
+<div id="for-discrete-grouped-data" class="section level4" number="5.5.1.1">
+<h4><span class="header-section-number">5.5.1.1</span> For discrete grouped data</h4>
 <p><span class="math display">\[s^{2} = \frac{1}{n - 1}\left\{ \sum_{i = 1}^{n}{{f_{i}x}_{i}^{2} - \frac{1}{n}}\left( \sum_{i = 1}^{n}{f_{i}x}_{i} \right)^{2} \right\}\]</span></p>
 <p>where <span class="math inline">\(f_{i}\)</span> is the frequency of <em>i</em><sup>th</sup> observation</p>
-<p><strong>Example 6</strong>: The frequency distributions of seed yield of 50 sesamum
+<p><strong>Example 5.6</strong>: The frequency distributions of seed yield of 50 sesamum
 plants are given below. Find the standard deviation.</p>
 <table>
 <thead>
@@ -846,7 +832,7 @@ plants are given below. Find the standard deviation.</p>
 </tr>
 </tbody>
 </table>
-<p>Solution:</p>
+<p><strong>Solution</strong>:</p>
 <table>
 <thead>
 <tr class="header">
@@ -898,12 +884,14 @@ plants are given below. Find the standard deviation.</p>
 <p><span class="math display">\[s^{2} = \frac{1}{n - 1}\left\{ \sum_{i = 1}^{n}{{f_{i}x}_{i}^{2} - \frac{1}{n}}\left( \sum_{i = 1}^{n}{f_{i}x}_{i} \right)^{2} \right\}\]</span></p>
 <p><span class="math display">\[{sample\ variance,\ s}^{2} = \frac{1}{50 - 1}\left\{ 1537 - \frac{271^{2}}{50} \right\} = 1.3914\]</span></p>
 <p><span class="math inline">\(standard\ deviation,\ s = \sqrt{1.3914}\)</span> = 1.179</p>
-<p>For continuous grouped data</p>
+</div>
+<div id="for-continuous-grouped-data" class="section level4" number="5.5.1.2">
+<h4><span class="header-section-number">5.5.1.2</span> For continuous grouped data</h4>
 <p><span class="math display">\[s^{2} = \frac{1}{n - 1}\left\{ \sum_{i = 1}^{n}{{f_{i}d}_{i}^{2} - \frac{1}{n}}\left( \sum_{i = 1}^{n}{f_{i}d}_{i} \right)^{2} \right\}\]</span></p>
 <p>where <span class="math inline">\(f_{i}\)</span> is the frequency of <em>i</em><sup>th</sup> class, <em>c</em> is the class
 interval, <span class="math inline">\(d_{i} = \frac{x_{i} - A}{c}\)</span>, <span class="math inline">\(x_{i}\)</span> is the class mark, <span class="math inline">\(A\)</span>
 is the class mark with the highest frequency</p>
-<p><strong>Example 7</strong>: The frequency distributions of seed yield of 50 sesamum
+<p><strong>Example 5.7</strong>: The frequency distributions of seed yield of 50 sesamum
 plants are given below. Find the standard deviation</p>
 <table>
 <thead>
@@ -927,7 +915,7 @@ plants are given below. Find the standard deviation</p>
 </tr>
 </tbody>
 </table>
-<p>Solution</p>
+<p><strong>Solution</strong>:</p>
 <p>Here <em>n</em> =50; <em>c</em> =1</p>
 <table>
 <thead>
@@ -995,7 +983,10 @@ plants are given below. Find the standard deviation</p>
 <p><span class="math display">\[s^{2} = \frac{1}{n - 1}\left\{ \sum_{i = 1}^{n}{{f_{i}d}_{i}^{2} - \frac{1}{n}}\left( \sum_{i = 1}^{n}{f_{i}d}_{i} \right)^{2} \right\}\]</span></p>
 <p><span class="math display">\[{sample\ variance,\ s}^{2} = \frac{1}{49}\left( 77 - \frac{\left( 21 \right)^{2}}{50} \right) = \ 1.3914\]</span></p>
 <p><span class="math inline">\(standard\ deviation,\ s = \sqrt{1.3914}\)</span> = 1.179</p>
-<p>8. <strong>Merits and Demerits of Standard Deviation</strong></p>
+</div>
+</div>
+<div id="merits-and-demerits-of-standard-deviation" class="section level3" number="5.5.2">
+<h3><span class="header-section-number">5.5.2</span> Merits and Demerits of Standard Deviation</h3>
 <p><strong><u>Merits</u></strong></p>
 <ol style="list-style-type: decimal">
 <li><p>It is rigidly defined and its value is always definite and based on
@@ -1017,7 +1008,10 @@ squared up.</p></li>
 <li><p>As it is an absolute measure of variability, it cannot be used for
 the purpose of comparison.</p></li>
 </ol>
-<p>9. <strong>Coefficient of Variation (relative measure of dispersion)</strong></p>
+</div>
+</div>
+<div id="coefficient-of-variation-relative-measure-of-dispersion" class="section level2" number="5.6">
+<h2><span class="header-section-number">5.6</span> Coefficient of Variation (relative measure of dispersion)</h2>
 <p>The Standard deviation is an absolute measure of dispersion. It is
 expressed in terms of units in which the original figures are collected
 and stated. The standard deviation of heights of plants cannot be
@@ -1036,11 +1030,11 @@ that the group is more variable, less stable, less uniform, less
 consistent or less homogeneous. If the C.V. is less, it indicates that
 the group is less variable or more stable or more uniform or more
 consistent or more homogeneous.</p>
-<p><strong>Example 8</strong>: Consider the measurement on yield and plant height of a
+<p><strong>Example 5.8</strong>: Consider the measurement on yield and plant height of a
 paddy variety. The mean and standard deviation for yield are 50 kg and
 10 kg respectively. The mean and standard deviation for plant height are
 55 cm and 5 cm respectively. Compare the variability.</p>
-<p>Solution:</p>
+<p><strong>Solution</strong>:</p>
 <p>Here the measurements for yield and plant height are in different units.
 Hence the variability can be compared only by using coefficient of
 variation.</p>

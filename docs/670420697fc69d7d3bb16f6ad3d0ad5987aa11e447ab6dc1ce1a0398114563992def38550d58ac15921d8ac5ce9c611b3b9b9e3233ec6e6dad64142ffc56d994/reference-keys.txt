@@ -141,6 +141,11 @@ the-inter-quartile-range-iqr-or-midspread
 mean-absolute-deviation-mad
 merits-and-demerits-of-mad
 the-variance-and-standard-deviation
+variance-and-standard-deviation-for-grouped-data
+for-discrete-grouped-data
+for-continuous-grouped-data
+merits-and-demerits-of-standard-deviation
+coefficient-of-variation-relative-measure-of-dispersion
 skewness-and-kurtosis
 skewness
 left-skewed-or-negatively-skewed
