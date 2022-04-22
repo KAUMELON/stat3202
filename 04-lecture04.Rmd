@@ -178,7 +178,7 @@ the harmonic mean.
   
 **Solution 4.5**:  
 
-  x                    f                      1/x                                f(1/x)
+  x                    f                      1/x                                f.1/x
   ---------------- ---------------- ----------------------------------- ------------------------------------------------------------
   20               4                0.05                                0.2
   21               2                0.047619                            0.095238
@@ -272,7 +272,7 @@ positional averages include **Percentiles**, **Quartiles** and
 Note that Arithmetic mean, Harmonic mean and Geometric mean are termed
 as mathematical averages
 
-## Quartiles 
+## Quartiles {#quartile} 
 
 The median divides a set of data into two equal parts. We can also
 divide a set of data into more than two parts. When an ordered set of
@@ -530,8 +530,6 @@ Assignment 1: Find $\text{P}_{25}$, $P_{50}$& $P_{75}$for Example
 **4.7** & **4.8**; verify that $P_{50} = Q_{2}$, $P_{25} = Q_{1}$ &
 $P_{75} = Q_{3}$
 ```
-
-
 
 ## Deciles
 

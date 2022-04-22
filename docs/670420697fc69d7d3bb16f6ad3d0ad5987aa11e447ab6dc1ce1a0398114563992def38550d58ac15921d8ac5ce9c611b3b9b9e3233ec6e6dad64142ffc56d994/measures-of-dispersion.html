@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Graphical representation of data | LECTURE NOTES OF STAT 3202</title>
+  <title>Chapter 5 Measures of Dispersion | LECTURE NOTES OF STAT 3202</title>
   <meta name="description" content="A BOOK FOR UNDERGRADUATE PROGRAMME IN AGRICULTURE" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Graphical representation of data | LECTURE NOTES OF STAT 3202" />
+  <meta property="og:title" content="Chapter 5 Measures of Dispersion | LECTURE NOTES OF STAT 3202" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="/images/cover.PNG" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="https://github.com/KAUMELON/stat3202" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Graphical representation of data | LECTURE NOTES OF STAT 3202" />
+  <meta name="twitter:title" content="Chapter 5 Measures of Dispersion | LECTURE NOTES OF STAT 3202" />
   
   <meta name="twitter:description" content="A BOOK FOR UNDERGRADUATE PROGRAMME IN AGRICULTURE" />
   <meta name="twitter:image" content="/images/cover.PNG" />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="introduction.html"/>
-<link rel="next" href="measures-of-central-tendency---i.html"/>
+<link rel="prev" href="measures-of-central-tendency--ii.html"/>
+<link rel="next" href="skewness-and-kurtosis.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -278,439 +278,778 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="graphical-representation-of-data" class="section level1" number="2">
-<h1><span class="header-section-number">Chapter 2</span> Graphical representation of data</h1>
-<p>We found that information given in a frequency distribution is easier to interpret than raw data. Information given in a frequency distribution in a tabular form is easier to grasp if presented graphically. Many types of diagrams are used in statistics, depending on the nature of the data and the purpose for which the diagram is intended.</p>
-<div id="histogram" class="section level2" number="2.1">
-<h2><span class="header-section-number">2.1</span> Histogram</h2>
-<p>A histogram consists of rectangles with:</p>
-<ul>
-<li><p>Bases on a horizontal axis, centres at the class marks, and lengths equal to the class widths.</p></li>
-<li><p>Areas proportional to class frequencies.</p></li>
-</ul>
-<p><u>Note:</u><br />
-If the class intervals are of equal size, then the heights of the rectangles are proportional to the class frequencies and it is then customary to take the heights of the rectangles numerically equal to the class frequencies. If the class intervals are of different widths, then
-the heights of the rectangles are proportional to <span class="math inline">\(\frac{\text{Class Frequency}}{\text{Class Width}}\)</span>. This ratio is called <strong>frequency density</strong>.</p>
-<p>Table below shows the frequency distribution of the body masses of 50 AIDS patients. Draw a Histogram.</p>
+<div id="measures-of-dispersion" class="section level1" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Measures of Dispersion</h1>
+<p>We discussed in previous lectures, how a set of data can be summarized
+by a single representative value which describes the central value of
+the data. Consider the two sets of data A &amp; B below</p>
 <table>
 <thead>
 <tr class="header">
-<th align="left">Mass</th>
-<th align="left">30 – 39</th>
-<th align="left">40 – 49</th>
-<th align="left">50 – 59</th>
-<th align="left">60 – 69</th>
-<th align="left">70 – 79</th>
-<th align="left">80 – 89</th>
+<th>Data sets</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Frequency</td>
-<td align="left">3</td>
-<td align="left">6</td>
-<td align="left">17</td>
-<td align="left">13</td>
-<td align="left">8</td>
-<td align="left">3</td>
+<td><strong>A</strong></td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+</tr>
+<tr class="even">
+<td><strong>B</strong></td>
+<td>-1</td>
+<td>0</td>
+<td>3</td>
+<td>3</td>
+<td>5</td>
+<td>8</td>
 </tr>
 </tbody>
 </table>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:hist1"></span>
-<img src="images/image8.png" alt="Histogram" width="600" />
+<p>You can see mean, median and mode for both the sets <strong>A</strong> &amp; <strong>B</strong> is 3</p>
+<p>See the dot diagrams of data sets A and B.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:d"></span>
+<img src="images/image2_d.jpeg" alt="Scatter diagram of data sets A &amp; B" width="50%" />
 <p class="caption">
-Figure 2.1: Histogram
+Figure 5.1: Scatter diagram of data sets A &amp; B
 </p>
 </div>
+<p>It can be seen that, while values of data set <strong>A</strong> are grouped close to
+their mean, while the values of data set <strong>B</strong> are more spread out. We
+say that values of data set <strong>B</strong> are more dispersed (or scattered) than
+those of data set <strong>A</strong></p>
+<p>This example shows that the mean, the mode and the median, are not
+enough in describing a set of data. In addition to using these measures,
+we need a numerical measure of dispersion (or variation) of a set of
+data.</p>
+<p>Statistical dispersion means the extent to which a numerical data is
+likely to vary about an average value.</p>
+<div id="characteristics-of-a-good-measure-of-dispersion" class="section level2" number="5.1">
+<h2><span class="header-section-number">5.1</span> Characteristics of a good measure of dispersion</h2>
+<p>An ideal measure of dispersion is expected to possess the following
+properties</p>
+<ol style="list-style-type: decimal">
+<li><p>It should be rigidly defined</p></li>
+<li><p>It should be based on all the items.</p></li>
+<li><p>It should not be unduly affected by extreme items.</p></li>
+<li><p>It should lend itself for algebraic manipulation.</p></li>
+<li><p>It should be simple to understand and easy to calculate</p></li>
+</ol>
+<p>The most important measures of dispersion are the <strong>Range</strong>, the
+<strong>Inter-quartile range</strong>, <strong>Mean Absolute Deviation (MAD)</strong>and the <strong>standard deviation</strong>.</p>
 </div>
-<div id="cumulative-frequency-curve-ogive" class="section level2" number="2.2">
-<h2><span class="header-section-number">2.2</span> Cumulative frequency curve (Ogive)</h2>
-<p>A graph obtained by plotting a cumulative frequency against the class boundary and joining the points by a smooth curve, is called a cumulative frequency curve. It is also called as Ogive. Two types of ogive are there, Less Than Type Cumulative Frequency Curve (Less than Ogive) and Greater Than Type Cumulative Frequency Curve (Greater than Ogive).</p>
-<div id="less-than-ogive" class="section level3" number="2.2.1">
-<h3><span class="header-section-number">2.2.1</span> Less than Ogive</h3>
-<p>Also known as less than type cumulative frequency curve. Here we use the upper limit of the classes and the less than cumulative frequency to plot the curve. Let us see for the example of the body masses of 50 AIDS patients.</p>
+<div id="the-range" class="section level2" number="5.2">
+<h2><span class="header-section-number">5.2</span> The Range</h2>
+<p>This is the simplest possible measure of dispersion. The range of a set
+of data is defined as the difference between the largest observation and
+the smallest observation in the set of data.</p>
+<p>Thus,</p>
+<p><strong>Range = largest observation – smallest observation.</strong></p>
+<p>In symbols, Range = L – S.</p>
+<p>Where L = Largest value; S = Smallest value.</p>
+<p>In individual observations and discrete series, L and S are easily
+identified. In continuous series, the following two methods are
+followed.</p>
+<div id="method-1" class="section level3" number="5.2.1">
+<h3><span class="header-section-number">5.2.1</span> Method 1</h3>
+<p>L = Upper boundary of the highest class</p>
+<p>S = Lower boundary of the lowest class.</p>
+</div>
+<div id="method-2" class="section level3" number="5.2.2">
+<h3><span class="header-section-number">5.2.2</span> Method 2</h3>
+<p>L = Mid-value of the highest class.</p>
+<p>S = Mid-value of the lowest class.</p>
+<p><strong>Example 5.1</strong>: The marks obtained by 8 students in Mathematics and
+Physics examinations are as follows:</p>
+<p>Mathematics: 35, 60, 70, 40, 85, 96, 55, 65.</p>
+<p>Physics: 50, 55, 70, 65, 89, 68, 72, 80.</p>
+<p>Find the ranges of the two sets of data. Are the Physics marks more
+dispersed than the Mathematics marks?</p>
+<p><strong>Solution</strong></p>
+<p>For Mathematics,</p>
+<p>Highest mark = 96, lowest mark = 35, range =96 – 35 = 61</p>
+<p>For Physics,</p>
+<p>Highest mark = 89, lowest mark = 50, range =89 – 50 = 39.</p>
+<p>The mathematics marks have a wider range than the Physics marks. The
+Mathematics marks are therefore more dispersed than the Physics marks.</p>
+<p><strong>Example 5.2</strong>: Calculate range from the following distribution</p>
 <table>
 <thead>
 <tr class="header">
-<th align="left">Upper limit</th>
-<th align="left">39</th>
-<th align="left">49</th>
-<th align="left">59</th>
-<th align="left">69</th>
-<th align="left">79</th>
-<th align="left">89</th>
+<th align="left">Size</th>
+<th align="left">60-63</th>
+<th align="left">63-66</th>
+<th align="left">66-69</th>
+<th align="left">69-72</th>
+<th align="left">72-75</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Less than Cumulative frequency</td>
+<td align="left">Number</td>
+<td align="left">5</td>
+<td align="left">18</td>
+<td align="left">42</td>
+<td align="left">27</td>
+<td align="left">8</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Solution</strong></p>
+<p>L = Upper boundary of the highest class = 75</p>
+<p>S = Lower boundary of the lowest class = 60</p>
+<p>Range = L – S = 75 – 60 = 15</p>
+</div>
+<div id="merits-and-demerits-of-range" class="section level3" number="5.2.3">
+<h3><span class="header-section-number">5.2.3</span> Merits and Demerits of Range</h3>
+<p><strong><u>Merits</u></strong></p>
+<ol style="list-style-type: decimal">
+<li><p>It is simple to understand.</p></li>
+<li><p>It is easy to calculate.</p></li>
+<li><p>In certain types of problems like quality control, weather
+forecasts, share price analysis, etc.</p></li>
+</ol>
+<p><strong><u>Demerits</u></strong></p>
+<ol style="list-style-type: decimal">
+<li><p>It is very much affected by the extreme items.</p></li>
+<li><p>It is based on only two extreme observations.</p></li>
+<li><p>It cannot be calculated from open-end class intervals.</p></li>
+<li><p>It is not suitable for mathematical treatment.</p></li>
+<li><p>It is a very rarely used measure.</p></li>
+</ol>
+</div>
+</div>
+<div id="the-inter-quartile-range-iqr-or-midspread" class="section level2" number="5.3">
+<h2><span class="header-section-number">5.3</span> The Inter-Quartile Range (IQR) or Midspread</h2>
+<p>The range has the advantage that it is quick and easy to calculate.
+However, since it depends only on the maximum and the minimum values of
+a set of data, it does not show how the whole data is distributed
+between these two values. The range is therefore not a good measure of
+dispersion if one or both of these two values differ greatly from other
+values of the data. To overcome this problem, we sometimes use the
+inter-quartile range. A robust measure of dispersion is the
+inter-quartile range. The inter-quartile range of a set of data is the
+difference between the upper and lower quartiles of the data. Thus,</p>
+<p><strong>Inter-Quartile Range (IQR)</strong> = <em>Q</em><sub>3</sub> – <em>Q</em><sub>1</sub>.</p>
+<p>The inter-quartile range of a set of data is therefore not affected by
+values of the data outside <em>Q</em><sub>1</sub> and <em>Q</em><sub>3</sub>. The inter-quartile range
+is sometimes used as a measure of dispersion.</p>
+<p><strong>Example 3</strong>: Consider the two sets of data below, find IQR</p>
+<p><strong>A</strong>: 3, 4, 5, 6, 8, 9, 10, 12, 15</p>
+<p><strong>B</strong>: 3, 8, 8, 9, 9, 9, 10, 10, 15</p>
+<p>For data set A, <em>Q</em><sub>1</sub> = 5, <em>Q</em><sub>3</sub> = 10; so Inter-Quartile Range =10 –
+5 = 5</p>
+<p>For data set B, <em>Q</em><sub>1</sub> = 8, <em>Q</em><sub>3</sub> = 10; so Inter-Quartile Range =10 –
+8 = 2</p>
+<p>Since the inter-quartile range of data set A is greater than that of
+data set B, these results confirm that data set A is more dispersed than
+data set B. You can also see Range is same for both the sets.</p>
+</div>
+<div id="mean-absolute-deviation-mad" class="section level2" number="5.4">
+<h2><span class="header-section-number">5.4</span> Mean Absolute Deviation (MAD)</h2>
+<p>The mean absolute deviation (MAD) is a measure of variability that
+indicates the average distance between observations and their mean. MAD
+uses the original units of the data, which simplifies interpretation.
+Larger values signify that the data points spread out further from the
+average. Conversely, lower values correspond to data points bunching
+closer to it. The mean absolute deviation is also known as the mean
+deviation and average absolute deviation.</p>
+<p>Here is how to calculate the mean absolute deviation.</p>
+<ol style="list-style-type: decimal">
+<li><p>Calculate the mean.</p></li>
+<li><p>Calculate the difference of each observation from mean and take
+absolute value <em>i</em>.<em>e</em>. ignore the sign. This difference is known as
+absolute deviation</p></li>
+<li><p>Add those deviations together.</p></li>
+<li><p>Divide the sum by the number of data points.</p></li>
+</ol>
+<p><span class="math display">\[MAD = \frac{\sum_{i = 1}^{n}\left| x_{i} - \overline{x} \right|}{n}\]</span></p>
+<p>Example : 5.1 find the mean absolute deviation of the following 10, 15,
+15, 17, 18, 21</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Sl.No.</th>
+<th align="left"><span class="math display">\[x_{i}\]</span></th>
+<th align="left"><span class="math display">\[x_{i} - \overline{x}\]</span></th>
+<th align="left"><span class="math display">\[\left| x_{i} - \overline{x} \right|\]</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">10</td>
+<td align="left">-6</td>
+<td align="left">6</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">15</td>
+<td align="left">-1</td>
+<td align="left">1</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">15</td>
+<td align="left">-1</td>
+<td align="left">1</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="left">17</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+<tr class="odd">
+<td align="left">5</td>
+<td align="left">18</td>
+<td align="left">2</td>
+<td align="left">2</td>
+</tr>
+<tr class="even">
+<td align="left">6</td>
+<td align="left">21</td>
+<td align="left">5</td>
+<td align="left">5</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"><span class="math inline">\(\overline{x} =\)</span> 16</td>
+<td align="left"></td>
+<td align="left"><span class="math inline">\(\sum_{i = 1}^{n}\left| x_{i} - \overline{x} \right|\)</span> = 16</td>
+</tr>
+</tbody>
+</table>
+<p>Here n = 6 and <span class="math inline">\(\sum_{i = 1}^{n}\left| x_{i} - \overline{x} \right|\)</span> =
+16 therefore MAD = <span class="math inline">\(\frac{16}{6} = 2.67\)</span></p>
+<div id="merits-and-demerits-of-mad" class="section level3" number="5.4.1">
+<h3><span class="header-section-number">5.4.1</span> Merits and Demerits of MAD</h3>
+<p><strong><u>Merits</u></strong></p>
+<ol style="list-style-type: decimal">
+<li><p>Simple And Easy</p></li>
+<li><p>Different items of observations can be easily compared with mean deviation</p></li>
+<li><p>Mean deviation is better than quartile deviation and range because it is based on all the observations of the series.</p></li>
+<li><p>Mean deviation is less affected by the extreme values in the series while comparing to standard deviation.</p></li>
+<li><p>Mean deviation is rigidly defined. So, it has fixed value.</p></li>
+</ol>
+<p><strong><u>Demerits</u></strong></p>
+<ol style="list-style-type: decimal">
+<li><p>It becomes difficult to compute mean deviation in case of fractions.</p></li>
+<li><p>Mean deviation is not applicable for algebraic calculations.</p></li>
+<li><p>It cannot be calculated from open-end class intervals.</p></li>
+<li><p>Mean deviation is not a good measure as it ignores negative signs of deviations.</p></li>
+</ol>
+</div>
+</div>
+<div id="the-variance-and-standard-deviation" class="section level2" number="5.5">
+<h2><span class="header-section-number">5.5</span> The variance and standard deviation</h2>
+<p>The most important measures of variability are the sample variance and
+the sample standard deviation. If <em>x</em><sub>1</sub>, <em>x</em><sub>2</sub>… <em>x</em><sub>n</sub> is a sample
+of <em>n</em> observations, then the <strong>sample variance</strong> is denoted by <em>s</em>² and
+is defined by the equation.</p>
+<p><span class="math display">\[{\mathbf{\text{sample\ variance}},\ \mathbf{s}}^{\mathbf{2}}\mathbf{=}\frac{\sum_{\mathbf{i = 1}}^{\mathbf{n}}\left( \mathbf{x}_{\mathbf{i}}\mathbf{-}\overline{\mathbf{x}} \right)^{\mathbf{2}}}{\mathbf{n - 1}}\]</span></p>
+<p>The sample <strong>standard deviation</strong>, <em>s</em>, is the positive square root of
+the sample variance.</p>
+<p><span class="math display">\[\mathbf{variance =}\left( \mathbf{\text{standard deviation}} \right)^{\mathbf{2}}\]</span></p>
+<p><span class="math display">\[\mathbf{standard\ deviation = \ }\sqrt{\mathbf{\text{variance}}}\]</span></p>
+<p><strong>Note</strong>: If <em>s</em><sub>A</sub>, the standard deviation of data set A, is greater
+than <em>s</em><sub>B</sub>, the standard deviation of data set B, then data set A is
+more dispersed than data set B. It should be noted that the standard
+deviation of a set of data is a non-negative number.</p>
+<p><strong>Example 4</strong>: Consider the two sets of data A &amp; B below; find standard
+deviation?</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"><strong>A</strong></th>
+<th align="left">1</th>
+<th align="left">2</th>
+<th align="left">3</th>
+<th align="left">3</th>
+<th align="left">4</th>
+<th align="left">5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><strong>B</strong></td>
+<td align="left">-1</td>
+<td align="left">0</td>
+<td align="left">3</td>
+<td align="left">3</td>
+<td align="left">5</td>
+<td align="left">8</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th align="left"><strong>Set A</strong></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td><span class="math display">\[\mathbf{x}_{\mathbf{i}}\]</span></td>
+<td><span class="math display">\[\left( \mathbf{x}_{\mathbf{i}}\mathbf{-}\overline{\mathbf{x}} \right)\]</span></td>
+<td><span class="math display">\[\left( \mathbf{x}_{\mathbf{i}}\mathbf{-}\overline{\mathbf{x}} \right)^{\mathbf{2}}\]</span></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td>1</td>
+<td>-2</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td>2</td>
+<td>-1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td>4</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td>5</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Sum</strong></td>
+<td><strong>18</strong></td>
+<td><strong>0</strong></td>
+<td><strong>10</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Mean (<span class="math inline">\(\overline{x}\)</span>) =<span class="math inline">\(\ \frac{18}{6} = 3\)</span></p>
+<p><span class="math display">\[{Sample\ variane,\ s}_{A}^{2} = \frac{\sum_{i = 1}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n - 1} = \frac{10}{5} = 2\]</span></p>
+<p><span class="math display">\[\text{sample\ standard\ deviat}ion,\ s_{A} = \ \sqrt{s_{A}^{2}} = \ \sqrt{2} = 1.414\]</span></p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"><strong>Set B</strong></th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+<td><span class="math display">\[\mathbf{x}_{\mathbf{i}}\]</span></td>
+<td><span class="math display">\[\left( \mathbf{x}_{\mathbf{i}}\mathbf{-}\overline{\mathbf{x}} \right)\]</span></td>
+<td><span class="math display">\[\left( \mathbf{x}_{\mathbf{i}}\mathbf{-}\overline{\mathbf{x}} \right)^{\mathbf{2}}\]</span></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td>-1</td>
+<td>-4</td>
+<td>16</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td>0</td>
+<td>-3</td>
+<td>9</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td>5</td>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td>8</td>
+<td>5</td>
+<td>25</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Sum</strong></td>
+<td><strong>18</strong></td>
+<td><strong>0</strong></td>
+<td><strong>54</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Mean (<span class="math inline">\(\overline{x}\)</span>) =<span class="math inline">\(\ \frac{18}{6} = 3\)</span></p>
+<p><span class="math display">\[{Sample\ variane,\ s}_{B}^{2} = \frac{\sum_{i = 1}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n - 1} = \frac{54}{5} = 10.8\]</span></p>
+<p><span class="math display">\[sample\ standard\ deviation,\ s_{B} = \ \sqrt{s_{B}^{2}} = \ \sqrt{10.8} = 3.29\]</span></p>
+<p>It can be seen that <span class="math inline">\(s_{B} &gt; s_{A}\ \)</span>, confirming that data set B is
+more dispersed than data set A (see the dot diagrams)</p>
+<p><strong>Note</strong>: The unit of measurement of the sample variance is the square
+of the unit of measurement of the data. Sample standard deviation has
+same unit of measurement as of the data. Thus, if <em>x</em> is measured in
+centimetres (cm), then the unit of measurement of the sample variance is
+cm<sup>2</sup> and that of sample standard deviation is cm. The standard
+deviation has the desirable property of measuring variability in the
+same unit as the data.</p>
+<p><strong>An alternative formula for computing the variance</strong></p>
+<p>The computation of <em>s</em>² requires calculations of <span class="math inline">\(\overline{x}\)</span>, <em>n</em>
+subtractions and <em>n</em> squaring and adding operations. If the original
+observations or the deviations <span class="math inline">\(\left( x_{i} - \overline{x} \right)\)</span> are
+not integers, the deviations <span class="math inline">\(\left( x_{i} - \overline{x} \right)\)</span> may
+be difficult to work with, and several decimals may have to be carried
+to ensure numerical accuracy. A more efficient computational formula for
+<em>s</em>² is given by</p>
+<p><span class="math inline">\(s^{2} = \frac{1}{n - 1}\left\{ \sum_{i = 1}^{n}{x_{i}^{2} - \frac{1}{n}}\left( \sum_{i = 1}^{n}x_{i} \right)^{2} \right\}\)</span></p>
+<p><strong>Example 5</strong>: Consider the data set below; find standard deviation?</p>
+<table>
+<tbody>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">4</td>
+<td align="left">5</td>
+<td align="left">6</td>
+<td align="left">8</td>
+<td align="left">9</td>
+<td align="left">10</td>
+<td align="left">12</td>
+<td align="left">15</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th></th>
+<th align="left"><span class="math display">\[\mathbf{x}_{\mathbf{i}}\]</span></th>
+<th align="left"><span class="math display">\[\mathbf{x}_{\mathbf{i}}^{\mathbf{2}}\]</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td></td>
 <td align="left">3</td>
 <td align="left">9</td>
-<td align="left">26</td>
-<td align="left">39</td>
-<td align="left">47</td>
-<td align="left">50</td>
 </tr>
-</tbody>
-</table>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:lto"></span>
-<img src="images/image9.jpeg" alt="Less than ogive" width="292" />
-<p class="caption">
-Figure 2.2: Less than ogive
-</p>
-</div>
-</div>
-<div id="greater-than-ogive" class="section level3" number="2.2.2">
-<h3><span class="header-section-number">2.2.2</span> Greater than Ogive</h3>
-<p>Also known as greater than type cumulative frequency curve Here we use the lower limit of the classes and the greater than cumulative frequency to plot the curve.</p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Lower Limit</th>
-<th align="left">30</th>
-<th align="left">40</th>
-<th align="left">50</th>
-<th align="left">60</th>
-<th align="left">70</th>
-<th align="left">80</th>
+<tr class="even">
+<td></td>
+<td align="left">4</td>
+<td align="left">16</td>
 </tr>
-</thead>
-<tbody>
 <tr class="odd">
-<td align="left">Greater than Cumulative frequency</td>
-<td align="left">50</td>
-<td align="left">47</td>
-<td align="left">41</td>
-<td align="left">24</td>
-<td align="left">11</td>
-<td align="left">3</td>
+<td></td>
+<td align="left">5</td>
+<td align="left">25</td>
 </tr>
-</tbody>
-</table>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:gco"></span>
-<img src="images/image10.jpeg" alt="greater than ogive" width="292" />
-<p class="caption">
-Figure 2.3: greater than ogive
-</p>
-</div>
-<p><u>Note:</u><br />
-Intersection of both ogives gives the median</p>
-</div>
-<div id="frequency-polygon" class="section level3" number="2.2.3">
-<h3><span class="header-section-number">2.2.3</span> Frequency polygon</h3>
-<p>A grouped frequency table can also be represented by a frequency
-polygon, which is a special kind of line graph. To construct a frequency
-polygon, we plot a graph of class frequencies against the corresponding
-class mid-points and join successive points with straight lines.</p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Class Midpoints</th>
-<th align="left">34.5</th>
-<th align="left">44.5</th>
-<th align="left">54.5</th>
-<th align="left">64.5</th>
-<th align="left">74.5</th>
-<th align="left">84.5</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Frequencies</td>
-<td align="left">3</td>
+<tr class="even">
+<td></td>
 <td align="left">6</td>
-<td align="left">17</td>
-<td align="left">13</td>
+<td align="left">36</td>
+</tr>
+<tr class="odd">
+<td></td>
 <td align="left">8</td>
-<td align="left">3</td>
-</tr>
-</tbody>
-</table>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:freqpol"></span>
-<img src="images/image11.jpeg" alt="Frequency polygon" width="291" />
-<p class="caption">
-Figure 2.4: Frequency polygon
-</p>
-</div>
-<p>Frequency polygon is also obtained by joining the midpoints of a histogram as shown below</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:frehit"></span>
-<img src="images/image12.png" alt="Frequency polygon and histogram" width="434" />
-<p class="caption">
-Figure 2.5: Frequency polygon and histogram
-</p>
-</div>
-</div>
-</div>
-<div id="stem-and-leaf-plot" class="section level2" number="2.3">
-<h2><span class="header-section-number">2.3</span> Stem-and-leaf plot</h2>
-<p>A stem-and-leaf plot is a graphical device that is useful for representing a relatively small set of data which takes numerical values. To construct a stem-and-leaf plot, we partition each measurement into two parts. The first part is called the stem, and the second part is called the leaf. Here each numerical value is divided into two parts:
-The leading digits become the stem the trailing digits become the leaf. One advantage of the stem-and-leaf display over a frequency distribution is that we retain the value of each observation. Another is the distribution of the data within each groups is clear. A stem-and-leaf plot conveys similar information as a histogram. Turned on its side, it has the same shape as the histogram. In fact, since the
-stem-and-leaf plot shows each observation,it displays information that is lost in a histogram. A properly
-constructed stem-and-leaf plot, like a histogram, provides information regarding the range of the data set, shows the location of the highest concentration of measurements, and reveals the presence or absence of symmetry.</p>
-<p>Consider the example</p>
-<p>10,15,22,25,28,23,29,31,36,45,48</p>
-<table class=" lightable-paper lightable-hover" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
-<caption>
-<span id="tab:unnamed-chunk-1">Table 2.1: </span>Stem and leaf plot
-</caption>
-<thead>
-<tr>
-<th style="text-align:right;">
-Stem
-</th>
-<th style="text-align:left;">
-Leaf
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-0 5
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:left;">
-2 3 5 8 9
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:left;">
-1 6
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:left;">
-5 8
-</td>
-</tr>
-</tbody>
-</table>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:stem"></span>
-<img src="images/image18.png" alt="Stem and Leaf plot" width="224" />
-<p class="caption">
-Figure 2.6: Stem and Leaf plot
-</p>
-</div>
-</div>
-<div id="bar-chart" class="section level2" number="2.4">
-<h2><span class="header-section-number">2.4</span> Bar chart</h2>
-<p>A bar chart or bar graph is a diagram consisting of a series of horizontal or vertical bars of equal width. The bars represent various categories of the data. There are three types of bar charts, and these are simple bar charts, component bar charts and grouped bar charts.</p>
-<div id="simple-bar-chart" class="section level3" number="2.4.1">
-<h3><span class="header-section-number">2.4.1</span> Simple bar chart</h3>
-<p>In a simple bar chart, the height (or length) of each bar is equal to the value of category in the y-axis it represents. For example data below shows the production of timber in five districts of Kerala in a certain year.</p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">District</th>
-<th align="left">Production</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Alappuzha</td>
-<td align="left">600</td>
+<td align="left">64</td>
 </tr>
 <tr class="even">
-<td align="left">Kannur</td>
-<td align="left">900</td>
+<td></td>
+<td align="left">9</td>
+<td align="left">81</td>
 </tr>
 <tr class="odd">
-<td align="left">Trissur</td>
-<td align="left">1800</td>
+<td></td>
+<td align="left">10</td>
+<td align="left">100</td>
 </tr>
 <tr class="even">
-<td align="left">Ernakulam</td>
-<td align="left">1500</td>
-</tr>
-<tr class="odd">
-<td align="left">Wayanad</td>
-<td align="left">2400</td>
-</tr>
-</tbody>
-</table>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:bar"></span>
-<img src="images/image13.png" alt="Barchart" width="272" />
-<p class="caption">
-Figure 2.7: Barchart
-</p>
-</div>
-</div>
-<div id="component-bar-chart" class="section level3" number="2.4.2">
-<h3><span class="header-section-number">2.4.2</span> Component bar chart</h3>
-<p>In a component bar chart, the bar for each category is subdivided into component parts; hence its name. Component bar charts are therefore used to show the division of items into components. This is illustrated in the following example.</p>
-<p>Example shows the distribution of sales of agricultural produce from a Farm in 1995, 1996 and 1997.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:componentdata"></span>
-<img src="images/image14.jpeg" alt="Sales data of agricultural produce" width="209" />
-<p class="caption">
-Figure 2.8: Sales data of agricultural produce
-</p>
-</div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:componentbar"></span>
-<img src="images/image15.jpeg" alt="Component bar chart" width="324" />
-<p class="caption">
-Figure 2.9: Component bar chart
-</p>
-</div>
-<p>The component bar chart shows the changes of each component over the years as well as the comparison of the total sales between different years.</p>
-</div>
-<div id="grouped-bar-chart" class="section level3" number="2.4.3">
-<h3><span class="header-section-number">2.4.3</span> Grouped bar chart</h3>
-<p>For a grouped bar chart, the components are grouped together and drawn side by side. We illustrate this with the above example.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:groupbar"></span>
-<img src="images/image16.jpeg" alt="Grouped bar chart" width="344" />
-<p class="caption">
-Figure 2.10: Grouped bar chart
-</p>
-</div>
-</div>
-</div>
-<div id="histogram-and-bar-chart" class="section level2" number="2.5">
-<h2><span class="header-section-number">2.5</span> Histogram and Bar chart</h2>
-<table>
-<colgroup>
-<col width="9%" />
-<col width="49%" />
-<col width="41%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>BASIS FOR COMPARISON</th>
-<th>HISTOGRAM</th>
-<th>BAR GRAPH</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Meaning</td>
-<td>Histogram refers to a graphical representation, that displays data by way of bars to show the frequency of numerical data.</td>
-<td>Bar graph is a pictorial representation of data that uses bars to compare different categories of data.</td>
-</tr>
-<tr class="even">
-<td>Indicates</td>
-<td>Distribution of non-discrete variables</td>
-<td>Comparison of discrete variables</td>
-</tr>
-<tr class="odd">
-<td>Presents</td>
-<td>Quantitative data</td>
-<td>Categorical data</td>
-</tr>
-<tr class="even">
-<td>Spaces</td>
-<td>Bars touch each other, hence there are no spaces between bars</td>
-<td>Bars do not touch each other, hence there are spaces between bars.</td>
-</tr>
-<tr class="odd">
-<td>Elements</td>
-<td>Elements are grouped together, so that they are considered as ranges.</td>
-<td>Elements are taken as individual entities.</td>
-</tr>
-<tr class="even">
-<td>Can bars be reordered?</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr class="odd">
-<td>Width of bars</td>
-<td>Need not to be same</td>
-<td>Same</td>
-</tr>
-</tbody>
-</table>
-</div>
-<div id="pie-charts" class="section level2" number="2.6">
-<h2><span class="header-section-number">2.6</span> Pie Charts</h2>
-<p>A pie chart is a circular graph divided into sectors, each sector representing a different value or category. The angle of each sector of a pie chart is proportional to the value of the part of the data it represents. The bar chart is more precise than the pie chart for visual comparison of categories with similar relative frequencies.</p>
-<div id="steps-for-constructing-a-pie-chart" class="section level3" number="2.6.1">
-<h3><span class="header-section-number">2.6.1</span> Steps for constructing a pie chart</h3>
-<ol style="list-style-type: decimal">
-<li>Find the sum of the category values.<br />
-</li>
-<li>Calculate the angle of the sector for each category, using the following formula.Angle of the sector for category A = <span class="math inline">\(\frac{\text{value of category A}}{\text{sum of category values}} \times 360\)</span><br />
-</li>
-<li>Construct a circle and mark the centre.<br />
-</li>
-<li>Use a protractor to divide the circle into sectors, using the angles obtained in step 2.<br />
-</li>
-<li>Label each sector clearly.</li>
-</ol>
-<p>See the example:<br />
-A housewife spent the following sums of money on buying ingredients for a family Christmas cake.</p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Ingredients</th>
-<th align="left">Price</th>
-<th align="left">Angle</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Flour</td>
-<td align="left">24</td>
-<td align="left">(24/240)×360= 36</td>
-</tr>
-<tr class="even">
-<td align="left">Margarine</td>
-<td align="left">96</td>
+<td></td>
+<td align="left">12</td>
 <td align="left">144</td>
 </tr>
 <tr class="odd">
-<td align="left">Sugar</td>
-<td align="left">18</td>
-<td align="left">27</td>
+<td></td>
+<td align="left">15</td>
+<td align="left">225</td>
 </tr>
 <tr class="even">
-<td align="left">Eggs</td>
-<td align="left">60</td>
-<td align="left">90</td>
-</tr>
-<tr class="odd">
-<td align="left">Baking powder</td>
-<td align="left">12</td>
-<td align="left">18</td>
-</tr>
-<tr class="even">
-<td align="left">Miscellaneous</td>
-<td align="left">30</td>
-<td align="left">45</td>
-</tr>
-<tr class="odd">
-<td align="left"><strong>Total</strong></td>
-<td align="left"><strong>240</strong></td>
-<td align="left"><strong>360</strong></td>
+<td><strong>Sum</strong></td>
+<td align="left"><strong>72</strong></td>
+<td align="left"><strong>700</strong></td>
 </tr>
 </tbody>
 </table>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:oiechart"></span>
-<img src="images/image17.jpeg" alt="Pie chart" width="272" />
-<p class="caption">
-Figure 2.11: Pie chart
-</p>
-</div>
-<p> <br />
- <br />
- </p>
-<div id="hello" class="greeting message" style="color: #c9c6c5;">
-<center>
-<p><strong>Statistics is the grammar of science." - Karl Pearson</strong>!</p>
-</center>
-</div>
+<p><span class="math inline">\(s^{2} = \frac{1}{n - 1}\left\{ \sum_{i = 1}^{n}{x_{i}^{2} - \frac{1}{n}}\left( \sum_{i = 1}^{n}x_{i} \right)^{2} \right\}\)</span>
+; here <em>n</em> = 9</p>
+<p><span class="math inline">\(s^{2} = \frac{1}{8}\left\{ 700 - {\frac{1}{9}\left( 72 \right)}^{2} \right\}\)</span>
+=15.5</p>
+<p><span class="math inline">\(s = \ \sqrt{15.5} = 3.94\)</span></p>
+<p>7. <strong>Variance and standard deviation for grouped data</strong></p>
+<p>For discrete grouped data</p>
+<p><span class="math display">\[s^{2} = \frac{1}{n - 1}\left\{ \sum_{i = 1}^{n}{{f_{i}x}_{i}^{2} - \frac{1}{n}}\left( \sum_{i = 1}^{n}{f_{i}x}_{i} \right)^{2} \right\}\]</span></p>
+<p>where <span class="math inline">\(f_{i}\)</span> is the frequency of <em>i</em><sup>th</sup> observation</p>
+<p><strong>Example 6</strong>: The frequency distributions of seed yield of 50 sesamum
+plants are given below. Find the standard deviation.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Seed yield in gms (<em>x</em>)</th>
+<th align="left"><strong>3</strong></th>
+<th align="left"><strong>4</strong></th>
+<th align="left"><strong>5</strong></th>
+<th align="left"><strong>6</strong></th>
+<th align="left"><strong>7</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Frequency (<em>f</em>)</td>
+<td align="left"><strong>4</strong></td>
+<td align="left"><strong>6</strong></td>
+<td align="left"><strong>15</strong></td>
+<td align="left"><strong>15</strong></td>
+<td align="left"><strong>10</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Solution:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"><strong><em>x</em></strong></th>
+<th align="left"><strong><em>f</em></strong></th>
+<th align="left"><strong><em>fx</em></strong></th>
+<th align="left"><strong><em>fx<sup>2</sup></em></strong></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">4</td>
+<td align="left">12</td>
+<td align="left">36</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="left">6</td>
+<td align="left">24</td>
+<td align="left">96</td>
+</tr>
+<tr class="odd">
+<td align="left">5</td>
+<td align="left">15</td>
+<td align="left">75</td>
+<td align="left">375</td>
+</tr>
+<tr class="even">
+<td align="left">6</td>
+<td align="left">15</td>
+<td align="left">90</td>
+<td align="left">540</td>
+</tr>
+<tr class="odd">
+<td align="left">7</td>
+<td align="left">10</td>
+<td align="left">70</td>
+<td align="left">490</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Total</strong></td>
+<td align="left"><strong>50</strong></td>
+<td align="left"><strong>271</strong></td>
+<td align="left"><strong>1537</strong></td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[s^{2} = \frac{1}{n - 1}\left\{ \sum_{i = 1}^{n}{{f_{i}x}_{i}^{2} - \frac{1}{n}}\left( \sum_{i = 1}^{n}{f_{i}x}_{i} \right)^{2} \right\}\]</span></p>
+<p><span class="math display">\[{sample\ variance,\ s}^{2} = \frac{1}{50 - 1}\left\{ 1537 - \frac{271^{2}}{50} \right\} = 1.3914\]</span></p>
+<p><span class="math inline">\(standard\ deviation,\ s = \sqrt{1.3914}\)</span> = 1.179</p>
+<p>For continuous grouped data</p>
+<p><span class="math display">\[s^{2} = \frac{1}{n - 1}\left\{ \sum_{i = 1}^{n}{{f_{i}d}_{i}^{2} - \frac{1}{n}}\left( \sum_{i = 1}^{n}{f_{i}d}_{i} \right)^{2} \right\}\]</span></p>
+<p>where <span class="math inline">\(f_{i}\)</span> is the frequency of <em>i</em><sup>th</sup> class, <em>c</em> is the class
+interval, <span class="math inline">\(d_{i} = \frac{x_{i} - A}{c}\)</span>, <span class="math inline">\(x_{i}\)</span> is the class mark, <span class="math inline">\(A\)</span>
+is the class mark with the highest frequency</p>
+<p><strong>Example 7</strong>: The frequency distributions of seed yield of 50 sesamum
+plants are given below. Find the standard deviation</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Seed yield in gms (<em>x</em>)</th>
+<th align="left">2.5-3.5</th>
+<th align="left">3.5-4.5</th>
+<th align="left">4.5-5.5</th>
+<th align="left">5.5-6.5</th>
+<th align="left">6.5-7.5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Frequency (<em>f</em>)</td>
+<td align="left">4</td>
+<td align="left">6</td>
+<td align="left">15</td>
+<td align="left">15</td>
+<td align="left">10</td>
+</tr>
+</tbody>
+</table>
+<p>Solution</p>
+<p>Here <em>n</em> =50; <em>c</em> =1</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left"><strong>Seed yield</strong></th>
+<th align="left"><em>f</em></th>
+<th align="left"><em>x</em></th>
+<th align="left"><span class="math display">\[d_{i} = \frac{x_{i} - A}{c}\]</span></th>
+<th align="left"><em>fd</em></th>
+<th align="left"><em>f d<sup>2</sup></em></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">2.5-3.5</td>
+<td align="left">4</td>
+<td align="left">3</td>
+<td align="left">-2</td>
+<td align="left">-8</td>
+<td align="left">16</td>
+</tr>
+<tr class="even">
+<td align="left">3.5-4.5</td>
+<td align="left">6</td>
+<td align="left">4</td>
+<td align="left">-1</td>
+<td align="left">-6</td>
+<td align="left">6</td>
+</tr>
+<tr class="odd">
+<td align="left">4.5-5.5</td>
+<td align="left">15</td>
+<td align="left">5</td>
+<td align="left">0</td>
+<td align="left">0</td>
+<td align="left">0</td>
+</tr>
+<tr class="even">
+<td align="left">6.5-7.5</td>
+<td align="left">15</td>
+<td align="left">6</td>
+<td align="left">1</td>
+<td align="left">15</td>
+<td align="left">15</td>
+</tr>
+<tr class="odd">
+<td align="left">7.5-8.5</td>
+<td align="left">10</td>
+<td align="left">7</td>
+<td align="left">2</td>
+<td align="left">20</td>
+<td align="left">40</td>
+</tr>
+<tr class="even">
+<td align="left"><strong>Total</strong></td>
+<td align="left"><strong>50</strong></td>
+<td align="left"><strong>25</strong></td>
+<td align="left"><strong>0</strong></td>
+<td align="left"><strong>21</strong></td>
+<td align="left"><strong>77</strong></td>
+</tr>
+</tbody>
+</table>
+<p><em>A</em> = 5</p>
+<p><span class="math display">\[s^{2} = \frac{1}{n - 1}\left\{ \sum_{i = 1}^{n}{{f_{i}d}_{i}^{2} - \frac{1}{n}}\left( \sum_{i = 1}^{n}{f_{i}d}_{i} \right)^{2} \right\}\]</span></p>
+<p><span class="math display">\[{sample\ variance,\ s}^{2} = \frac{1}{49}\left( 77 - \frac{\left( 21 \right)^{2}}{50} \right) = \ 1.3914\]</span></p>
+<p><span class="math inline">\(standard\ deviation,\ s = \sqrt{1.3914}\)</span> = 1.179</p>
+<p>8. <strong>Merits and Demerits of Standard Deviation</strong></p>
+<p><strong><u>Merits</u></strong></p>
+<ol style="list-style-type: decimal">
+<li><p>It is rigidly defined and its value is always definite and based on
+all the observations</p></li>
+<li><p>As it is based on arithmetic mean, it has all the merits of
+arithmetic mean.</p></li>
+<li><p>It is the most important and widely used measure of dispersion.</p></li>
+<li><p>It is possible for further algebraic treatment.</p></li>
+<li><p>It is less affected by the fluctuations of sampling and hence
+stable.</p></li>
+<li><p>It is the basis for measuring the coefficient of correlation and
+other measures.</p></li>
+</ol>
+<p><strong><u>Demerits</u></strong></p>
+<ol style="list-style-type: decimal">
+<li><p>It is not easy to understand and it is difficult to calculate.</p></li>
+<li><p>It gives more weight to extreme values because the values are
+squared up.</p></li>
+<li><p>As it is an absolute measure of variability, it cannot be used for
+the purpose of comparison.</p></li>
+</ol>
+<p>9. <strong>Coefficient of Variation (relative measure of dispersion)</strong></p>
+<p>The Standard deviation is an absolute measure of dispersion. It is
+expressed in terms of units in which the original figures are collected
+and stated. The standard deviation of heights of plants cannot be
+compared with the standard deviation of weights of the grains, as both
+are expressed in different units, <em>i</em>.<em>e</em> heights in centimetre and
+weights in kilograms.</p>
+<p>Therefore the standard deviation must be converted into a relative
+measure of dispersion for the purpose of comparison. The relative
+measure is known as the <strong>coefficient of variation</strong>. The coefficient of
+variation is obtained by dividing the standard deviation by the mean and
+expressed in percentage.</p>
+<p><span class="math display">\[\mathbf{\text{Coefficient of variation}}\left( \mathbf{C}\mathbf{.}\mathbf{V} \right)\mathbf{=}\frac{\mathbf{\text{standard deviation}}}{\mathbf{\text{mean}}}\mathbf{\times 100}\]</span></p>
+<p>If we want to compare the variability of two or more series, we can use
+C.V. The series or groups of data for which the C.V. is greater indicate
+that the group is more variable, less stable, less uniform, less
+consistent or less homogeneous. If the C.V. is less, it indicates that
+the group is less variable or more stable or more uniform or more
+consistent or more homogeneous.</p>
+<p><strong>Example 8</strong>: Consider the measurement on yield and plant height of a
+paddy variety. The mean and standard deviation for yield are 50 kg and
+10 kg respectively. The mean and standard deviation for plant height are
+55 cm and 5 cm respectively. Compare the variability.</p>
+<p>Solution:</p>
+<p>Here the measurements for yield and plant height are in different units.
+Hence the variability can be compared only by using coefficient of
+variation.</p>
+<p>For yield, CV=<span class="math inline">\(\ \frac{10}{50} \times 100 =\)</span> 20%</p>
+<p>For plant height, CV=
+<span class="math inline">\(\frac{5}{55} \times 100 = \ \)</span><!-- -->9.1%</p>
+<p>The yield is subject to more variation than the plant height.</p>
+<p><strong>******************************************************************</strong></p>
 
-</div>
 </div>
 </div>
             </section>
@@ -718,8 +1057,8 @@ Figure 2.11: Pie chart
           </div>
         </div>
       </div>
-<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="measures-of-central-tendency---i.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="measures-of-central-tendency--ii.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="skewness-and-kurtosis.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

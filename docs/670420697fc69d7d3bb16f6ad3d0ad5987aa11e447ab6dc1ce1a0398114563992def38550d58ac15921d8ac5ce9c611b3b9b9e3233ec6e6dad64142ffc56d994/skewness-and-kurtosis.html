@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 2 Graphical representation of data | LECTURE NOTES OF STAT 3202</title>
+  <title>Chapter 6 Skewness and Kurtosis | LECTURE NOTES OF STAT 3202</title>
   <meta name="description" content="A BOOK FOR UNDERGRADUATE PROGRAMME IN AGRICULTURE" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 2 Graphical representation of data | LECTURE NOTES OF STAT 3202" />
+  <meta property="og:title" content="Chapter 6 Skewness and Kurtosis | LECTURE NOTES OF STAT 3202" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="/images/cover.PNG" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="https://github.com/KAUMELON/stat3202" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 2 Graphical representation of data | LECTURE NOTES OF STAT 3202" />
+  <meta name="twitter:title" content="Chapter 6 Skewness and Kurtosis | LECTURE NOTES OF STAT 3202" />
   
   <meta name="twitter:description" content="A BOOK FOR UNDERGRADUATE PROGRAMME IN AGRICULTURE" />
   <meta name="twitter:image" content="/images/cover.PNG" />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="introduction.html"/>
-<link rel="next" href="measures-of-central-tendency---i.html"/>
+<link rel="prev" href="measures-of-dispersion.html"/>
+<link rel="next" href="references.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -278,439 +278,648 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="graphical-representation-of-data" class="section level1" number="2">
-<h1><span class="header-section-number">Chapter 2</span> Graphical representation of data</h1>
-<p>We found that information given in a frequency distribution is easier to interpret than raw data. Information given in a frequency distribution in a tabular form is easier to grasp if presented graphically. Many types of diagrams are used in statistics, depending on the nature of the data and the purpose for which the diagram is intended.</p>
-<div id="histogram" class="section level2" number="2.1">
-<h2><span class="header-section-number">2.1</span> Histogram</h2>
-<p>A histogram consists of rectangles with:</p>
-<ul>
-<li><p>Bases on a horizontal axis, centres at the class marks, and lengths equal to the class widths.</p></li>
-<li><p>Areas proportional to class frequencies.</p></li>
-</ul>
-<p><u>Note:</u><br />
-If the class intervals are of equal size, then the heights of the rectangles are proportional to the class frequencies and it is then customary to take the heights of the rectangles numerically equal to the class frequencies. If the class intervals are of different widths, then
-the heights of the rectangles are proportional to <span class="math inline">\(\frac{\text{Class Frequency}}{\text{Class Width}}\)</span>. This ratio is called <strong>frequency density</strong>.</p>
-<p>Table below shows the frequency distribution of the body masses of 50 AIDS patients. Draw a Histogram.</p>
+<div id="skewness-and-kurtosis" class="section level1" number="6">
+<h1><span class="header-section-number">Chapter 6</span> Skewness and Kurtosis</h1>
+<p>In the previous lectures we have learned numerical measures of central
+tendency and dispersion, but what about measures of shape?</p>
+<p>The histogram can give you a general idea on the shape of the
+distribution of values in your data. But we need some numerical measures
+to identify the shape of the distribution. The numerical measures which
+deal with the shape of the distribution are Skewness and Kurtosis.</p>
+<div id="skewness" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> Skewness</h2>
+<p>Skewness is a measure of symmetry, or more precisely, the lack of
+symmetry. Then you may ask, what will a symmetric distribution looks
+like. Histogram of a symmetric distribution is showed below:</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:hs"></span>
+<img src="images/Hist1.png" alt="Histogram of a symmetric distribution" width="50%" />
+<p class="caption">
+Figure 6.1: Histogram of a symmetric distribution
+</p>
+</div>
+<p>A distribution, or data set, is symmetric if it looks the same to the
+left and right of the centre point. In our discussion we are including
+only unimodal cases.</p>
+<p>For a symmetric distribution skewness = 0; mean = median = mode</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:hs1"></span>
+<img src="images/image3_5.jpeg" alt="symmetric distribution" width="50%" />
+<p class="caption">
+Figure 6.2: symmetric distribution
+</p>
+</div>
+<p>Example of a data set with skewness = 0 (symmetric distribution)</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:sk0"></span>
+<img src="images/image4_5.jpeg" alt="Data set with skewness = 0" width="50%" />
+<p class="caption">
+Figure 6.3: Data set with skewness = 0
+</p>
+</div>
+<div id="left-skewed-or-negatively-skewed" class="section level3" number="6.1.1">
+<h3><span class="header-section-number">6.1.1</span> Left-skewed or negatively skewed</h3>
+<p>For negatively skewed data set or distribution, the left tail is longer;
+the mass of the distribution is concentrated on the right of the figure.
+The distribution is said to be left-skewed, left-tailed, or skewed to
+the left, considering that there is a long tail in the left side. See
+the figure below, you can also see Mean &lt; Median &lt; Mode.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:sk1"></span>
+<img src="images/image5_5.jpeg" alt="Left skewed or negatively skewed distribution" width="50%" />
+<p class="caption">
+Figure 6.4: Left skewed or negatively skewed distribution
+</p>
+</div>
+<p>Example of a data set with negative skewness</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:sk3"></span>
+<img src="images/image6_5.jpeg" alt="Negatively skewed data set" width="50%" />
+<p class="caption">
+Figure 6.5: Negatively skewed data set
+</p>
+</div>
+</div>
+<div id="right-skewed-or-positively-skewed" class="section level3" number="6.1.2">
+<h3><span class="header-section-number">6.1.2</span> Right-skewed or positively skewed</h3>
+<p>For positively skewed data set or distribution, the right tail is
+longer; the mass of the distribution is concentrated on the left of the
+figure. The distribution is said to be right-skewed, right-tailed, or
+skewed to the right, considering that there is a long tail in the right
+side. See the figure below, you can also see Mean &gt; Median &gt; Mode</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:sk4"></span>
+<img src="images/image7_5.jpeg" alt="Right skewed or positively skewed distribution" width="50%" />
+<p class="caption">
+Figure 6.6: Right skewed or positively skewed distribution
+</p>
+</div>
+<p>Example of a data set with positive skewness</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:sk5"></span>
+<img src="images/image8_5.jpeg" alt="Data set with positive skewness (right skewed)" width="50%" />
+<p class="caption">
+Figure 6.7: Data set with positive skewness (right skewed)
+</p>
+</div>
+</div>
+</div>
+<div id="measures-of-skewness" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> Measures of Skewness</h2>
+<p>The direction and extent of skewness can be measured in various ways. We
+shall discuss four measures.</p>
+<div id="karl-pearsons-coefficient-of-skewness-s_k" class="section level3" number="6.2.1">
+<h3><span class="header-section-number">6.2.1</span> Karl Pearson’s coefficient of Skewness (<strong><span class="math inline">\(S_{k}\)</span></strong>)</h3>
+<p>You have noticed that the mean, median and mode are not equal in a
+skewed distribution. The Karl Pearson's measure of skewness is based
+upon the divergence of mean from mode in a skewed distribution.</p>
+<p><span class="math display">\[S_{k} = \frac{mean - mode}{\text{standard deviation}}\]</span></p>
+<p>The sign of <span class="math inline">\(S_{k}\)</span> gives the direction of skewness and its magnitude
+gives the extent of skewness. If <span class="math inline">\(S_{k}\)</span> &gt; 0, the distribution is
+positively skewed, and if <span class="math inline">\(S_{k}\)</span> &lt; 0 it is negatively skewed.</p>
+<p>In the above formula since mode is used, there is a problem that if mode
+is not defined for a distribution we cannot find <span class="math inline">\(S_{k}\)</span>. But empirical
+relation between mean, median and mode states that, for a moderately
+symmetrical distribution<span class="math inline">\(\ mean - mode \approx 3(mean - median)\)</span>. So the
+above formula can be written as</p>
+<p><span class="math display">\[S_{k} = \frac{3(mean - median)}{\text{standard deviation}}\]</span></p>
+<p><strong>Example 6.1</strong>: Compute the Karl Pearson's coefficient of skewness from
+the following data:</p>
 <table>
 <thead>
 <tr class="header">
-<th align="left">Mass</th>
-<th align="left">30 – 39</th>
-<th align="left">40 – 49</th>
-<th align="left">50 – 59</th>
-<th align="left">60 – 69</th>
-<th align="left">70 – 79</th>
-<th align="left">80 – 89</th>
+<th align="left">Height (<em>x</em>)</th>
+<th align="left">frequency (<em>f</em>)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Frequency</td>
-<td align="left">3</td>
-<td align="left">6</td>
-<td align="left">17</td>
-<td align="left">13</td>
-<td align="left">8</td>
-<td align="left">3</td>
-</tr>
-</tbody>
-</table>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:hist1"></span>
-<img src="images/image8.png" alt="Histogram" width="600" />
-<p class="caption">
-Figure 2.1: Histogram
-</p>
-</div>
-</div>
-<div id="cumulative-frequency-curve-ogive" class="section level2" number="2.2">
-<h2><span class="header-section-number">2.2</span> Cumulative frequency curve (Ogive)</h2>
-<p>A graph obtained by plotting a cumulative frequency against the class boundary and joining the points by a smooth curve, is called a cumulative frequency curve. It is also called as Ogive. Two types of ogive are there, Less Than Type Cumulative Frequency Curve (Less than Ogive) and Greater Than Type Cumulative Frequency Curve (Greater than Ogive).</p>
-<div id="less-than-ogive" class="section level3" number="2.2.1">
-<h3><span class="header-section-number">2.2.1</span> Less than Ogive</h3>
-<p>Also known as less than type cumulative frequency curve. Here we use the upper limit of the classes and the less than cumulative frequency to plot the curve. Let us see for the example of the body masses of 50 AIDS patients.</p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Upper limit</th>
-<th align="left">39</th>
-<th align="left">49</th>
-<th align="left">59</th>
-<th align="left">69</th>
-<th align="left">79</th>
-<th align="left">89</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Less than Cumulative frequency</td>
-<td align="left">3</td>
-<td align="left">9</td>
-<td align="left">26</td>
-<td align="left">39</td>
-<td align="left">47</td>
-<td align="left">50</td>
-</tr>
-</tbody>
-</table>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:lto"></span>
-<img src="images/image9.jpeg" alt="Less than ogive" width="292" />
-<p class="caption">
-Figure 2.2: Less than ogive
-</p>
-</div>
-</div>
-<div id="greater-than-ogive" class="section level3" number="2.2.2">
-<h3><span class="header-section-number">2.2.2</span> Greater than Ogive</h3>
-<p>Also known as greater than type cumulative frequency curve Here we use the lower limit of the classes and the greater than cumulative frequency to plot the curve.</p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Lower Limit</th>
-<th align="left">30</th>
-<th align="left">40</th>
-<th align="left">50</th>
-<th align="left">60</th>
-<th align="left">70</th>
-<th align="left">80</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Greater than Cumulative frequency</td>
-<td align="left">50</td>
-<td align="left">47</td>
-<td align="left">41</td>
-<td align="left">24</td>
-<td align="left">11</td>
-<td align="left">3</td>
-</tr>
-</tbody>
-</table>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:gco"></span>
-<img src="images/image10.jpeg" alt="greater than ogive" width="292" />
-<p class="caption">
-Figure 2.3: greater than ogive
-</p>
-</div>
-<p><u>Note:</u><br />
-Intersection of both ogives gives the median</p>
-</div>
-<div id="frequency-polygon" class="section level3" number="2.2.3">
-<h3><span class="header-section-number">2.2.3</span> Frequency polygon</h3>
-<p>A grouped frequency table can also be represented by a frequency
-polygon, which is a special kind of line graph. To construct a frequency
-polygon, we plot a graph of class frequencies against the corresponding
-class mid-points and join successive points with straight lines.</p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">Class Midpoints</th>
-<th align="left">34.5</th>
-<th align="left">44.5</th>
-<th align="left">54.5</th>
-<th align="left">64.5</th>
-<th align="left">74.5</th>
-<th align="left">84.5</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Frequencies</td>
-<td align="left">3</td>
-<td align="left">6</td>
-<td align="left">17</td>
-<td align="left">13</td>
-<td align="left">8</td>
-<td align="left">3</td>
-</tr>
-</tbody>
-</table>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:freqpol"></span>
-<img src="images/image11.jpeg" alt="Frequency polygon" width="291" />
-<p class="caption">
-Figure 2.4: Frequency polygon
-</p>
-</div>
-<p>Frequency polygon is also obtained by joining the midpoints of a histogram as shown below</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:frehit"></span>
-<img src="images/image12.png" alt="Frequency polygon and histogram" width="434" />
-<p class="caption">
-Figure 2.5: Frequency polygon and histogram
-</p>
-</div>
-</div>
-</div>
-<div id="stem-and-leaf-plot" class="section level2" number="2.3">
-<h2><span class="header-section-number">2.3</span> Stem-and-leaf plot</h2>
-<p>A stem-and-leaf plot is a graphical device that is useful for representing a relatively small set of data which takes numerical values. To construct a stem-and-leaf plot, we partition each measurement into two parts. The first part is called the stem, and the second part is called the leaf. Here each numerical value is divided into two parts:
-The leading digits become the stem the trailing digits become the leaf. One advantage of the stem-and-leaf display over a frequency distribution is that we retain the value of each observation. Another is the distribution of the data within each groups is clear. A stem-and-leaf plot conveys similar information as a histogram. Turned on its side, it has the same shape as the histogram. In fact, since the
-stem-and-leaf plot shows each observation,it displays information that is lost in a histogram. A properly
-constructed stem-and-leaf plot, like a histogram, provides information regarding the range of the data set, shows the location of the highest concentration of measurements, and reveals the presence or absence of symmetry.</p>
-<p>Consider the example</p>
-<p>10,15,22,25,28,23,29,31,36,45,48</p>
-<table class=" lightable-paper lightable-hover" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
-<caption>
-<span id="tab:unnamed-chunk-1">Table 2.1: </span>Stem and leaf plot
-</caption>
-<thead>
-<tr>
-<th style="text-align:right;">
-Stem
-</th>
-<th style="text-align:left;">
-Leaf
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:right;">
-1
-</td>
-<td style="text-align:left;">
-0 5
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-2
-</td>
-<td style="text-align:left;">
-2 3 5 8 9
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-3
-</td>
-<td style="text-align:left;">
-1 6
-</td>
-</tr>
-<tr>
-<td style="text-align:right;">
-4
-</td>
-<td style="text-align:left;">
-5 8
-</td>
-</tr>
-</tbody>
-</table>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:stem"></span>
-<img src="images/image18.png" alt="Stem and Leaf plot" width="224" />
-<p class="caption">
-Figure 2.6: Stem and Leaf plot
-</p>
-</div>
-</div>
-<div id="bar-chart" class="section level2" number="2.4">
-<h2><span class="header-section-number">2.4</span> Bar chart</h2>
-<p>A bar chart or bar graph is a diagram consisting of a series of horizontal or vertical bars of equal width. The bars represent various categories of the data. There are three types of bar charts, and these are simple bar charts, component bar charts and grouped bar charts.</p>
-<div id="simple-bar-chart" class="section level3" number="2.4.1">
-<h3><span class="header-section-number">2.4.1</span> Simple bar chart</h3>
-<p>In a simple bar chart, the height (or length) of each bar is equal to the value of category in the y-axis it represents. For example data below shows the production of timber in five districts of Kerala in a certain year.</p>
-<table>
-<thead>
-<tr class="header">
-<th align="left">District</th>
-<th align="left">Production</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left">Alappuzha</td>
-<td align="left">600</td>
+<td align="left">58</td>
+<td align="left">10</td>
 </tr>
 <tr class="even">
-<td align="left">Kannur</td>
-<td align="left">900</td>
+<td align="left">59</td>
+<td align="left">18</td>
 </tr>
 <tr class="odd">
-<td align="left">Trissur</td>
+<td align="left">60</td>
+<td align="left">30</td>
+</tr>
+<tr class="even">
+<td align="left">61</td>
+<td align="left">42</td>
+</tr>
+<tr class="odd">
+<td align="left">62</td>
+<td align="left">35</td>
+</tr>
+<tr class="even">
+<td align="left">63</td>
+<td align="left">28</td>
+</tr>
+<tr class="odd">
+<td align="left">64</td>
+<td align="left">16</td>
+</tr>
+<tr class="even">
+<td align="left">65</td>
+<td align="left">8</td>
+</tr>
+</tbody>
+</table>
+<p>Solution:</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Height (<span class="math inline">\(x_{i}\)</span>)</th>
+<th align="left">frequency (<span class="math inline">\(f_{i}\)</span>)</th>
+<th align="left"><span class="math display">\[f_{i}x_{i}\]</span></th>
+<th align="left"><span class="math display">\[f_{i}x_{i}^{2}\]</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">58</td>
+<td align="left">10</td>
+<td align="left">580</td>
+<td align="left">33640</td>
+</tr>
+<tr class="even">
+<td align="left">59</td>
+<td align="left">18</td>
+<td align="left">1062</td>
+<td align="left">62658</td>
+</tr>
+<tr class="odd">
+<td align="left">60</td>
+<td align="left">30</td>
 <td align="left">1800</td>
+<td align="left">108000</td>
 </tr>
 <tr class="even">
-<td align="left">Ernakulam</td>
-<td align="left">1500</td>
+<td align="left">61</td>
+<td align="left">42</td>
+<td align="left">2562</td>
+<td align="left">156282</td>
 </tr>
 <tr class="odd">
-<td align="left">Wayanad</td>
-<td align="left">2400</td>
+<td align="left">62</td>
+<td align="left">35</td>
+<td align="left">2170</td>
+<td align="left">134540</td>
+</tr>
+<tr class="even">
+<td align="left">63</td>
+<td align="left">28</td>
+<td align="left">1764</td>
+<td align="left">111132</td>
+</tr>
+<tr class="odd">
+<td align="left">64</td>
+<td align="left">16</td>
+<td align="left">1024</td>
+<td align="left">65536</td>
+</tr>
+<tr class="even">
+<td align="left">65</td>
+<td align="left">8</td>
+<td align="left">520</td>
+<td align="left">33800</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Sum</strong></td>
+<td align="left"><strong>187</strong></td>
+<td align="left"><strong>11482</strong></td>
+<td align="left"><strong>705588</strong></td>
 </tr>
 </tbody>
 </table>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:bar"></span>
-<img src="images/image13.png" alt="Barchart" width="272" />
-<p class="caption">
-Figure 2.7: Barchart
-</p>
-</div>
-</div>
-<div id="component-bar-chart" class="section level3" number="2.4.2">
-<h3><span class="header-section-number">2.4.2</span> Component bar chart</h3>
-<p>In a component bar chart, the bar for each category is subdivided into component parts; hence its name. Component bar charts are therefore used to show the division of items into components. This is illustrated in the following example.</p>
-<p>Example shows the distribution of sales of agricultural produce from a Farm in 1995, 1996 and 1997.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:componentdata"></span>
-<img src="images/image14.jpeg" alt="Sales data of agricultural produce" width="209" />
-<p class="caption">
-Figure 2.8: Sales data of agricultural produce
-</p>
-</div>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:componentbar"></span>
-<img src="images/image15.jpeg" alt="Component bar chart" width="324" />
-<p class="caption">
-Figure 2.9: Component bar chart
-</p>
-</div>
-<p>The component bar chart shows the changes of each component over the years as well as the comparison of the total sales between different years.</p>
-</div>
-<div id="grouped-bar-chart" class="section level3" number="2.4.3">
-<h3><span class="header-section-number">2.4.3</span> Grouped bar chart</h3>
-<p>For a grouped bar chart, the components are grouped together and drawn side by side. We illustrate this with the above example.</p>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:groupbar"></span>
-<img src="images/image16.jpeg" alt="Grouped bar chart" width="344" />
-<p class="caption">
-Figure 2.10: Grouped bar chart
-</p>
-</div>
-</div>
-</div>
-<div id="histogram-and-bar-chart" class="section level2" number="2.5">
-<h2><span class="header-section-number">2.5</span> Histogram and Bar chart</h2>
+<p>Mean,
+<span class="math inline">\(\overline{x} = \frac{\sum_{i = 1}^{n}{f_{i}x_{i}}}{\sum_{i = 1}^{n}f_{i}}\)</span>
+= <span class="math inline">\(\frac{11482}{187} = 61.40\)</span></p>
+<p><span class="math inline">\({sample\ variance,\ s}^{2} = \frac{1}{n - 1}\left\{ \sum_{i = 1}^{n}{{f_{i}x}_{i}^{2} - \frac{1}{n}}\left( \sum_{i = 1}^{n}{f_{i}x}_{i} \right)^{2} \right\}\)</span>=
+<span class="math inline">\(\frac{705588 - \frac{\left( 11482 \right)^{2}}{187}}{186} = 3.123\)</span></p>
+<p><span class="math inline">\(standard\ deviation,\ s = \sqrt{3.123} = 1.179\)</span></p>
+<p>Median: See in the cumulative frequencies, the value just greater
+than<span class="math inline">\(\ \left( \frac{n + 1}{2} \right)\)</span> , then the corresponding value of
+<span class="math inline">\(x\)</span> is <span class="math inline">\(Q_{2}\)</span>, median</p>
+<p><span class="math inline">\(\left( \frac{n + 1}{2} \right) = \frac{187 + 1}{2}\ \)</span>= <span class="math inline">\(\frac{188}{2}\)</span>
+= 94</p>
 <table>
+<thead>
+<tr class="header">
+<th align="left">Height (<em>x</em>)</th>
+<th align="left">frequency (<em>f</em>)</th>
+<th align="left">cumulative frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">58</td>
+<td align="left">10</td>
+<td align="left">10</td>
+</tr>
+<tr class="even">
+<td align="left">59</td>
+<td align="left">18</td>
+<td align="left">28</td>
+</tr>
+<tr class="odd">
+<td align="left">60</td>
+<td align="left">30</td>
+<td align="left">58</td>
+</tr>
+<tr class="even">
+<td align="left">61</td>
+<td align="left">42</td>
+<td align="left">100</td>
+</tr>
+<tr class="odd">
+<td align="left">62</td>
+<td align="left">35</td>
+<td align="left">135</td>
+</tr>
+<tr class="even">
+<td align="left">63</td>
+<td align="left">28</td>
+<td align="left">163</td>
+</tr>
+<tr class="odd">
+<td align="left">64</td>
+<td align="left">16</td>
+<td align="left">179</td>
+</tr>
+<tr class="even">
+<td align="left">65</td>
+<td align="left">8</td>
+<td align="left">187</td>
+</tr>
+</tbody>
+</table>
+<p><span class="math display">\[S_{k} = \frac{3(mean - median)}{\text{standard deviation}}\]</span></p>
+<p><span class="math display">\[S_{k} = \frac{3(61.40 - 61)}{1.179} = \frac{1.2}{1.179} = 1.017\]</span></p>
+<p>Hence, the Karl Pearson's coefficient of skewness <span class="math inline">\(S_{k}\)</span>=<span class="math inline">\(1.017\)</span>, Thus
+the distribution is positively skewed.</p>
+</div>
+<div id="bowleys-measure-of-skewness-sq" class="section level3" number="6.2.2">
+<h3><span class="header-section-number">6.2.2</span> Bowley's measure of Skewness (<em>S</em><sub>Q</sub>)</h3>
+<p>Karl Pearson's coefficient of skewness is most commonly used skewness
+measure. However, in order to use it you must know the mean, mode (or
+median) and standard deviation for your data. Sometimes you might not
+have that information; instead you might have information about
+quartiles. If that’s the case, you can use Bowley’s measure of Skewness
+as an alternative to find out more about the asymmetry of your
+distribution. It’s very useful if you have extreme data values
+(outliers) or if you have an open-ended distribution.</p>
+<p><span class="math display">\[{Bowley’s\ measure\ of\ Skewness,\ S}_{Q} = \frac{\left( Q_{3} - Q_{2} \right) - \left( Q_{2} - Q_{1} \right)}{\left( Q_{3} - Q_{2} \right) + \left( Q_{2} - Q_{1} \right)}\]</span></p>
+<p>Where <span class="math inline">\(Q_{1}\)</span>= 1<sup>st</sup> quartile; <span class="math inline">\(Q_{2}\)</span> = median; <span class="math inline">\(Q_{3}\)</span>= 3<sup>rd</sup> quartile</p>
+<p>Equation can be further modified into</p>
+<p><span class="math display">\[S_{Q} = \frac{Q_{3} - 2Q_{2} + Q_{1}}{Q_{3} - Q_{1}}\]</span></p>
+<ul>
+<li><p><span class="math inline">\(S_{Q}\)</span>= 0 means that the curve is symmetrical.</p></li>
+<li><p><span class="math inline">\(S_{Q}\)</span> &gt; 0 means the curve is positively skewed.</p></li>
+<li><p><span class="math inline">\(S_{Q}\)</span>&lt; 0 means the curve is negatively skewed.</p></li>
+</ul>
+<p>For <strong>Example 6.1</strong> given above, Bowley's measure of Skewness can be
+calculated as follows</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Height (<em>x</em>)</th>
+<th align="left">frequency (<em>f</em>)</th>
+<th align="left">cumulative frequency</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">58</td>
+<td align="left">10</td>
+<td align="left">10</td>
+</tr>
+<tr class="even">
+<td align="left">59</td>
+<td align="left">18</td>
+<td align="left">28</td>
+</tr>
+<tr class="odd">
+<td align="left">60</td>
+<td align="left">30</td>
+<td align="left">58</td>
+</tr>
+<tr class="even">
+<td align="left">61</td>
+<td align="left">42</td>
+<td align="left">100</td>
+</tr>
+<tr class="odd">
+<td align="left">62</td>
+<td align="left">35</td>
+<td align="left">135</td>
+</tr>
+<tr class="even">
+<td align="left">63</td>
+<td align="left">28</td>
+<td align="left">163</td>
+</tr>
+<tr class="odd">
+<td align="left">64</td>
+<td align="left">16</td>
+<td align="left">179</td>
+</tr>
+<tr class="even">
+<td align="left">65</td>
+<td align="left">8</td>
+<td align="left">187</td>
+</tr>
+</tbody>
+</table>
+<p>Calculation of<span class="math inline">\(\text{Q}_{1}\)</span>, <span class="math inline">\(Q_{2}\)</span>, <span class="math inline">\(Q_{3}\)</span> is given in Section <a href="measures-of-central-tendency--ii.html#quartile">4.8</a></p>
+<p><span class="math display">\[{Q}_{1} = 60\]</span></p>
+<p><span class="math display">\[Q_{2} = 61\]</span></p>
+<p><span class="math display">\[Q_{3} = 63\]</span></p>
+<p><span class="math display">\[S_{Q} = \frac{63 - (2 \times 61) + 60}{63 - 60} = \ \frac{1}{3} = 0.33\]</span></p>
+<p>Since <span class="math inline">\(S_{Q}\)</span> &gt; 0 means the curve is positively skewed.</p>
+</div>
+<div id="kellys-measure-of-skewness-sp" class="section level3" number="6.2.3">
+<h3><span class="header-section-number">6.2.3</span> Kelly's Measure of Skewness (<em>S</em><sub>p</sub>)</h3>
+<p>Bowley's measure of skewness is based on the middle 50% of the
+observations; it leaves 25% of the observations on each extreme of the
+distribution. As an improvement over Bowley's measure, Kelly has
+suggested a measure based on Percentiles, including <em>P</em><sub>10</sub> and <em>P</em><sub>90</sub>
+so that only 10% of the observations on each extreme are ignored.</p>
+<p><span class="math display">\[{Kelly&#39;s\ Measure\ of\ Skewness,\ S}_{p} = \frac{\left( P_{90} - P_{50} \right) - \left( P_{50} - P_{10} \right)}{\left( P_{90} - P_{50} \right) + \left( P_{50} - P_{10} \right)}\]</span></p>
+
+<div class="rmdnote">
+Assignment 3:Try to find Kelly’s Measure of Skewness
+for the Example 6.1 given above
+</div>
+</div>
+<div id="measure-based-on-moments" class="section level3" number="6.2.4">
+<h3><span class="header-section-number">6.2.4</span> Measure based on moments</h3>
+<p>Before going into measuring skewness using moments, one should know what
+a moment is:</p>
+<div id="moments" class="section level4" number="6.2.4.1">
+<h4><span class="header-section-number">6.2.4.1</span> Moments</h4>
+<p>The <strong><em>r</em><sup>th</sup> moment about mean</strong> of a distribution, denoted by
+<strong><em>μ</em><sub>r</sub></strong> is given by</p>
+<p><span class="math display">\[\mu_{r} = \frac{\sum_{i = 1}^{N}{f_{i}\left( x_{i} - \overline{x} \right)^{r}}}{N}\]</span></p>
+<p>Where <span class="math inline">\(f_{i}\)</span> is the frequency of <em>i</em><sup>th</sup> observation or class
+mark<span class="math inline">\(\ x_{i}\)</span>, <span class="math inline">\(N = \sum_{}^{}f_{i}\)</span>, number of observations</p>
+<p>Moment about mean is also called as <strong>Central Moment</strong></p>
+<p>If <em>r</em> = 0,
+<span class="math inline">\(\mu_{0} = \frac{\sum_{i = 1}^{N}{f_{i}\left( x_{i} - \overline{x} \right)^{0}}}{N}\)</span>
+= 1</p>
+<p>If <em>r</em> = 1,
+<span class="math inline">\(\mu_{1} = \frac{\sum_{i = 1}^{N}{f_{i}\left( x_{i} - \overline{x} \right)^{1}}}{N}\)</span>
+= 0 (sum of deviation about mean is zero)</p>
+<p>If <em>r</em> = 2,
+<span class="math inline">\(\mu_{2} = \frac{\sum_{i = 1}^{N}{f_{i}\left( x_{i} - \overline{x} \right)^{2}}}{N}\)</span>
+= <span class="math inline">\(\sigma^{2}\)</span>, Population variance</p>
+<p>In short values of following moments about mean are</p>
+<table style="width:58%;">
 <colgroup>
-<col width="9%" />
-<col width="49%" />
-<col width="41%" />
+<col width="34%" />
+<col width="23%" />
 </colgroup>
 <thead>
 <tr class="header">
-<th>BASIS FOR COMPARISON</th>
-<th>HISTOGRAM</th>
-<th>BAR GRAPH</th>
+<th><p><strong>Moments about mean</strong></p>
+<strong>(central moment)</strong></th>
+<th><strong>Value</strong></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Meaning</td>
-<td>Histogram refers to a graphical representation, that displays data by way of bars to show the frequency of numerical data.</td>
-<td>Bar graph is a pictorial representation of data that uses bars to compare different categories of data.</td>
+<td><span class="math display">\[\mu_{0}\]</span></td>
+<td>1</td>
 </tr>
 <tr class="even">
-<td>Indicates</td>
-<td>Distribution of non-discrete variables</td>
-<td>Comparison of discrete variables</td>
+<td><span class="math display">\[\mu_{1}\]</span></td>
+<td>0</td>
 </tr>
 <tr class="odd">
-<td>Presents</td>
-<td>Quantitative data</td>
-<td>Categorical data</td>
-</tr>
-<tr class="even">
-<td>Spaces</td>
-<td>Bars touch each other, hence there are no spaces between bars</td>
-<td>Bars do not touch each other, hence there are spaces between bars.</td>
-</tr>
-<tr class="odd">
-<td>Elements</td>
-<td>Elements are grouped together, so that they are considered as ranges.</td>
-<td>Elements are taken as individual entities.</td>
-</tr>
-<tr class="even">
-<td>Can bars be reordered?</td>
-<td>No</td>
-<td>Yes</td>
-</tr>
-<tr class="odd">
-<td>Width of bars</td>
-<td>Need not to be same</td>
-<td>Same</td>
+<td><span class="math display">\[\mu_{2}\]</span></td>
+<td><span class="math display">\[\sigma^{2}\]</span></td>
 </tr>
 </tbody>
 </table>
-</div>
-<div id="pie-charts" class="section level2" number="2.6">
-<h2><span class="header-section-number">2.6</span> Pie Charts</h2>
-<p>A pie chart is a circular graph divided into sectors, each sector representing a different value or category. The angle of each sector of a pie chart is proportional to the value of the part of the data it represents. The bar chart is more precise than the pie chart for visual comparison of categories with similar relative frequencies.</p>
-<div id="steps-for-constructing-a-pie-chart" class="section level3" number="2.6.1">
-<h3><span class="header-section-number">2.6.1</span> Steps for constructing a pie chart</h3>
-<ol style="list-style-type: decimal">
-<li>Find the sum of the category values.<br />
-</li>
-<li>Calculate the angle of the sector for each category, using the following formula.Angle of the sector for category A = <span class="math inline">\(\frac{\text{value of category A}}{\text{sum of category values}} \times 360\)</span><br />
-</li>
-<li>Construct a circle and mark the centre.<br />
-</li>
-<li>Use a protractor to divide the circle into sectors, using the angles obtained in step 2.<br />
-</li>
-<li>Label each sector clearly.</li>
-</ol>
-<p>See the example:<br />
-A housewife spent the following sums of money on buying ingredients for a family Christmas cake.</p>
+<p>For the <strong>Example 6.1</strong> given above, calculate third central moment, <span class="math inline">\(\mu_{3}\)</span></p>
 <table>
 <thead>
 <tr class="header">
-<th align="left">Ingredients</th>
-<th align="left">Price</th>
-<th align="left">Angle</th>
+<th align="left">Height (<span class="math inline">\(x_{i}\)</span>)</th>
+<th align="left">frequency (<span class="math inline">\(f_{i}\)</span>)</th>
+<th align="left"><span class="math display">\[\left( x_{i} - \overline{x} \right)^{3}\]</span></th>
+<th align="left"><span class="math display">\[{f_{i}\left( x_{i} - \overline{x} \right)}^{3}\]</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Flour</td>
-<td align="left">24</td>
-<td align="left">(24/240)×360= 36</td>
+<td align="left">58</td>
+<td align="left">10</td>
+<td align="left">-39.304</td>
+<td align="left">-393.04</td>
 </tr>
 <tr class="even">
-<td align="left">Margarine</td>
-<td align="left">96</td>
-<td align="left">144</td>
+<td align="left">59</td>
+<td align="left">18</td>
+<td align="left">-13.824</td>
+<td align="left">-248.832</td>
 </tr>
 <tr class="odd">
-<td align="left">Sugar</td>
-<td align="left">18</td>
-<td align="left">27</td>
-</tr>
-<tr class="even">
-<td align="left">Eggs</td>
 <td align="left">60</td>
-<td align="left">90</td>
-</tr>
-<tr class="odd">
-<td align="left">Baking powder</td>
-<td align="left">12</td>
-<td align="left">18</td>
+<td align="left">30</td>
+<td align="left">-2.744</td>
+<td align="left">-82.32</td>
 </tr>
 <tr class="even">
-<td align="left">Miscellaneous</td>
-<td align="left">30</td>
-<td align="left">45</td>
+<td align="left">61</td>
+<td align="left">42</td>
+<td align="left">-0.064</td>
+<td align="left">-2.688</td>
 </tr>
 <tr class="odd">
-<td align="left"><strong>Total</strong></td>
-<td align="left"><strong>240</strong></td>
-<td align="left"><strong>360</strong></td>
+<td align="left">62</td>
+<td align="left">35</td>
+<td align="left">0.216</td>
+<td align="left">7.56</td>
+</tr>
+<tr class="even">
+<td align="left">63</td>
+<td align="left">28</td>
+<td align="left">4.096</td>
+<td align="left">114.688</td>
+</tr>
+<tr class="odd">
+<td align="left">64</td>
+<td align="left">16</td>
+<td align="left">17.576</td>
+<td align="left">281.216</td>
+</tr>
+<tr class="even">
+<td align="left">65</td>
+<td align="left">8</td>
+<td align="left">46.656</td>
+<td align="left">373.248</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Sum</strong></td>
+<td align="left"><strong>187</strong></td>
+<td align="left"><strong> </strong></td>
+<td align="left"><strong>49.832</strong></td>
 </tr>
 </tbody>
 </table>
-<div class="figure" style="text-align: center"><span style="display:block;" id="fig:oiechart"></span>
-<img src="images/image17.jpeg" alt="Pie chart" width="272" />
+<p>Mean = 61.40</p>
+<p><span class="math display">\[\mu_{3} = \frac{\sum_{i = 1}^{N}{f_{i}\left( x_{i} - \overline{x} \right)^{3}}}{N} = \ \frac{49.832}{187} = 0.266\]</span></p>
+</div>
+<div id="moment-measure-of-skewness-mathbfbeta_1textandgamma_1mathbf" class="section level4" number="6.2.4.2">
+<h4><span class="header-section-number">6.2.4.2</span> Moment Measure of Skewness <span class="math inline">\(\mathbf{(}\beta_{1}\text{and}\)</span><span class="math inline">\(\gamma_{1}\mathbf{)}\)</span></h4>
+<p>The moment measure of skewness is based on the property that, for a
+symmetrical distribution, all odd ordered central moments are equal to
+zero. We note that <span class="math inline">\(\mu_{1}\)</span> = 0, for every distribution, therefore, the
+lowest order moment that can provide an absolute measure of skewness
+is<span class="math inline">\(\text{μ}_{3}\)</span>. So measures of skewness are based
+on<span class="math inline">\(\text{μ}_{3}\)</span>.</p>
+<p><span class="math display">\[\beta_{1} = \frac{\mu_{3}^{2}}{\mu_{2}^{3}}\]</span></p>
+<p>Pronounced as ‘beta one’</p>
+<p><span class="math inline">\(\beta_{1}\)</span>= 0 means that the curve is symmetrical. The greater the
+value of <span class="math inline">\(\beta_{1}\)</span>the more skewed the distribution. One serious
+limitation of <span class="math inline">\(\beta_{1}\)</span>is that it cannot tell the direction of
+skewness, <em>i</em>.<em>e</em>., whether it is positive or negative. Since
+<span class="math inline">\(\text{μ}_{2}\)</span> is always positive and <span class="math inline">\(\mu_{3}^{2}\)</span> is positive,
+<span class="math inline">\(\beta_{1}\)</span> will be positive always. This drawback is removed by
+calculating<span class="math inline">\(\text{γ}_{1}\)</span>, called as Karl Pearson’s<span class="math inline">\(\text{ γ}_{1}\)</span>,
+pronounced as ‘gamma one.’</p>
+<p><span class="math display">\[\gamma_{1} = \sqrt{\beta_{1}} = \frac{\mu_{3}}{\mu_{2}^{3}}\]</span></p>
+<p>If <span class="math inline">\(\mu_{3}\)</span> is positive <span class="math inline">\(\gamma_{1}\)</span> is positive, If <span class="math inline">\(\mu_{3}\)</span> is
+negative <span class="math inline">\(\gamma_{1}\)</span> is negative</p>
+<ul>
+<li><p><span class="math inline">\(\gamma_{1}\)</span>= 0 means that the curve is symmetrical.</p></li>
+<li><p><span class="math inline">\(\gamma_{1}\)</span> &gt; 0 means the curve is positively skewed.</p></li>
+<li><p><span class="math inline">\(\gamma_{1}\)</span>&lt; 0 means the curve is negatively skewed.</p></li>
+</ul>
+<p>For the <strong>Example 6.1</strong> given above, skewness can be examined as below</p>
+<p><span class="math inline">\(\mu_{3}\)</span>= 0.226</p>
+<p><span class="math inline">\(\mu_{2}\)</span>= 3.123</p>
+<p><span class="math inline">\(\beta_{1} = \frac{\mu_{3}^{2}}{\mu_{2}^{3}}\)</span> =
+<span class="math inline">\(\frac{\left( 0.226 \right)^{2}}{\left( 3.123 \right)^{3}} = \ \frac{0.051}{30.46} = 0.0016\)</span></p>
+<p><span class="math inline">\(\gamma_{1} = \sqrt{\beta_{1}} = \ \sqrt{0.0016} = + 0.04\)</span></p>
+<p>Since <span class="math inline">\(\mu_{3}\)</span> is positive <span class="math inline">\(\gamma_{1}\)</span>is positive. Since
+<span class="math inline">\(\gamma_{1}\)</span>is slightly greater than 0, distribution is a slightly
+skewed to right.</p>
+</div>
+</div>
+</div>
+<div id="kurtosis" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> Kurtosis</h2>
+<p>Kurtosis is another measure of the shape of a distribution. Whereas
+skewness measures the lack of symmetry of the frequency curve of a
+distribution, kurtosis is a measure of the relative peakedness of its
+frequency curve. Various frequency curves can be divided into three
+categories depending upon the shape of their peak.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:k1"></span>
+<img src="images/image10_5.jpeg" alt="Three categories of frequency curves depending upon the shape of their peak" width="50%" />
 <p class="caption">
-Figure 2.11: Pie chart
+Figure 6.8: Three categories of frequency curves depending upon the shape of their peak
 </p>
 </div>
-<p> <br />
- <br />
- </p>
-<div id="hello" class="greeting message" style="color: #c9c6c5;">
-<center>
-<p><strong>Statistics is the grammar of science." - Karl Pearson</strong>!</p>
-</center>
+<p>Kurtosis refers to degree of flatness or peakedness of the curve. It is
+measured relative to the peakedness of normal curve. The normal curve is considered as <em>mesokurtic</em>. If a curve is
+more peaked than normal curve, it is called <em>leptokurtic</em>. If a curve is
+more flat-topped than normal curve, it is called <em>platykurtic</em>.</p>
+<p>The condition of peakedness (leptokurtic) or flatness (platykurtic) is
+called <strong>kurtosis of excess</strong>.</p>
+<p>Measure of kurtosis is given by ‘beta two’ given by Karl Pearson</p>
+<p><span class="math inline">\(\beta_{2} = \frac{\mu_{4}}{\mu_{2}^{2}}\)</span></p>
+<p>Where <span class="math inline">\(\mu_{4}\)</span> is the 4<sup>th</sup> central moment, <span class="math inline">\(\mu_{2}\)</span> is the 2<sup>nd</sup>
+central moment</p>
+<ul>
+<li><p><span class="math inline">\(\beta_{2}\)</span>= 3 means that the curve is mesokurtic.</p></li>
+<li><p><span class="math inline">\(\beta_{2}\)</span> &gt; 3 means the curve is leptokurtic.</p></li>
+<li><p><span class="math inline">\(\beta_{2}\)</span>&lt; 3 means the curve is platykurtic.</p></li>
+</ul>
+<p>Another measure of kurtosis is gamma two, <span class="math inline">\(\gamma_{2} = \beta_{2} - 3\ \)</span></p>
+<ul>
+<li><p><span class="math inline">\(\gamma_{2}\)</span>= 0 means that the curve is mesokurtic.</p></li>
+<li><p><span class="math inline">\(\gamma_{2}\)</span> &gt; 0 means the curve is leptokurtic.</p></li>
+<li><p><span class="math inline">\(\gamma_{2}\)</span>&lt; 0 means the curve is platykurtic.</p></li>
+</ul>
+<p>For the <strong>Example 6.1</strong> given above, kurtosis can be examined as follows</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Height (<span class="math inline">\(x_{i}\)</span>)</th>
+<th align="left">frequency (<span class="math inline">\(f_{i}\)</span>)</th>
+<th align="left"><span class="math display">\[\left( x_{i} - \overline{x} \right)^{4}\]</span></th>
+<th align="left"><span class="math display">\[{f_{i}\left( x_{i} - \overline{x} \right)}^{4}\]</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">58</td>
+<td align="left">10</td>
+<td align="left">133.6336</td>
+<td align="left">1336.336</td>
+</tr>
+<tr class="even">
+<td align="left">59</td>
+<td align="left">18</td>
+<td align="left">33.1776</td>
+<td align="left">597.1968</td>
+</tr>
+<tr class="odd">
+<td align="left">60</td>
+<td align="left">30</td>
+<td align="left">3.8416</td>
+<td align="left">115.248</td>
+</tr>
+<tr class="even">
+<td align="left">61</td>
+<td align="left">42</td>
+<td align="left">0.0256</td>
+<td align="left">1.0752</td>
+</tr>
+<tr class="odd">
+<td align="left">62</td>
+<td align="left">35</td>
+<td align="left">0.1296</td>
+<td align="left">4.536</td>
+</tr>
+<tr class="even">
+<td align="left">63</td>
+<td align="left">28</td>
+<td align="left">6.5536</td>
+<td align="left">183.5008</td>
+</tr>
+<tr class="odd">
+<td align="left">64</td>
+<td align="left">16</td>
+<td align="left">45.6976</td>
+<td align="left">731.1616</td>
+</tr>
+<tr class="even">
+<td align="left">65</td>
+<td align="left">8</td>
+<td align="left">167.9616</td>
+<td align="left">1343.693</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Sum</strong></td>
+<td align="left"><strong>187</strong></td>
+<td align="left"></td>
+<td align="left"><strong>4312.747</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Mean,<span class="math inline">\(\ \overline{x}\ \)</span>= 61.40</p>
+<p><span class="math inline">\(\mu_{2}\)</span> = 3.123 (calculation shown in previous example)</p>
+<p><span class="math inline">\(\mu_{4} = \frac{\sum_{i = 1}^{N}{f_{i}\left( x_{i} - \overline{x} \right)^{4}}}{N} = \frac{4312.747}{187} = 23.062\)</span></p>
+<p><span class="math inline">\(\beta_{2} = \frac{\mu_{4}}{\mu_{2}^{2}} = \frac{23.062}{\left( 3.123 \right)^{2}} = 2.364\)</span></p>
+<p><span class="math inline">\(\beta_{2}\)</span> is 2.364, which is close to 3, distribution can be considered
+slightly platykurtic close to symmetric.</p>
+<p>You can verify the frequency curve of <strong>Example 6.1</strong> below, it can be seen
+that it is slightly right tailed (positively skewed)</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:k2"></span>
+<img src="images/image11_5.jpeg" alt="frequency curve of Example 6.1" width="50%" />
+<p class="caption">
+Figure 6.9: frequency curve of Example 6.1
+</p>
 </div>
 
-</div>
 </div>
 </div>
             </section>
@@ -718,8 +927,8 @@ Figure 2.11: Pie chart
           </div>
         </div>
       </div>
-<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="measures-of-central-tendency---i.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="measures-of-dispersion.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="references.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
