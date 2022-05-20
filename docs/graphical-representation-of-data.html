@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>LECTURE NOTES OF STAT 3202</title>
+  <title>Chapter 2 Graphical representation of data | LECTURE NOTES OF STAT 3202</title>
   <meta name="description" content="A BOOK FOR UNDERGRADUATE PROGRAMME IN AGRICULTURE" />
   <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="LECTURE NOTES OF STAT 3202" />
+  <meta property="og:title" content="Chapter 2 Graphical representation of data | LECTURE NOTES OF STAT 3202" />
   <meta property="og:type" content="book" />
   
   <meta property="og:image" content="/images/cover.PNG" />
@@ -16,7 +16,7 @@
   <meta name="github-repo" content="https://github.com/KAUMELON/stat3202" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="LECTURE NOTES OF STAT 3202" />
+  <meta name="twitter:title" content="Chapter 2 Graphical representation of data | LECTURE NOTES OF STAT 3202" />
   
   <meta name="twitter:description" content="A BOOK FOR UNDERGRADUATE PROGRAMME IN AGRICULTURE" />
   <meta name="twitter:image" content="/images/cover.PNG" />
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-
-<link rel="next" href="preface.html"/>
+<link rel="prev" href="introduction.html"/>
+<link rel="next" href="measures-of-central-tendency---i.html"/>
 <script src="libs/header-attrs-2.11/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
@@ -305,25 +305,448 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="header">
-<h1 class="title">LECTURE NOTES OF STAT 3202</h1>
-<p class="author"><em>Dr. Pratheesh P. Gopinath</em></p>
-<p class="date"><em>2022-01-30</em></p>
-</div>
-<div id="welcome" class="section level1 unnumbered">
-<h1>Welcome</h1>
-<p style="text-align: center;">
-<a href="https://coavellayani.kau.in/people/dr-pratheesh-p-gopinath"><img src="images/cover.png" alt="STAT 3202" /></a>
+<div id="graphical-representation-of-data" class="section level1" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Graphical representation of data</h1>
+<p>We found that information given in a frequency distribution is easier to interpret than raw data. Information given in a frequency distribution in a tabular form is easier to grasp if presented graphically. Many types of diagrams are used in statistics, depending on the nature of the data and the purpose for which the diagram is intended.</p>
+<div id="histogram" class="section level2" number="2.1">
+<h2><span class="header-section-number">2.1</span> Histogram</h2>
+<p>A histogram consists of rectangles with:</p>
+<ul>
+<li><p>Bases on a horizontal axis, centres at the class marks, and lengths equal to the class widths.</p></li>
+<li><p>Areas proportional to class frequencies.</p></li>
+</ul>
+<p><u>Note:</u><br />
+If the class intervals are of equal size, then the heights of the rectangles are proportional to the class frequencies and it is then customary to take the heights of the rectangles numerically equal to the class frequencies. If the class intervals are of different widths, then
+the heights of the rectangles are proportional to <span class="math inline">\(\frac{\text{Class Frequency}}{\text{Class Width}}\)</span>. This ratio is called <strong>frequency density</strong>.</p>
+<p>Table below shows the frequency distribution of the body masses of 50 AIDS patients. Draw a Histogram.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Mass</th>
+<th align="left">30 – 39</th>
+<th align="left">40 – 49</th>
+<th align="left">50 – 59</th>
+<th align="left">60 – 69</th>
+<th align="left">70 – 79</th>
+<th align="left">80 – 89</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Frequency</td>
+<td align="left">3</td>
+<td align="left">6</td>
+<td align="left">17</td>
+<td align="left">13</td>
+<td align="left">8</td>
+<td align="left">3</td>
+</tr>
+</tbody>
+</table>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:hist1"></span>
+<img src="images/image8.png" alt="Histogram" width="600" />
+<p class="caption">
+Figure 2.1: Histogram
 </p>
-<p>Welcome to the book <strong>LECTURE NOTES ON STATISTICAL METHODS AND APPLICATIONS</strong>.</p>
+</div>
+</div>
+<div id="cumulative-frequency-curve-ogive" class="section level2" number="2.2">
+<h2><span class="header-section-number">2.2</span> Cumulative frequency curve (Ogive)</h2>
+<p>A graph obtained by plotting a cumulative frequency against the class boundary and joining the points by a smooth curve, is called a cumulative frequency curve. It is also called as Ogive. Two types of ogive are there, Less Than Type Cumulative Frequency Curve (Less than Ogive) and Greater Than Type Cumulative Frequency Curve (Greater than Ogive).</p>
+<div id="less-than-ogive" class="section level3" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Less than Ogive</h3>
+<p>Also known as less than type cumulative frequency curve. Here we use the upper limit of the classes and the less than cumulative frequency to plot the curve. Let us see for the example of the body masses of 50 AIDS patients.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Upper limit</th>
+<th align="left">39</th>
+<th align="left">49</th>
+<th align="left">59</th>
+<th align="left">69</th>
+<th align="left">79</th>
+<th align="left">89</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Less than Cumulative frequency</td>
+<td align="left">3</td>
+<td align="left">9</td>
+<td align="left">26</td>
+<td align="left">39</td>
+<td align="left">47</td>
+<td align="left">50</td>
+</tr>
+</tbody>
+</table>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:lto"></span>
+<img src="images/image9.jpeg" alt="Less than ogive" width="292" />
+<p class="caption">
+Figure 2.2: Less than ogive
+</p>
+</div>
+</div>
+<div id="greater-than-ogive" class="section level3" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> Greater than Ogive</h3>
+<p>Also known as greater than type cumulative frequency curve Here we use the lower limit of the classes and the greater than cumulative frequency to plot the curve.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Lower Limit</th>
+<th align="left">30</th>
+<th align="left">40</th>
+<th align="left">50</th>
+<th align="left">60</th>
+<th align="left">70</th>
+<th align="left">80</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Greater than Cumulative frequency</td>
+<td align="left">50</td>
+<td align="left">47</td>
+<td align="left">41</td>
+<td align="left">24</td>
+<td align="left">11</td>
+<td align="left">3</td>
+</tr>
+</tbody>
+</table>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:gco"></span>
+<img src="images/image10.jpeg" alt="greater than ogive" width="292" />
+<p class="caption">
+Figure 2.3: greater than ogive
+</p>
+</div>
+<p><u>Note:</u><br />
+Intersection of both ogives gives the median</p>
+</div>
+<div id="frequency-polygon" class="section level3" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> Frequency polygon</h3>
+<p>A grouped frequency table can also be represented by a frequency
+polygon, which is a special kind of line graph. To construct a frequency
+polygon, we plot a graph of class frequencies against the corresponding
+class mid-points and join successive points with straight lines.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Class Midpoints</th>
+<th align="left">34.5</th>
+<th align="left">44.5</th>
+<th align="left">54.5</th>
+<th align="left">64.5</th>
+<th align="left">74.5</th>
+<th align="left">84.5</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Frequencies</td>
+<td align="left">3</td>
+<td align="left">6</td>
+<td align="left">17</td>
+<td align="left">13</td>
+<td align="left">8</td>
+<td align="left">3</td>
+</tr>
+</tbody>
+</table>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:freqpol"></span>
+<img src="images/image11.jpeg" alt="Frequency polygon" width="291" />
+<p class="caption">
+Figure 2.4: Frequency polygon
+</p>
+</div>
+<p>Frequency polygon is also obtained by joining the midpoints of a histogram as shown below</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:frehit"></span>
+<img src="images/image12.png" alt="Frequency polygon and histogram" width="434" />
+<p class="caption">
+Figure 2.5: Frequency polygon and histogram
+</p>
+</div>
+</div>
+</div>
+<div id="stem-and-leaf-plot" class="section level2" number="2.3">
+<h2><span class="header-section-number">2.3</span> Stem-and-leaf plot</h2>
+<p>A stem-and-leaf plot is a graphical device that is useful for representing a relatively small set of data which takes numerical values. To construct a stem-and-leaf plot, we partition each measurement into two parts. The first part is called the stem, and the second part is called the leaf. Here each numerical value is divided into two parts:
+The leading digits become the stem the trailing digits become the leaf. One advantage of the stem-and-leaf display over a frequency distribution is that we retain the value of each observation. Another is the distribution of the data within each groups is clear. A stem-and-leaf plot conveys similar information as a histogram. Turned on its side, it has the same shape as the histogram. In fact, since the
+stem-and-leaf plot shows each observation,it displays information that is lost in a histogram. A properly
+constructed stem-and-leaf plot, like a histogram, provides information regarding the range of the data set, shows the location of the highest concentration of measurements, and reveals the presence or absence of symmetry.</p>
+<p>Consider the example</p>
+<p>10,15,22,25,28,23,29,31,36,45,48</p>
+<table class=" lightable-paper lightable-hover" style="font-family: &quot;Arial Narrow&quot;, arial, helvetica, sans-serif; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-1">Table 2.1: </span>Stem and leaf plot
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+Stem
+</th>
+<th style="text-align:left;">
+Leaf
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+1
+</td>
+<td style="text-align:left;">
+0 5
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+2
+</td>
+<td style="text-align:left;">
+2 3 5 8 9
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+3
+</td>
+<td style="text-align:left;">
+1 6
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+4
+</td>
+<td style="text-align:left;">
+5 8
+</td>
+</tr>
+</tbody>
+</table>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:stem"></span>
+<img src="images/image18.png" alt="Stem and Leaf plot" width="224" />
+<p class="caption">
+Figure 2.6: Stem and Leaf plot
+</p>
+</div>
+</div>
+<div id="bar-chart" class="section level2" number="2.4">
+<h2><span class="header-section-number">2.4</span> Bar chart</h2>
+<p>A bar chart or bar graph is a diagram consisting of a series of horizontal or vertical bars of equal width. The bars represent various categories of the data. There are three types of bar charts, and these are simple bar charts, component bar charts and grouped bar charts.</p>
+<div id="simple-bar-chart" class="section level3" number="2.4.1">
+<h3><span class="header-section-number">2.4.1</span> Simple bar chart</h3>
+<p>In a simple bar chart, the height (or length) of each bar is equal to the value of category in the y-axis it represents. For example data below shows the production of timber in five districts of Kerala in a certain year.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">District</th>
+<th align="left">Production</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Alappuzha</td>
+<td align="left">600</td>
+</tr>
+<tr class="even">
+<td align="left">Kannur</td>
+<td align="left">900</td>
+</tr>
+<tr class="odd">
+<td align="left">Trissur</td>
+<td align="left">1800</td>
+</tr>
+<tr class="even">
+<td align="left">Ernakulam</td>
+<td align="left">1500</td>
+</tr>
+<tr class="odd">
+<td align="left">Wayanad</td>
+<td align="left">2400</td>
+</tr>
+</tbody>
+</table>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:bar"></span>
+<img src="images/image13.png" alt="Barchart" width="272" />
+<p class="caption">
+Figure 2.7: Barchart
+</p>
+</div>
+</div>
+<div id="component-bar-chart" class="section level3" number="2.4.2">
+<h3><span class="header-section-number">2.4.2</span> Component bar chart</h3>
+<p>In a component bar chart, the bar for each category is subdivided into component parts; hence its name. Component bar charts are therefore used to show the division of items into components. This is illustrated in the following example.</p>
+<p>Example shows the distribution of sales of agricultural produce from a Farm in 1995, 1996 and 1997.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:componentdata"></span>
+<img src="images/image14.jpeg" alt="Sales data of agricultural produce" width="209" />
+<p class="caption">
+Figure 2.8: Sales data of agricultural produce
+</p>
+</div>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:componentbar"></span>
+<img src="images/image15.jpeg" alt="Component bar chart" width="324" />
+<p class="caption">
+Figure 2.9: Component bar chart
+</p>
+</div>
+<p>The component bar chart shows the changes of each component over the years as well as the comparison of the total sales between different years.</p>
+</div>
+<div id="grouped-bar-chart" class="section level3" number="2.4.3">
+<h3><span class="header-section-number">2.4.3</span> Grouped bar chart</h3>
+<p>For a grouped bar chart, the components are grouped together and drawn side by side. We illustrate this with the above example.</p>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:groupbar"></span>
+<img src="images/image16.jpeg" alt="Grouped bar chart" width="344" />
+<p class="caption">
+Figure 2.10: Grouped bar chart
+</p>
+</div>
+</div>
+</div>
+<div id="histogram-and-bar-chart" class="section level2" number="2.5">
+<h2><span class="header-section-number">2.5</span> Histogram and Bar chart</h2>
+<table>
+<colgroup>
+<col width="9%" />
+<col width="49%" />
+<col width="41%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>BASIS FOR COMPARISON</th>
+<th>HISTOGRAM</th>
+<th>BAR GRAPH</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Meaning</td>
+<td>Histogram refers to a graphical representation, that displays data by way of bars to show the frequency of numerical data.</td>
+<td>Bar graph is a pictorial representation of data that uses bars to compare different categories of data.</td>
+</tr>
+<tr class="even">
+<td>Indicates</td>
+<td>Distribution of non-discrete variables</td>
+<td>Comparison of discrete variables</td>
+</tr>
+<tr class="odd">
+<td>Presents</td>
+<td>Quantitative data</td>
+<td>Categorical data</td>
+</tr>
+<tr class="even">
+<td>Spaces</td>
+<td>Bars touch each other, hence there are no spaces between bars</td>
+<td>Bars do not touch each other, hence there are spaces between bars.</td>
+</tr>
+<tr class="odd">
+<td>Elements</td>
+<td>Elements are grouped together, so that they are considered as ranges.</td>
+<td>Elements are taken as individual entities.</td>
+</tr>
+<tr class="even">
+<td>Can bars be reordered?</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr class="odd">
+<td>Width of bars</td>
+<td>Need not to be same</td>
+<td>Same</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="pie-charts" class="section level2" number="2.6">
+<h2><span class="header-section-number">2.6</span> Pie Charts</h2>
+<p>A pie chart is a circular graph divided into sectors, each sector representing a different value or category. The angle of each sector of a pie chart is proportional to the value of the part of the data it represents. The bar chart is more precise than the pie chart for visual comparison of categories with similar relative frequencies.</p>
+<div id="steps-for-constructing-a-pie-chart" class="section level3" number="2.6.1">
+<h3><span class="header-section-number">2.6.1</span> Steps for constructing a pie chart</h3>
+<ol style="list-style-type: decimal">
+<li>Find the sum of the category values.<br />
+</li>
+<li>Calculate the angle of the sector for each category, using the following formula.Angle of the sector for category A = <span class="math inline">\(\frac{\text{value of category A}}{\text{sum of category values}} \times 360\)</span><br />
+</li>
+<li>Construct a circle and mark the centre.<br />
+</li>
+<li>Use a protractor to divide the circle into sectors, using the angles obtained in step 2.<br />
+</li>
+<li>Label each sector clearly.</li>
+</ol>
+<p>See the example:<br />
+A housewife spent the following sums of money on buying ingredients for a family Christmas cake.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Ingredients</th>
+<th align="left">Price</th>
+<th align="left">Angle</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Flour</td>
+<td align="left">24</td>
+<td align="left">(24/240)×360= 36</td>
+</tr>
+<tr class="even">
+<td align="left">Margarine</td>
+<td align="left">96</td>
+<td align="left">144</td>
+</tr>
+<tr class="odd">
+<td align="left">Sugar</td>
+<td align="left">18</td>
+<td align="left">27</td>
+</tr>
+<tr class="even">
+<td align="left">Eggs</td>
+<td align="left">60</td>
+<td align="left">90</td>
+</tr>
+<tr class="odd">
+<td align="left">Baking powder</td>
+<td align="left">12</td>
+<td align="left">18</td>
+</tr>
+<tr class="even">
+<td align="left">Miscellaneous</td>
+<td align="left">30</td>
+<td align="left">45</td>
+</tr>
+<tr class="odd">
+<td align="left"><strong>Total</strong></td>
+<td align="left"><strong>240</strong></td>
+<td align="left"><strong>360</strong></td>
+</tr>
+</tbody>
+</table>
+<div class="figure" style="text-align: center"><span style="display:block;" id="fig:oiechart"></span>
+<img src="images/image17.jpeg" alt="Pie chart" width="272" />
+<p class="caption">
+Figure 2.11: Pie chart
+</p>
+</div>
+<p> <br />
+ <br />
+ </p>
+<div id="hello" class="greeting message" style="color: #c9c6c5;">
+<center>
+<p><strong>Statistics is the grammar of science." - Karl Pearson</strong>!</p>
+</center>
+</div>
+
+</div>
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-
-<a href="preface.html" class="navigation navigation-next navigation-unique" aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="introduction.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="measures-of-central-tendency---i.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

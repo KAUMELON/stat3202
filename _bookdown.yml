@@ -1,5 +1,5 @@
 book_filename: "lecture_note"
-output_dir: "docs/670420697fc69d7d3bb16f6ad3d0ad5987aa11e447ab6dc1ce1a0398114563992def38550d58ac15921d8ac5ce9c611b3b9b9e3233ec6e6dad64142ffc56d994"
+output_dir: "docs"
 delete_merged_file: true
 #edit: https://github.com/pratheesh3780/lecture_notes/edit/master/%s
 #view: https://github.com/pratheesh3780/lecture_notes/blob/master/%s
