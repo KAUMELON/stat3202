@@ -189,6 +189,8 @@ tied-rank-case
 kendalls-rank-correlation-coefficient-τ
 regression-analysis
 definition
+simple-regression
+two-types-of-variables
 detailed-explanation
 error-and-residual
 straight-lines

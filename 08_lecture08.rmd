@@ -12,7 +12,8 @@ Regression analysis is a mathematical measure of the
 average relationship between two or more variables in terms of the
 original units of the data
 
-##Simple regression  
+## Simple regression  
+
 when only two variables are involved; Regression
 can be defined as the functional relationship between two variables,
 where one may represent cause and the other may represent effect. The
@@ -24,7 +25,8 @@ yield and fertilizer dose, here yield can be considered as dependent
 variable (Y) and fertilizer dose can be considered as independent
 variable (X).
 
-##Two types of variables   
+## Two types of variables  
+
 In regression analysis the
 variable whose values need to be predicted (Y) is called **dependent variable** and the variable which is used for prediction (X) is called
 **independent variable.**
@@ -158,16 +160,16 @@ a line of best fit by minimizing the sum of squares of the error term
 
 *y~i~*=*a*+*bx*~i~+*e~i~*;
 
-*e~i~ =* *y*~i~ -- (*a*+*bx*~i~)
+*e~i~ =* *y*~i~ -- (*a*+*bx*~i~)  
 
-> *e~i~*^2^ = {*y*~i~ -- (*a*+*bx*~i~)}^2^
->
-> **Σ** *e~i~*^2^ = **Σ** {*y*~i~ -- (*a*+*bx*~i~)}^2^
+*e~i~*^2^ = {*y*~i~ -- (*a*+*bx*~i~)}^2^  
+
+**Σ** *e~i~*^2^ = **Σ** {*y*~i~ -- (*a*+*bx*~i~)}^2^
 
 **Σ** *e~i~*^2^ is called as error sum of squares. As we are minimizing
 error sum of squares, hence the name principle of least squares.
 
-We want to minimize, **E = Σ** *ei*^2^ = **Σ** {*y*~i~ --
+We want to minimize, **E = Σ** *e*~i~^2^ = **Σ** {*y*~i~ --
 (*a*+*bx*~i~)}^2^
 
 *i*.*e*. we need to find ***a*** and ***b*** such that **E** is minimum
@@ -189,7 +191,7 @@ On solving the above equations we will get
 Regression coefficient, ***b*** =
 $\frac{\sum_{i = 1}^{n}{y_{i}x_{i} - \frac{\sum_{i = 1}^{n}{y_{i}\sum_{i = 1}^{n}x_{i}}}{n}}}{\sum_{i = 1}^{n}x_{i}^{2} - \frac{\left( \sum_{i = 1}^{n}x_{i} \right)^{2}}{n}}$
 
-=$\frac{COV(x,y)}{var(x)}$
+=$\frac{cov(x,y)}{var(x)}$
 
 $$\mathbf{b =}\frac{\mathbf{cov(x,y)}}{\mathbf{var(x)}}
 $$
@@ -344,8 +346,8 @@ Now consider the example 8.1 and answer the questions
 
 Model: *y* = ***a***+***b**x*
 
-+---------+-------------+----------+-----------------------------------------+
-| Sl. No. | Temperature | Sales    | $$\left( x_{i} - \overline{x} \right)$$ |
++---------+-------------+----------+------------+
+| Sl. No. | Temperature | Sales    | $$x_{i} - \overline{x}$$ |
 |         |             |          |                                         |
 |         | (*x*)       | (*y*)    |                                         |
 +=========+=============+==========+=========================================+
