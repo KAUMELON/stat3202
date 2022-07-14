@@ -10,7 +10,6 @@ fig:lto
 fig:gco
 fig:freqpol
 fig:frehit
-tab:unnamed-chunk-1
 fig:stem
 fig:bar
 fig:componentdata

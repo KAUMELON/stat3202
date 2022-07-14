@@ -20,7 +20,7 @@ Table below shows the frequency distribution of the body masses of 50 AIDS patie
   ----------- ---------- ---------- ---------- ---------- ---------- ----------
   Frequency   3          6          17         13         8          3
 
-```{r hist1, echo=FALSE,fig.cap='Histogram',fig.height=6, fig.align='center'}
+```{r hist1, echo=FALSE,fig.cap='Histogram',out.width="70%", fig.align='center'}
 knitr::include_graphics(rep("images/image8.png"))
 ```  
 
@@ -36,7 +36,7 @@ Also known as  less than type cumulative frequency curve. Here we use the upper 
   -------------------------------- ---- ---- ---- ---- ---- ----
   Less than Cumulative frequency   3    9    26   39   47   50
 
-```{r lto, echo=FALSE,fig.cap='Less than ogive',fig.height=6, fig.align='center'}
+```{r lto, echo=FALSE,fig.cap='Less than ogive',out.width="70%", fig.align='center'}
 knitr::include_graphics(rep("images/image9.jpeg"))
 ``` 
 
@@ -47,7 +47,7 @@ Also known as greater than type cumulative frequency curve Here we use the lower
   ----------------------------------- ---- ---- ---- ---- ---- ----
   Greater than Cumulative frequency   50   47   41   24   11   3
 
-```{r gco, echo=FALSE,fig.cap='greater than ogive',fig.height=6, fig.align='center'}
+```{r gco, echo=FALSE,fig.cap='greater than ogive',out.width="70%", fig.align='center'}
 knitr::include_graphics(rep("images/image10.jpeg"))
 ```   
 [Note:]{.ul}  
@@ -58,21 +58,27 @@ Intersection of both ogives gives the median
 A grouped frequency table can also be represented by a frequency
 polygon, which is a special kind of line graph. To construct a frequency
 polygon, we plot a graph of class frequencies against the corresponding
-class mid-points and join successive points with straight lines.
+class mid-points and join successive points with straight lines. Frequency polygon is also obtained by joining the midpoints of a histogram as shown in Fig 2.5.  
 
-  Class Midpoints   34.5   44.5   54.5   64.5   74.5   84.5
-  ----------------- ------ ------ ------ ------ ------ ------
-  Frequencies       3      6      17     13     8      3
+```{r ex2234, echo=FALSE,warning=FALSE,results='asis'}
+library(knitr)
+library(kableExtra)
+dt<-read.csv("csv/c2e1.csv")
+dt %>%
+  kbl(col.names = NULL) %>%
+   kable_classic(full_width = F, html_font = "Cambria")%>%
+kable_styling(latex_options = "HOLD_position")
+```    
 
-```{r freqpol, echo=FALSE,fig.cap='Frequency polygon',fig.height=6, fig.align='center'}
+
+```{r freqpol, echo=FALSE,fig.cap='Frequency polygon',out.width="70%", fig.align='center'}
 knitr::include_graphics(rep("images/image11.jpeg"))
-```
+```  
 
-Frequency polygon is also obtained by joining the midpoints of a histogram as shown below
-
-```{r frehit, echo=FALSE,fig.cap='Frequency polygon and histogram',fig.height=6, fig.align='center'}
+```{r frehit, echo=FALSE,fig.cap='Frequency polygon and histogram',out.width="70%", fig.align='center'}
 knitr::include_graphics(rep("images/image12.png"))
 ```
+
 
 ## Stem-and-leaf plot
 
@@ -85,16 +91,21 @@ Consider the example
 
 10,15,22,25,28,23,29,31,36,45,48  
 
-```{r echo=FALSE,warning=FALSE,results='asis'}
+stem and leaf plot can be drawn as shown below.  
+
+
+```{r ex343, echo=FALSE,warning=FALSE,results='asis'}
 library(knitr)
 library(kableExtra)
 dt<-read.csv("csv/stem.csv")
 dt %>%
-  kbl(caption = "Stem and leaf plot") %>%
-  kable_paper("hover", full_width = F)
+  kbl(booktabs = TRUE, align = "c") %>%
+   kable_classic(full_width = F, html_font = "Cambria") %>%
+kable_styling(latex_options = "HOLD_position")
+
 
 ```  
-```{r stem, echo=FALSE,fig.cap='Stem and Leaf plot',fig.height=6, fig.align='center'}
+```{r stem, echo=FALSE,fig.cap='Stem and Leaf plot',out.width="30%", fig.align='center'}
 knitr::include_graphics(rep("images/image18.png"))
 ```
 
@@ -112,7 +123,7 @@ In a simple bar chart, the height (or length) of each bar is equal to the value 
   Ernakulam   1500
   Wayanad     2400
 
-```{r bar, echo=FALSE,fig.cap='Barchart',fig.height=6, fig.align='center'}
+```{r bar, echo=FALSE,fig.cap='Barchart',out.width="50%", fig.align='center'}
 knitr::include_graphics(rep("images/image13.png"))
 ```
 
@@ -122,11 +133,11 @@ In a component bar chart, the bar for each category is subdivided into component
 
 Example shows the distribution of sales of agricultural produce from a Farm in 1995, 1996 and 1997.  
 
-```{r componentdata, echo=FALSE,fig.cap='Sales data of agricultural produce',fig.height=6, fig.align='center'}
+```{r componentdata, echo=FALSE,fig.cap='Sales data of agricultural produce',out.width="50%", fig.align='center'}
 knitr::include_graphics(rep("images/image14.jpeg"))
 ```
 
-```{r componentbar, echo=FALSE,fig.cap='Component bar chart',fig.height=6, fig.align='center'}
+```{r componentbar, echo=FALSE,fig.cap='Component bar chart',out.width="50%", fig.align='center'}
 knitr::include_graphics(rep("images/image15.jpeg"))
 ```  
 The component bar chart shows the changes of each component over the years as well as the comparison of the total sales between different years.
@@ -135,11 +146,12 @@ The component bar chart shows the changes of each component over the years as we
 
 For a grouped bar chart, the components are grouped together and drawn side by side. We illustrate this with the above example.  
 
-```{r groupbar, echo=FALSE,fig.cap='Grouped bar chart',fig.height=6, fig.align='center'}
+```{r groupbar, echo=FALSE,fig.cap='Grouped bar chart',out.width="70%", fig.align='center'}
 knitr::include_graphics(rep("images/image16.jpeg"))
-```
+```  
+
 ## Histogram and Bar chart  
-| BASIS FOR COMPARISON   | HISTOGRAM                                                                                                                  | BAR GRAPH                                                                                               |
+| Items   | HISTOGRAM                                                                                                                  | BAR GRAPH                                                                                               |
 |------------------------|----------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
 | Meaning                | Histogram refers to a graphical representation, that displays data by way of bars to show the frequency of numerical data. | Bar graph is a pictorial representation of data that uses bars to compare different categories of data. |
 | Indicates              | Distribution of non-discrete variables                                                                                     | Comparison of discrete variables                                                                        |
@@ -162,7 +174,7 @@ A pie chart is a circular graph divided into sectors, each sector representing a
 5. Label each sector clearly.
 
 See the example:  
-A housewife spent the following sums of money on buying ingredients for a family Christmas cake.
+A lady spent the following sums of money on buying ingredients for a family Christmas cake.
 
   Ingredients     Price     Angle
   --------------- --------- ------------------
@@ -174,7 +186,7 @@ A housewife spent the following sums of money on buying ingredients for a family
   Miscellaneous   30        45
   **Total**       **240**   **360**
 
-```{r oiechart, echo=FALSE,fig.cap='Pie chart',fig.height=6, fig.align='center'}
+```{r oiechart, echo=FALSE,fig.cap='Pie chart',out.width="50%", fig.align='center'}
 knitr::include_graphics(rep("images/image17.jpeg"))
 ```  
 
