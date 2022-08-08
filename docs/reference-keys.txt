@@ -48,6 +48,7 @@ fig:r4
 fig:r5
 fig:r6
 fig:r7
+fig:tossing
 introduction
 origin-of-the-word-statistics
 statistics-and-mathematics
@@ -200,4 +201,14 @@ assumptions-of-regression
 properties-of-regression-coefficients
 uses-of-regression
 example-problem
+probability-distributions
+random-experiment
+random-variable
+probability-distributions-1
+probability-mass-function
+probability-density-function
+expected-value-of-a-random-variable
+example
+discrete-probability-distributions
+bernoulli-distribution
 references

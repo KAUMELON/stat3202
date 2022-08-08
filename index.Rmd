@@ -14,7 +14,7 @@ cover-image: images/cover.PNG
  
 
 # Welcome {-} 
-<p style="text-align: center;"><a href="https://coavellayani.kau.in/people/dr-pratheesh-p-gopinath"><img src="images/cover.png" alt="STAT 3202" /></a></p>  
+<p style="text-align: center;"><a href="https://coavellayani.kau.in/people/dr-pratheesh-p-gopinath"><img src="images/cover.png" class="cover" width="250" height="328"/></a></p>  
 Welcome to the book **LECTURE NOTES ON STATISTICAL METHODS AND APPLICATIONS**.
 
 # Preface {-}  
