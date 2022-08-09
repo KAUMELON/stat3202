@@ -489,7 +489,7 @@ Hence $p$(both red balls ) = ^5^C~2~ / ^9^C~2~ = 5/18
   Six cards are drawn at random from a pack of 52 cards. What is the probability that 3 will be red and 3 black?
 ```
 
-## Answers of exercise 1 {-}{#answer}
+## Answers of exercise 1 {#answer}
 
 1.  {1, 2, 3, 4, 5, 6}
 
