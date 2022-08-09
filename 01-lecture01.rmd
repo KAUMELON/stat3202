@@ -5,13 +5,13 @@ output:
 ---
 # Introduction  
 
-<p style="text-align: justify;">In this lecture we will have the introduction, which includes, definition of statistics, collection and classification of data, formation of frequency distribution.[@goon] [@gupta]</p>  
+In this lecture we will have the introduction, which includes, definition of statistics, collection and classification of data, formation of frequency distribution.[@goon] [@gupta]  
 
 ## Origin of the word “Statistics”  
 
-<p style="text-align: justify;">The term statistics was derived from the Neo-Latin word `statisticum collegium` meaning “council of state" and the Italian word `statista` meaning "statesman" or "politician".</p>  
-
-<p style="text-align: justify;">A German word `Statistik`, got the meaning "collection and classification of data" generally in the early 19th century. This word was first introduced by Gottfried Achenwall (1749). `Statistik` was  originally designated as a term for analysis of data about the state (data used by government or other administrative bodies). The term `Statistik` was introduced into English in 1791 by Sir John Sinclair when he published the first of 21 volumes titled "Statistical Account of Scotland" [@ball]. The first book to have 'Statistics' in its title was "Contributions to Vital Statistics" (1845) by Francis GP Neison, actuary^[actuary: A person who compiles and analyses statistics and uses them to calculate insurance risks and premiums.] to the Medical Invalid and General Life Office.</p>
+ term statistics was derived from the Neo-Latin word `statisticum collegium` meaning “council of state" and the Italian word `statista` meaning "statesman" or "politician".  
+ 
+A German word `Statistik`, got the meaning "collection and classification of data" generally in the early 19th century. This word was first introduced by Gottfried Achenwall (1749). `Statistik` was  originally designated as a term for analysis of data about the state (data used by government or other administrative bodies). The term `Statistik` was introduced into English in 1791 by Sir John Sinclair when he published the first of 21 volumes titled "Statistical Account of Scotland" [@ball]. The first book to have 'Statistics' in its title was "Contributions to Vital Statistics" (1845) by Francis GP Neison, actuary^[actuary: A person who compiles and analyses statistics and uses them to calculate insurance risks and premiums.] to the Medical Invalid and General Life Office.
 ```{r scotland, echo=FALSE,fig.cap='Statistical Account of Scotland by Sir John Sinclair (1791)',fig.height=4, fig.align='center'}
 knitr::include_graphics(rep("images/history1.png"))
 ```
@@ -21,7 +21,7 @@ Mathematics follows a rigid theorem and proof. Mathematical theories involve wel
 
 ## Definition of Statistics
 
-<p style="text-align: justify;">Statistics is the science which deals with the
+Statistics is the science which deals with the
 
 * Collection of data
 
@@ -31,31 +31,31 @@ Mathematics follows a rigid theorem and proof. Mathematical theories involve wel
 
 * Analysis of data
 
-* Interpretation of data</p>
+* Interpretation of data
 
 Two main branches of statistics are:
 
-<p style="text-align: justify;">**Descriptive statistics**, which deals with summarizing data from a sample using indexes such as the mean or standard deviation etc.</p>
+**Descriptive statistics**, which deals with summarizing data from a sample using indexes such as the mean or standard deviation etc.
 
-<p style="text-align: justify;">**Inferential statistics**, use a random sample of data taken from a population to describe and make inferences about the population parameters.</p>
+**Inferential statistics**, use a random sample of data taken from a population to describe and make inferences about the population parameters.
 
 ## Data  
 
-<p style="text-align: justify;">Data can be defined as individual pieces of factual information recorded and used for the purpose of analysis. It is the raw information from which inferences are drawn using the science "STATISTICS".</p>
+Data can be defined as individual pieces of factual information recorded and used for the purpose of analysis. It is the raw information from which inferences are drawn using the science "STATISTICS".
 
-<p style="text-align: justify;">Example for data
+Example for data
 
 * No. of farmers in a block.
 
 * The rainfall over a period of time.
 
-* Area under paddy crop in a state.</p>
+* Area under paddy crop in a state.
 
 ## Use and limitations of statistics
 
-<p style="text-align: justify;">**Functions of statistics**: Statistics simplifies complexity, presents facts in a definite form, helps in formulation of suitable policies, facilitates comparison and helps in forecasting. Valid results and conclusion are obtained in research experiments using proper statistical tools.</p>
+**Functions of statistics**: Statistics simplifies complexity, presents facts in a definite form, helps in formulation of suitable policies, facilitates comparison and helps in forecasting. Valid results and conclusion are obtained in research experiments using proper statistical tools.
 
-<p style="text-align: justify;">**Uses of statistics:** Statistics has pervaded almost all spheres of human activities. Statistics is useful in the administration, Industry, business, economics, research workers, banking,insurance companies etc.</p>
+**Uses of statistics:** Statistics has pervaded almost all spheres of human activities. Statistics is useful in the administration, Industry, business, economics, research workers, banking,insurance companies etc.
 
 **Limitations of Statistics**
 
@@ -69,11 +69,11 @@ Two main branches of statistics are:
 
 ## Population and Sample
 
-<p style="text-align: justify;">Consider the following example.Suppose we wish to study the body masses of all students of College of Agriculture, Vellayani. It will take us a long time to measure the body masses of all students of the college and so we may select 20 of the students and measure their body masses (in kg). Suppose we obtain the measurements like this</p>
+Consider the following example.Suppose we wish to study the body masses of all students of College of Agriculture, Vellayani. It will take us a long time to measure the body masses of all students of the college and so we may select 20 of the students and measure their body masses (in kg). Suppose we obtain the measurements like this
 
 49 56 48 61 59 43 58 52 64 71 57 52 63 58 51 47 57 46 53 59
 
-<p style="text-align: justify;">In this study, we are interested in the body masses of all students of College of Agriculture, Vellayani. The set of body masses of all students of College of Agriculture, Vellayani is called the **population** of this study. The set of 20 body masses, *W* = {49, 56,48, ..., 53, 59}, is a **sample** from this population.</p>
+In this study, we are interested in the body masses of all students of College of Agriculture, Vellayani. The set of body masses of all students of College of Agriculture, Vellayani is called the **population** of this study. The set of 20 body masses, *W* = {49, 56,48, ..., 53, 59}, is a **sample** from this population.
 
 ### Population 
 A population is the set of all objects we wish to study  
@@ -85,17 +85,17 @@ A sample is part of the population we study to learn about the population.
 
 ### Variables  
 
-<p style="text-align: justify;">Any type of observation which can take different values for different people, or different values at different times, or places, is called a variable. The following are examples of variables:  
+Any type of observation which can take different values for different people, or different values at different times, or places, is called a variable. The following are examples of variables:  
 
 * family size, number of hospital beds, number of schools in a country, etc.  
 
-* height, mass, blood pressure, temperature, blood glucose level, etc.</p>  
+* height, mass, blood pressure, temperature, blood glucose level, etc. 
 
-<p style="text-align: justify;">Broadly speaking, there are two types of variables -- **quantitative** and **qualitative** (or categorical) variables</p>
+Broadly speaking, there are two types of variables -- **quantitative** and **qualitative** (or categorical) variables
 
 ### Constants
 
-<p style="text-align: justify;">Constants are characteristics that have values that do not change. Examples of constants are: pi (𝝅) = the ratio of the circumference of a circle to its diameter (𝝅 = 3.14159\...) and *e*, the base of the natural or (Napierian) logarithms (*e*=2.71828).</p>
+Constants are characteristics that have values that do not change. Examples of constants are: pi (𝝅) = the ratio of the circumference of a circle to its diameter (𝝅 = 3.14159\...) and *e*, the base of the natural or (Napierian) logarithms (*e*=2.71828).
 
 ## Types of variables
 

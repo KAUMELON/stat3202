@@ -4,17 +4,17 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Chapter 9 Probability Distributions | LECTURE NOTES OF STAT 3202</title>
+<title>Chapter 10 Probability Distributions | LECTURE NOTES OF STAT 3202</title>
 <meta name="author" content="Dr. Pratheesh P. Gopinath">
-<meta name="description" content="9.1 Random experiment A random experiment is an experiment or a process for which the outcome cannot be predicted with certainty. The sample space (denoted S) of a random experiment is the set of...">
+<meta name="description" content="10.1 Random experiment A random experiment is an experiment or a process for which the outcome cannot be predicted with certainty. The sample space (denoted S) of a random experiment is the set of...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
-<meta property="og:title" content="Chapter 9 Probability Distributions | LECTURE NOTES OF STAT 3202">
+<meta property="og:title" content="Chapter 10 Probability Distributions | LECTURE NOTES OF STAT 3202">
 <meta property="og:type" content="book">
 <meta property="og:image" content="/images/cover.PNG">
-<meta property="og:description" content="9.1 Random experiment A random experiment is an experiment or a process for which the outcome cannot be predicted with certainty. The sample space (denoted S) of a random experiment is the set of...">
+<meta property="og:description" content="10.1 Random experiment A random experiment is an experiment or a process for which the outcome cannot be predicted with certainty. The sample space (denoted S) of a random experiment is the set of...">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chapter 9 Probability Distributions | LECTURE NOTES OF STAT 3202">
-<meta name="twitter:description" content="9.1 Random experiment A random experiment is an experiment or a process for which the outcome cannot be predicted with certainty. The sample space (denoted S) of a random experiment is the set of...">
+<meta name="twitter:title" content="Chapter 10 Probability Distributions | LECTURE NOTES OF STAT 3202">
+<meta name="twitter:description" content="10.1 Random experiment A random experiment is an experiment or a process for which the outcome cannot be predicted with certainty. The sample space (denoted S) of a random experiment is the set of...">
 <meta name="twitter:image" content="/images/cover.PNG">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -52,8 +52,9 @@
 <li><a class="" href="skewness-and-kurtosis.html"><span class="header-section-number">6</span> Skewness and Kurtosis</a></li>
 <li><a class="" href="measures-of-association.html"><span class="header-section-number">7</span> Measures of Association</a></li>
 <li><a class="" href="regression-analysis.html"><span class="header-section-number">8</span> Regression Analysis</a></li>
-<li><a class="active" href="probability-distributions.html"><span class="header-section-number">9</span> Probability Distributions</a></li>
-<li><a class="" href="references.html"><span class="header-section-number">10</span> References</a></li>
+<li><a class="" href="probability.html"><span class="header-section-number">9</span> Probability</a></li>
+<li><a class="active" href="probability-distributions.html"><span class="header-section-number">10</span> Probability Distributions</a></li>
+<li><a class="" href="references.html">References</a></li>
 </ul>
 
         <div class="book-extra">
@@ -61,13 +62,13 @@
         </div>
       </nav>
 </div>
-  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="probability-distributions" class="section level1" number="9">
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="probability-distributions" class="section level1" number="10">
 <h1>
-<span class="header-section-number">9</span> Probability Distributions<a class="anchor" aria-label="anchor" href="#probability-distributions"><i class="fas fa-link"></i></a>
+<span class="header-section-number">10</span> Probability Distributions<a class="anchor" aria-label="anchor" href="#probability-distributions"><i class="fas fa-link"></i></a>
 </h1>
-<div id="random-experiment" class="section level2" number="9.1">
+<div id="random-experiment" class="section level2" number="10.1">
 <h2>
-<span class="header-section-number">9.1</span> Random experiment<a class="anchor" aria-label="anchor" href="#random-experiment"><i class="fas fa-link"></i></a>
+<span class="header-section-number">10.1</span> Random experiment<a class="anchor" aria-label="anchor" href="#random-experiment"><i class="fas fa-link"></i></a>
 </h2>
 <p>A random experiment is an experiment or a
 process for which the outcome cannot be predicted with certainty. The
@@ -75,137 +76,137 @@ sample space (denoted S) of a random experiment is the set of all
 possible outcomes.</p>
 <p>Example: Tossing a coin, Throwing a die etc</p>
 </div>
-<div id="random-variable" class="section level2" number="9.2">
+<div id="random-variable" class="section level2" number="10.2">
 <h2>
-<span class="header-section-number">9.2</span> Random variable<a class="anchor" aria-label="anchor" href="#random-variable"><i class="fas fa-link"></i></a>
+<span class="header-section-number">10.2</span> Random variable<a class="anchor" aria-label="anchor" href="#random-variable"><i class="fas fa-link"></i></a>
 </h2>
 <p>A Random Variable is a set of possible
-values from a random experiment. Random variable is usually denoted as ‘X’</p>
+values from a random experiment. Random variable is usually denoted as ‘<span class="math inline">\(X\)</span>’</p>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:tossing"></span>
-<img src="images/prob1.png" alt="Tossing a coin" width="80%"><p class="caption">
-Figure 9.1: Tossing a coin
+<img src="images/prob1.png" alt="Tossing a coin" width="90%"><p class="caption">
+Figure 10.1: Tossing a coin
 </p>
 </div>
 <p>A Random Variable has a whole set of values and it could take on any of those values, randomly. Not like an Algebra Variable, In Algebra a variable, like X, is an unknown value. But a Random Variable is different.</p>
-<p>Probability of a random variable can be represented by p(X= <em>x</em>) or p(<em>x</em>).Small letter <em>x</em> denotes the value taken by the random variable X.</p>
+<p>Probability of a random variable can be represented by <span class="math inline">\(p(X = x)\)</span> or <span class="math inline">\(p(x)\)</span>.Small letter <span class="math inline">\(x\)</span> denotes the value taken by the random variable <span class="math inline">\(X\)</span>.</p>
 <p>For example throwing a die once</p>
 <p>Here you can define a random variable of your interest. Defining a random variable is like:</p>
 <ol style="list-style-type: decimal">
-<li><p>Let X be the number appearing on throwing the dice then; x = {1, 2, 3, 4, 5, 6}. The random variable X can take any values shown above. In this case they are equally likely, probability of anyone is 1/6. So, p(X=<em>x</em>) = p(<em>x</em>) =1/6</p></li>
-<li><p>Let X be the even number appearing on throwing the dice then; X = {2, 4, 6}. The random variable X can take any values shown above. p(X = <em>x</em>) = p(<em>x</em>) =3/6</p></li>
+<li><p>Let <span class="math inline">\(X\)</span> be the number appearing on throwing the dice then; <span class="math inline">\(x\)</span> = {1, 2, 3, 4, 5, 6}. The random variable <span class="math inline">\(X\)</span> can take any values shown above. In this case they are equally likely, probability of anyone is 1/6. So, <span class="math inline">\(p(X = x)\)</span> = <span class="math inline">\(p(x)\)</span> =1/6</p></li>
+<li><p>Let <span class="math inline">\(X\)</span> be the even number appearing on throwing the dice then; <span class="math inline">\(X\)</span> = {2, 4, 6}. The random variable <span class="math inline">\(X\)</span> can take any values shown above. <span class="math inline">\(p(X = x)\)</span> = <span class="math inline">\(p(x)\)</span> = 3/6</p></li>
 </ol>
 </div>
-<div id="probability-distributions-1" class="section level2" number="9.3">
+<div id="probability-distributions-1" class="section level2" number="10.3">
 <h2>
-<span class="header-section-number">9.3</span> Probability distributions<a class="anchor" aria-label="anchor" href="#probability-distributions-1"><i class="fas fa-link"></i></a>
+<span class="header-section-number">10.3</span> Probability distributions<a class="anchor" aria-label="anchor" href="#probability-distributions-1"><i class="fas fa-link"></i></a>
 </h2>
 <p>A probability distribution is a list of all of the possible outcomes of a random variable along with their corresponding probability values.</p>
 <p>Example: - Tossing a coin 3 times</p>
 <p>Defining random variable:</p>
 <p>Let X be the number of heads appearing on throwing the dice
-In this case there would be 0 heads, 1, 2 and 3 heads, so the sample space is <em>x</em> = {0, 1, 2, 3} and they are not equally likely.</p>
+In this case there would be 0 heads, 1, 2 and 3 heads, so the sample space is <span class="math inline">\(X\)</span> = {0, 1, 2, 3} and they are not equally likely.</p>
 <p>There are total 8 possible cases on tossing coin three times is shown in table below</p>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
 <th align="left">On tossing thrice</th>
-<th align="left">No: of heads (X)</th>
+<th>No: of heads (<span class="math inline">\(X\)</span>)</th>
 </tr></thead>
 <tbody>
 <tr class="odd">
 <td align="left">HHH</td>
-<td align="left">3</td>
+<td>3</td>
 </tr>
 <tr class="even">
 <td align="left">HHT</td>
-<td align="left">2</td>
+<td>2</td>
 </tr>
 <tr class="odd">
 <td align="left">HTH</td>
-<td align="left">2</td>
+<td>2</td>
 </tr>
 <tr class="even">
 <td align="left">THH</td>
-<td align="left">2</td>
+<td>2</td>
 </tr>
 <tr class="odd">
 <td align="left">HTT</td>
-<td align="left">1</td>
+<td>1</td>
 </tr>
 <tr class="even">
 <td align="left">THT</td>
-<td align="left">1</td>
+<td>1</td>
 </tr>
 <tr class="odd">
 <td align="left">TTH</td>
-<td align="left">1</td>
+<td>1</td>
 </tr>
 <tr class="even">
 <td align="left">TTT</td>
-<td align="left">0</td>
+<td>0</td>
 </tr>
 </tbody>
 </table></div>
-<p>p (X = <em>x</em>) = <span class="math inline">\(\frac{No:\ of \ times\ X\ takes\ value\ x}{8}\)</span></p>
-<p>p(X = 3) = 1/8; p(X = 2 ) = 3/8; p(X = 1) = 3/8; p(X = 0) = 1/8</p>
+<p><span class="math inline">\(p(X = x)\)</span> = <span class="math inline">\(\frac{No: \ of \ times\ X\ takes\ value\ x}{8}\)</span></p>
+<p><span class="math inline">\(p(X = 3)\)</span> = 1/8; <span class="math inline">\(p(X = 2)\)</span> = 3/8; <span class="math inline">\(p(X = 1)\)</span> = 3/8; <span class="math inline">\(p(X = 0)\)</span> = 1/8</p>
 <p>A <strong>probability distribution</strong> is a list of all of the possible outcomes of a random variable along with their corresponding probability values.</p>
 <p>Table below shows a probability distribution.</p>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
-<th align="left"><strong>x</strong></th>
-<th><strong>p(<em>x</em>)</strong></th>
+<th align="left"><span class="math inline">\(X\)</span></th>
+<th align="left"><span class="math inline">\(p(x)\)</span></th>
 </tr></thead>
 <tbody>
 <tr class="odd">
 <td align="left">0</td>
-<td>1/8</td>
+<td align="left">1/8</td>
 </tr>
 <tr class="even">
 <td align="left">1</td>
-<td>3/8</td>
+<td align="left">3/8</td>
 </tr>
 <tr class="odd">
 <td align="left">2</td>
-<td>3/8</td>
+<td align="left">3/8</td>
 </tr>
 <tr class="even">
 <td align="left">3</td>
-<td>1/8</td>
+<td align="left">1/8</td>
 </tr>
 </tbody>
 </table></div>
-<p>This is an example of discrete probability distribution as X takes only discrete values. If x takes continuous values, it is termed as continuous probability distribution.</p>
+<p>This is an example of discrete probability distribution as <span class="math inline">\(X\)</span> takes only discrete values. If <span class="math inline">\(x\)</span> takes continuous values, it is termed as continuous probability distribution.</p>
 </div>
-<div id="probability-mass-function" class="section level2" number="9.4">
+<div id="probability-mass-function" class="section level2" number="10.4">
 <h2>
-<span class="header-section-number">9.4</span> Probability mass function<a class="anchor" aria-label="anchor" href="#probability-mass-function"><i class="fas fa-link"></i></a>
+<span class="header-section-number">10.4</span> Probability mass function<a class="anchor" aria-label="anchor" href="#probability-mass-function"><i class="fas fa-link"></i></a>
 </h2>
-<p>When we use a probability function to describe a discrete probability distribution, we call it a probability mass function (commonly abbreviated as <em>p</em>.<em>m</em>.<em>f</em>). A probability mass function, returns the probability of an outcome. Therefore, a probability mass function is written as: p(x) = p(X = x). Here the variable X is discrete in nature.</p>
+<p>When we use a probability function to describe a discrete probability distribution, we call it a probability mass function (commonly abbreviated as <em>p</em>.<em>m</em>.<em>f</em>). A probability mass function, returns the probability of an outcome. Therefore, a probability mass function is written as: <span class="math inline">\(p(x)\)</span> = <span class="math inline">\(p(X = x)\)</span>. Here the variable <span class="math inline">\(X\)</span> is discrete in nature.</p>
 </div>
-<div id="probability-density-function" class="section level2" number="9.5">
+<div id="probability-density-function" class="section level2" number="10.5">
 <h2>
-<span class="header-section-number">9.5</span> Probability density function<a class="anchor" aria-label="anchor" href="#probability-density-function"><i class="fas fa-link"></i></a>
+<span class="header-section-number">10.5</span> Probability density function<a class="anchor" aria-label="anchor" href="#probability-density-function"><i class="fas fa-link"></i></a>
 </h2>
 <p>When we use a probability function to describe a continuous probability distribution, we call it a probability density function (commonly abbreviated as <em>p</em>.<em>d</em>.<em>f</em>).</p>
 </div>
-<div id="expected-value-of-a-random-variable" class="section level2" number="9.6">
+<div id="expected-value-of-a-random-variable" class="section level2" number="10.6">
 <h2>
-<span class="header-section-number">9.6</span> Expected value of a random variable<a class="anchor" aria-label="anchor" href="#expected-value-of-a-random-variable"><i class="fas fa-link"></i></a>
+<span class="header-section-number">10.6</span> Expected value of a random variable<a class="anchor" aria-label="anchor" href="#expected-value-of-a-random-variable"><i class="fas fa-link"></i></a>
 </h2>
 <p>Expected value is exactly what you might think it means. The return you can expect for some kind of action. The expected value of a random variable is the long-run average value of repetitions of the same experiment it represents. For example, the expected value in rolling a six-sided die is 3.5, because the average of all the numbers that come
-up is 3.5 as the number of rolls approaches infinity. Expected value of random variable X is denoted as <strong>E(X)</strong>.<br>
-The formula for calculating the Expected Value where there are multiple probabilities is</p>
+up is 3.5 as the number of rolls approaches infinity. Expected value of random variable <span class="math inline">\(X\)</span> is denoted as <span class="math inline">\(E(X)\)</span>.<br>
+The formula for calculating the Expected Value of random variable where there are multiple probabilities is</p>
 <ul>
-<li><p>E(X) = ∑<em>x</em> p(x) (Discrete Case)</p></li>
-<li><p>E(X) = <span class="math inline">\(\int_{- \infty}^{\infty}{\text{x}p(x)\ \text{dx }}\)</span>
+<li><p>E(<span class="math inline">\(X\)</span>) = <span class="math inline">\(\sum_{i = 1}^{\infty}xp(x)\)</span> (Discrete Case)</p></li>
+<li><p>E(<span class="math inline">\(X\)</span>) = <span class="math inline">\(\int_{- \infty}^{\infty}{x p(x)\ \text{dx }}\)</span>
 (continuous case); <span class="math inline">\(- \infty \leq x \leq \infty\)</span></p></li>
 </ul>
-<div id="example" class="section level3" number="9.6.1">
-<h3>
-<span class="header-section-number">9.6.1</span> Example<a class="anchor" aria-label="anchor" href="#example"><i class="fas fa-link"></i></a>
+<p>here the random variable <span class="math inline">\(X\)</span> lies between <span class="math inline">\({-\infty}\)</span> and <span class="math inline">\({+\infty}\)</span></p>
+<div id="example-5" class="section level3 unnumbered">
+<h3>Example<a class="anchor" aria-label="anchor" href="#example-5"><i class="fas fa-link"></i></a>
 </h3>
 <ol style="list-style-type: decimal">
-<li>Find Expected value of X of tossing a single unfair die</li>
+<li>Find Expected value of <span class="math inline">\(X\)</span> of tossing a single unfair die</li>
 </ol>
 <div class="inline-table"><table class=" lightable-classic table" style="font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto; margin-left: auto; margin-right: auto;"><tbody>
 <tr>
@@ -258,8 +259,7 @@ p(x)
 <p>Solution:</p>
 <div class="inline-table"><table class=" lightable-classic table" style="font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto; margin-left: auto; margin-right: auto;"><tbody><tr>
 <td style="text-align:center;">
-<ol start="24" style="list-style-type: lower-alpha"><li>p(x)
-</li></ol>
+xp(x)
 </td>
 <td style="text-align:center;">
 0.1
@@ -280,39 +280,40 @@ p(x)
 3
 </td>
 </tr></tbody></table></div>
-<p>E(X) = ∑<em>x.</em>P(X) = 0.1+0.2+0.3+0.4+0.5+3 = 4.5</p>
+<p>E(<span class="math inline">\(X\)</span>) = <span class="math inline">\(\sum_{i = 1}^{6}xp(x)\)</span><br>
+= 0.1+0.2+0.3+0.4+0.5+3 = 4.5</p>
 <ol start="2" style="list-style-type: decimal">
 <li>Find E(X) in the following case (Do it by yourself)</li>
 </ol>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
-<th align="left">x</th>
-<th align="left">p(x)</th>
+<th><span class="math inline">\(x\)</span></th>
+<th><span class="math inline">\(p(x)\)</span></th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left">0</td>
-<td align="left">1/8</td>
+<td>0</td>
+<td>1/8</td>
 </tr>
 <tr class="even">
-<td align="left">1</td>
-<td align="left">3/8</td>
+<td>1</td>
+<td>3/8</td>
 </tr>
 <tr class="odd">
-<td align="left">2</td>
-<td align="left">3/8</td>
+<td>2</td>
+<td>3/8</td>
 </tr>
 <tr class="even">
-<td align="left">3</td>
-<td align="left">1/8</td>
+<td>3</td>
+<td>1/8</td>
 </tr>
 </tbody>
 </table></div>
 </div>
 </div>
-<div id="discrete-probability-distributions" class="section level2" number="9.7">
+<div id="discrete-probability-distributions" class="section level2" number="10.7">
 <h2>
-<span class="header-section-number">9.7</span> Discrete probability distributions<a class="anchor" aria-label="anchor" href="#discrete-probability-distributions"><i class="fas fa-link"></i></a>
+<span class="header-section-number">10.7</span> Discrete probability distributions<a class="anchor" aria-label="anchor" href="#discrete-probability-distributions"><i class="fas fa-link"></i></a>
 </h2>
 <p>We have seen that a <strong>probability distribution</strong> is a list of all of the possible outcomes of a random variable along with their corresponding probability values. It is represented as a table. It will be more convenient if it can be expressed as an equation. So if the value of x is given we can calculate the corresponding probability from the equation. There are several discrete distributions depending on situations. Our discussion is limited to following discrete distributions.</p>
 <ul>
@@ -320,86 +321,102 @@ p(x)
 <li><p>Binomial distribution</p></li>
 <li><p>Poisson distribution</p></li>
 </ul>
-</div>
-<div id="bernoulli-distribution" class="section level2" number="9.8">
-<h2>
-<span class="header-section-number">9.8</span> Bernoulli distribution<a class="anchor" aria-label="anchor" href="#bernoulli-distribution"><i class="fas fa-link"></i></a>
-</h2>
+<div id="bernoulli-distribution" class="section level3" number="10.7.1">
+<h3>
+<span class="header-section-number">10.7.1</span> Bernoulli distribution<a class="anchor" aria-label="anchor" href="#bernoulli-distribution"><i class="fas fa-link"></i></a>
+</h3>
 <p>A Bernoulli distribution is a discrete probability distribution. This distribution applies to random experiment that has only two outcomes (usually called a “Success” or a “Failure”).</p>
 <p>For example tossing a coin has only two outcomes which can be termed as success and failure by the experimenter</p>
 <p>Success: getting head</p>
 <p>Failure: getting tail</p>
 <p>The probability mass function of the distribution is</p>
-<p>p(X = <em>x</em>) = p(<em>x</em>) = p<sup><em>x</em></sup> (1-p)<sup>1-<em>x</em></sup>, where <em>x</em> takes only two values = 0,1</p>
-<p>The expected value for a random variable, X, from a Bernoulli distribution is: E(X) = p and the variance of a Bernoulli random variable is: var(X) = p(1 – p).</p>
-<p><strong>Example</strong>: Find the probability assuming Bernoulli distribution of a
-biased coin where probability of success (getting head) p = 0.4</p>
-<p>Let X be the random variable which takes value 0 on getting tail
+<p><span class="math inline">\(p(X = x)\)</span> = <span class="math inline">\(p(x)\)</span> = <span class="math inline">\(p\)</span><sup><span class="math inline">\(x\)</span></sup><span class="math inline">\((1-p)\)</span><sup><span class="math inline">\(1-x\)</span></sup>, where <span class="math inline">\(X\)</span> takes only two values = 0,1</p>
+<p>The expected value for a random variable, <span class="math inline">\(X\)</span>, from a Bernoulli distribution is: E(<span class="math inline">\(X\)</span>) = <span class="math inline">\(p\)</span> and the variance of a Bernoulli random variable is: var(<span class="math inline">\(X\)</span>) = <span class="math inline">\(p(1 - p)\)</span>.</p>
+<div id="example-6" class="section level4 unnumbered">
+<h4>Example<a class="anchor" aria-label="anchor" href="#example-6"><i class="fas fa-link"></i></a>
+</h4>
+<p>Find the probability assuming Bernoulli distribution of a
+biased coin where probability of success (getting head) <span class="math inline">\(p\)</span> = 0.4</p>
+<p>Let <span class="math inline">\(X\)</span> be the random variable which takes value 0 on getting tail
 (failure) and takes value 1 on getting head (success). So using the
 equation</p>
-<p>p(X = x) = p(x) = p<sup>x</sup> (1-p)<sup>1-x</sup></p>
-<p>P(X = 0) = (0.4)<sup>0</sup>(1-0.4)<sup>1</sup> =0.6</p>
-<p>P(X = 1) = (0.4)<sup>1</sup>(1-0.4)<sup>0</sup> =0.4</p>
+<p>p(<span class="math inline">\(X\)</span> = <span class="math inline">\(x\)</span>) = p(<span class="math inline">\(X\)</span>) = p<sup><span class="math inline">\(X\)</span></sup><span class="math inline">\((1-p)\)</span><sup><span class="math inline">\(1-x\)</span></sup></p>
+<p>P(<span class="math inline">\(X\)</span> = 0) = (0.4)<sup>0</sup>(1-0.4)<sup>1</sup> =0.6</p>
+<p>P(<span class="math inline">\(X\)</span> = 1) = (0.4)<sup>1</sup>(1-0.4)<sup>0</sup> =0.4</p>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
-<th align="left">x</th>
-<th align="left">p(x)</th>
+<th><span class="math inline">\(x\)</span></th>
+<th><span class="math inline">\(p(x)\)</span></th>
 </tr></thead>
 <tbody>
 <tr class="odd">
-<td align="left">0</td>
-<td align="left">0.6</td>
+<td>0</td>
+<td>0.6</td>
 </tr>
 <tr class="even">
-<td align="left">1</td>
-<td align="left">0.4</td>
+<td>1</td>
+<td>0.4</td>
 </tr>
 </tbody>
 </table></div>
+<blockquote>
 <p>A <strong>Bernoulli trial</strong> is one of the simplest experiments you can conduct
 in probability and statistics. It’s an experiment where you can have one
 of two possible outcomes. For example, “Yes” and “No” or “Heads” and
 “Tails.”</p>
-<p><strong>3.2 Binomial distribution</strong></p>
+</blockquote>
+</div>
+</div>
+<div id="binomial-distribution" class="section level3" number="10.7.2">
+<h3>
+<span class="header-section-number">10.7.2</span> Binomial distribution<a class="anchor" aria-label="anchor" href="#binomial-distribution"><i class="fas fa-link"></i></a>
+</h3>
 <p>Binomial distribution can be thought of as simply the probability of a
 SUCCESS or FAILURE outcome in an experiment or survey that is repeated
 multiple times; <em>i.e</em>. a Binomial distribution happens, when a Bernoulli
-trial is repeated <em>n</em> number of times. The binomial is a type of
+trial is repeated <span class="math inline">\(n\)</span> number of times. The binomial is a type of
 distribution that has two possible outcomes (the prefix “bi” means two,
 or twice). For example when a coin toss is repeated 5 times, the random
-variable, X = no: of heads will follow a binomial distribution with <em>n</em>
+variable, <span class="math inline">\(X\)</span> = no: of heads will follow a binomial distribution with <span class="math inline">\(n\)</span>
 = 5.</p>
 <p><strong>Binomial distributions must also meet the following three criteria:</strong></p>
 <ul>
-<li><p>The number of observations or trials is fixed. (<em>n</em>)</p></li>
+<li><p>The number of observations or trials is fixed. (<span class="math inline">\(n\)</span>)</p></li>
 <li><p>Each observation or trial is independent</p></li>
-</ul>
-<!-- --><ul>
-<li>The probability of success (tails, heads, fail or pass) is exactly
-the same from one trial to another (<em>p</em>)</li>
+<li><p>The probability of success (tails, heads, fail or pass) is exactly the same from one trial to another (<span class="math inline">\(p\)</span>)</p></li>
 </ul>
 <p>The probability mass function of the distribution is</p>
-<p>p(x) = <sup>n</sup>c<sub>x</sub> p<sup>x</sup> q<sup>n-x</sup> = <span class="math inline">\(\frac{n!}{\left( n - x \right)!x!\ }\)</span> p<sup>x</sup>
-q<sup>n-x</sup></p>
-<p>where x takes values = 0,1,2,..., <em>n</em></p>
-<p>n= number of trials</p>
-<p>x= number of success desired</p>
-<p>p= probability of getting a success in one trial</p>
-<p>q = 1-p = probability of getting a failure in one trial</p>
-<p>E(X) = np</p>
-<p>V(X) = npq; n and p are the most important parameters in binomial
+<p><span class="math inline">\(p(x)\)</span> = <sup><span class="math inline">\(n\)</span></sup><span class="math inline">\(c\)</span><sub><span class="math inline">\(x\)</span></sub><span class="math inline">\(p\)</span><sup><span class="math inline">\(x\)</span></sup><span class="math inline">\(q\)</span><sup><span class="math inline">\(n-x\)</span></sup> = <span class="math inline">\(\frac{n!}{\left( n - x \right)!x!\ }\)</span> p<sup><span class="math inline">\(x\)</span></sup><span class="math inline">\(q\)</span><sup><span class="math inline">\(n-x\)</span></sup></p>
+<p>where x takes values = 0,1,2,..., <span class="math inline">\(n\)</span></p>
+<p><span class="math inline">\(n\)</span>= number of trials</p>
+<p><span class="math inline">\(x\)</span>= number of success desired</p>
+<p><span class="math inline">\(p\)</span>= probability of getting a success in one trial</p>
+<p><span class="math inline">\(q\)</span> = <span class="math inline">\(1-p\)</span> = probability of getting a failure in one trial</p>
+<p>E(<span class="math inline">\(X\)</span>) = <span class="math inline">\(np\)</span></p>
+<p>V(<span class="math inline">\(X\)</span>) = <span class="math inline">\(npq\)</span>; <span class="math inline">\(n\)</span> and <span class="math inline">\(p\)</span> are the most important parameters in binomial
 distribution.</p>
-<p><strong>Example</strong>: A coin is tossed 10 times. What is the probability of
+<blockquote>
+<p>Mean of binomial distribution is <span class="math inline">\(np\)</span> and variance is <span class="math inline">\(npq\)</span></p>
+</blockquote>
+<div id="example-7" class="section level4 unnumbered">
+<h4>Example<a class="anchor" aria-label="anchor" href="#example-7"><i class="fas fa-link"></i></a>
+</h4>
+<p>A coin is tossed 10 times. What is the probability of
 getting exactly 6 heads?</p>
 <p>here,</p>
-<p>n= 10</p>
-<p>x= 6</p>
-<p>p= ½</p>
-<p>q = 1-p = ½</p>
-<p>We have to find p(X=6); using the formula p(X=x) = <sup>n</sup>c<sub>x</sub> p<sup>x</sup> q<sup>n-x</sup></p>
-<p>p(X=6) = <sup>10</sup>c<sub>6</sub><span class="math inline">\(\left( \frac{1}{2} \right)^{6}\left( \frac{1}{2} \right)^{10 - 6}\)</span>=
+<p><span class="math inline">\(n\)</span> = 10</p>
+<p><span class="math inline">\(x\)</span> = 6</p>
+<p><span class="math inline">\(p\)</span> = ½</p>
+<p><span class="math inline">\(q\)</span> = <span class="math inline">\(1-p\)</span> = ½</p>
+<p>We have to find <span class="math inline">\(p(X=6)\)</span>; using the formula <span class="math inline">\(p(X=x)\)</span> <span class="math inline">\(=\)</span> <sup><span class="math inline">\(n\)</span></sup><span class="math inline">\(c\)</span><sub><span class="math inline">\(x\)</span></sub><span class="math inline">\(p\)</span><sup><span class="math inline">\(x\)</span></sup><span class="math inline">\(q\)</span><sup><span class="math inline">\(n-x\)</span></sup></p>
+<p><span class="math inline">\(p(X=6)\)</span> = <sup>10</sup><span class="math inline">\(c\)</span><sub>6</sub><span class="math inline">\(\left( \frac{1}{2} \right)^{6}\left( \frac{1}{2} \right)^{10 - 6}\)</span>=
 0.2050</p>
-<p><strong>3.3 Poisson distribution</strong></p>
+</div>
+</div>
+<div id="poisson-distribution" class="section level3" number="10.7.3">
+<h3>
+<span class="header-section-number">10.7.3</span> Poisson distribution<a class="anchor" aria-label="anchor" href="#poisson-distribution"><i class="fas fa-link"></i></a>
+</h3>
 <p>Discovered by the French Mathematician Simeon Denis Poisson (1781
 -1840). It is developed to describe the number of times a gambler would
 win a rarely won game of chance in a large number of tries, i.e. Poisson
@@ -418,36 +435,41 @@ horse kicking in the Prussian army.</p>
 <li><p>Spread of an endangered animal in Africa</p></li>
 <li><p>Failure of a machine in one month</p></li>
 </ul>
-<p>A random variable x is said to follow a Poisson distribution; if it
+<p>A random variable <span class="math inline">\(X\)</span> is said to follow a Poisson distribution; if it
 assumes non-negative values and its probability mass function is given
 by:</p>
 <p><span class="math display">\[p\left( X = x \right) = \frac{e^{- \lambda}.\lambda^{x}}{x!}\]</span></p>
-<p>where x = 0,1,2,… ., ∞,</p>
-<p>e = 2.7183.</p>
-<p>λ : Average number of successes occurring in a given time interval or
+<p>where <span class="math inline">\(x\)</span> = 0,1,2,… ., ∞,</p>
+<p><span class="math inline">\(e\)</span> = 2.7183.</p>
+<p><span class="math inline">\(λ\)</span> : Average number of successes occurring in a given time interval or
 region in the Poisson distribution</p>
 <p>It is a discrete distribution with a single parameter λ</p>
+<blockquote>
 <p>The <strong>mean</strong> and the <strong>variance</strong> of the Poisson distribution are both
-equal to <strong>λ</strong></p>
-<p><strong>Example</strong>: The average number of homes sold by a Realty company is 2
+equal to <span class="math inline">\(λ\)</span></p>
+</blockquote>
+<div id="example-8" class="section level4 unnumbered">
+<h4>Example<a class="anchor" aria-label="anchor" href="#example-8"><i class="fas fa-link"></i></a>
+</h4>
+<p>The average number of homes sold by a Realty company is 2
 homes per day. Assuming Poisson distribution what is the probability
 that exactly 3 homes will be sold tomorrow?</p>
 <p><strong>Solution:</strong></p>
-<p>λ = 2; since 2 homes are sold per day, on average.</p>
-<p>x = 3; since we want to find the probability that 3 homes will be sold
+<p><span class="math inline">\(λ\)</span> = 2; since 2 homes are sold per day, on average.</p>
+<p><span class="math inline">\(x\)</span> = 3; since we want to find the probability that 3 homes will be sold
 tomorrow.</p>
-<p>e = 2.71828; since e is a constant equal to approximately 2.71828.</p>
+<p><span class="math inline">\(e\)</span> = 2.71828; since e is a constant equal to approximately 2.71828.</p>
 <p><span class="math display">\[p\left( X = x \right) = \frac{e^{- \lambda}.\lambda^{x}}{x!}\]</span></p>
-<p>p(X=3) =<span class="math inline">\(\ \frac{{2.71828}^{- 2}{\  \times \ 2}^{3}}{3!}\)</span></p>
-<p>P(X = 3) = 0.180</p>
-<div class="inline-figure"><img src="media%5Cimage3.jpeg" style="width:0.62986in;height:0.60625in"></div>
-<p><strong>Questions</strong></p>
+<p><span class="math inline">\(p(X=3)\)</span> = <span class="math inline">\(\ \frac{{2.71828}^{- 2}{\  \times \ 2}^{3}}{3!}\)</span></p>
+<p><span class="math inline">\(p(X = 3)\)</span> = 0.180</p>
+</div>
+</div>
+<div id="questions" class="section level3 unnumbered">
+<h3>Questions<a class="anchor" aria-label="anchor" href="#questions"><i class="fas fa-link"></i></a>
+</h3>
 <ol style="list-style-type: decimal">
-<li><p>If the random variable X follows a Poisson distribution with mean
-3.4, find P (X= 6)</p></li>
-<li><p>The number of industrial injuries per working week in a particular
-factory is known to follow a Poisson distribution with mean 0.5.
-Find the probability that in a particular week there will be:</p></li>
+<li><p>If the random variable X follows a Poisson distribution with mean 3.4, find <span class="math inline">\(p(X = 6)\)</span></p></li>
+<li><p>The number of industrial injuries per working week in a particular factory is known to follow a Poisson distribution with mean 0.5. Find the probability that in a particular week there will be:</p></li>
 </ol>
 <blockquote>
 <p>(i) Less than 2 accidents [Hint: p(X&lt;2) = p(X = 0) + p(X = 1)]</p>
@@ -456,10 +478,8 @@ Find the probability that in a particular week there will be:</p></li>
 </blockquote>
 <ol start="3" style="list-style-type: decimal">
 <li>
-<p>A company known on the past experience that 3% of the bulbs they
-produced are defective. Assuming Poisson distribution find the
-probability of getting the following in a sample of 100 bulbs:
-[Hint: here λ = n × p = 100 × 0.03]</p>
+<p>A company known on the past experience that 3% of the bulbs they produced are defective. Assuming Poisson distribution find the probability of getting the following in a sample of 100 bulbs:
+[Hint: here  λ = n × p = 100 × 0.03]</p>
 <ol style="list-style-type: lower-alpha">
 <li><p>No defective [Hint: let X be the number of defectives; x = 0]</p></li>
 <li><p>1 defective [Hint: x = 1]</p></li>
@@ -468,31 +488,39 @@ probability of getting the following in a sample of 100 bulbs:
 </ol>
 </li>
 </ol>
-<p>Distributions Bernoulli, Binomial and Poisson that we discussed so far
-are discrete distributions.</p>
-<p><strong>4. Continuous probability distributions</strong></p>
+<p>Distributions Bernoulli, Binomial and Poisson that we discussed so far are discrete distributions.</p>
+</div>
+</div>
+<div id="continuous-probability-distributions" class="section level2" number="10.8">
+<h2>
+<span class="header-section-number">10.8</span> Continuous probability distributions<a class="anchor" aria-label="anchor" href="#continuous-probability-distributions"><i class="fas fa-link"></i></a>
+</h2>
 <p>If the random variable X is continuous, the corresponding probability
 distribution is termed as continuous probability distribution. There are
 several continuous distributions. Our discussion is limited to only
 <strong>Normal distribution</strong>.</p>
-<p><strong>4.1 Normal distribution</strong></p>
-<p>The normal distribution is defined by the following probability density
-function (probability density function is explained in above section)</p>
+<div id="normal-distribution" class="section level3" number="10.8.1">
+<h3>
+<span class="header-section-number">10.8.1</span> Normal distribution<a class="anchor" aria-label="anchor" href="#normal-distribution"><i class="fas fa-link"></i></a>
+</h3>
+<p>The normal distribution is defined by the following probability density function (probability density function is explained in above section)</p>
 <p><span class="math display">\[f\left( x \right) = \frac{1}{\sqrt{2\pi\sigma}}e^{- \frac{{(x - \mu)}^{2}}{2\sigma^{2}}}\]</span></p>
-<p>, where <span class="math inline">\(- \infty &lt; x &lt; + \infty\)</span> ; μ is the population mean and σ<sup>2</sup> is
+<p>, where <span class="math inline">\(- \infty &lt; x &lt; + \infty\)</span> ; <span class="math inline">\(μ\)</span> is the population mean and <span class="math inline">\(σ\)</span><sup>2</sup> is
 the variance, <em>e</em> = 2.718.</p>
-<p>If a random variable X follows the normal distribution, then we write:</p>
-<p>X~N(μ, σ<sup>2</sup>)</p>
-<p>In particular, the normal distribution with μ = 0 and σ<sup>2</sup> = 1 is called
-the standard normal distribution, and is denoted as X~N(0,1).</p>
-<p><strong>Properties of Normal distribution</strong></p>
-<p>The normal distribution is the most frequently used among all
-probability laws. The normal distribution can be found in many practical
-problems</p>
-<p>If you plot density <em>f</em> (x) against x the graph will be <strong>bell shaped</strong>
-always</p>
-<div class="figure">
-<img src="media%5Cimage4.jpeg" style="width:3.61297in;height:1.48031in" alt=""><p class="caption">normal distn.png</p>
+<p>If a random variable <span class="math inline">\(X\)</span> follows the normal distribution, then we write:</p>
+<p><span class="math inline">\(X\)</span>~<span class="math inline">\(N\)</span>(<span class="math inline">\(μ\)</span>, <span class="math inline">\(σ\)</span><sup>2</sup>)</p>
+<p>In particular, the normal distribution with <span class="math inline">\(μ\)</span> = 0 and <span class="math inline">\(σ\)</span><sup>2</sup> = 1 is called
+the standard normal distribution, and is denoted as <span class="math inline">\(X\)</span>~<span class="math inline">\(N\)</span>(0,1).</p>
+<div id="properties-of-normal-distribution" class="section level4 unnumbered">
+<h4>Properties of Normal distribution<a class="anchor" aria-label="anchor" href="#properties-of-normal-distribution"><i class="fas fa-link"></i></a>
+</h4>
+<p>The normal distribution is the most frequently used among all probability laws. The normal distribution can be found in many practical problems</p>
+<p>If you plot density <span class="math inline">\(f(x)\)</span> against <span class="math inline">\(x\)</span> the graph will be <strong>bell shaped</strong> always</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:noraml1"></span>
+<img src="images/normal1.png" alt="Normal distribution curve" width="80%"><p class="caption">
+Figure 10.2: Normal distribution curve
+</p>
 </div>
 <p>Many things closely follow a Normal Distribution:</p>
 <ul>
@@ -507,33 +535,43 @@ always</p>
 <p>mean = median = mode</p>
 <p>Mean is located to the centre of the curve. mean = median = mode, all
 these locate towards the centre</p>
-<div class="figure">
-<img src="media%5Cimage5.jpeg" style="width:3.45161in;height:1.52543in" alt=""><p class="caption">normal.JPG</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:noraml2"></span>
+<img src="images/normal2.png" alt="Mean=Median=Mode in normal distribution" width="80%"><p class="caption">
+Figure 10.3: Mean=Median=Mode in normal distribution
+</p>
 </div>
-<p>Normal distribution is symmetric about the centre, 50% of values less
-than the mean and 50% greater than the mean</p>
-<div class="figure">
-<img src="media%5Cimage6.jpeg" style="width:2.59237in;height:1.68504in" alt=""><p class="caption">symmetry.JPG</p>
+<p>Normal distribution is symmetric about the centre, 50% of values less than the mean and 50% greater than the mean</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:noraml3"></span>
+<img src="images/normal3.jpg" alt="Normal distribution is a symmetric distribution" width="80%"><p class="caption">
+Figure 10.4: Normal distribution is a symmetric distribution
+</p>
 </div>
-<p><strong>Standardisation of Normal distribution</strong></p>
+</div>
+<div id="standardisation-of-normal-distribution" class="section level4" number="10.8.1.1">
+<h4>
+<span class="header-section-number">10.8.1.1</span> Standardisation of Normal distribution<a class="anchor" aria-label="anchor" href="#standardisation-of-normal-distribution"><i class="fas fa-link"></i></a>
+</h4>
 <p>The standard normal distribution is a special case of the normal
 distribution where the mean is zero and the standard deviation is 1.</p>
 <p>This distribution is also known as the Z-distribution. A value on the
 standard normal distribution is known as a standard score or a Z-score.</p>
-<p>A <strong>standard score</strong> or <strong>Z-score</strong> represents the number of standard
-deviations above or below the mean that a specific observation falls.</p>
+<p>A <strong>standard score</strong> or <strong>Z-score</strong> represents the number of standard deviations above or below the mean that a specific observation falls.</p>
 <p><strong><u>So to convert a value to a Standard Score ("z-score"):</u></strong></p>
 <ul>
 <li><p>First subtract the mean,</p></li>
 <li><p>Then divide by the Standard Deviation</p></li>
 </ul>
 <p>And doing that is called "Standardizing".</p>
-<div class="figure">
-<img src="media%5Cimage7.jpeg" style="width:4.07365in;height:1.06516in" alt=""><p class="caption">normalsatand.JPG</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:normall4"></span>
+<img src="images/normal4.jpg" alt="Standardization of Normal distribution" width="90%"><p class="caption">
+Figure 10.5: Standardization of Normal distribution
+</p>
 </div>
 <p>Example: A survey of daily travel time had these results (in minutes):</p>
-<p><strong>X</strong>: 26, 33, 65, 28, 34, 55, 25, 44, 50, 36, 26, 37, 43, 62, 35, 38,
-45, 32, 28, 34</p>
+<p><span class="math inline">\(X\)</span>: 26, 33, 65, 28, 34, 55, 25, 44, 50, 36, 26, 37, 43, 62, 35, 38, 45, 32, 28, 34</p>
 <p>Convert it in to standard scores (Z-score).</p>
 <p>The Mean is 38.8 minutes, and the Standard Deviation is 11.4</p>
 <ol style="list-style-type: decimal">
@@ -542,149 +580,159 @@ deviations above or below the mean that a specific observation falls.</p>
 </ol>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
-<th align="left">X</th>
-<th align="left">subtract mean from X</th>
-<th align="left">Z-score obtained by dividing column 2 by sd</th>
+<th align="left"><span class="math inline">\(X\)</span></th>
+<th align="center"><span class="math inline">\(X-\mu\)</span></th>
+<th><span class="math display">\[z = \frac{x - \mu}{\sigma}\]</span></th>
 </tr></thead>
 <tbody>
 <tr class="odd">
 <td align="left">26</td>
-<td align="left">-12.8</td>
-<td align="left">-1.12</td>
+<td align="center">-12.8</td>
+<td>-1.12</td>
 </tr>
 <tr class="even">
 <td align="left">33</td>
-<td align="left">-5.8</td>
-<td align="left">-0.51</td>
+<td align="center">-5.8</td>
+<td>-0.51</td>
 </tr>
 <tr class="odd">
 <td align="left">65</td>
-<td align="left">26.2</td>
-<td align="left">2.30</td>
+<td align="center">26.2</td>
+<td>2.30</td>
 </tr>
 <tr class="even">
 <td align="left">28</td>
-<td align="left">-10.8</td>
-<td align="left">-0.95</td>
+<td align="center">-10.8</td>
+<td>-0.95</td>
 </tr>
 <tr class="odd">
 <td align="left">34</td>
-<td align="left">-4.8</td>
-<td align="left">-0.42</td>
+<td align="center">-4.8</td>
+<td>-0.42</td>
 </tr>
 <tr class="even">
 <td align="left">55</td>
-<td align="left">16.2</td>
-<td align="left">1.42</td>
+<td align="center">16.2</td>
+<td>1.42</td>
 </tr>
 <tr class="odd">
 <td align="left">25</td>
-<td align="left">-13.8</td>
-<td align="left">-1.21</td>
+<td align="center">-13.8</td>
+<td>-1.21</td>
 </tr>
 <tr class="even">
 <td align="left">44</td>
-<td align="left">5.2</td>
-<td align="left">0.46</td>
+<td align="center">5.2</td>
+<td>0.46</td>
 </tr>
 <tr class="odd">
 <td align="left">50</td>
-<td align="left">11.2</td>
-<td align="left">0.98</td>
+<td align="center">11.2</td>
+<td>0.98</td>
 </tr>
 <tr class="even">
 <td align="left">36</td>
-<td align="left">-2.8</td>
-<td align="left">-0.25</td>
+<td align="center">-2.8</td>
+<td>-0.25</td>
 </tr>
 <tr class="odd">
 <td align="left">26</td>
-<td align="left">-12.8</td>
-<td align="left">-1.12</td>
+<td align="center">-12.8</td>
+<td>-1.12</td>
 </tr>
 <tr class="even">
 <td align="left">37</td>
-<td align="left">-1.8</td>
-<td align="left">-0.16</td>
+<td align="center">-1.8</td>
+<td>-0.16</td>
 </tr>
 <tr class="odd">
 <td align="left">43</td>
-<td align="left">4.2</td>
-<td align="left">0.37</td>
+<td align="center">4.2</td>
+<td>0.37</td>
 </tr>
 <tr class="even">
 <td align="left">62</td>
-<td align="left">23.2</td>
-<td align="left">2.04</td>
+<td align="center">23.2</td>
+<td>2.04</td>
 </tr>
 <tr class="odd">
 <td align="left">35</td>
-<td align="left">-3.8</td>
-<td align="left">-0.33</td>
+<td align="center">-3.8</td>
+<td>-0.33</td>
 </tr>
 <tr class="even">
 <td align="left">38</td>
-<td align="left">-0.8</td>
-<td align="left">-0.07</td>
+<td align="center">-0.8</td>
+<td>-0.07</td>
 </tr>
 <tr class="odd">
 <td align="left">45</td>
-<td align="left">6.2</td>
-<td align="left">0.54</td>
+<td align="center">6.2</td>
+<td>0.54</td>
 </tr>
 <tr class="even">
 <td align="left">32</td>
-<td align="left">-6.8</td>
-<td align="left">-0.60</td>
+<td align="center">-6.8</td>
+<td>-0.60</td>
 </tr>
 <tr class="odd">
 <td align="left">28</td>
-<td align="left">-10.8</td>
-<td align="left">-0.95</td>
+<td align="center">-10.8</td>
+<td>-0.95</td>
 </tr>
 <tr class="even">
 <td align="left">34</td>
-<td align="left">-4.8</td>
-<td align="left">-0.42</td>
+<td align="center">-4.8</td>
+<td>-0.42</td>
 </tr>
 </tbody>
 </table></div>
-<div class="figure">
-<img src="media%5Cimage8.jpeg" style="width:1.52247in;height:0.93557in" alt=""><p class="caption">imagean.JPG</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:normal5"></span>
+<img src="images/normal5.jpg" alt="Z score values for X" width="50%"><p class="caption">
+Figure 10.6: Z score values for X
+</p>
 </div>
 <p>The <strong>z-score formula</strong> that we have been using is:</p>
 <p><span class="math display">\[z = \frac{x - \mu}{\sigma}\]</span></p>
 <ul>
 <li><p>z is the "z-score" (Standard Score)</p></li>
-<li><p>x is the value to be standardized</p></li>
-<li><p>μ ('mu") is the mean</p></li>
-<li><p>σ ("sigma") is the standard deviation</p></li>
+<li><p><span class="math inline">\(x\)</span> is the value to be standardized</p></li>
+<li><p><span class="math inline">\(μ\)</span> ('mu") is the mean</p></li>
+<li><p><span class="math inline">\(σ\)</span> ("sigma") is the standard deviation</p></li>
 </ul>
-<p><strong>Parameters of Normal distribution</strong></p>
-<p>As with any probability distribution, the parameters of the normal
-distribution define its shape and probabilities entirely. The normal
-distribution has two parameters, mean (μ) and standard deviation (σ).
-The normal distribution does not have just one form. Instead, the shape
-changes based on the parameter values</p>
-<div class="figure">
-<img src="media%5Cimage9.jpeg" style="width:2.83738in;height:2.01575in" alt=""><p class="caption">jujj.JPG</p>
+</div>
+<div id="parameters-of-normal-distribution" class="section level4 unnumbered">
+<h4>Parameters of Normal distribution<a class="anchor" aria-label="anchor" href="#parameters-of-normal-distribution"><i class="fas fa-link"></i></a>
+</h4>
+<p>As with any probability distribution, the parameters of the normal distribution define its shape and probabilities entirely. The normal distribution has two parameters, mean (<span class="math inline">\(μ\)</span>) and standard deviation (<span class="math inline">\(σ\)</span>). The normal distribution does not have just one form. Instead, the shape changes based on the parameter values</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:normal6"></span>
+<img src="images/normal6.jpg" alt="Shape changes in normal distribution based on different means" width="80%"><p class="caption">
+Figure 10.7: Shape changes in normal distribution based on different means
+</p>
 </div>
 <p><strong>Standard deviation:</strong></p>
-<p>The standard deviation is a measure of variability. It defines the width
-of the normal distribution. It determines how far away from the mean the
-values tend to fall. It represents the typical distance the observations
-and the average</p>
-<div class="figure">
-<img src="media%5Cimage10.jpeg" style="width:3.13992in;height:2.0375in" alt=""><p class="caption">aaxa.JPG</p>
+<p>The standard deviation is a measure of variability. It defines the width of the normal distribution. It determines how far away from the mean the values tend to fall. It represents the typical distance the observations and the average</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:normal7"></span>
+<img src="images/normal7.jpg" alt="Shape changes in normal distribution based on different standard deviation" width="80%"><p class="caption">
+Figure 10.8: Shape changes in normal distribution based on different standard deviation
+</p>
 </div>
-<p>When you have normally distributed data, the standard deviation can be
-used to determine the proportion of the values that fall within a
+<p>When you have normally distributed data, the standard deviation can be used to determine the proportion of the values that fall within a
 specified number of standard deviations from the mean. For example, in a
 normal distribution, 68 % of the observation falls within +/- 1 standard
 deviation from the mean. This property is called as <strong>Area Property</strong>.</p>
-<p><strong>Area Property</strong></p>
-<div class="figure">
-<img src="media%5Cimage11.jpeg" style="width:4.09222in;height:3.19685in" alt=""><p class="caption">dsasdad.JPG</p>
+</div>
+<div id="area-property" class="section level4 unnumbered">
+<h4>Area Property<a class="anchor" aria-label="anchor" href="#area-property"><i class="fas fa-link"></i></a>
+</h4>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:normal8"></span>
+<img src="images/normal8.jpg" alt="Area property of normal distribution" width="90%"><p class="caption">
+Figure 10.9: Area property of normal distribution
+</p>
 </div>
 <div class="inline-table"><table class="table table-sm">
 <thead><tr class="header">
@@ -728,7 +776,10 @@ than the mean.</p></li>
 <li><p>Area property allows you to determine the proportion of values that
 fall within certain distances from the mean.</p></li>
 </ul>
-<p><strong>Some problems</strong></p>
+</div>
+<div id="solved-example" class="section level4 unnumbered">
+<h4>Solved example<a class="anchor" aria-label="anchor" href="#solved-example"><i class="fas fa-link"></i></a>
+</h4>
 <p>1. What is the z-score of a value of 27, given a set mean of 24, and a
 standard deviation of 2?</p>
 <p><strong>Solution</strong></p>
@@ -742,23 +793,34 @@ discussed in practical session.</p>
 
 </div>
 </div>
+</div>
+</div>
   <div class="chapter-nav">
-<div class="prev"><a href="regression-analysis.html"><span class="header-section-number">8</span> Regression Analysis</a></div>
-<div class="next"><a href="references.html"><span class="header-section-number">10</span> References</a></div>
+<div class="prev"><a href="probability.html"><span class="header-section-number">9</span> Probability</a></div>
+<div class="next"><a href="references.html">References</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
       <ul class="nav navbar-nav">
-<li><a class="nav-link" href="#probability-distributions"><span class="header-section-number">9</span> Probability Distributions</a></li>
-<li><a class="nav-link" href="#random-experiment"><span class="header-section-number">9.1</span> Random experiment</a></li>
-<li><a class="nav-link" href="#random-variable"><span class="header-section-number">9.2</span> Random variable</a></li>
-<li><a class="nav-link" href="#probability-distributions-1"><span class="header-section-number">9.3</span> Probability distributions</a></li>
-<li><a class="nav-link" href="#probability-mass-function"><span class="header-section-number">9.4</span> Probability mass function</a></li>
-<li><a class="nav-link" href="#probability-density-function"><span class="header-section-number">9.5</span> Probability density function</a></li>
+<li><a class="nav-link" href="#probability-distributions"><span class="header-section-number">10</span> Probability Distributions</a></li>
+<li><a class="nav-link" href="#random-experiment"><span class="header-section-number">10.1</span> Random experiment</a></li>
+<li><a class="nav-link" href="#random-variable"><span class="header-section-number">10.2</span> Random variable</a></li>
+<li><a class="nav-link" href="#probability-distributions-1"><span class="header-section-number">10.3</span> Probability distributions</a></li>
+<li><a class="nav-link" href="#probability-mass-function"><span class="header-section-number">10.4</span> Probability mass function</a></li>
+<li><a class="nav-link" href="#probability-density-function"><span class="header-section-number">10.5</span> Probability density function</a></li>
 <li>
-<a class="nav-link" href="#expected-value-of-a-random-variable"><span class="header-section-number">9.6</span> Expected value of a random variable</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#example"><span class="header-section-number">9.6.1</span> Example</a></li></ul>
+<a class="nav-link" href="#expected-value-of-a-random-variable"><span class="header-section-number">10.6</span> Expected value of a random variable</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#example-5">Example</a></li></ul>
 </li>
-<li><a class="nav-link" href="#discrete-probability-distributions"><span class="header-section-number">9.7</span> Discrete probability distributions</a></li>
-<li><a class="nav-link" href="#bernoulli-distribution"><span class="header-section-number">9.8</span> Bernoulli distribution</a></li>
+<li>
+<a class="nav-link" href="#discrete-probability-distributions"><span class="header-section-number">10.7</span> Discrete probability distributions</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#bernoulli-distribution"><span class="header-section-number">10.7.1</span> Bernoulli distribution</a></li>
+<li><a class="nav-link" href="#binomial-distribution"><span class="header-section-number">10.7.2</span> Binomial distribution</a></li>
+<li><a class="nav-link" href="#poisson-distribution"><span class="header-section-number">10.7.3</span> Poisson distribution</a></li>
+<li><a class="nav-link" href="#questions">Questions</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#continuous-probability-distributions"><span class="header-section-number">10.8</span> Continuous probability distributions</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#normal-distribution"><span class="header-section-number">10.8.1</span> Normal distribution</a></li></ul>
+</li>
 </ul>
 
       <div class="book-extra">

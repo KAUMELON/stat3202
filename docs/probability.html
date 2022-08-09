@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 9 Probability | LECTURE NOTES OF STAT 3202</title>
+<meta name="author" content="Dr. Pratheesh P. Gopinath">
+<meta name="description" content="Many events can’t be predicted with total certainty. The best we can say is how likely they are to happen, using the idea of probability.  9.1 Tossing a Coin When a coin is tossed, there are two...">
+<meta name="generator" content="bookdown 0.24 with bs4_book()">
+<meta property="og:title" content="Chapter 9 Probability | LECTURE NOTES OF STAT 3202">
+<meta property="og:type" content="book">
+<meta property="og:image" content="/images/cover.PNG">
+<meta property="og:description" content="Many events can’t be predicted with total certainty. The best we can say is how likely they are to happen, using the idea of probability.  9.1 Tossing a Coin When a coin is tossed, there are two...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 9 Probability | LECTURE NOTES OF STAT 3202">
+<meta name="twitter:description" content="Many events can’t be predicted with total certainty. The best we can say is how likely they are to happen, using the idea of probability.  9.1 Tossing a Coin When a coin is tossed, there are two...">
+<meta name="twitter:image" content="/images/cover.PNG">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">LECTURE NOTES OF STAT 3202</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome</a></li>
+<li><a class="" href="preface.html">Preface</a></li>
+<li><a class="" href="introduction.html"><span class="header-section-number">1</span> Introduction</a></li>
+<li><a class="" href="graphical-representation-of-data.html"><span class="header-section-number">2</span> Graphical representation of data</a></li>
+<li><a class="" href="measures-of-central-tendency---i.html"><span class="header-section-number">3</span> Measures of central tendency - I</a></li>
+<li><a class="" href="measures-of-central-tendency--ii.html"><span class="header-section-number">4</span> Measures of central tendency -II</a></li>
+<li><a class="" href="measures-of-dispersion.html"><span class="header-section-number">5</span> Measures of Dispersion</a></li>
+<li><a class="" href="skewness-and-kurtosis.html"><span class="header-section-number">6</span> Skewness and Kurtosis</a></li>
+<li><a class="" href="measures-of-association.html"><span class="header-section-number">7</span> Measures of Association</a></li>
+<li><a class="" href="regression-analysis.html"><span class="header-section-number">8</span> Regression Analysis</a></li>
+<li><a class="active" href="probability.html"><span class="header-section-number">9</span> Probability</a></li>
+<li><a class="" href="probability-distributions.html"><span class="header-section-number">10</span> Probability Distributions</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="probability" class="section level1" number="9">
+<h1>
+<span class="header-section-number">9</span> Probability<a class="anchor" aria-label="anchor" href="#probability"><i class="fas fa-link"></i></a>
+</h1>
+<p>Many events can’t be predicted with total certainty. The best we can say is how likely they are to happen, using the idea of probability.</p>
+<div id="tossing-a-coin" class="section level2" number="9.1">
+<h2>
+<span class="header-section-number">9.1</span> Tossing a Coin<a class="anchor" aria-label="anchor" href="#tossing-a-coin"><i class="fas fa-link"></i></a>
+</h2>
+<p>When a coin is tossed, there are two possible outcomes:</p>
+<ul>
+<li><p>heads (<strong>H</strong>) or</p></li>
+<li><p>tails (<strong>T</strong>)</p></li>
+</ul>
+<p>We say that the probability of the coin landing <strong>H</strong> is ½ and the probability of the coin landing <strong>T</strong> is ½</p>
+</div>
+<div id="throwing-dice" class="section level2" number="9.2">
+<h2>
+<span class="header-section-number">9.2</span> Throwing Dice<a class="anchor" aria-label="anchor" href="#throwing-dice"><i class="fas fa-link"></i></a>
+</h2>
+<p>When a single die is thrown, there are six possible
+outcomes: 1, 2, 3, 4, 5, and 6. The probability of getting any one of them is <span class="math inline">\(\frac{1}{6}\)</span></p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:dice"></span>
+<img src="images/dice.png" alt="Image of dice (plural)" width="10%"><p class="caption">
+Figure 9.1: Image of dice (plural)
+</p>
+</div>
+</div>
+<div id="playing-cards" class="section level2" number="9.3">
+<h2>
+<span class="header-section-number">9.3</span> Playing cards<a class="anchor" aria-label="anchor" href="#playing-cards"><i class="fas fa-link"></i></a>
+</h2>
+<p>A standard deck of playing cards consists of <strong>52</strong> cards divided into 4 suits (Spades, Hearts, Diamonds, Clubs) of 13 cards each</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:spades"></span>
+<img src="images/spade.png" alt="Image of a spade symbol" width="10%"><p class="caption">
+Figure 9.2: Image of a spade symbol
+</p>
+</div>
+<blockquote>
+<p>Spades : - 13 cards, which include 9 numbered cards from 2 to 10 and picture cards Ace, King, Queen, Jack</p>
+</blockquote>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:Heart"></span>
+<img src="images/heart.png" alt="Image of a hearts symbol" width="10%"><p class="caption">
+Figure 9.3: Image of a hearts symbol
+</p>
+</div>
+<blockquote>
+<p>Hearts : - 13 cards</p>
+</blockquote>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:diamond"></span>
+<img src="images/diamond.png" alt="Image of a diamond symbol" width="10%"><p class="caption">
+Figure 9.4: Image of a diamond symbol
+</p>
+</div>
+<blockquote>
+<p>Diamonds :- 13 cards</p>
+</blockquote>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:claver"></span>
+<img src="images/claver.png" alt="Image of a clubs symbol" width="10%"><p class="caption">
+Figure 9.5: Image of a clubs symbol
+</p>
+</div>
+<blockquote>
+<p>Clubs :- 13 cards</p>
+</blockquote>
+<blockquote>
+<p><strong>Red cards</strong>:- 26 cards and <strong>Black cards</strong>:- 26 cards</p>
+</blockquote>
+</div>
+<div id="probability-1" class="section level2" number="9.4">
+<h2>
+<span class="header-section-number">9.4</span> Probability<a class="anchor" aria-label="anchor" href="#probability-1"><i class="fas fa-link"></i></a>
+</h2>
+<p>In general:</p>
+<p>Probability of an event happening =
+<span class="math inline">\(\frac{\text{Number of ways it can happen}}{\text{Total  number of outcomes}}\)</span></p>
+<div id="example-1" class="section level3 unnumbered">
+<h3>Example 1<a class="anchor" aria-label="anchor" href="#example-1"><i class="fas fa-link"></i></a>
+</h3>
+<p>The chances of rolling a "4" with a die</p>
+<p>Number of ways it can happen: 1 (there is only 1 face with a "4" on it)</p>
+<p>Total number of outcomes: 6 (there are 6 faces altogether)</p>
+<p>So the probability = <span class="math inline">\(\frac{1}{6}\)</span></p>
+</div>
+<div id="example-2" class="section level3 unnumbered">
+<h3>Example 2<a class="anchor" aria-label="anchor" href="#example-2"><i class="fas fa-link"></i></a>
+</h3>
+<p>There are 5 marbles in a bag: 4 are blue, and 1 is red. What is the probability that a blue marble gets picked?</p>
+<p>Number of ways it can happen: 4 (there are 4 blues)</p>
+<p>Total number of outcomes: 5 (there are 5 marbles in total)</p>
+<p>So the probability = <span class="math inline">\(\frac{4}{5}\)</span> = 0.8</p>
+</div>
+<div id="must-learn-definitions" class="section level3 unnumbered">
+<h3>Must learn definitions<a class="anchor" aria-label="anchor" href="#must-learn-definitions"><i class="fas fa-link"></i></a>
+</h3>
+<p><strong>Random experiment:</strong> A random experiment is an experiment or a process for which the outcome cannot be predicted with certainty.</p>
+<p>Eg: Tossing a coin; Tossing a coin five times; Choosing a card from deck
+of cards; Tossing a die.</p>
+<p><strong>Sample space</strong>: The sample space (denoted <strong>S</strong>) of a random experiment is the set of all possible outcomes.</p>
+<p>Eg: Throwing a coin generates the sample space; <strong>S</strong>={H,T},Throwing a die: <strong>S</strong>= {1,2,3,4,5,6}</p>
+<p><strong>Sample point</strong>: Just one of the possible outcomes. Eg: heads, the 5 of Clubs in cards. There are 6 different sample points in the sample space of throwing a
+die.</p>
+
+<div class="rmdnote">
+<p>Exercise1: Check yourself</p>
+<p>If a die is tossed</p>
+<ol style="list-style-type: decimal">
+<li>What is the sample space?<br>
+</li>
+<li>What is the probability of getting a 1?<br>
+</li>
+<li>What is the probability of obtaining a even number?</li>
+<li>What is the probability of getting a 7?<br>
+</li>
+</ol>
+</div>
+Answers given in section <a href="probability.html#answer">9.9</a>
+
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:dicepoints"></span>
+<img src="images/dicesamplepoints.jpg" alt="Sample space in throwing a die" width="50%"><p class="caption">
+Figure 9.6: Sample space in throwing a die
+</p>
+</div>
+</div>
+<div id="event" class="section level3" number="9.4.1">
+<h3>
+<span class="header-section-number">9.4.1</span> Event<a class="anchor" aria-label="anchor" href="#event"><i class="fas fa-link"></i></a>
+</h3>
+<p>One or more outcomes of a random experiment</p>
+<p><u>An event can be just one outcome:</u></p>
+<ul>
+<li><p>Getting a Tail when tossing a coin</p></li>
+<li><p>Rolling a "5"</p></li>
+</ul>
+<p><u>An event can include more than one outcome:</u></p>
+<ul>
+<li><p>Choosing a "King" from a deck of cards (any of the 4 Kings)</p></li>
+<li><p>Rolling an "even number" (2, 4 or 6)</p></li>
+</ul>
+</div>
+<div id="example" class="section level3 unnumbered">
+<h3>Example<a class="anchor" aria-label="anchor" href="#example"><i class="fas fa-link"></i></a>
+</h3>
+<p>Ram wants to see how many times a "double" (both dice have same number) comes up when throwing 2 dice.</p>
+<p>The <strong>Sample Space</strong> is all possible Outcomes (36 Sample Points):</p>
+<p>{1,1} {1,2} {1,3} {1,4} ... {6,3} {6,4} {6,5} {6,6}</p>
+<p>The <strong>Event</strong> Ram is looking for is a "double", where both dice have the same number. It is made up of these 6 Sample Points:</p>
+<p>{1,1} {2,2} {3,3} {4,4} {5,5} and {6,6}</p>
+<div id="types-of-events" class="section level4" number="9.4.1.1">
+<h4>
+<span class="header-section-number">9.4.1.1</span> Types of Events<a class="anchor" aria-label="anchor" href="#types-of-events"><i class="fas fa-link"></i></a>
+</h4>
+<p><strong>Independent Events</strong></p>
+<p>Events can be "Independent", meaning each event is not affected by any other events.</p>
+<p>Eg: You toss a coin and it comes up "Heads" three times. what is the chance that the next toss will also be a "Head"?</p>
+<p>The chance is simply ½ (or 0.5) just like any other toss of the coin. Past will not affect the current toss.</p>
+<p><strong>Dependent Events</strong></p>
+<p>But some events can be "dependent", which means they can be affected by previous events. after taking one card from the deck there are less
+cards available, so the probabilities change!</p>
+<p>Let's look at the chances of getting a King from a deck of cards</p>
+<p>For the 1st card the chance of drawing a King is 4 out of 52</p>
+<p>But for the 2nd card:</p>
+<p>If the 1st card was a King, then the 2nd card is less likely to be a
+King, as only 3 of the 51 cards left are Kings.</p>
+<p>If the 1st card was not a King, then the 2nd card is slightly more
+likely to be a King, as 4 of the 51 cards left are King.</p>
+<p><u>Note</u></p>
+<p><em>Replacement</em>: When we put each card back after drawing it the chances don't change, as the events are independent.</p>
+<p><em>Without Replacement</em>: The chances will change, and the events are dependent.</p>
+<p><strong>Mutually Exclusive Events</strong></p>
+<p>Mutually Exclusive means we can't get both events at the same time. It
+is either one or the other, but not both</p>
+<p>Examples:</p>
+<ul>
+<li><p>Turning left or right are Mutually Exclusive (you can't do both at
+the same time)</p></li>
+<li><p>Heads and Tails are Mutually Exclusive</p></li>
+<li><p>Kings and Aces are Mutually Exclusive</p></li>
+</ul>
+<p>What isn't Mutually Exclusive</p>
+<p>Kings and Hearts are not Mutually Exclusive, because we can have a King of Hearts!</p>
+<p><strong>Exhaustive Events</strong></p>
+<p>A set of events is called exhaustive if all the events together make the
+entire sample space.</p>
+<p>For example</p>
+<p>Sample space of tossing a die is <span class="math inline">\(S\)</span>= {1, 2, 3, 4, 5, 6}</p>
+<p>Then the</p>
+<p><em>Event A</em>: getting an even number; {2, 4, 6}</p>
+<p><em>Event B</em>: getting an odd number; {1, 3, 5}</p>
+<p>are exhaustive events because together they makes the entire sample space.</p>
+<p><strong>Equally likely events</strong></p>
+<p>Equally likely events are events that have the same theoretical
+probability of occurring.</p>
+<p>For example: Tossing a coin</p>
+<p><em>Event A</em>: getting a head</p>
+<p><em>Event B</em>: getting a tail</p>
+<p>Both events have equal probability of occurring; these events are so termed as equally likely events</p>
+</div>
+</div>
+</div>
+<div id="definition-of-probability" class="section level2" number="9.5">
+<h2>
+<span class="header-section-number">9.5</span> Definition of Probability<a class="anchor" aria-label="anchor" href="#definition-of-probability"><i class="fas fa-link"></i></a>
+</h2>
+<div id="mathematical-definition" class="section level3" number="9.5.1">
+<h3>
+<span class="header-section-number">9.5.1</span> Mathematical Definition<a class="anchor" aria-label="anchor" href="#mathematical-definition"><i class="fas fa-link"></i></a>
+</h3>
+<p>If an experiment with <span class="math inline">\(n\)</span> exhaustive, mutually exclusive and equally likely outcomes, <span class="math inline">\(m\)</span> outcomes are favourable to the happening of an event <span class="math inline">\(E\)</span>, the probability <span class="math inline">\(p\)</span> of happening of E is given by</p>
+<p><span class="math display">\[P\left( E \right) = p = \ \frac{m}{n}\]</span></p>
+<p><span class="math inline">\(p\)</span> is termed as probability of success.</p>
+<div id="example-3" class="section level4 unnumbered">
+<h4>Example<a class="anchor" aria-label="anchor" href="#example-3"><i class="fas fa-link"></i></a>
+</h4>
+<p>When a coin is tossed, there are two possible outcomes Heads or Tails. Outcomes are exhaustive, mutually exclusive and equally likely.</p>
+<p>Consider the event <span class="math inline">\(E\)</span> : getting a head</p>
+<p>Probability of event <span class="math inline">\(E\)</span>, <span class="math inline">\(p(E)\)</span> is denoted as <span class="math inline">\(p\)</span></p>
+<p><span class="math inline">\(p\)</span> is given by the definition as:</p>
+<p><span class="math inline">\(m\)</span> = number of outcomes are favourable to the happening of event <span class="math inline">\(E\)</span> = 1</p>
+<p><span class="math inline">\(n\)</span> = number of outcomes (Head and Tail) = 2</p>
+<p><span class="math display">\[P\left( E \right) = p = \ \frac{m}{n}\]</span></p>
+<p><span class="math display">\[P\left( E \right) = p = \ \frac{1}{2}\]</span></p>
+<p><em>i</em>.<em>e</em>. probability of getting a Head is ½</p>
+<p>Above definition have following limitations</p>
+<ul>
+<li><p>What will happen if the outcomes are not equally likely. For example
+in tossing of a biased die.</p></li>
+<li><p>Probability cannot be defined if the total cases ‘<em>n</em>’ is unknown or
+tends to infinity. For example; what is the probability of raining
+tomorrow?</p></li>
+</ul>
+<p>To overcome these limitations, other definitions are given</p>
+</div>
+</div>
+<div id="statistical-definition" class="section level3" number="9.5.2">
+<h3>
+<span class="header-section-number">9.5.2</span> Statistical Definition<a class="anchor" aria-label="anchor" href="#statistical-definition"><i class="fas fa-link"></i></a>
+</h3>
+<p>The probability '<em>p</em>' of happening of E is given by</p>
+<p><span class="math display">\[P\left( E \right) = \lim_{n \rightarrow \infty}\frac{m}{n}\]</span></p>
+<p>where <span class="math inline">\(n\)</span> is the number of times the process (e.g., tossing the die) is
+performed which tends to infinity, and <span class="math inline">\(m\)</span> is the number of times the
+outcome ‘<span class="math inline">\(E\)</span>’ happens.</p>
+<p>Above definition also has some limitations</p>
+<ul>
+<li><p>In some cases, the experiment could never in practice be carried out
+more than once.</p></li>
+<li><p>It leaves open the question of how large <span class="math inline">\(n\)</span> has to be before we get
+a good approximation.</p></li>
+</ul>
+<p>To overcome these limitations, another approach to probability was
+introduced by Russian mathematician A.N. Kolmogorov. In this approach no
+precise definition is given, instead certain axioms or postulates on
+which probability calculations are based.</p>
+</div>
+<div id="axiomatic-approach" class="section level3" number="9.5.3">
+<h3>
+<span class="header-section-number">9.5.3</span> Axiomatic Approach<a class="anchor" aria-label="anchor" href="#axiomatic-approach"><i class="fas fa-link"></i></a>
+</h3>
+<p>Whole field of probability theory is based on the following three axioms</p>
+<ol style="list-style-type: decimal">
+<li><p>Probability of an event, P (<span class="math inline">\(E\)</span>) lies between 0 and 1.That is
+<span class="math inline">\(0 \leq P(E) \leq 1\)</span></p></li>
+<li><p>Probability of entire sample space is 1. That is
+<span class="math inline">\(P\left( S \right) = 1\)</span></p></li>
+<li><p>If A and B are mutually exclusive events then probability of occurrence of either A or B denoted by <span class="math inline">\(P(A \cup B)\)</span> shall be given by <span class="math inline">\(P\left( A \cup B \right) = P\left( A \right) + P(B)\)</span></p></li>
+</ol>
+</div>
+</div>
+<div id="some-interesting-facts-on-probability" class="section level2 unnumbered">
+<h2>Some interesting facts on probability<a class="anchor" aria-label="anchor" href="#some-interesting-facts-on-probability"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li><p>Probability <span class="math inline">\(p\)</span> of the happening of an event is known as the probability of success and the probability <span class="math inline">\(q\)</span>’ of the
+non-happening of the event as the probability of failure.</p></li>
+<li><p><span class="math inline">\(p\)</span> as well as <span class="math inline">\(q\)</span> are non-negative and cannot exceed unity. <em>i</em>.<em>e</em>., 0 ≤ <span class="math inline">\(p\)</span> ≤ 1 and 0 ≤ <span class="math inline">\(q\)</span> ≤ 1. Thus, the probability of occurrence of an event lies between 0 and 1[including 0 and 1]</p></li>
+<li><p>Probability of an impossible event is 0 and that of a sure event is 1. If <span class="math inline">\(p(A)\)</span> = 1, the event A is certainly going to happen and if <span class="math inline">\(p(A)\)</span> = 0, the event is certainly not going to happen.</p></li>
+<li><p>The number (<span class="math inline">\(m\)</span>) of favorable outcomes to an event cannot be greater than the total number of outcomes (<span class="math inline">\(n\)</span>).</p></li>
+</ul>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:probshow"></span>
+<img src="images/probshow.jpg" alt="Sample space in throwing a die" width="50%"><p class="caption">
+Figure 9.7: Sample space in throwing a die
+</p>
+</div>
+</div>
+<div id="additional-problems" class="section level2 unnumbered">
+<h2>Additional Problems<a class="anchor" aria-label="anchor" href="#additional-problems"><i class="fas fa-link"></i></a>
+</h2>
+<blockquote>
+<ol style="list-style-type: decimal">
+<li>In a simultaneous toss of two coins, find the probability of (i) getting 2 heads. (ii) exactly 1 head ?</li>
+</ol>
+</blockquote>
+<p><strong>Solution</strong></p>
+<p>Here, the possible outcomes are HH, HT, TH, TT. <em>i</em>.<em>e</em>., Total number of possible outcomes = 4.</p>
+<p>(i) Number of outcomes favorable to the event (2 heads) = 1 (i.e.,HH). <em>i</em>.<em>e</em>.<span class="math inline">\(p\)</span>(2 heads) = 1/4 .</p>
+<p>(ii) Now the event consisting of exactly one head has two favourable cases, namely HT and TH</p>
+<p><span class="math inline">\(p\)</span>(exactly one head) = 2 /4 = 1/ 2</p>
+<blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>In a single throw of two dice, what is the probability that the sum is 9?</li>
+</ol>
+</blockquote>
+<p><strong>Solution</strong></p>
+<p>The number of possible outcomes is 6 × 6 = 36.</p>
+<p>1,1 1,2 1,3 1,4 1,5 1.6</p>
+<p>2,1 2,2 2,3 2,4 2,5 2,6</p>
+<p>3,1 3,2 3,3 3,4 3,5 3,6</p>
+<p>4,1 4,2 4,3 4,4 4,5 4,6</p>
+<p>5,1 5,2 5,3 5,4 5,5 5,6</p>
+<p>6,1 6,2 6,3 6,4 6,5 6,6</p>
+<p>Event A: sum is 9</p>
+<p>four outcomes are there with sum 9, they are (5,4), (6,3), (3,6), (4,5)</p>
+<p>Probability (sum is 9) = 4/36= 1/9</p>
+<blockquote>
+<ol start="3" style="list-style-type: decimal">
+<li>From a bag containing 10 red, 4 blue and 6 black balls, a ball is drawn at random. What is the probability of drawing (i) a red ball? (ii) a blue ball? (iii) not a black ball?</li>
+</ol>
+</blockquote>
+<p>There are 20 balls in all. So, the total number of possible outcomes is 20</p>
+<p>(i) Number of red balls = 10,</p>
+<p><span class="math inline">\(p\)</span>(getting a red ball ) = 10/20 = ½</p>
+<p>(ii) Number of blue balls = 4</p>
+<p><span class="math inline">\(p\)</span>(getting a blue ball ) = 4/20 = 1/5</p>
+<p>(iii) Number of balls which are not black = 14</p>
+<p><span class="math inline">\(p\)</span>(not a black ball ) = 14/20 = 7/10</p>
+</div>
+<div id="event-relations" class="section level2" number="9.6">
+<h2>
+<span class="header-section-number">9.6</span> Event relations<a class="anchor" aria-label="anchor" href="#event-relations"><i class="fas fa-link"></i></a>
+</h2>
+<p>Consider tossing of a die. If A be the event of getting an even number, then the sample points 2, 4 and 6 are favorable to the event A. The remaining sample points 1, 3 and 5 are not favorable to the event A. Therefore, these will occur when the event A will not occur. In an experiment, the outcomes which are not favorable to the event A are
+called complement of A and are denoted by 'not' A or by A<sup>c</sup></p>
+<div id="event-a-or-b" class="section level3" number="9.6.1">
+<h3>
+<span class="header-section-number">9.6.1</span> Event A or B<a class="anchor" aria-label="anchor" href="#event-a-or-b"><i class="fas fa-link"></i></a>
+</h3>
+<p>Denoted as (A <span class="math inline">\(\cup\)</span> B), spelled as A union B</p>
+<p>Let us consider the example of throwing a die. A is an event of getting
+a multiple of 2 and B be another event of getting a multiple of 3. The
+outcomes 2, 4 and 6 are favourable to the event A and the outcomes 3 and
+6 are favourable to the event B.</p>
+<p><em>i</em>.<em>e</em>.</p>
+<p>A= {2, 4, 6}</p>
+<p>B= {3, 6}</p>
+<p>Then A ꓴ B = { 2, 3, 4,6}</p>
+<p>Again, if A be the event of getting an even number and B is another
+event of getting an odd number, then</p>
+<p>A = { 2, 4, 6 }</p>
+<p>B = { 1, 3, 5 }</p>
+<p>Then A ꓴ B = {1, 2, 3, 4,5,6}</p>
+</div>
+<div id="event-a-and-b" class="section level3" number="9.6.2">
+<h3>
+<span class="header-section-number">9.6.2</span> Event A and B<a class="anchor" aria-label="anchor" href="#event-a-and-b"><i class="fas fa-link"></i></a>
+</h3>
+<p>Denoted as (A ꓵ B) spelled as A intersection B. On throwing a die in which A is the event of getting a multiple of 2 and B is the event of getting a multiple of 3. The outcomes favorable to A are 2, 4, 6 and the outcomes favorable to B are 3, 6. Here 6 is present in both A and B so here A ꓵ B = 6</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:intersection"></span>
+<img src="images/intersection.png" alt="Venn diagram showing intersection" width="50%"><p class="caption">
+Figure 9.8: Venn diagram showing intersection
+</p>
+</div>
+</div>
+</div>
+<div id="additive-law-of-probability" class="section level2" number="9.7">
+<h2>
+<span class="header-section-number">9.7</span> Additive law of Probability<a class="anchor" aria-label="anchor" href="#additive-law-of-probability"><i class="fas fa-link"></i></a>
+</h2>
+<p>For any two events A and B of a sample space S,</p>
+<blockquote>
+<p><span class="math inline">\(p\)</span>(AꓴB) = <span class="math inline">\(p\)</span>(A)+<span class="math inline">\(p\)</span>(B) − <span class="math inline">\(p\)</span>(AꓵB)</p>
+</blockquote>
+<p>For mutually exclusive case <span class="math inline">\(p\)</span>P(AꓵB)=0; in that case <span class="math inline">\(p\)</span>(AꓴB )= <span class="math inline">\(p\)</span>(A )+<span class="math inline">\(p\)</span>(B ).</p>
+<div id="example-4" class="section level3 unnumbered">
+<h3>Example<a class="anchor" aria-label="anchor" href="#example-4"><i class="fas fa-link"></i></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>A card is drawn from a well-shuffled deck of 52 cards. What is the probability that it is either a spade or a king?</li>
+</ol>
+<p>If A denotes the event of drawing a 'spade card'. B denotes the events of drawing a 'king' respectively. The event A consists of 13 sample points, whereas the event B consists of 4 sample points.</p>
+<p><span class="math inline">\(p\)</span>(A)= 13/52</p>
+<p><span class="math inline">\(p\)</span>(B)= 4/52</p>
+<p><span class="math inline">\(p\)</span>( AꓵB) = 1/52</p>
+<p><span class="math inline">\(p\)</span>(AꓴB)= <span class="math inline">\(p\)</span>(A)+<span class="math inline">\(p\)</span>(B) − <span class="math inline">\(p\)</span>(AꓵB) = 13/52+4/52-1/52 = 4/13</p>
+<ol start="2" style="list-style-type: decimal">
+<li>In a single throw of two dice, find the probability of a total of 9 or 11.</li>
+</ol>
+<p>Let the events A= a total of 9 and B= a total of 11.</p>
+<p>Events are mutually exclusive A ꓵ B = 0</p>
+<p>Now <span class="math inline">\(p\)</span>(A) = <span class="math inline">\(p\)</span> [(3, 6), (4, 5), (5, 4), (6, 3)] = 4 /36</p>
+<p><span class="math inline">\(p\)</span>(B) = <span class="math inline">\(p\)</span>[ (5, 6), (6, 5)] = 2 /36</p>
+<p>Thus, <span class="math inline">\(p\)</span>( AꓴB) = 4 /36 +2/36 =6/36=1/6</p>
+</div>
+</div>
+<div id="multiplication-law-of-probability" class="section level2" number="9.8">
+<h2>
+<span class="header-section-number">9.8</span> Multiplication law of probability<a class="anchor" aria-label="anchor" href="#multiplication-law-of-probability"><i class="fas fa-link"></i></a>
+</h2>
+<p>If A and B are independent events, then</p>
+<p><span class="math inline">\(p\)</span>(AꓵB) = <span class="math inline">\(p\)</span>(A). <span class="math inline">\(p\)</span>(B)</p>
+<p>It is called as the Multiplication law of probability</p>
+<ol start="3" style="list-style-type: decimal">
+<li>A die is tossed twice. Find the probability of a number greater than 4 on each throw.</li>
+</ol>
+<p>Let us denote by A, the event 'a number greater than 4' on first throw. B be the event 'a number greater than 4' in the second throw. Clearly A and B are independent events. In the first throw, there are two outcomes, namely, 5 and 6 favourable to the event A.</p>
+<p>∴ <span class="math inline">\(p\)</span>(A) =2/6 = 1/3</p>
+<p>Similarly in the second throw, there are two outcomes, namely, 5 and 6 favourable to the event A.</p>
+<p>∴ <span class="math inline">\(p\)</span>(B) = 2/6 = 1/3</p>
+<p>Hence, <span class="math inline">\(p\)</span>(A and B) = <span class="math inline">\(p\)</span>(AꓵB) = <span class="math inline">\(p\)</span>(A).<span class="math inline">\(p\)</span>(B) = 1 /3 ×1 /3 = 1/9</p>
+</div>
+<div id="probability-using-combinations" class="section level2 unnumbered">
+<h2>Probability using combinations<a class="anchor" aria-label="anchor" href="#probability-using-combinations"><i class="fas fa-link"></i></a>
+</h2>
+<p>Knowledge of combinations can be applied to find total number of possible outcomes.</p>
+<p><sup>n</sup><em>C</em><sub>r</sub><span class="math inline">\(= \frac{n!}{r!(n - 1)!}\)</span></p>
+<p>For example
+<sup>3</sup><em>C</em><sub>2</sub><span class="math inline">\(= \frac{3!}{2!(3 - 2)!} = \frac{3 \times 2 \times 1}{2 \times 1(1)} = 3\)</span></p>
+<p>Now let us see with example how this is used in probability</p>
+<p>A bag contains 3 red, 6 white and 7 blue balls. What is the probability that two balls drawn are white and blue?</p>
+<p>Total number of balls = 3 + 6 + 7 = 16</p>
+<p>Out of 16 balls, 2 balls can be drawn in <sup>16</sup><em>C</em><sub>2</sub> ways</p>
+<p><em>i</em>.<em>e</em>. <sup>16</sup><em>C</em><sub>2</sub> = 120.</p>
+<p>Out of 6 white balls, 1 ball can be drawn in <sup>6</sup><em>C</em><sub>1</sub> ways and out of 7 blue balls, one can be drawn is <sup>7</sup><em>C</em><sub>1</sub> ways. Since each of the former case is associated with each of the later case, therefore total number of favorable cases is <sup>6</sup><em>C</em><sub>1</sub> × <sup>7</sup><em>C</em><sub>1</sub></p>
+<p>Therefore required probability= (<sup>6</sup><em>C</em><sub>1</sub> × <sup>7</sup><em>C</em><sub>1</sub>) / <sup>16</sup><em>C</em><sub>2</sub> = 42/120 = 7/20</p>
+<p>Find the probability of getting both red balls, when from a bag containing 5 red and 4 black balls, two balls are drawn</p>
+<p>Total number of balls = 9</p>
+<p>Out of 9 balls, 2 balls can be drawn in <sup>9</sup>C<sub>2</sub> ways</p>
+<p>No of ways both are red balls can be taken = <sup>5</sup>C<sub>2</sub></p>
+<p>Hence <span class="math inline">\(p\)</span>(both red balls ) = <sup>5</sup>C<sub>2</sub> / <sup>9</sup>C<sub>2</sub> = 5/18</p>
+
+<div class="rmdnote">
+<strong>Assignment Problem</strong><br>
+Six cards are drawn at random from a pack of 52 cards. What is the probability that 3 will be red and 3 black?
+</div>
+</div>
+<div id="answer" class="section level2" number="9.9">
+<h2>
+<span class="header-section-number">9.9</span> Answers of exercise 1 {-}<a class="anchor" aria-label="anchor" href="#answer"><i class="fas fa-link"></i></a>
+</h2>
+<ol style="list-style-type: decimal">
+<li><p>{1, 2, 3, 4, 5, 6}</p></li>
+<li><p>1/6</p></li>
+<li><p>3/6 = 1/2</p></li>
+<li><p>0</p></li>
+</ol>
+<p>********************************************************</p>
+
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="regression-analysis.html"><span class="header-section-number">8</span> Regression Analysis</a></div>
+<div class="next"><a href="probability-distributions.html"><span class="header-section-number">10</span> Probability Distributions</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#probability"><span class="header-section-number">9</span> Probability</a></li>
+<li><a class="nav-link" href="#tossing-a-coin"><span class="header-section-number">9.1</span> Tossing a Coin</a></li>
+<li><a class="nav-link" href="#throwing-dice"><span class="header-section-number">9.2</span> Throwing Dice</a></li>
+<li><a class="nav-link" href="#playing-cards"><span class="header-section-number">9.3</span> Playing cards</a></li>
+<li>
+<a class="nav-link" href="#probability-1"><span class="header-section-number">9.4</span> Probability</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#example-1">Example 1</a></li>
+<li><a class="nav-link" href="#example-2">Example 2</a></li>
+<li><a class="nav-link" href="#must-learn-definitions">Must learn definitions</a></li>
+<li><a class="nav-link" href="#event"><span class="header-section-number">9.4.1</span> Event</a></li>
+<li><a class="nav-link" href="#example">Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#definition-of-probability"><span class="header-section-number">9.5</span> Definition of Probability</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#mathematical-definition"><span class="header-section-number">9.5.1</span> Mathematical Definition</a></li>
+<li><a class="nav-link" href="#statistical-definition"><span class="header-section-number">9.5.2</span> Statistical Definition</a></li>
+<li><a class="nav-link" href="#axiomatic-approach"><span class="header-section-number">9.5.3</span> Axiomatic Approach</a></li>
+</ul>
+</li>
+<li><a class="nav-link" href="#some-interesting-facts-on-probability">Some interesting facts on probability</a></li>
+<li><a class="nav-link" href="#additional-problems">Additional Problems</a></li>
+<li>
+<a class="nav-link" href="#event-relations"><span class="header-section-number">9.6</span> Event relations</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#event-a-or-b"><span class="header-section-number">9.6.1</span> Event A or B</a></li>
+<li><a class="nav-link" href="#event-a-and-b"><span class="header-section-number">9.6.2</span> Event A and B</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#additive-law-of-probability"><span class="header-section-number">9.7</span> Additive law of Probability</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#example-4">Example</a></li></ul>
+</li>
+<li><a class="nav-link" href="#multiplication-law-of-probability"><span class="header-section-number">9.8</span> Multiplication law of probability</a></li>
+<li><a class="nav-link" href="#probability-using-combinations">Probability using combinations</a></li>
+<li><a class="nav-link" href="#answer"><span class="header-section-number">9.9</span> Answers of exercise 1 {-}</a></li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>LECTURE NOTES OF STAT 3202</strong>" was written by Dr. Pratheesh P. Gopinath. It was last built on 2022-01-30.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
