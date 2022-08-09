@@ -72,7 +72,7 @@ When the null hypothesis is true this $Z$ will follow a standard normal distribu
 This calculated of $Z$ is then compared with critical
 value of $Z$ from the table of standard normal distribution. If the calculated value is higher than the table value, we reject the null hypothesis. If the calculated value is less than table value, we conclude that we don't have enough evidence in our sample to reject the null hypothesis. See section \@ref(decision)
 
-#### Example 1 {-}
+### Example 1 {-}
 
 >A sample of 500 apples were taken from a large consignment and 60 were found to be bad. Test whether the proportion of bad apples in the consignment is 0.1 or not at 5% level of significance.
 
