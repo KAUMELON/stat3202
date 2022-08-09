@@ -1,4 +1,4 @@
-## Small sample tests
+# Small sample tests
 
 If the sample size *n* is less than 30 (*n* \< 30) it is known as small
 sample. For small samples the sampling distributions of statistic

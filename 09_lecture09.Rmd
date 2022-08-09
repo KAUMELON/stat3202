@@ -88,7 +88,7 @@ Eg: Throwing a coin generates the sample space; **S**={H,T},Throwing a die: **S*
 **Sample point**: Just one of the possible outcomes. Eg: heads, the 5 of Clubs in cards. There are 6 different sample points in the sample space of throwing a
 die.  
 
-```{block2 items, type='rmdnote'}
+```{block2 itemsprob, type='rmdnote'}
 Exercise1: Check yourself  
 
 If a die is tossed  

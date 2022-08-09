@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 16 Analysis of Variance (ANOVA) | TEXTBOOK OF AGRICULTURAL STATISTICS</title>
+<meta name="author" content="Dr. Pratheesh P. Gopinath">
+<meta name="description" content="Consider an example where three chemical fertilizers A, B, C are tested on potted plants. Experimenter would like to identify, which among the fertilizer among A, B and C gives the highest yield....">
+<meta name="generator" content="bookdown 0.24 with bs4_book()">
+<meta property="og:title" content="Chapter 16 Analysis of Variance (ANOVA) | TEXTBOOK OF AGRICULTURAL STATISTICS">
+<meta property="og:type" content="book">
+<meta property="og:image" content="/images/cover.PNG">
+<meta property="og:description" content="Consider an example where three chemical fertilizers A, B, C are tested on potted plants. Experimenter would like to identify, which among the fertilizer among A, B and C gives the highest yield....">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 16 Analysis of Variance (ANOVA) | TEXTBOOK OF AGRICULTURAL STATISTICS">
+<meta name="twitter:description" content="Consider an example where three chemical fertilizers A, B, C are tested on potted plants. Experimenter would like to identify, which among the fertilizer among A, B and C gives the highest yield....">
+<meta name="twitter:image" content="/images/cover.PNG">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">TEXTBOOK OF AGRICULTURAL STATISTICS</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome</a></li>
+<li><a class="" href="preface.html">Preface</a></li>
+<li><a class="" href="introduction.html"><span class="header-section-number">1</span> Introduction</a></li>
+<li><a class="" href="graphical-representation-of-data.html"><span class="header-section-number">2</span> Graphical representation of data</a></li>
+<li><a class="" href="measures-of-central-tendency---i.html"><span class="header-section-number">3</span> Measures of central tendency - I</a></li>
+<li><a class="" href="measures-of-central-tendency--ii.html"><span class="header-section-number">4</span> Measures of central tendency -II</a></li>
+<li><a class="" href="measures-of-dispersion.html"><span class="header-section-number">5</span> Measures of Dispersion</a></li>
+<li><a class="" href="skewness-and-kurtosis.html"><span class="header-section-number">6</span> Skewness and Kurtosis</a></li>
+<li><a class="" href="measures-of-association.html"><span class="header-section-number">7</span> Measures of Association</a></li>
+<li><a class="" href="regression-analysis.html"><span class="header-section-number">8</span> Regression Analysis</a></li>
+<li><a class="" href="probability.html"><span class="header-section-number">9</span> Probability</a></li>
+<li><a class="" href="probability-distributions.html"><span class="header-section-number">10</span> Probability Distributions</a></li>
+<li><a class="" href="hypothesis-testing.html"><span class="header-section-number">11</span> Hypothesis Testing</a></li>
+<li><a class="" href="large-sample-test.html"><span class="header-section-number">12</span> Large sample test</a></li>
+<li><a class="" href="small-sample-tests.html"><span class="header-section-number">13</span> Small sample tests</a></li>
+<li><a class="" href="design-of-experiments.html"><span class="header-section-number">14</span> Design of experiments</a></li>
+<li><a class="" href="uniformity-trials.html"><span class="header-section-number">15</span> Uniformity trials</a></li>
+<li><a class="active" href="analysis-of-variance-anova.html"><span class="header-section-number">16</span> Analysis of Variance (ANOVA)</a></li>
+<li><a class="" href="multiple-comparison-test.html"><span class="header-section-number">17</span> Multiple comparison test</a></li>
+<li><a class="" href="single-factor-experiments.html"><span class="header-section-number">18</span> Single factor experiments</a></li>
+<li><a class="" href="ftable.html"><span class="header-section-number">19</span> How to use F table</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="analysis-of-variance-anova" class="section level1" number="16">
+<h1>
+<span class="header-section-number">16</span> Analysis of Variance (ANOVA)<a class="anchor" aria-label="anchor" href="#analysis-of-variance-anova"><i class="fas fa-link"></i></a>
+</h1>
+<p>Consider an example where three chemical fertilizers A, B, C are tested
+on potted plants. Experimenter would like to identify, which among the
+fertilizer among A, B and C gives the highest yield. Potted plants are
+maintained in the same way; so that experimental conditions are
+homogenous. Now after collecting yield data from the plants, you can
+observe a variance <em>i</em>.<em>e</em>., the yield values are not same. Here, this
+variation is caused by the treatment and experimental error. So, the
+total observed variance = variance due to treatments + variance due to
+error. So, in this example treatment and error can be considered as the
+source of variation in the data. Basically, any experiment you perform
+is a sample based on which you make generalization about the population.
+Now, based on your experiment you want to test whether the means of
+treatment A, B and C are significantly different considering that the
+observed difference is not by chance taking in to account experimental
+error variance.</p>
+<p>Analysis of variance (ANOVA) is a statistical procedure used to analyze
+the differences among means, where the observed total variance is
+partitioned into components attributable to different sources of
+variation. The logic behind is simple, if much of the variation comes
+from the treatment, it is more likely that the mean of treatments is
+different. This variation is compared with the experimental error
+variance, larger the ratio of treatment variance to error variance, the
+more likely that the groups have different means. The term "analysis of
+variance" originates from how the analysis uses variances to determine
+whether the means are different. ANOVA works by comparing the variance
+of treatments (between group variance) to the error variance (within
+group variance).</p>
+<p>In short ANOVA is a statistical hypothesis test that determines whether
+the means of at least two populations are different. ANOVA was developed
+by the statistician Sir Ronald A. Fisher.</p>
+<div id="null-hypothesis-in-anova" class="section level2" number="16.1">
+<h2>
+<span class="header-section-number">16.1</span> Null hypothesis in ANOVA<a class="anchor" aria-label="anchor" href="#null-hypothesis-in-anova"><i class="fas fa-link"></i></a>
+</h2>
+<p>Null hypothesis in ANOVA is that population means are equal, which is
+denoted as H<sub>0</sub>: µ<sub>1</sub> = µ<sub>2</sub> =µ<sub>3</sub> = …., = µ<sub>k</sub> . Alternate
+hypothesis is that atleast a pair of treatment are not equal, H<sub>1</sub>: µ<sub>i</sub> ≠ µ<sub>j</sub>, where <em>i</em> ≠ <em>j</em>; <em>i</em>, <em>j</em> = 1,2, …, k. Where µ<sub>1</sub>, µ<sub>2</sub>, µ<sub>3</sub>, …, µ<sub>k</sub> are <em>k</em> population means</p>
+</div>
+<div id="degrees-of-freedom" class="section level2" number="16.2">
+<h2>
+<span class="header-section-number">16.2</span> Degrees of freedom<a class="anchor" aria-label="anchor" href="#degrees-of-freedom"><i class="fas fa-link"></i></a>
+</h2>
+<p>Before proceeding, it is important to understand the concept of degrees
+of freedom. Degrees of freedom can be defined as the number of
+independent observations that are free to vary.</p>
+<p>Consider a simple example, you have 7 hats and you want to wear a
+different hat every day of the week. On the first day, you can wear any
+of the 7 hats. On the second day, you can choose from the 6 remaining
+hats, on day 3 you can choose from 5 hats, and so on. When day 6 rolls
+around, you still have a choice between 2 hats that you haven’t worn yet
+that week. But after you choose your hat for day 6, you have no choice
+for the hat that you wear on Day 7. You must wear the one remaining hat.
+You had 7-1 = 6 days of “hat” freedom—in which the hat you wore could
+vary!</p>
+<p>Degrees of freedom can also be defined as the number of independent
+values, which were included into calculation of an estimate. An estimate
+is a single number that expresses some property of a population from a
+sample. It can be mean, median, standard deviation, or variance that is
+calculated from a sample. And there are independent values (or
+observations) that went into formula calculation. The quantity of these
+values is called “degrees of freedom.”</p>
+<p>Consider three observations 6, x and 9. Here x is unknown and suppose we
+know the mean is 6. Then we can say x is exactly equal to 3, because
+mean is 6. Here two values are free to vary but the third value depends
+on other two under the constraint that their mean should be 6. <em>i</em>.<em>e</em>.
+if other two values are changed third value will also change.</p>
+<p>Now consider the height of 7 students</p>
+<p>164, 173, 158, 179, 168, 187, 167.</p>
+<p>Mean: 170.85</p>
+<p>We can find standard deviation using two formulas</p>
+<p>SD= <span class="math inline">\(\frac{\sum_{}^{}\left( x_{i} - \overline{x} \right)^{2}}{n}\)</span>, where
+n is the number of observations</p>
+<p>Here SD = 9</p>
+<p>SD= <span class="math inline">\(\frac{\sum_{}^{}\left( x_{i} - \overline{x} \right)^{2}}{n - 1}\)</span>,
+where n-1 is the degrees of freedom</p>
+<p>Here SD = 9.72</p>
+<p>It is easy to notice that when we divide by degrees of freedom, we make
+our estimate of standard deviation greater than if we were diving only
+by sample size. But why do we need to make it greater? As we’ve already
+calculated the mean, we don’t have to use all the data in order to
+estimate the standard deviation. It does not depend on each piece of
+information, and the last observation does not contribute to the
+standard deviation. So, if we don’t delete this redundant data, then we
+underestimate the standard deviation of population from sample data. So here using the degrees of freedom in the denominator provides an unbiased estimate of population standard deviation.</p>
+<p>Degrees of freedom also define the probability distributions for the
+test statistics of various hypothesis tests. For example, hypothesis
+tests use the t-distribution, F-distribution, and the chi-square
+distribution to determine statistical significance. Each of these
+probability distributions is a family of distributions where the DF
+define the shape. Hypothesis tests use these distributions to make
+decisions on null hypothesis.</p>
+</div>
+<div id="mean-squares" class="section level2" number="16.3">
+<h2>
+<span class="header-section-number">16.3</span> Mean squares<a class="anchor" aria-label="anchor" href="#mean-squares"><i class="fas fa-link"></i></a>
+</h2>
+<p>The sum of squares is the sum of the square of difference of each
+observation from mean. That is Sum of squares
+=<span class="math inline">\(\sum_{i = 1}^{n}\left( x_{i} - \overline{x} \right)^{2}\)</span>. Where, <em>i</em>
+=1, 2, …, <em>n</em>, mean <span class="math inline">\(\overline{x} = \frac{\sum_{i = 1}^{n}x_{i}}{n}\)</span>.
+Sum of squares generates a measure of variability. In One-way ANOVA we
+calculate sum of squares of all observation to get measure of total
+variability along with within group and between group sum of squares,
+that gives idea on with in (error) and between group (between
+treatments) variability respectively. Mean sum of squares or mean
+squares are obtained by dividing sum of squares by corresponding degrees
+of freedom. Mean square provides unbiassed estimate of variance. For
+example, in ANOVA error mean square (MSE) given by
+<span class="math inline">\(\frac{\text{with in group sum of squares}}{\text{error degrees of freedom}}\)</span>
+provides unbiased estimate of error variance</p>
+</div>
+<div id="test-statistic-f" class="section level2" number="16.4">
+<h2>
+<span class="header-section-number">16.4</span> Test Statistic F<a class="anchor" aria-label="anchor" href="#test-statistic-f"><i class="fas fa-link"></i></a>
+</h2>
+<p>Any function of sample values is known as a statistic. For example,
+sample mean, sample variance, sum of all sample values are statistic,
+because these are all some functions of sample values. If a statistic is
+used to test a hypothesis, then it is known as test statistic. Examples
+of test statistic are t, F, χ<sup>2</sup> etc. The test statistic used in ANOVA
+is F.</p>
+<p>F-statistic is the ratio of two variances and it was named after Sir
+Ronald A. Fisher. It is proved that when null hypothesis H<sub>0</sub>: µ<sub>1</sub> =
+µ<sub>2</sub> =µ<sub>3</sub> = …., = µ<sub>k</sub> is true the ratio of mean square treatment and
+mean square error follows F distribution.The F distribution is a right-skewed distribution. In general, if your calculated
+F value in ANOVA is larger than your F critical value, you can reject
+the null hypothesis.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:fdist"></span>
+<img src="images/fdist.png" alt="Distribution F under different degrees of freedom" width="60%"><p class="caption">
+Figure 16.1: Distribution F under different degrees of freedom
+</p>
+</div>
+</div>
+<div id="assumptions-of-anova" class="section level2" number="16.5">
+<h2>
+<span class="header-section-number">16.5</span> Assumptions of ANOVA<a class="anchor" aria-label="anchor" href="#assumptions-of-anova"><i class="fas fa-link"></i></a>
+</h2>
+<ul>
+<li><p>Observations under each treatment group is drawn randomly from a normally distributed population</p></li>
+<li><p>All the populations from which observations are drawn have a common variance :- Homogeneity of variance</p></li>
+<li><p>All the samples are drawn independently of each other</p></li>
+<li><p>Treatment and environmental effects are additive</p></li>
+</ul>
+<blockquote>
+<p>As a result of above assumptions. The experimental errors are independent and identically distributed (iid) with a Normal distribution of mean 0 and variance σ<sup>2</sup>. In other word we can say <span class="math inline">\(e_{i}\)</span> <span class="math inline">\(\sim iid\ N(0,\sigma^{2})\)</span>.</p>
+</blockquote>
+</div>
+<div id="types-of-anova" class="section level2" number="16.6">
+<h2>
+<span class="header-section-number">16.6</span> Types of ANOVA<a class="anchor" aria-label="anchor" href="#types-of-anova"><i class="fas fa-link"></i></a>
+</h2>
+<p>Based on the model used and sources of variation studied ANOVA can be classified into following types</p>
+<ul>
+<li>One-way ANOVA<br>
+</li>
+<li>Two-way ANOVA<br>
+</li>
+<li>
+<em>m</em>-way ANOVA</li>
+</ul>
+<div id="one-way-anova" class="section level3" number="16.6.1">
+<h3>
+<span class="header-section-number">16.6.1</span> One-way ANOVA<a class="anchor" aria-label="anchor" href="#one-way-anova"><i class="fas fa-link"></i></a>
+</h3>
+<p>The simplest type of analysis of variance is known as one way analysis of variance, in which only one source of variation or factor of interest is controlled and its effect on the elementary units is observed. See the example in section <a href="analysis-of-variance-anova.html#fix">16.7.1</a> is an example where one-way ANOVA can be employed. Here only one source of variation is assumed to be causing variance other than error that is field.</p>
+<div id="one--way-anova-model-oneway" class="section level4" number="16.6.1.1">
+<h4>
+<span class="header-section-number">16.6.1.1</span> One -way ANOVA model {oneway}<a class="anchor" aria-label="anchor" href="#one--way-anova-model-oneway"><i class="fas fa-link"></i></a>
+</h4>
+<p><span class="math display">\[Y_{\text{ij}} = \mu + \tau_{i} + e_{\text{ij}}\]</span><br>
+Where <em>i</em> = 1,2, …, <em>t</em> and <em>j</em> =1,2, …, <em>r</em>. <span class="math inline">\(Y_{\text{ij}}\)</span> is the observed value of <em>i</em><sup>th</sup>
+treatment from <em>j</em><sup>th</sup> replication, <span class="math inline">\(\tau_{i}\)</span> is the effect of <em>i</em><sup>th</sup> treatment. <span class="math inline">\(\mu\)</span> is the general
+effect which is common for all treatments. <span class="math inline">\(e_{\text{ij}}\)</span> is the error
+effects.<span class="math inline">\(e_{ij}\)</span> <span class="math inline">\(\sim iid\ N(0,\sigma^{2})\)</span></p>
+</div>
+<div id="one-way-classification" class="section level4" number="16.6.1.2">
+<h4>
+<span class="header-section-number">16.6.1.2</span> One-way classification<a class="anchor" aria-label="anchor" href="#one-way-classification"><i class="fas fa-link"></i></a>
+</h4>
+Consider an experiment with <em>v</em> treatments with <em>r</em> replications each. Observations are recorded as shown below.<br><div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:oneway"></span>
+<img src="images/oneway.png" alt="One way classification of Data" width="60%"><p class="caption">
+Figure 16.2: One way classification of Data
+</p>
+</div>
+</div>
+<div id="total-sum-of-squares-partitioning" class="section level4" number="16.6.1.3">
+<h4>
+<span class="header-section-number">16.6.1.3</span> Total sum of squares partitioning<a class="anchor" aria-label="anchor" href="#total-sum-of-squares-partitioning"><i class="fas fa-link"></i></a>
+</h4>
+<p>ANOVA consists of partitioning the total variation in Y<sub>ij</sub> values
+into variation due to treatments and variation caused by uncontrolled
+factors (error variation). Therefore, we can write,</p>
+<p>Variance of <em>Y</em><sub>ij</sub> =
+<span class="math inline">\(\frac{1}{n}\sum_{i = 1}^{v}\sum_{j = 1}^{r}\left( Y_{\text{ij}} - \bar{Y} \right)^{2}\)</span>where <em>n</em> =
+<em>v</em> x <em>r</em>, overall mean <span class="math inline">\(\bar{Y} = \frac{G}{n}\)</span></p>
+<p>Total Sum of Squares = <span class="math inline">\(\sum_{i = 1}^{v}\sum_{j = 1}^{r} Y_{\text{ij}}^{2} - \frac{G^{2}}{n}\)</span>; where
+<span class="math inline">\(\frac{G^{2}}{n}\)</span> is known as the correction factor (C.F.).</p>
+<div id="proof" class="section level5" number="16.6.1.3.1">
+<h5>
+<span class="header-section-number">16.6.1.3.1</span> Proof<a class="anchor" aria-label="anchor" href="#proof"><i class="fas fa-link"></i></a>
+</h5>
+<p>= <span class="math inline">\(\sum_{i = 1}^{v}\sum_{j = 1}^{r}\left( Y_{\text{ij}} - \bar{Y} \right)^{2}\)</span><br>
+= <span class="math inline">\(\sum_{i = 1}^{v}\sum_{j = 1}^{r}\left( Y_{\text{ij}}^{2} - 2Y_{\text{ij}}\bar{Y} + {\bar{Y}}^{2} \right)\)</span><br>
+= <span class="math inline">\(\sum_{i = 1}^{v}\sum_{j = 1}^{r}\left( Y_{\text{ij}}^{2} - 2n{\bar{Y}}^{2} + n{\bar{Y}}^{2} \right)\)</span></p>
+<p>= <span class="math inline">\(\sum_{i = 1}^{v}\sum_{j = 1}^{r}\left( Y_{\text{ij}}^{2} - n{\bar{Y}}^{2} \right)\)</span></p>
+<p>= <span class="math inline">\(\sum_{i = 1}^{v}\sum_{j = 1}^{r} Y_{\text{ij}}^{2} - n\left( \frac{\sum_{i = 1}^{v}\sum_{j = 1} Y_{\text{ij}}}{n} \right)^{2},\)</span>
+denote <span class="math inline">\(\sum_{i = 1}^{v}\sum_{j = 1}^{r} Y_{\text{ij}} = G\)</span><br>
+Total Sum of Squares = <span class="math inline">\(\sum_{i = 1}^{v}\sum_{j = 1}^{r} Y_{\text{ij}}^{2} - \frac{G^{2}}{n}\)</span></p>
+<p>The Total Sum of Squares is partitioned into Sum of Squares due to Treatments and Sum of Squares due to Error.</p>
+</div>
+<div id="proof-1" class="section level5" number="16.6.1.3.2">
+<h5>
+<span class="header-section-number">16.6.1.3.2</span> Proof<a class="anchor" aria-label="anchor" href="#proof-1"><i class="fas fa-link"></i></a>
+</h5>
+<p><span class="math display">\[\sum_{i = 1}^{v}{\sum_{j = 1}^{r}\left( Y_{\text{ij}} - \overline{Y} \right)^{2}} = \sum_{i = 1}^{v}{\sum_{j = 1}^{r}\left( Y_{\text{ij}} - {\overline{Y}}_{i} + {\overline{Y}}_{i} - \overline{Y} \right)^{2}}\]</span></p>
+<p><span class="math display">\[= \sum_{i = 1}^{v}{\sum_{j = 1}^{r}\left( \left( Y_{\text{ij}} - {\overline{Y}}_{i} \right)^{2} + \left( {\overline{Y}}_{i} - \overline{Y} \right)^{2} + 2\left( Y_{\text{ij}} - {\overline{Y}}_{i} \right)\left( {\overline{Y}}_{i} - \overline{Y} \right) \right)}\]</span></p>
+<p><span class="math display">\[= \sum_{i = 1}^{v}{\sum_{j = 1}^{r}{\left( Y_{\text{ij}} - {\overline{Y}}_{i} \right)^{2} +}}\sum_{i = 1}^{v}{\sum_{j = 1}^{r}{\left( {\overline{Y}}_{i} - \overline{Y} \right)^{2} + 2\sum_{i = 1}^{v}{\sum_{j = 1}^{r}{\left( Y_{\text{ij}} - {\overline{Y}}_{i} \right)\left( {\overline{Y}}_{i} - \overline{Y} \right)}}}}\]</span></p>
+<p>Let
+<span class="math inline">\(\left( Y_{\text{ij}} - {\overline{Y}}_{i} \right)^{2} = e_{\text{ij}}^{2}\)</span>,
+<span class="math inline">\(\sum_{i = 1}^{v}{\sum_{j = 1}^{r}e_{\text{ij}}} = 0\)</span></p>
+<p><span class="math display">\[= \sum_{i = 1}^{v}{\sum_{j = 1}^{r}{{e_{\text{ij}}}^{2} +}}\sum_{i = 1}^{v}{\sum_{j = 1}^{r}{\left( {\overline{Y}}_{i} - \overline{Y} \right)^{2} + 2\sum_{i = 1}^{v}{\sum_{j = 1}^{r}{e_{\text{ij}}\left( {\overline{Y}}_{i} - \overline{Y} \right)}}}}\]</span></p>
+<p><span class="math inline">\(\sum_{i = 1}^{v}{\sum_{j = 1}^{r}{e_{\text{ij}}\left( {\overline{Y}}_{i} - \overline{Y} \right)}} = 0\)</span>,
+since the sum of the weighted residuals is zero, then the above equation
+will be</p>
+<p><span class="math display">\[= \sum_{i = 1}^{v}{\sum_{j = 1}^{r}{{e_{\text{ij}}}^{2} +}}\sum_{i = 1}^{v}{\sum_{j = 1}^{r}\left( {\overline{Y}}_{i} - \overline{Y} \right)^{2}}\]</span></p>
+<p>Total Sum of Square = with in group sum of square + between group sum of
+square</p>
+<blockquote>
+<p>Total Sum of Square = Error sum of square + Treatment Sum of Square</p>
+</blockquote>
+</div>
+</div>
+<div id="treatment-sum-of-square" class="section level4" number="16.6.1.4">
+<h4>
+<span class="header-section-number">16.6.1.4</span> Treatment sum of square<a class="anchor" aria-label="anchor" href="#treatment-sum-of-square"><i class="fas fa-link"></i></a>
+</h4>
+<p>Let us denote the treatment totals as T<sub>1,</sub> T<sub>2, ….,</sub>T<em><sub>V</sub></em> <em>i</em>.<em>e</em> <span class="math inline">\({T}_{i}{\ =\ }\sum_{j = 1}^{r} Y_{\text{ij}}\)</span> so that
+<span class="math inline">\(T_{1}{\ +\ }{T}_{2}{\ +\ }\text{T}_{3}{\ +\ }{T}_{n}\text{ }\text{……}{+\ }{T}_{v}{\ =\ }\sum_{i = 1}^{v}\sum_{j = 1}^{r} Y_{\text{ij}} = G\)</span></p>
+<p>Treatment Sum of Squares, TSS =
+<span class="math inline">\(\frac{\sum_{i = 1}^{v}\text{T}\text{i}^{2}}{r} - \frac{G^{2}}{n}\)</span>.</p>
+</div>
+<div id="oneway" class="section level4" number="16.6.1.5">
+<h4>
+<span class="header-section-number">16.6.1.5</span> Calculations for One-way ANOVA<a class="anchor" aria-label="anchor" href="#oneway"><i class="fas fa-link"></i></a>
+</h4>
+<p><strong>Total Sum of Square (Total SS)</strong> = <span class="math inline">\(\sum_{i = 1}^{v}\sum_{j = 1}^{r} Y_{\text{ij}}^{2} - \text{C.F.}\)</span>
+(square all the observations, sum it and correction factor is subtracted to get total sum of squares)</p>
+<p><strong>Treatment Sum of Squares (TSS)</strong> = <span class="math inline">\(\frac{\sum_{i = 1}^{v}\text{T}\text{i}^{2}}{r} - \text{C.F.}\)</span>.
+(square all the treatment totals, sum it and correction factor is subtracted to get treatment sum of squares )</p>
+<p><strong>Error Sum of Squares (ESS)</strong>= Total SS – TSS</p>
+<p><strong>Correction factor (C.F.)</strong> = <span class="math inline">\(\frac{G^{2}}{n}\)</span>, where <span class="math inline">\(G\)</span> = Grand Total of all observations.</p>
+<p><strong>Mean sum of squares</strong> is the sum of squares divided by corresponding
+degrees of freedoms (d.f.).</p>
+<p><strong>Error degrees of freedom</strong> = Total degrees of freedom – treatment degrees of freedom.</p>
+<blockquote>
+<p>Error d.f.= <span class="math inline">\(vr - 1 - \left( v - 1 \right) = vr - 1 - v + 1 = vr - v = v(r - 1)\)</span></p>
+</blockquote>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:onewayanova"></span>
+<img src="images/onewayanova.png" alt="One-way ANOVA table" width="90%"><p class="caption">
+Figure 16.3: One-way ANOVA table
+</p>
+</div>
+<p>Here F ~ F <sub>(v-1), v(r-1)</sub></p>
+<p>MSE is an estimate of error variance σ<sup>2</sup> and
+<span class="math inline">\(\sqrt{\frac{\text{MSE}}{r}}\)</span> is the standard error of a treatment mean.</p>
+<blockquote>
+<p>If your calculated F value in ANOVA is larger than your F critical value corresponding to the degrees of freedoms in the critical value table, you can reject the null hypothesis. see the section <a href="ftable.html#ftable">19</a></p>
+</blockquote>
+</div>
+<div id="example-of-one-way-anova" class="section level4" number="16.6.1.6">
+<h4>
+<span class="header-section-number">16.6.1.6</span> Example of One-way ANOVA<a class="anchor" aria-label="anchor" href="#example-of-one-way-anova"><i class="fas fa-link"></i></a>
+</h4>
+<p>The data on tiller count after transplanting were recorded from 4 hill sampling units for a fertilizer trial involving 6 treatments. Test for the significant difference between the treatments. The treatments are labeled as T1, T2, T3, T4, T5 and T6.<br>
+Data is arranged as shown below:</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:onewayanovaex"></span>
+<img src="images/onewayex.png" alt="One-way classified data on tiller count" width="60%"><p class="caption">
+Figure 16.4: One-way classified data on tiller count
+</p>
+</div>
+<p><strong>Calculation:</strong><br>
+Here equal number of observations are taken from all treatments, so <em>r</em><sub>1</sub> = <em>r</em><sub>2</sub> = … = <em>r</em><sub>6</sub> = 4</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:onewayanovaex1"></span>
+<img src="images/onewayex1.png" alt="One-way ANOVA calculation" width="90%"><p class="caption">
+Figure 16.5: One-way ANOVA calculation
+</p>
+</div>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:onewayresult"></span>
+<img src="images/anovaresult.png" alt="One-way table" width="90%"><p class="caption">
+Figure 16.6: One-way table
+</p>
+</div>
+<p>Here you can see the calculated value is greater than table value of F. So the null hypothesis is rejected and we conclude that at least a pair of treatments are significantly different at 5% level of significance.</p>
+</div>
+</div>
+<div id="two-way-anova" class="section level3" number="16.6.2">
+<h3>
+<span class="header-section-number">16.6.2</span> Two-way ANOVA<a class="anchor" aria-label="anchor" href="#two-way-anova"><i class="fas fa-link"></i></a>
+</h3>
+<p>In one way ANOVA explained in the previous section, the treatments constitute different levels of a single factor which is controlled in the experiment. There are, however, many situations in which the response variable of interest may be affected by more than one factor. For example,</p>
+<ul>
+<li><p>Milk yield of cow may be affected by differences in treatments i.e., feeds fed as well as differences in breed of the cows.</p></li>
+<li><p>Moisture contents of butter prepared by churning cream may be affected with different levels of fat and churning speed etc.</p></li>
+</ul>
+<p>Here two independent factors might have an effect on the response variable of interest. These two factors are considered to be the source of variation in the data in addition to experimental error. To compare means in such a situation we use two-way ANOVA.</p>
+<p>In a two-way classification, the data are classified according to two different criteria or factors. The procedure for analysis of variance is somewhat different than the one followed earlier. One can also study interaction between the two factors, if interaction effect is included in two-way ANOVA model.</p>
+<div id="two-way-anova-model" class="section level4" number="16.6.2.1">
+<h4>
+<span class="header-section-number">16.6.2.1</span> Two-way ANOVA model<a class="anchor" aria-label="anchor" href="#two-way-anova-model"><i class="fas fa-link"></i></a>
+</h4>
+<p><span class="math display">\[Y_{\text{ij}} = \mu + \tau_{i} +  \gamma_{j}+ e_{\text{ij}}\]</span><br>
+Where <em>i</em> = 1,2, …, <em>t</em> and <em>j</em> =1,2, …, <em>r</em>. <span class="math inline">\(Y_{\text{ij}}\)</span> is the observed value of response under <em>i</em><sup>th</sup> level of
+factor A and <em>j</em><sup>th</sup> level of factor B, <span class="math inline">\(\tau_{i}\)</span> is the effect of <em>i</em><sup>th</sup> factor,<span class="math inline">\(\gamma_{j}\)</span> is the effect of <em>j</em><sup>th</sup> factor . <span class="math inline">\(\mu\)</span> is the general
+effect which is common for all treatments. <span class="math inline">\(e_{\text{ij}}\)</span> is the error
+effects.<span class="math inline">\(e_{ij}\)</span> <span class="math inline">\(\sim iid\ N(0,\sigma^{2})\)</span></p>
+</div>
+<div id="two-way-classification" class="section level4" number="16.6.2.2">
+<h4>
+<span class="header-section-number">16.6.2.2</span> Two-way classification<a class="anchor" aria-label="anchor" href="#two-way-classification"><i class="fas fa-link"></i></a>
+</h4>
+<p>Consider an experiment with <em>v</em> levels of factor 1 with <em>r</em> levels of factor 2. Observations are recorded as shown below. We have considered the situation of only one observation per cell.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:twoway"></span>
+<img src="images/twoway.png" alt="Two way classification of Data" width="60%"><p class="caption">
+Figure 16.7: Two way classification of Data
+</p>
+</div>
+</div>
+<div id="twoway" class="section level4" number="16.6.2.3">
+<h4>
+<span class="header-section-number">16.6.2.3</span> Calculations for Two-way ANOVA<a class="anchor" aria-label="anchor" href="#twoway"><i class="fas fa-link"></i></a>
+</h4>
+<ul>
+<li><p><em>SSA</em> = Take sum of squares of the totals of each level of factor A divide it by number of levels of factor B – Correction Factor</p></li>
+<li><p><em>SSB</em> = Take sum of squares of the totals of each level of factor B divide it by number of levels of factor A – Correction Factor.</p></li>
+<li><p><em>Total SS</em> = Take sum of squares of all observations – Correction Factor</p></li>
+<li><p><em>Error SS</em> = Total SS – SSA – SSB</p></li>
+<li><p>Error Degrees of Freedom = Total D.F. – Factor A (D.F.) – Factor B (D.F.)</p></li>
+</ul>
+<blockquote>
+<p>Error D.F.=<br><span class="math inline">\(vr - 1 - \left( v - 1 \right) - \left( r - 1 \right) = vr - 1 - v + 1 - r + 1 = vr - v - r + 1 = (v - 1)(r - 1)\)</span></p>
+</blockquote>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:twowaytable"></span>
+<img src="images/twowayanovatable.png" alt="Two way ANOVA table" width="80%"><p class="caption">
+Figure 16.8: Two way ANOVA table
+</p>
+</div>
+<p>Here there are two F values one for factor A and one for Factor B. F<sub>A</sub> ~ F <sub>(v-1), (v-1)(r-1)</sub> and F<sub>B</sub> ~ F ~(r-1), (v-1)(r-1)</p>
+<blockquote>
+<p>Here in Two-way ANOVA there are two null hypotheses one for factor A and other for factor B. For example for Factor A.<br>
+H<sub>0</sub>: <span class="math inline">\(\mu\)</span><sub>1</sub> = <span class="math inline">\(\mu\)</span><sub>2</sub> =<span class="math inline">\(\mu\)</span><sub>3</sub> = …., = <span class="math inline">\(\mu\)</span><sub>v</sub>; where <span class="math inline">\(\mu\)</span><sub>i</sub> is the population mean of <em>i</em><sup>th</sup> level of factor A.
+H<sub>1</sub>: atleast a pair of treatment means are not equal.<br>
+Factor B<br>
+H<sub>0</sub>: <span class="math inline">\(\beta\)</span><sub>1</sub> = <span class="math inline">\(\beta\)</span><sub>2</sub> =<span class="math inline">\(\beta\)</span><sub>3</sub> = …., = <span class="math inline">\(\beta\)</span><sub>r</sub>; where <span class="math inline">\(\beta\)</span><sub>j</sub> is the population mean of <em>j</em><sup>th</sup> level of factor B.
+H<sub>1</sub>: atleast a pair of treatment means are not equal.</p>
+</blockquote>
+<p>Decisions on the null hypothesis is made by comparing corresponding F value to the table value as explained in section <a href="ftable.html#ftable">19</a></p>
+</div>
+<div id="example-of-two-way-anova" class="section level4" number="16.6.2.4">
+<h4>
+<span class="header-section-number">16.6.2.4</span> Example of Two-way ANOVA<a class="anchor" aria-label="anchor" href="#example-of-two-way-anova"><i class="fas fa-link"></i></a>
+</h4>
+<p>Four chemicals S1, S2, S3, and S4 were administered in 5 cow breeds (A, B, C, D, E). observations were taken during peak lactation period. Average yield over the period is taken. Is there any significant difference between chemicals? Is there any significant difference between milk yield of the breeds? Considering chemicals and breeds are independent.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:twowayex"></span>
+<img src="images/twowayex.png" alt="Two way classification of observations for chemicals and breeds" width="70%"><p class="caption">
+Figure 16.9: Two way classification of observations for chemicals and breeds
+</p>
+</div>
+<p><span class="math inline">\(here\ n = 20,\ v = 5\ and\ r = 4\)</span>, factor A = cow breeds; factor B =
+chemicals, Grand total (G)=874</p>
+<blockquote>
+<p>Correction Factor, <span class="math inline">\(CF = \frac{G^{2}}{n} = \frac{\left( 874 \right)^{2}}{20} = 38193.8\)</span></p>
+</blockquote>
+<p>Total Sum of squares,</p>
+<p><span class="math inline">\(\text{TSS} = \text{sum of squares of all observations} - CF = \ \text{38288} - \text{CF} = \text{94.2}\)</span></p>
+<p>Sum of Squares between Breeds (SSA)</p>
+<p><span class="math inline">\(= \sum_{i=1}^{v}\frac{T_{i}^{2}}{r} - \text{CF}\)</span>
+<span class="math inline">\(= \frac{1}{4}\left\lbrack \left( \text{179} \right)^{2} + \text{...} + \left( \text{172} \right)^{2} \right\rbrack - \text{CF} = \text{34.7}\)</span></p>
+<p>Sum of Squares between
+chemicals (SSB)
+<span class="math inline">\(= \sum_{j=1}^{r}\frac{B_{j}^{2}}{v} - \text{CF} = \frac{1}{5}\left\lbrack \left( \text{217} \right)^{2} + \text{...} + \left( \text{212} \right)^{2} \right\rbrack - \text{CF} = \text{32.2}\)</span></p>
+<p>Sum of squares of Error</p>
+<p><span class="math inline">\(\text{SSE} = \text{TSS} - (\text{SST} + \text{SSB}) = \text{27.3}\)</span></p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:twowayanovatable"></span>
+<img src="images/twowayanovatable.png" alt="ANOVA table for chemicals and breeds" width="80%"><p class="caption">
+Figure 16.10: ANOVA table for chemicals and breeds
+</p>
+</div>
+<p>For both chemicals and breeds there is significance difference at 5% level. Because both F values calculated are greater than table values.</p>
+</div>
+</div>
+</div>
+<div id="models-under-anova" class="section level2" number="16.7">
+<h2>
+<span class="header-section-number">16.7</span> Models under ANOVA<a class="anchor" aria-label="anchor" href="#models-under-anova"><i class="fas fa-link"></i></a>
+</h2>
+<p>Analysis of variance is based on a linear statistical model. This linear model may be either</p>
+<ul>
+<li><p>Fixed effects model</p></li>
+<li><p>Random effects model</p></li>
+<li><p>Mixed effects model</p></li>
+</ul>
+<div id="fix" class="section level3" number="16.7.1">
+<h3>
+<span class="header-section-number">16.7.1</span> Fixed effects model<a class="anchor" aria-label="anchor" href="#fix"><i class="fas fa-link"></i></a>
+</h3>
+<p>Fixed effects model is a statistical model in which the model parameters
+are fixed or non-random quantities. In using fixed effect model in
+agricultural experiments, we assume treatment effect are unknown
+constants</p>
+<p>Fixed effects model can be explained using an example. Consider an
+experiment where experimenter wants to know whether three fields had any
+impact on the yield of a particular strain of wheat. Observations where
+taken from 12 plots from each fields (replication). The AOV (Analysis of
+Variance) model is</p>
+<p><span class="math inline">\(Y_{\text{ij}} = \mu + \tau_{i} + e_{\text{ij}}\)</span>; where <span class="math inline">\(e_{ij}\)</span> <span class="math inline">\(\sim iid\ N(0,\sigma^{2})\)</span></p>
+<p>Where <em>i</em> = 1,2, …, <em>t</em> and <em>j</em> =1,2, …, <em>r</em>. Here in our example
+<em>t</em> =3 and <em>r</em> =12. <span class="math inline">\(Y_{\text{ij}}\)</span> is the observed value of <em>i</em><sup>th</sup>
+field from <em>j</em><sup>th</sup> plot, <span class="math inline">\(\tau_{i}\)</span> is the effect of <em>i</em><sup>th</sup> treatment,
+which is considered to be an unknown constant. <span class="math inline">\(\mu\)</span> is the general
+effect which is common for all treatments. <span class="math inline">\(e_{\text{ij}}\)</span> is the error
+effects, which are independently and normally distributed with mean 0
+and constant variance σ<sup>2</sup>. In this model, field is a “fixed effect.”
+Along with <span class="math inline">\(\mu\)</span>, the fixed parameters <span class="math inline">\(\tau_{1}\)</span>,<span class="math inline">\(\tau_{2}\)</span> and
+<span class="math inline">\(\tau_{3}\)</span> are the quantities of interest. Using this model,
+experimenter can make decisions only on the treatment (field) tested.</p>
+</div>
+<div id="random-effects-model" class="section level3" number="16.7.2">
+<h3>
+<span class="header-section-number">16.7.2</span> Random effects model<a class="anchor" aria-label="anchor" href="#random-effects-model"><i class="fas fa-link"></i></a>
+</h3>
+<p>A random effects model, also called as a variance components model, is a
+statistical model where the model parameters are random variables.
+Consider the example above in of wheat fields, if a random effect model
+is used then, fields are assumed to be randomly sampled from a
+population of fields in that area and the AOV (Analysis of Variance)
+model is</p>
+<p><span class="math inline">\(Y_{\text{ij}} = \mu + \tau_{i} + e_{\text{ij}}\)</span>;</p>
+<p><span class="math inline">\(e_{ij}\)</span> <span class="math inline">\(\sim iid\ N(0,\sigma^{2})\)</span> and <span class="math inline">\(\tau_{i}\sim N(0,\ \sigma_{\tau}^{2})\)</span></p>
+<p>Where <em>i</em> = 1,2, …, <em>t</em> and <em>j</em> =1,2, …, <em>r</em>. Here <span class="math inline">\(\tau_{i}\)</span> is
+considered as a random variable,
+<span class="math inline">\(\tau_{i}\sim N(0,\ \sigma_{\tau}^{2})\)</span>; and
+<span class="math inline">\(e_{ij}\sim N(0,\ \sigma^{2})\)</span>. In this model, field is a “random
+effect.” The statistical model describes the whole ensemble of possible
+repetitions of the experiment in the region from which the fields were
+selected. Experimenter could make generalisations on all the fields in
+that particular region based on his experiment. One important
+consequence of random effects is that the responses (<span class="math inline">\(Y_{\text{ij}}\)</span>'s)
+are no longer independent. The random <span class="math inline">\(\tau_{i}\)</span>'s induce correlations
+among the responses. The responses jointly have a multivariate normal
+distribution.</p>
+</div>
+<div id="mixed-effects-model" class="section level3" number="16.7.3">
+<h3>
+<span class="header-section-number">16.7.3</span> Mixed effects model<a class="anchor" aria-label="anchor" href="#mixed-effects-model"><i class="fas fa-link"></i></a>
+</h3>
+<p>A mixed model, mixed-effects model or mixed error-component model is a
+statistical model containing both fixed effects and random effects.</p>
+
+</div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="uniformity-trials.html"><span class="header-section-number">15</span> Uniformity trials</a></div>
+<div class="next"><a href="multiple-comparison-test.html"><span class="header-section-number">17</span> Multiple comparison test</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#analysis-of-variance-anova"><span class="header-section-number">16</span> Analysis of Variance (ANOVA)</a></li>
+<li><a class="nav-link" href="#null-hypothesis-in-anova"><span class="header-section-number">16.1</span> Null hypothesis in ANOVA</a></li>
+<li><a class="nav-link" href="#degrees-of-freedom"><span class="header-section-number">16.2</span> Degrees of freedom</a></li>
+<li><a class="nav-link" href="#mean-squares"><span class="header-section-number">16.3</span> Mean squares</a></li>
+<li><a class="nav-link" href="#test-statistic-f"><span class="header-section-number">16.4</span> Test Statistic F</a></li>
+<li><a class="nav-link" href="#assumptions-of-anova"><span class="header-section-number">16.5</span> Assumptions of ANOVA</a></li>
+<li>
+<a class="nav-link" href="#types-of-anova"><span class="header-section-number">16.6</span> Types of ANOVA</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#one-way-anova"><span class="header-section-number">16.6.1</span> One-way ANOVA</a></li>
+<li><a class="nav-link" href="#two-way-anova"><span class="header-section-number">16.6.2</span> Two-way ANOVA</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#models-under-anova"><span class="header-section-number">16.7</span> Models under ANOVA</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#fix"><span class="header-section-number">16.7.1</span> Fixed effects model</a></li>
+<li><a class="nav-link" href="#random-effects-model"><span class="header-section-number">16.7.2</span> Random effects model</a></li>
+<li><a class="nav-link" href="#mixed-effects-model"><span class="header-section-number">16.7.3</span> Mixed effects model</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>TEXTBOOK OF AGRICULTURAL STATISTICS</strong>" was written by Dr. Pratheesh P. Gopinath. It was last built on 2022-01-30.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>

@@ -1,9 +1,6 @@
-# Introduction 
+# Design of experiments  
 
-```{block2 items, type='rmdnote'}
-Need for designing of experiments, characteristics of a good design. Basic principles of designs - randomization, replication and local control  
-```  
-## Design of experiments  
+## Introduction  
 
 Design of Experiments is an integral component of agricultural research. A scientifically designed experiment is a valuable tool in advancement in gaining new knowledge and technology development. “It is the effective use of the tools of statistical design of experiments that paved the way for the green revolution” – these words of the father of green revolution in India, Dr. M.S. Swaminathan, itself shows how important is Design and analysis of experiments as well as statistical science is for agricultural experiments. A carefully designed experiment is able to answer all the queries of a researcher with accuracy and reliability with efficient use of available resources of the experimenters. Thus, for successful experimentation, it is highly desirable that scientists and researchers of scientific disciplines, including agricultural sciences, understand the basic principles of designing an experiment and analysis of resultant data from the completed experiment. It may be emphasized that a researcher should always consult a statistician before, during and after experimentation, if he is not convinced enough about using a design for his experiment or an analysis technique for his data.   
 
