@@ -267,3 +267,11 @@ decision-rule
 an-example
 confidence-interval
 steps-in-hypothesis-testing
+large-sample-test
+large-sample-tests
+decision
+test-for-a-single-population-proportion
+test-for-equality-of-two-proportions
+test-for-a-single-population-mean
+test-for-equality-of-two-means
+when-the-population-standard-deviations-are-not-equal

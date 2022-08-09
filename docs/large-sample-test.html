@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 12 Large sample test | TEXTBOOK OF AGRICULTURAL STATISTICS</title>
+<meta name="author" content="Dr. Pratheesh P. Gopinath">
+<meta name="description" content="The sample for which sample size \(n\) is greater than 30 (\(n\) ≥ 30) is known as large sample. The study of sampling distribution of statistic for large sample is known as large sample theory ...">
+<meta name="generator" content="bookdown 0.24 with bs4_book()">
+<meta property="og:title" content="Chapter 12 Large sample test | TEXTBOOK OF AGRICULTURAL STATISTICS">
+<meta property="og:type" content="book">
+<meta property="og:image" content="/images/cover.PNG">
+<meta property="og:description" content="The sample for which sample size \(n\) is greater than 30 (\(n\) ≥ 30) is known as large sample. The study of sampling distribution of statistic for large sample is known as large sample theory ...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 12 Large sample test | TEXTBOOK OF AGRICULTURAL STATISTICS">
+<meta name="twitter:description" content="The sample for which sample size \(n\) is greater than 30 (\(n\) ≥ 30) is known as large sample. The study of sampling distribution of statistic for large sample is known as large sample theory ...">
+<meta name="twitter:image" content="/images/cover.PNG">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">TEXTBOOK OF AGRICULTURAL STATISTICS</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome</a></li>
+<li><a class="" href="preface.html">Preface</a></li>
+<li><a class="" href="introduction.html"><span class="header-section-number">1</span> Introduction</a></li>
+<li><a class="" href="graphical-representation-of-data.html"><span class="header-section-number">2</span> Graphical representation of data</a></li>
+<li><a class="" href="measures-of-central-tendency---i.html"><span class="header-section-number">3</span> Measures of central tendency - I</a></li>
+<li><a class="" href="measures-of-central-tendency--ii.html"><span class="header-section-number">4</span> Measures of central tendency -II</a></li>
+<li><a class="" href="measures-of-dispersion.html"><span class="header-section-number">5</span> Measures of Dispersion</a></li>
+<li><a class="" href="skewness-and-kurtosis.html"><span class="header-section-number">6</span> Skewness and Kurtosis</a></li>
+<li><a class="" href="measures-of-association.html"><span class="header-section-number">7</span> Measures of Association</a></li>
+<li><a class="" href="regression-analysis.html"><span class="header-section-number">8</span> Regression Analysis</a></li>
+<li><a class="" href="probability.html"><span class="header-section-number">9</span> Probability</a></li>
+<li><a class="" href="probability-distributions.html"><span class="header-section-number">10</span> Probability Distributions</a></li>
+<li><a class="" href="hypothesis-testing.html"><span class="header-section-number">11</span> Hypothesis Testing</a></li>
+<li><a class="active" href="large-sample-test.html"><span class="header-section-number">12</span> Large sample test</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="large-sample-test" class="section level1" number="12">
+<h1>
+<span class="header-section-number">12</span> Large sample test<a class="anchor" aria-label="anchor" href="#large-sample-test"><i class="fas fa-link"></i></a>
+</h1>
+<p>The sample for which sample size <span class="math inline">\(n\)</span> is greater than 30 (<span class="math inline">\(n\)</span> ≥ 30) is known as large sample. The study of sampling distribution of statistic for large sample is known as large sample theory</p>
+<div id="large-sample-tests" class="section level2" number="12.1">
+<h2>
+<span class="header-section-number">12.1</span> Large Sample Tests<a class="anchor" aria-label="anchor" href="#large-sample-tests"><i class="fas fa-link"></i></a>
+</h2>
+<p>In this section we shall discuss the application of <span class="math inline">\(Z\)</span>-test. The test statistic <span class="math inline">\(Z\)</span> calculated from the large sample follows a standard normal distribution. <span class="math inline">\(Z\)</span> <span class="math inline">\(\sim N(0,1)\)</span></p>
+<ul>
+<li><p>Test for a single proportion</p></li>
+<li><p>Test for the equality of two proportions</p></li>
+<li><p>Test for a single mean</p></li>
+<li><p>Test for equality of two means</p></li>
+<li><p>Test for equality of two standard deviations</p></li>
+</ul>
+<div id="decision" class="section level3" number="12.1.1">
+<h3>
+<span class="header-section-number">12.1.1</span> Decision rule for Z test<a class="anchor" aria-label="anchor" href="#decision"><i class="fas fa-link"></i></a>
+</h3>
+<p>Let <span class="math inline">\(Z\)</span> be the calculated value and α be the level of significance, then we reject the null hypothesis if</p>
+<ul>
+<li><p><span class="math inline">\(Z\)</span> &gt; <span class="math inline">\(Z\)</span><sub>α/2</sub> ; for two tailed test</p></li>
+<li><p><span class="math inline">\(Z\)</span> &gt; <span class="math inline">\(Z\)</span><sub>α</sub> ; for right tailed test</p></li>
+<li><p><span class="math inline">\(Z\)</span> &lt; - <span class="math inline">\(Z\)</span><sub>α</sub> ; for left tailed test</p></li>
+</ul>
+<p>Table values (critical values) of Z for specified level of significance is shown below</p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="left"><strong>α</strong></th>
+<th align="center"><span class="math inline">\(Z\)</span></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">0.10</td>
+<td align="center">1.282</td>
+</tr>
+<tr class="even">
+<td align="left">0.05</td>
+<td align="center">1.645</td>
+</tr>
+<tr class="odd">
+<td align="left">0.025</td>
+<td align="center">1.960</td>
+</tr>
+<tr class="even">
+<td align="left">0.01</td>
+<td align="center">2.326</td>
+</tr>
+<tr class="odd">
+<td align="left">0.005</td>
+<td align="center">2.576</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+<div id="test-for-a-single-population-proportion" class="section level3" number="12.1.2">
+<h3>
+<span class="header-section-number">12.1.2</span> Test for a single population proportion<a class="anchor" aria-label="anchor" href="#test-for-a-single-population-proportion"><i class="fas fa-link"></i></a>
+</h3>
+<p>Consider there is a population with proportion value, say <span class="math inline">\(P\)</span>; <span class="math inline">\(P\)</span> is
+unknown, we will take a random sample of size <span class="math inline">\(n\)</span> from the population
+and calculate a sample proportion <span class="math inline">\(p\)</span>. We want to test whether the
+population proportion <span class="math inline">\(P\)</span>, which is unknown is equal to <span class="math inline">\(P\)</span><sub>0</sub>, based on
+the sample proportion <span class="math inline">\(p\)</span>.</p>
+<p>The null hypothesis to be tested is</p>
+<p>H<sub>0</sub> : <span class="math inline">\(P\)</span> = <span class="math inline">\(P\)</span><sub>0</sub></p>
+<p>The alternative hypothesis may be either</p>
+<p>H<sub>1</sub> : <span class="math inline">\(P\)</span> &lt; <span class="math inline">\(P\)</span><sub>0</sub> (called left tailed alternative)</p>
+<p>Or</p>
+<p>H<sub>1</sub> : <span class="math inline">\(P\)</span> &gt; <span class="math inline">\(P\)</span><sub>0</sub> (called right tailed alternative)</p>
+<p>Or</p>
+<p>H<sub>1</sub> : <span class="math inline">\(P\)</span> ≠ <span class="math inline">\(P\)</span><sub>0</sub> (called two tailed alternative)</p>
+<p>For this test, we will calculate test statistic, <span class="math inline">\(Z\)</span> using the following
+formula.</p>
+<p><span class="math display">\[Z = \frac{p - P_{0}}{\sqrt{\text{pq}}}\]</span></p>
+<p>Where <span class="math inline">\(q\)</span> = 1 - <span class="math inline">\(p\)</span></p>
+<p>When the null hypothesis is true this <span class="math inline">\(Z\)</span> will follow a standard normal distribution with mean 0 and variance 1. <span class="math inline">\(Z\)</span> <span class="math inline">\(\sim N(0,1)\)</span></p>
+<p>This calculated of <span class="math inline">\(Z\)</span> is then compared with critical
+value of <span class="math inline">\(Z\)</span> from the table of standard normal distribution. If the calculated value is higher than the table value, we reject the null hypothesis. If the calculated value is less than table value, we conclude that we don’t have enough evidence in our sample to reject the null hypothesis. See section <a href="large-sample-test.html#decision">12.1.1</a></p>
+<div id="example-1-1" class="section level4 unnumbered">
+<h4>Example 1<a class="anchor" aria-label="anchor" href="#example-1-1"><i class="fas fa-link"></i></a>
+</h4>
+<blockquote>
+<p>A sample of 500 apples were taken from a large consignment and 60 were found to be bad. Test whether the proportion of bad apples in the consignment is 0.1 or not at 5% level of significance.</p>
+</blockquote>
+<p><strong>Solution:</strong></p>
+<p>Sample size (<span class="math inline">\(n\)</span>) = 500</p>
+<p>Proportion of bad apples in the sample (<span class="math inline">\(p\)</span>) = 60/500 = 0.12</p>
+<p>Proportion of good apples in the sample (<span class="math inline">\(q\)</span>) = 1 - 0.12 = 0.88</p>
+<p>We want to test whether the proportion of bad apple in the population =
+0.1 ; Here <span class="math inline">\(P\)</span><sub>0</sub> = 0.1</p>
+<p>The null hypothesis to be tested is</p>
+<p>H<sub>0</sub> : <span class="math inline">\(P\)</span> = 0.1</p>
+<p>If we want to prove that proportion of bad apples is more than 0.1 we
+can use a right tailed test with alternative hypothesis as below</p>
+<p>H<sub>1</sub> : <span class="math inline">\(P\)</span> &gt; 0.1</p>
+<p>So that if null hypothesis is rejected, we accept this alternative hypothesis</p>
+<p>Level of significance is given at 5% , so α=0.05</p>
+<p>Now we calculate <span class="math inline">\(Z\)</span></p>
+<p><span class="math inline">\(Z = \frac{p - P_{0}}{\sqrt{\text{pq}}}\)</span></p>
+<p><span class="math inline">\(Z = \frac{0.12 - 0.1}{\sqrt{0.12 \times 0.88}}\)</span></p>
+<p><span class="math inline">\(= 0.0615\)</span></p>
+<p>Here in our case table value of Z is 1.645, as it is a right tailed test. The calculated value of Z is less than the table value. So, we conclude that, we don’t have enough evidence to reject the null hypothesis. So, it can be stated that proportion of bad apples in the population is 0.1.</p>
+</div>
+</div>
+<div id="self-excercise" class="section level3 unnumbered">
+<h3>Self excercise<a class="anchor" aria-label="anchor" href="#self-excercise"><i class="fas fa-link"></i></a>
+</h3>
+<blockquote>
+<ol style="list-style-type: decimal">
+<li>A random sample of 500 plants was taken from a large experimental field and 65 plants were found to be affected by yellowing disease. Is the disease rate significant? (α = 0.05)</li>
+</ol>
+</blockquote>
+</div>
+</div>
+<div id="test-for-equality-of-two-proportions" class="section level2" number="12.2">
+<h2>
+<span class="header-section-number">12.2</span> Test for equality of two proportions<a class="anchor" aria-label="anchor" href="#test-for-equality-of-two-proportions"><i class="fas fa-link"></i></a>
+</h2>
+<p>Consider there are two populations with proportion values, say <span class="math inline">\(P\)</span><sub>1</sub> and <span class="math inline">\(P\)</span><sub>2</sub> ; both are unknown, we will take a random sample of sizes <span class="math inline">\(n\)</span><sub>1</sub> and <span class="math inline">\(n\)</span><sub>2</sub> from the both populations respectively and calculate sample proportions <span class="math inline">\(p\)</span><sub>1</sub> and <span class="math inline">\(p\)</span><sub>2</sub>. We want to test whether the population proportions <span class="math inline">\(P\)</span><sub>1</sub> and <span class="math inline">\(P\)</span><sub>2</sub> are equal, based on the sample
+proportions <span class="math inline">\(p\)</span><sub>1</sub> and <span class="math inline">\(p\)</span><sub>2</sub>.</p>
+<p>The null hypothesis to be tested is</p>
+<p>H<sub>0</sub> : <span class="math inline">\(P\)</span><sub>1</sub> = <span class="math inline">\(P\)</span><sub>2</sub></p>
+<p>The alternative hypothesis may be either</p>
+<p>H<sub>1</sub> : <span class="math inline">\(P\)</span><sub>1</sub> &lt; <span class="math inline">\(P\)</span><sub>2</sub> (called left tailed alternative)</p>
+<p>Or</p>
+<p>H<sub>1</sub> : <span class="math inline">\(P\)</span><sub>1</sub>&gt; <span class="math inline">\(P\)</span><sub>2</sub> (called right tailed alternative)</p>
+<p>Or</p>
+<p>H<sub>1</sub> : <span class="math inline">\(P\)</span><sub>1</sub>≠ <span class="math inline">\(P\)</span><sub>2</sub> (called two tailed alternative)</p>
+<p>For this test, we will calculate test statistic, <span class="math inline">\(Z\)</span> using the following formula.</p>
+<p><span class="math display">\[Z = \frac{p_{1} - p_{2}}{\sqrt{\widehat{P}\widehat{Q}\left( \frac{1}{n_{1}} + \frac{1}{n_{2}} \right)}}\]</span></p>
+<p>Where <span class="math inline">\(\widehat{P} = \frac{n_{1}p_{1} + n_{1}p_{1}}{n_{1} + n_{2}}\)</span> and
+<span class="math inline">\(\widehat{P} = 1 - \widehat{Q}\)</span></p>
+<p>When the null hypothesis is true this <span class="math inline">\(Z\)</span> will follow a standard normal distribution with mean 0 and variance 1. <span class="math inline">\(Z\)</span> ~ <em>N</em>(0,1).</p>
+<p>This calculated value of <span class="math inline">\(z\)</span> is then compared with critical
+value of <span class="math inline">\(Z\)</span> from the table of standard normal distribution. See section <a href="large-sample-test.html#decision">12.1.1</a>. If the calculated value is higher than the table value, we reject the null hypothesis. If the calculated value is less than table value, we conclude that we don’t have enough evidence in our sample to reject the null hypothesis.</p>
+<div id="example-2-1" class="section level3 unnumbered">
+<h3>Example 2<a class="anchor" aria-label="anchor" href="#example-2-1"><i class="fas fa-link"></i></a>
+</h3>
+<blockquote>
+<p>In order to assess the adoption of a new variety of paddy by farmers, a survey was conducted in a locality. The survey covered 80 farmers with large land holding and 250 farmers with small land holding. It was observed that 50 out of big farmers and 78 out of small farmers adopted the new paddy variety. Test whether there is any significant difference
+in the adoption behaviour of the two groups of farmers (Take α = 0.01)</p>
+</blockquote>
+<p><strong>Solution:</strong></p>
+<p>Sample size of first population, framers with large land holding
+<span class="math inline">\(n\)</span><sub>1</sub>) = 80</p>
+<p>Sample size of first population, framers with small land holding
+(<span class="math inline">\(n\)</span><sub>2</sub>) = 250</p>
+<p>Proportion of framers with large land holding who adopted paddy variety
+(<span class="math inline">\(p\)</span><sub>1</sub>) = 50/80 = 0.625</p>
+<p>Proportion of framers with large land holding who adopted paddy variety
+(<span class="math inline">\(p\)</span><sub>2</sub>) =78/250 = 0.312</p>
+<p>We want to test whether the proportion is significantly different
+between both populations so,</p>
+<p>H<sub>0</sub> : <span class="math inline">\(P\)</span><sub>1</sub>= <span class="math inline">\(P\)</span><sub>2</sub></p>
+<p>Here the alternate hypothesis is</p>
+<p>H<sub>1</sub> : <span class="math inline">\(P\)</span><sub>1</sub> ≠ <span class="math inline">\(P\)</span><sub>2</sub></p>
+<p>So, it is a two tailed test</p>
+<p><span class="math inline">\(\widehat{P} = \frac{n_{1}p_{1} + n_{1}p_{1}}{n_{1} + n_{2}}\)</span></p>
+<p><span class="math inline">\(\widehat{P} = \frac{80 \times 0.625 + 250 \times 0.312}{80 + 250}\)</span></p>
+<p><span class="math inline">\(= 0.3879\)</span></p>
+<p><span class="math inline">\(\widehat{Q} = 1 - 0.3879 = 0.6121\)</span></p>
+<p>So that if null hypothesis is rejected, we accept this alternative hypothesis</p>
+<p>Level of significance is given at 1% , so α=0.01</p>
+<p>Now we calculate <span class="math inline">\(Z\)</span> using the formula</p>
+<p><span class="math inline">\(Z = \frac{p_{1} - p_{2}}{\sqrt{\widehat{P}\widehat{Q}\left( \frac{1}{n_{1}} + \frac{1}{n_{2}} \right)}}\)</span></p>
+<p><span class="math inline">\(= \frac{0.625 - 0.312}{\sqrt{0.3879 \times 0.6121\left( \frac{1}{80} + \frac{1}{250} \right)}}\)</span></p>
+<p><span class="math inline">\(= \frac{0.313}{\sqrt{0.2374 \times 0.0165}}\)</span></p>
+<p><span class="math inline">\(= 5.008\)</span></p>
+<p>Since it is a two tailed test, we have to look for the critical value of <span class="math inline">\(Z\)</span> at α/2. Here in this case so we have to look for the value of <span class="math inline">\(Z\)</span> at α/2 = 0.01/2 = 0.005, which is 2.576 (see section <a href="large-sample-test.html#decision">12.1.1</a>). Since the
+calculated value (5.008) is greater than the table value (2.576) we reject the null hypothesis and conclude that there is a significant difference between two population proportions.</p>
+</div>
+</div>
+<div id="test-for-a-single-population-mean" class="section level2" number="12.3">
+<h2>
+<span class="header-section-number">12.3</span> Test for a single population mean<a class="anchor" aria-label="anchor" href="#test-for-a-single-population-mean"><i class="fas fa-link"></i></a>
+</h2>
+<p>Consider there is a population with mean, say <span class="math inline">\(μ\)</span>; where <span class="math inline">\(μ\)</span> is unknown, we will take a random sample of size <em>n</em> from the population and calculate a sample mean, denoted as <span class="math inline">\(\overline{x}\)</span>. We want to test whether the population mean <span class="math inline">\(μ\)</span>, which is unknown is equal to some known constant <span class="math inline">\(μ\)</span><sub>0</sub>, based on the sample mean <span class="math inline">\(\overline{x}\)</span>.</p>
+<p>The null hypothesis to be tested is</p>
+<p>H<sub>0</sub> : <span class="math inline">\(μ\)</span> = <span class="math inline">\(μ\)</span><sub>0</sub></p>
+<p>The alternative hypothesis may be either</p>
+<p>H<sub>1</sub> : <span class="math inline">\(μ\)</span> &lt; <span class="math inline">\(μ\)</span><sub>0</sub> (called left tailed alternative)</p>
+<p>Or</p>
+<p>H<sub>1</sub> : <span class="math inline">\(μ\)</span> &gt; <span class="math inline">\(μ\)</span><sub>0</sub> (called right tailed alternative)</p>
+<p>Or</p>
+<p>H<sub>1</sub> : <span class="math inline">\(μ\)</span> ≠ <span class="math inline">\(μ\)</span><sub>0</sub> (called two tailed alternative)</p>
+<p>This particular test has two cases</p>
+<ul>
+<li><p>Case when the population standard deviation σ is known</p></li>
+<li><p>Case when the population standard deviation σ is unknown</p></li>
+</ul>
+<p>We will discuss each case below</p>
+<div id="population-standard-deviation-σ-is-known" class="section level3 unnumbered">
+<h3>Population standard deviation σ is known<a class="anchor" aria-label="anchor" href="#population-standard-deviation-%CF%83-is-known"><i class="fas fa-link"></i></a>
+</h3>
+<p>Population standard deviation σ is known and for this test, we will
+calculate test statistic, <span class="math inline">\(Z\)</span> using the following formula.</p>
+<p><span class="math display">\[Z = \frac{\overline{x} - \mu_{0}}{\frac{\sigma}{\sqrt{n}}}\]</span></p>
+<p>When the null hypothesis is true this <span class="math inline">\(Z\)</span> will follow a standard normal distribution with mean 0 and variance 1. <span class="math inline">\(Z\)</span> ~ <em>N</em>(0,1). Decision rule is given in section <a href="large-sample-test.html#decision">12.1.1</a></p>
+</div>
+<div id="population-standard-deviation-σ-is-unknown" class="section level3 unnumbered">
+<h3>Population standard deviation σ is unknown<a class="anchor" aria-label="anchor" href="#population-standard-deviation-%CF%83-is-unknown"><i class="fas fa-link"></i></a>
+</h3>
+<p>Population standard deviation σ is unknown and for this test, 𝜎 is replaced by its sample estimate <em>s</em>, we will calculate test statistic, <span class="math inline">\(Z\)</span> using the following formula.</p>
+<p><span class="math display">\[Z = \frac{\overline{x} - \mu_{0}}{\frac{s}{\sqrt{n}}}\]</span></p>
+<p>When the null hypothesis is true this <span class="math inline">\(Z\)</span> will follow a standard normal distribution with mean 0 and variance 1. <span class="math inline">\(Z\)</span> ~ <em>N</em>(0,1). Decision rule is given in section <a href="large-sample-test.html#decision">12.1.1</a></p>
+</div>
+<div id="example-3-1" class="section level3 unnumbered">
+<h3>Example 3<a class="anchor" aria-label="anchor" href="#example-3-1"><i class="fas fa-link"></i></a>
+</h3>
+<blockquote>
+<p>A sample of 900 items has a mean 3.4 cm and standard deviation 2.61cm. Test whether the population mean is 3.25cm at 5% significance level.</p>
+</blockquote>
+<p><strong>Solution:</strong></p>
+<p>Null hypothesis, H<sub>0</sub> : <span class="math inline">\(μ\)</span> = 3.25</p>
+<p>Alternate hypothesis, H<sub>1</sub> : <span class="math inline">\(μ\)</span> ≠ 3.25; two tailed test</p>
+<p>Sample size (<span class="math inline">\(n\)</span>) = 900</p>
+<p>Sample mean, <span class="math inline">\(\overline{x}\)</span> = 3.4</p>
+<p>Sample standard deviation (<span class="math inline">\(s\)</span>) = 2.61</p>
+<p>Population mean (<span class="math inline">\(μ\)</span><sub>0</sub>) = 3.25</p>
+<p>Level of significance, α = 0.05</p>
+<p><span class="math inline">\(Z = \frac{\overline{x} - \mu_{0}}{\frac{s}{\sqrt{n}}}\)</span></p>
+<p><span class="math inline">\(Z = \frac{3.4 - 3.25}{\frac{2.61}{\sqrt{900}}} = 1.724\)</span></p>
+<p>Since it is a two tailed test, we have to look for the critical value of <span class="math inline">\(Z\)</span> at α/2. Here in this case so we have to look for the value of Z at α/2=0.05/2 =0.025, which is 1.96 (Decision rule see section <a href="large-sample-test.html#decision">12.1.1</a>). Since the
+calculated value (1.724) is less than the table value (1.96), we conclude that, we don’t have enough evidence to reject the null hypothesis. So, it can be stated that mean is 3.25 cm.</p>
+</div>
+<div id="self-exercise" class="section level3 unnumbered">
+<h3>Self exercise<a class="anchor" aria-label="anchor" href="#self-exercise"><i class="fas fa-link"></i></a>
+</h3>
+<blockquote>
+<ol start="2" style="list-style-type: decimal">
+<li>From a paddy field a sample of 36 plants were selected at random. From these plants, the panicle lengths were observed. The mean and standard deviation of these measurements were 18.7cm and 1.25cm respectively. Test whether the mean length of panicle of paddy is 19cm. (α = 0.05)</li>
+</ol>
+</blockquote>
+</div>
+</div>
+<div id="test-for-equality-of-two-means" class="section level2" number="12.4">
+<h2>
+<span class="header-section-number">12.4</span> Test for equality of two means<a class="anchor" aria-label="anchor" href="#test-for-equality-of-two-means"><i class="fas fa-link"></i></a>
+</h2>
+<p>Let there be two normally distributed populations with means <span class="math inline">\(µ\)</span><sub>1</sub> and <span class="math inline">\(µ\)</span><sub>2</sub> and standard deviations be <span class="math inline">\(σ\)</span><sub>1</sub> and <span class="math inline">\(σ\)</span><sub>2</sub> respectively. Let samples of sizes <span class="math inline">\(n\)</span><sub>1</sub> and <span class="math inline">\(n\)</span><sub>2</sub> were taken from these populations. Let the sample means were <span class="math inline">\(\overline{x}_{1}\)</span> and <span class="math inline">\(\overline{x}_{2}\)</span> respectively. We want to test whether these population means are significantly different or not based on the sample means.</p>
+<p>The null hypothesis to be tested is</p>
+<p>H<sub>0</sub> : <span class="math inline">\(µ\)</span><sub>1</sub> = <span class="math inline">\(µ\)</span><sub>2</sub></p>
+<p>The alternative hypothesis may be either</p>
+<p>H<sub>1</sub> : <span class="math inline">\(µ\)</span><sub>1</sub> &lt; <span class="math inline">\(µ\)</span><sub>2</sub> (called left tailed alternative)</p>
+<p>Or</p>
+<p>H<sub>1</sub> : <span class="math inline">\(µ\)</span><sub>1</sub>&gt; <span class="math inline">\(µ\)</span><sub>2</sub> (called right tailed alternative)</p>
+<p>Or</p>
+<p>H<sub>1</sub> : <span class="math inline">\(µ\)</span><sub>1</sub>≠ <span class="math inline">\(µ\)</span><sub>2</sub> (called two tailed alternative)</p>
+<p>There are two cases under this test</p>
+<ul>
+<li><p>Case when the population standard deviations are not equal <span class="math inline">\(σ\)</span><sub>1</sub> ≠ <span class="math inline">\(σ\)</span><sub>2</sub></p></li>
+<li><p>Case when the population standard deviations are equal <span class="math inline">\(σ\)</span><sub>1</sub> = <span class="math inline">\(σ\)</span><sub>2</sub> = <span class="math inline">\(σ\)</span></p></li>
+</ul>
+<div id="when-the-population-standard-deviations-are-equal" class="section level3 unnumbered">
+<h3>When the population standard deviations are equal<a class="anchor" aria-label="anchor" href="#when-the-population-standard-deviations-are-equal"><i class="fas fa-link"></i></a>
+</h3>
+<p>Under this case, we will calculate test statistic, <span class="math inline">\(Z\)</span> using the following formula.</p>
+<p><span class="math display">\[Z = \frac{{\overline{x}}_{1} - {\overline{x}}_{2}}{\sigma\sqrt{\left( \frac{1}{n_{1}} + \frac{1}{n_{2}} \right)}}\]</span></p>
+<p>When the null hypothesis is true this <span class="math inline">\(Z\)</span> will follow a standard normal distribution with mean 0 and variance 1. <span class="math inline">\(Z\)</span> ~ <em>N</em>(0,1). Decision rule is same as that of above tests (section <a href="large-sample-test.html#decision">12.1.1</a>).</p>
+<p>Note: If <span class="math inline">\(σ\)</span> is unknown then it is replaced by its estimate
+<span class="math inline">\(\sqrt{\frac{n_{1}s_{1}^{2} + n_{2}s_{2}^{2}}{n_{1} + n_{2}}}\)</span> where <span class="math inline">\(n\)</span><sub>1</sub> and <span class="math inline">\(n\)</span><sub>2</sub> are the sample sizes, <span class="math inline">\(s\)</span><sub>1</sub> and <span class="math inline">\(s\)</span><sub>2</sub> are the sample standard deviations.</p>
+</div>
+<div id="when-the-population-standard-deviations-are-not-equal" class="section level3" number="12.4.1">
+<h3>
+<span class="header-section-number">12.4.1</span> When the population standard deviations are not equal<a class="anchor" aria-label="anchor" href="#when-the-population-standard-deviations-are-not-equal"><i class="fas fa-link"></i></a>
+</h3>
+<p>Under this case, we will calculate test statistic, <span class="math inline">\(Z\)</span> using the following formula.</p>
+<p><span class="math display">\[Z = \frac{{\overline{x}}_{1} - {\overline{x}}_{2}}{\sqrt{\left( \frac{\sigma_{1}^{2}}{n_{1}} + \frac{\sigma_{2}^{2}}{n_{2}} \right)}}\]</span></p>
+<p>When the null hypothesis is true this <span class="math inline">\(Z\)</span> will follow a standard normal distribution with mean 0 and variance 1. <span class="math inline">\(Z\)</span> ~ <em>N</em>(0,1). Decision rule is same as that of above tests (section <a href="large-sample-test.html#decision">12.1.1</a>).</p>
+</div>
+<div id="example-4-1" class="section level3 unnumbered">
+<h3>Example 4<a class="anchor" aria-label="anchor" href="#example-4-1"><i class="fas fa-link"></i></a>
+</h3>
+<blockquote>
+<p>The means of two single large samples of 1000 and 2000 members are 67.5 inches and 68 inches respectively. Can the samples be regarded as drawn from the same population of standard deviation 2.5 inches. (Test at 5% significance level).</p>
+</blockquote>
+<p><strong>Solution:</strong></p>
+<p>Null hypothesis, <span class="math inline">\(H\)</span><sub>0</sub> : <span class="math inline">\(μ\)</span><sub>1</sub> = <span class="math inline">\(μ\)</span><sub>2</sub></p>
+<p>Alternate hypothesis, H<sub>1</sub> : : <span class="math inline">\(μ\)</span><sub>1</sub>≠ <span class="math inline">\(μ\)</span><sub>2</sub>; two tailed test</p>
+<p>Sample size (<span class="math inline">\(n\)</span><sub>1</sub>) = 2000</p>
+<p>Sample size (<span class="math inline">\(n\)</span><sub>2</sub>) = 1000</p>
+<p>Sample mean of first group, <span class="math inline">\({\overline{x}}_{1}\)</span> = 68</p>
+<p>Sample mean of second group, <span class="math inline">\({\overline{x}}_{2}\)</span> = 67.5</p>
+<p>Population standard deviation (<span class="math inline">\(σ\)</span>) = 2.5</p>
+<p>Level of significance, α = 0.05</p>
+<p>we will calculate test statistic, <span class="math inline">\(Z\)</span> using the following formula.</p>
+<p><span class="math inline">\(Z = \frac{{\overline{x}}_{1} - {\overline{x}}_{2}}{\sigma\sqrt{\left( \frac{1}{n_{1}} + \frac{1}{n_{2}} \right)}}\)</span></p>
+<p><span class="math inline">\(Z = \frac{68 - 67.5}{2.5\sqrt{\left( \frac{1}{2000} + \frac{1}{1000} \right)}} = \frac{0.5}{0.00375} = 133.33\)</span></p>
+<p>Since it is a two tailed test, we have to look for the critical value of <span class="math inline">\(Z\)</span> at α/2. Here in this case so we have to look for the value of <span class="math inline">\(Z\)</span> at α/2=0.05/2 =0.025, which is 1.96 (see section <a href="large-sample-test.html#decision">12.1.1</a>). Calculated value (133.33) is very much greater than table value, so we reject the null hypothesis. We may conclude that samples are not drawn from the same population.</p>
+</div>
+<div id="self-exercise-1" class="section level3 unnumbered">
+<h3>Self exercise<a class="anchor" aria-label="anchor" href="#self-exercise-1"><i class="fas fa-link"></i></a>
+</h3>
+<blockquote>
+<ol start="3" style="list-style-type: decimal">
+<li>Two random samples were drawn from two populations and the following data were obtained. Test whether the population means are equal. <span class="math inline">\(n\)</span><sub>1</sub> = 400, <span class="math inline">\(n\)</span><sub>2</sub> = 400, <span class="math inline">\(\overline{x}_{1}\)</span> = 250, <span class="math inline">\(\overline{x}_{2}\)</span> = 220, $_{1}, <span class="math inline">\(s\)</span><sub>1</sub> = 40, <span class="math inline">\(s\)</span><sub>2</sub> = 55</li>
+</ol>
+</blockquote>
+
+</div>
+</div>
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="hypothesis-testing.html"><span class="header-section-number">11</span> Hypothesis Testing</a></div>
+<div class="next"><a href="references.html">References</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#large-sample-test"><span class="header-section-number">12</span> Large sample test</a></li>
+<li>
+<a class="nav-link" href="#large-sample-tests"><span class="header-section-number">12.1</span> Large Sample Tests</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#decision"><span class="header-section-number">12.1.1</span> Decision rule for Z test</a></li>
+<li><a class="nav-link" href="#test-for-a-single-population-proportion"><span class="header-section-number">12.1.2</span> Test for a single population proportion</a></li>
+<li><a class="nav-link" href="#self-excercise">Self excercise</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#test-for-equality-of-two-proportions"><span class="header-section-number">12.2</span> Test for equality of two proportions</a><ul class="nav navbar-nav"><li><a class="nav-link" href="#example-2-1">Example 2</a></li></ul>
+</li>
+<li>
+<a class="nav-link" href="#test-for-a-single-population-mean"><span class="header-section-number">12.3</span> Test for a single population mean</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#population-standard-deviation-%CF%83-is-known">Population standard deviation σ is known</a></li>
+<li><a class="nav-link" href="#population-standard-deviation-%CF%83-is-unknown">Population standard deviation σ is unknown</a></li>
+<li><a class="nav-link" href="#example-3-1">Example 3</a></li>
+<li><a class="nav-link" href="#self-exercise">Self exercise</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#test-for-equality-of-two-means"><span class="header-section-number">12.4</span> Test for equality of two means</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#when-the-population-standard-deviations-are-equal">When the population standard deviations are equal</a></li>
+<li><a class="nav-link" href="#when-the-population-standard-deviations-are-not-equal"><span class="header-section-number">12.4.1</span> When the population standard deviations are not equal</a></li>
+<li><a class="nav-link" href="#example-4-1">Example 4</a></li>
+<li><a class="nav-link" href="#self-exercise-1">Self exercise</a></li>
+</ul>
+</li>
+</ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>TEXTBOOK OF AGRICULTURAL STATISTICS</strong>" was written by Dr. Pratheesh P. Gopinath. It was last built on 2022-01-30.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
