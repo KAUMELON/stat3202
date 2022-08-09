@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>Chapter 13 Small sample tests | TEXTBOOK OF AGRICULTURAL STATISTICS</title>
+<meta name="author" content="Dr. Pratheesh P. Gopinath">
+<meta name="description" content="If the sample size n is less than 30 (n &lt; 30) it is known as small sample. For small samples the sampling distributions of statistic commonly used are χ2 (Chi-square), F and t distribution. A...">
+<meta name="generator" content="bookdown 0.24 with bs4_book()">
+<meta property="og:title" content="Chapter 13 Small sample tests | TEXTBOOK OF AGRICULTURAL STATISTICS">
+<meta property="og:type" content="book">
+<meta property="og:image" content="/images/cover.PNG">
+<meta property="og:description" content="If the sample size n is less than 30 (n &lt; 30) it is known as small sample. For small samples the sampling distributions of statistic commonly used are χ2 (Chi-square), F and t distribution. A...">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chapter 13 Small sample tests | TEXTBOOK OF AGRICULTURAL STATISTICS">
+<meta name="twitter:description" content="If the sample size n is less than 30 (n &lt; 30) it is known as small sample. For small samples the sampling distributions of statistic commonly used are χ2 (Chi-square), F and t distribution. A...">
+<meta name="twitter:image" content="/images/cover.PNG">
+<!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.3.1/transition.js"></script><script src="libs/bs3compat-0.3.1/tabs.js"></script><script src="libs/bs3compat-0.3.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS -->
+</head>
+<body data-spy="scroll" data-target="#toc">
+
+<div class="container-fluid">
+<div class="row">
+  <header class="col-sm-12 col-lg-3 sidebar sidebar-book"><a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div class="d-flex align-items-start justify-content-between">
+      <h1>
+        <a href="index.html" title="">TEXTBOOK OF AGRICULTURAL STATISTICS</a>
+      </h1>
+      <button class="btn btn-outline-primary d-lg-none ml-2 mt-1" type="button" data-toggle="collapse" data-target="#main-nav" aria-expanded="true" aria-controls="main-nav"><i class="fas fa-bars"></i><span class="sr-only">Show table of contents</span></button>
+    </div>
+
+    <div id="main-nav" class="collapse-lg">
+      <form role="search">
+        <input id="search" class="form-control" type="search" placeholder="Search" aria-label="Search">
+</form>
+
+      <nav aria-label="Table of contents"><h2>Table of contents</h2>
+        <ul class="book-toc list-unstyled">
+<li><a class="" href="index.html">Welcome</a></li>
+<li><a class="" href="preface.html">Preface</a></li>
+<li><a class="" href="introduction.html"><span class="header-section-number">1</span> Introduction</a></li>
+<li><a class="" href="graphical-representation-of-data.html"><span class="header-section-number">2</span> Graphical representation of data</a></li>
+<li><a class="" href="measures-of-central-tendency---i.html"><span class="header-section-number">3</span> Measures of central tendency - I</a></li>
+<li><a class="" href="measures-of-central-tendency--ii.html"><span class="header-section-number">4</span> Measures of central tendency -II</a></li>
+<li><a class="" href="measures-of-dispersion.html"><span class="header-section-number">5</span> Measures of Dispersion</a></li>
+<li><a class="" href="skewness-and-kurtosis.html"><span class="header-section-number">6</span> Skewness and Kurtosis</a></li>
+<li><a class="" href="measures-of-association.html"><span class="header-section-number">7</span> Measures of Association</a></li>
+<li><a class="" href="regression-analysis.html"><span class="header-section-number">8</span> Regression Analysis</a></li>
+<li><a class="" href="probability.html"><span class="header-section-number">9</span> Probability</a></li>
+<li><a class="" href="probability-distributions.html"><span class="header-section-number">10</span> Probability Distributions</a></li>
+<li><a class="" href="hypothesis-testing.html"><span class="header-section-number">11</span> Hypothesis Testing</a></li>
+<li><a class="" href="large-sample-test.html"><span class="header-section-number">12</span> Large sample test</a></li>
+<li><a class="active" href="small-sample-tests.html"><span class="header-section-number">13</span> Small sample tests</a></li>
+<li><a class="" href="design-of-experiments.html"><span class="header-section-number">14</span> Design of experiments</a></li>
+<li><a class="" href="uniformity-trials.html"><span class="header-section-number">15</span> Uniformity trials</a></li>
+<li><a class="" href="analysis-of-variance-anova.html"><span class="header-section-number">16</span> Analysis of Variance (ANOVA)</a></li>
+<li><a class="" href="multiple-comparison-test.html"><span class="header-section-number">17</span> Multiple comparison test</a></li>
+<li><a class="" href="single-factor-experiments.html"><span class="header-section-number">18</span> Single factor experiments</a></li>
+<li><a class="" href="ftable.html"><span class="header-section-number">19</span> How to use F table</a></li>
+<li><a class="" href="references.html">References</a></li>
+</ul>
+
+        <div class="book-extra">
+          
+        </div>
+      </nav>
+</div>
+  </header><main class="col-sm-12 col-md-9 col-lg-7" id="content"><div id="small-sample-tests" class="section level1" number="13">
+<h1>
+<span class="header-section-number">13</span> Small sample tests<a class="anchor" aria-label="anchor" href="#small-sample-tests"><i class="fas fa-link"></i></a>
+</h1>
+<p>If the sample size <em>n</em> is less than 30 (<em>n</em> &lt; 30) it is known as small
+sample. For small samples the sampling distributions of statistic
+commonly used are χ<sup>2</sup> (Chi-square), <em>F</em> and <em>t</em> distribution. A study
+of sampling distribution of statistic for small samples is known as
+small sample theory.</p>
+<p><strong>Small Sample Tests (sample size (n) &lt; 30)</strong></p>
+<p><strong>2. Tests based on Student t distribution (t-tests)</strong></p>
+<p><strong>Assumptions of t-test:</strong></p>
+<ul>
+<li><p>The parent population from which the sample is drawn is normal</p></li>
+<li><p>The sample is a random sample</p></li>
+<li><p>The population standard deviation, σ is unknown</p></li>
+</ul>
+<p><strong>2.1 Test for a single population mean</strong></p>
+<p>Consider there is a population with mean, say <em>μ</em>; where <em>μ</em> is unknown,
+we will take a random sample of size <em>n</em> from the population and
+calculate a sample mean, denoted as <span class="math inline">\(\overline{x}\)</span>. We want to test
+whether the population mean <em>μ</em>, which is unknown is equal to some known
+constant <em>μ</em><sub>0</sub>, based on the sample mean <span class="math inline">\(\overline{x}\)</span>. Here sample
+size is less than 30.</p>
+<p>The null hypothesis to be tested is</p>
+<p>H<sub>0</sub> : <em>μ</em> = <em>μ</em><sub>0</sub></p>
+<p>The alternative hypothesis may be either</p>
+<p>H<sub>1</sub> : <em>μ</em> &lt; <em>μ</em><sub>0</sub> (called left tailed alternative)</p>
+<p>Or</p>
+<p>H<sub>1</sub> : <em>μ</em> &gt; <em>μ</em><sub>0</sub> (called right tailed alternative)</p>
+<p>Or</p>
+<p>H<sub>1</sub> : <em>μ</em> ≠ <em>μ</em><sub>0</sub> (called two tailed alternative)</p>
+<p><span class="math display">\[t = \frac{\overline{x} - \mu_{0}}{\frac{s}{\sqrt{n}}}\]</span></p>
+<p>Where,
+<span class="math inline">\(s^{2} = \frac{\sum_{i = 1}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n - 1}\)</span></p>
+<p>Under null hypothesis <em>t</em> follows a <em>t</em> distribution with <em>n</em>-1 degrees
+of freedom</p>
+<p><strong>2.1.1 Decision rule for t test</strong></p>
+<p>Let <em>t</em> be the calculated value, degrees of freedom = <em>n</em>-1, α be the
+level of significance, then we reject the null hypothesis if</p>
+<ul>
+<li><p>|<em>t</em>| &gt; <em>t</em><sub>α/2</sub> ; for two tailed test</p></li>
+<li><p><em>t</em> &gt; <em>t</em><sub>α</sub> ; for right tailed test</p></li>
+<li><p><em>t</em> &lt; - <em>t</em><sub>α</sub> ; for left tailed test</p></li>
+</ul>
+<p>Where <em>t</em><sub>α</sub> or <em>t</em><sub>α/2</sub> can be obtained from the table of Student <em>t</em>
+distribution for the given degrees of freedom, <em>n</em>-1 and level of
+significance <em>α</em>. If the calculated value of the test statistic is less
+than critical values from the table. we may reject the null hypothesis.
+Otherwise, we may accept it.</p>
+<p><strong>Example 9:</strong></p>
+<p>Based on field experiments, a new variety of green gram is expected to
+give a yield of 12 quintals per hectare. The variety was tested on 10
+randomly selected farmers’ fields. The yields (quintals per hectare)
+were recorded as 14.3, 12.6, 13.7, 10.9, 13.7, 12, 11.4, 12, 12.6, and
+13.1. Do the results conform the expectation?</p>
+<p><strong>Solution:</strong></p>
+<p>Null hypothesis, H<sub>0</sub> : <em>μ</em> = 12</p>
+<p>Alternate hypothesis, H<sub>1</sub> : <em>μ</em> ≠ 12; two tailed test</p>
+<p>Sample size (<em>n</em>) = 10</p>
+<p>Sample mean, <span class="math inline">\(\overline{x}\)</span> =
+<span class="math inline">\(\frac{\sum_{i = 1}^{n}x_{i}}{n} = \ \)</span>(14.3+12.6+…+13.1)/10 =
+126.3/10=12.63</p>
+<p>Sample standard deviation (<em>s</em>) = 1.08536</p>
+<p><em>μ</em><sub>0</sub> = 12</p>
+<p>Level of significance, α = 0.05</p>
+<p><strong>Calculation of sample mean and sample standard deviation</strong></p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="left"><strong>Sl. No</strong></th>
+<th align="left"><strong>Yield</strong></th>
+<th align="left"><span class="math display">\[\left( \mathbf{x}_{\mathbf{i}}\mathbf{-}\overline{\mathbf{x}} \right)\]</span></th>
+<th align="left"><span class="math display">\[\left( \mathbf{x}_{\mathbf{i}}\mathbf{-}\overline{\mathbf{x}} \right)^{\mathbf{2}}\]</span></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">14.3</td>
+<td align="left">1.67</td>
+<td align="left">2.7889</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">12.6</td>
+<td align="left">-0.03</td>
+<td align="left">0.0009</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">13.7</td>
+<td align="left">1.07</td>
+<td align="left">1.1449</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="left">10.9</td>
+<td align="left">-1.73</td>
+<td align="left">2.9929</td>
+</tr>
+<tr class="odd">
+<td align="left">5</td>
+<td align="left">13.7</td>
+<td align="left">1.07</td>
+<td align="left">1.1449</td>
+</tr>
+<tr class="even">
+<td align="left">6</td>
+<td align="left">12</td>
+<td align="left">-0.63</td>
+<td align="left">0.3969</td>
+</tr>
+<tr class="odd">
+<td align="left">7</td>
+<td align="left">11.4</td>
+<td align="left">-1.23</td>
+<td align="left">1.5129</td>
+</tr>
+<tr class="even">
+<td align="left">8</td>
+<td align="left">12</td>
+<td align="left">-0.63</td>
+<td align="left">0.3969</td>
+</tr>
+<tr class="odd">
+<td align="left">9</td>
+<td align="left">12.6</td>
+<td align="left">-0.03</td>
+<td align="left">0.0009</td>
+</tr>
+<tr class="even">
+<td align="left">10</td>
+<td align="left">13.1</td>
+<td align="left">0.47</td>
+<td align="left">0.2209</td>
+</tr>
+<tr class="odd">
+<td align="left">Sum = <span class="math inline">\(\sum_{i = 1}^{n}x_{i}\)</span>
+</td>
+<td align="left"><strong>126.3</strong></td>
+<td align="left"><span class="math display">\[\sum_{i = 1}^{n}\left( x_{i} - \overline{x} \right)^{2}\]</span></td>
+<td align="left"><strong>10.601</strong></td>
+</tr>
+<tr class="even">
+<td align="left">Mean, <span class="math inline">\(\overline{x}\)</span> =<span class="math inline">\(\ \frac{\sum_{i = 1}^{n}x_{i}}{10}\)</span>
+</td>
+<td align="left"><strong>12.63</strong></td>
+<td align="left"><span class="math display">\[s^{2} = \frac{\sum_{i = 1}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n - 1}\]</span></td>
+<td align="left"><strong>1.177889</strong></td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><span class="math display">\[s = \sqrt{s^{2}}\]</span></td>
+<td align="left"><strong>1.085306</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><span class="math display">\[t = \frac{\overline{x} - \mu_{0}}{\frac{s}{\sqrt{n - 1}}}\]</span></p>
+<p><span class="math display">\[t = \frac{12.63 - 12}{\frac{1.085306}{\sqrt{10 - 1}}} = \frac{0.63}{0.3432} = 1.835\]</span></p>
+<p>Table value for <em>t</em> corresponding to 5% level of significance and 9
+degrees of freedom is 2.262 (two tailed test) – see table 1.1 at the
+end of this chapter.</p>
+<p>Since the calculated value (1.835) is less than the table value (2.262),
+we conclude that, we don’t have enough evidence to reject the null
+hypothesis. So, it can be stated that mean is 12 quintals per hectare.</p>
+<p><strong>Example 10: Try it by yourself</strong></p>
+<p>The mean weekly sales of soap bars in departmental stores were 146.3
+bars per store. After an advertising campaign the mean weekly sales in
+22 stores for a typical week was 153.7 and showed a standard deviation
+of 17.2. Was the advertisement campaign successful?</p>
+<p><strong>2.2 Test for equality of two means</strong></p>
+<p>Let there be two normally distributed populations with means <em>µ</em><sub>1</sub> and
+<em>µ</em><sub>2</sub>. Let the population standard deviations be equal and unknown. Let
+samples of sizes <em>n</em><sub>1</sub> and <em>n</em><sub>2</sub> were taken from these populations.
+Let the sample means were 𝑥̅<sub>1</sub> 𝑎𝑛𝑑 𝑥̅<sub>2</sub> respectively. We want to test
+whether these population means are significantly different or not based
+on the sample means.</p>
+<p>There are two cases under this situation</p>
+<ol style="list-style-type: decimal">
+<li><p>Population variances are equal</p></li>
+<li><p>Population variances are unequal</p></li>
+</ol>
+<p>Before proceeding to t-test a F test is performed to test homogeneity of
+population variance (See section).</p>
+<p><strong>2.2.1 Case when the population variances are equal (homogenous)</strong></p>
+<p>The null hypothesis to be tested is</p>
+<p>H<sub>0</sub> : <em>μ</em><sub>1</sub> = <em>μ</em><sub>2</sub></p>
+<p>The alternative hypothesis may be either</p>
+<p>H<sub>1</sub> : <em>μ</em><sub>1</sub> &lt; <em>μ</em><sub>2</sub> (called left tailed alternative)</p>
+<p>Or</p>
+<p>H<sub>1</sub> : <em>μ</em><sub>1</sub>&gt; <em>μ</em><sub>2</sub> (called right tailed alternative)</p>
+<p>Or</p>
+<p>H<sub>1</sub> : <em>μ</em><sub>1</sub>≠ <em>μ</em><sub>2</sub> (called two tailed alternative)</p>
+<p>We will calculate test statistic, <span class="math inline">\(t\)</span> using the following formula.</p>
+<p><span class="math display">\[t = \frac{{\overline{x}}_{1} - {\overline{x}}_{2}}{s\sqrt{\left( \frac{1}{n_{1}} + \frac{1}{n_{2}} \right)}}\]</span></p>
+<p>Where,
+<span class="math inline">\(s^{2} = \frac{\sum_{i = 1}^{n_{1}}\left( x_{1i} - {\overline{x}}_{1} \right)^{2} + \sum_{i = 1}^{n_{2}}\left( x_{2i} - {\overline{x}}_{2} \right)^{2}}{n_{1} + n_{2} - 2}\)</span>,
+<span class="math inline">\(x_{1i}\)</span> and <span class="math inline">\(x_{2i}\)</span> are sample observations from population 1 &amp; 2,
+respectively.</p>
+<p>Under null hypothesis <em>t</em> follows a <em>t</em> distribution with
+<span class="math inline">\(n_{1} + n_{2} - 2\ \)</span>degrees of freedom. Decision rule is same as that
+of previous t- test (section 2.1.2).</p>
+<p><strong>2.2.2 Case when the population variances are unequal</strong></p>
+<p>The Welch t-test is an adaptation of Student’s t-test. It is used to
+compare the means of two groups, when the variances are different.</p>
+<p>The null hypothesis to be tested is</p>
+<p>H<sub>0</sub> : <em>μ</em><sub>1</sub> = <em>μ</em><sub>2</sub></p>
+<p>The alternative hypothesis may be either</p>
+<p>H<sub>1</sub> : <em>μ</em><sub>1</sub> &lt; <em>μ</em><sub>2</sub> (called left tailed alternative)</p>
+<p>Or</p>
+<p>H<sub>1</sub> : <em>μ</em><sub>1</sub>&gt; <em>μ</em><sub>2</sub> (called right tailed alternative)</p>
+<p>Or</p>
+<p>H<sub>1</sub> : <em>μ</em><sub>1</sub>≠ <em>μ</em><sub>2</sub> (called two tailed alternative)</p>
+<p>We will calculate test statistic, <span class="math inline">\(t\)</span> using the following formula.</p>
+<p><span class="math display">\[t = \frac{{\overline{x}}_{1} - {\overline{x}}_{2}}{\sqrt{\left( \frac{s_{1}^{2}}{n_{1}} + \frac{s_{2}^{2}}{n_{2}} \right)}}\]</span></p>
+<p><span class="math inline">\(s_{1}\)</span>and<span class="math inline">\(\text{\ s}_{2}\)</span> are the sample standard deviations from two
+populations, respectively.</p>
+<p>The degrees of freedom of Welch t-test is calculated as follows:</p>
+<p><span class="math display">\[\frac{\left( \frac{s_{1}^{2}}{n_{1}} + \frac{s_{2}^{2}}{n_{2}} \right)^{2}}{\frac{s_{1}^{4}}{n_{1}^{2}\left( n_{2} - 1 \right)} + \frac{s_{2}^{4}}{n_{2}^{2}\left( n_{1} - 1 \right)}}\]</span></p>
+<p>Once the t value is determined, you have to read in the t table the
+critical value of Student’s t distribution corresponding to the
+significance level. Decision rule is same as that of previous t- test
+(section 2.1.2).</p>
+<p><strong>Example 11:</strong></p>
+<p>In order to compare the effectiveness of two sources of nitrogen, namely
+ammonium chloride and urea on grain yield of paddy, an experiment was
+conducted. The results on the grain yield of paddy (kg/plot) under the
+two treatments are given below.</p>
+<p><strong>Ammonium chloride</strong>: 13.4, 10.9, 11.2, 11.8, 14, 15.3, 14.2, 12.6, 17,
+16.2, 16.5, 15.7</p>
+<p><strong>Urea</strong>: 12, 11.7, 10.7, 11.2, 14.8, 14.4, 13.9, 13.7, 16.9, 16, 15.6,
+16</p>
+<p><strong>2.3 Paired t-test</strong></p>
+<p>Paired Student’s t-test is used to compare the means of two related
+samples. That is when you have two values (pair of values) for the same
+samples. For example, 20 cows received a treatment for 3 months. The
+question is to test whether the treatment has an impact on the milk
+yield of the cow at the end of the 3 months treatment. The milk yield of
+the 20 cows has been measured before and after the treatment. This gives
+us 20 sets of values before treatment and 20 sets of values after
+treatment. In this case, in order to test whether there is any
+significant difference between before and after, paired t-test can be
+used; as the two sets of values being compared are related. We have a
+pair of values for each cow (one before and the other after treatment).</p>
+<p>Suppose we have two correlated random samples <em>x</em><sub>1</sub>, <em>x</em><sub>2</sub>, ...,
+<em>x</em><sub>n</sub> and <em>y</em><sub>1</sub>, <em>y</em><sub>2</sub>, ..., <em>y</em><sub>n</sub>. We want to test whether these
+population means are significantly different.</p>
+<p>The Welch t-test is an adaptation of Student’s t-test. It is used to
+compare the means of two groups, when the variances are different.</p>
+<p>The null hypothesis to be tested is</p>
+<p>H<sub>0</sub> : <em>μ</em><sub>1</sub> = <em>μ</em><sub>2</sub></p>
+<p>The alternative hypothesis may be either</p>
+<p>H<sub>1</sub> : <em>μ</em><sub>1</sub> &lt; <em>μ</em><sub>2</sub> (called left tailed alternative)</p>
+<p>Or</p>
+<p>H<sub>1</sub> : <em>μ</em><sub>1</sub>&gt; <em>μ</em><sub>2</sub> (called right tailed alternative)</p>
+<p>Or</p>
+<p>H<sub>1</sub> : <em>μ</em><sub>1</sub>≠ <em>μ</em><sub>2</sub> (called two tailed alternative)</p>
+<p>We will calculate test statistic, <span class="math inline">\(t\)</span> using the following formula.</p>
+<p><span class="math display">\[t = \frac{|d|}{\frac{s}{\sqrt{n}}}\]</span></p>
+<p>Where <span class="math inline">\(d_{i} = x_{i} - y_{i}\)</span>,
+<span class="math inline">\(\overline{d} = \frac{\sum_{i = 1}^{n}d_{i}}{n}\)</span>,
+<span class="math inline">\(s^{2} = \frac{\sum_{i = 1}^{n}\left( d_{i} - \overline{d} \right)^{2}}{n - 1}\)</span></p>
+<p>Under null hypothesis <em>t</em> follows a <em>t</em> distribution with
+<span class="math inline">\(n - 1\ \)</span>degrees of freedom. Decision rule is same as that of previous
+t- test (section 2.1.2).</p>
+<p><strong>Example 12:</strong></p>
+<p>In an experiment the plots were divided into two equal parts. One part
+received soil treatment A and the second part received soil treatment B.
+each plot was planted with sorghum. The sorghum yield (kg/plot) was
+observed as shown below. Test the effectiveness of soil treatments on
+sorghum yield</p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="left">Soil Treatment A</th>
+<th align="left">49</th>
+<th align="left">53</th>
+<th align="left">51</th>
+<th align="left">52</th>
+<th align="left">47</th>
+<th align="left">50</th>
+<th align="left">52</th>
+<th align="left">53</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="left">Soil Treatment B</td>
+<td align="left">52</td>
+<td align="left">55</td>
+<td align="left">52</td>
+<td align="left">53</td>
+<td align="left">50</td>
+<td align="left">54</td>
+<td align="left">54</td>
+<td align="left">53</td>
+</tr></tbody>
+</table></div>
+<p><strong>Solution:</strong></p>
+<p>Null hypothesis, H<sub>0</sub> : <em>μ</em><sub>1</sub> = <em>μ</em><sub>2</sub>, , there is no significant
+difference between the effects of the two soil treatments</p>
+<p>Alternate hypothesis, H<sub>1</sub> : : <em>μ</em><sub>1</sub>≠ <em>μ</em><sub>2</sub>; two tailed test, there is
+significant difference between the effects of the two soil treatments</p>
+<p>Level of significance, α = 0.05</p>
+<p><span class="math display">\[t = \frac{|d|}{\frac{s}{\sqrt{n}}}\]</span></p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="left"><strong>Sl.No.</strong></th>
+<th align="left"><span class="math display">\[\mathbf{A}\]</span></th>
+<th align="left"><span class="math display">\[\mathbf{B}\]</span></th>
+<th align="left"><span class="math display">\[\mathbf{d}_{\mathbf{i}}\mathbf{= A - B}\]</span></th>
+<th align="left"><span class="math display">\[\mathbf{d}_{\mathbf{i}}\mathbf{-}\overline{\mathbf{d}}\]</span></th>
+<th align="left"><span class="math display">\[\left( \mathbf{d}_{\mathbf{i}}\mathbf{-}\overline{\mathbf{d}} \right)^{\mathbf{2}}\]</span></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">1</td>
+<td align="left">49</td>
+<td align="left">52</td>
+<td align="left">-3</td>
+<td align="left">-1</td>
+<td align="left">1</td>
+</tr>
+<tr class="even">
+<td align="left">2</td>
+<td align="left">53</td>
+<td align="left">55</td>
+<td align="left">-2</td>
+<td align="left">0</td>
+<td align="left">0</td>
+</tr>
+<tr class="odd">
+<td align="left">3</td>
+<td align="left">51</td>
+<td align="left">52</td>
+<td align="left">-1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+<tr class="even">
+<td align="left">4</td>
+<td align="left">52</td>
+<td align="left">53</td>
+<td align="left">-1</td>
+<td align="left">1</td>
+<td align="left">1</td>
+</tr>
+<tr class="odd">
+<td align="left">5</td>
+<td align="left">47</td>
+<td align="left">50</td>
+<td align="left">-3</td>
+<td align="left">-1</td>
+<td align="left">1</td>
+</tr>
+<tr class="even">
+<td align="left">6</td>
+<td align="left">50</td>
+<td align="left">54</td>
+<td align="left">-4</td>
+<td align="left">-2</td>
+<td align="left">4</td>
+</tr>
+<tr class="odd">
+<td align="left">7</td>
+<td align="left">52</td>
+<td align="left">54</td>
+<td align="left">-2</td>
+<td align="left">0</td>
+<td align="left">0</td>
+</tr>
+<tr class="even">
+<td align="left">8</td>
+<td align="left">53</td>
+<td align="left">53</td>
+<td align="left">0</td>
+<td align="left">2</td>
+<td align="left">4</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><span class="math display">\[\sum_{i = 1}^{8}d_{i}\]</span></td>
+<td align="left">-16</td>
+<td align="left"><span class="math display">\[\sum_{i = 1}^{8}\left( d_{i} - \overline{d} \right)^{2}\]</span></td>
+<td align="left">12</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><span class="math display">\[\overline{d} = \frac{\sum_{i = 1}^{8}d_{i}}{n} = \frac{- 16}{8}\]</span></td>
+<td align="left">
+<span class="math inline">\(\overline{d} =\)</span>-2</td>
+<td align="left"><span class="math display">\[s^{2} = \frac{\sum_{i = 1}^{8}\left( d_{i} - \overline{d} \right)^{2}}{n - 1}\]</span></td>
+<td align="left">
+<span class="math inline">\(s^{2} = \ \)</span><!-- -->1.7143</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">
+<span class="math inline">\(s = \sqrt{1.7143}\)</span> =1.309</td>
+</tr>
+</tbody>
+</table></div>
+<p><span class="math display">\[t = \frac{| - 2|}{\frac{1.309}{\sqrt{8}}}\]</span></p>
+<p><span class="math display">\[= \frac{2}{\frac{1.309}{2.828}}\]</span></p>
+<p><span class="math display">\[= \frac{2}{0.4629}\]</span></p>
+<p><span class="math display">\[= 4.321\]</span></p>
+<p>Table value of <em>t</em> for 7 degrees of freedom at 5% level of significance
+is 2.365</p>
+<p>As calculated value (4.321) is greater than table value (2.365). We
+reject the null hypothesis H<sub>0</sub>. We conclude that the is significant
+difference between the two soil treatments between A and B. Soil
+treatment B increases the yield of sorghum significantly.</p>
+<p><strong>Example 13: Try it by yourself</strong></p>
+<p>A certain stimulus administered to each of 12 patients resulted in the
+following increase of Blood pressure: 5, 2, 8, -1, 3, 0, -2, 1, 5, 0, 4,
+6. Can it be concluded that the stimulus will, in general be accompanied
+by an increase in Blood pressure? (tip: difference <span class="math inline">\(d_{i}\)</span>is given)</p>
+<p><strong>2.4 Testing the significance of correlation coefficient</strong></p>
+<p>Let there be two normally distributed populations with means <em>µ</em><sub>1</sub> and
+<em>µ</em><sub>2</sub> and standard deviations be <em>σ</em><sub>1</sub> and <em>σ</em><sub>2</sub> respectively. Let
+the correlation between two populations be <em>ρ</em>. We want to test the null
+hypothesis that population correlation coefficient is zero (<em>ρ</em> =0). We
+can use t- test for the purpose. If we don’t have enough evidence from
+our sample to reject the null hypothesis, we may conclude that there is
+a significant correlation between populations ((<em>ρ</em> ≠ 0).</p>
+<p>The null hypothesis to be tested is</p>
+<p>H<sub>0</sub> : <em>ρ</em> = 0</p>
+<p>The alternative hypothesis</p>
+<p>H<sub>1</sub> : <em>ρ</em> ≠ 0 (two tailed alternative)</p>
+<p><span class="math display">\[t = \frac{r\sqrt{n - 2}}{\sqrt{1 - r^{2}}}\]</span></p>
+<p>Under null hypothesis <em>t</em> follows a <em>t</em> distribution with
+<span class="math inline">\(n - 2\ \)</span>degrees of freedom. We reject the null hypothesis, if the
+calculated value is greater than table value of <em>t</em> corresponding to
+<span class="math inline">\(n - 2\ \)</span>degrees of freedom and level of significance (α) [our case α =
+0.05]</p>
+<p><strong>Example 14:</strong></p>
+<p>A coefficient of correlation of 0.2 is derived from a random sample of
+625 pairs of observations. Test whether the population correlation
+coefficient is significant or not.</p>
+<p>Solution:</p>
+<p>Null hypothesis, H<sub>0</sub> : <em>ρ</em> = 0 (Population correlation coefficient is
+zero)</p>
+<p>Alternative hypothesis, H<sub>1</sub> : <em>ρ</em> ≠ 0 (Population correlation
+coefficient is not zero)</p>
+<p>Sample correlation coefficient (<span class="math inline">\(r\)</span>) = 0.2</p>
+<p>Number of pairs (<em>n</em>) = 625</p>
+<p><span class="math display">\[t = \frac{r\sqrt{n - 2}}{\sqrt{1 - r^{2}}}\]</span></p>
+<p><span class="math display">\[= \frac{0.2\sqrt{625 - 2}}{\sqrt{1 - 0.04}}\  = 5.095\]</span></p>
+<p>Sample size is so large (&gt;30) t distribution can be approximated to a z
+distribution. Critical value for two tailed test at 5% level of
+significance is 1.96. So the calculated value is more than 1.96, we
+reject the null hypothesis and conclude that, there is a significant
+correlation in population.</p>
+<p><strong>3. Chi square test (χ<sup>2</sup>)</strong></p>
+<p>Chi-square tests are based on the sampling distribution called
+chi-square distribution (χ<sup>2</sup> distribution). <strong>χ<sup>2</sup></strong>tests are based on
+the following assumptions</p>
+<ol style="list-style-type: decimal">
+<li><p>The sample observations are independent.</p></li>
+<li><p>The total frequency should be reasonably large, say, greater
+than 50.</p></li>
+<li><p>The theoretical cell frequencies should not be less than 5. If any
+theoretical cell frequency is less than 5, then for the application
+χ<sup>2</sup>tests, it is pooled with the preceding or succeeding frequencies
+so that the pooled frequency is more than 5 and finally adjust the
+degrees of freedom lost in pooling.</p></li>
+<li><p>Constraints on the cell frequencies should be linear. (eg., ∑ 𝑂𝑖 = ∑
+𝐸𝑖 (where <em>O</em> and <em>E</em> represents the observed and expected
+frequencies)</p></li>
+</ol>
+<p>Note:</p>
+<p>The χ<sup>2</sup> tests do not make any assumptions regarding the parent
+population from which the observations are taken. Such tests do not
+involve any population parameter. Hence these tests are known as
+non-parametric tests or distribution free tests.</p>
+<p>Degrees of freedom in χ<sup>2</sup> tests: Degrees of freedom in χ<sup>2</sup> tests
+refers to the number of independent variates which make up the
+statistic. The degrees of freedom in general is the total number of
+observations less the number of independent constraints imposed on the
+observations. For example, if <em>k</em> is the number of independent
+constraints in a set of data on <em>n</em> observations, then degrees of
+freedom = <em>n</em>-<em>k</em>.</p>
+<p>Three important chi-square tests:</p>
+<ul>
+<li><p>Chi-square test of goodness of fit</p></li>
+<li><p>Chi-square test for independence of attributes</p></li>
+<li><p>Chi-square test for a variance.</p></li>
+</ul>
+<p><strong>3.1 Chi square test (χ<sup>2</sup>) of goodness of fit</strong></p>
+<p>A very powerful test for testing the significance of the discrepancy
+between theory and experiment was given by Prof. Karl Pearson in 1900
+and is known as “χ<sup>2</sup> tests of goodness of fit.”</p>
+<p>We want to test the null hypothesis, H<sub>0</sub>: There is no significance
+between the theory and experiment</p>
+<p>Against the alternative hypothesis H<sub>1</sub>: There is significance between
+the theory and experiment</p>
+<p>If <em>O</em><sub>i</sub> (<em>i</em>=1,2,...,<em>n</em>) is a set of observed frequencies and <em>E</em><sub>i</sub>
+(<em>i</em>=1,2,...,<em>n</em>) is the corresponding set of expected (theoretical)
+frequencies, then Karl Pearson’s chi-square test statistic is given by</p>
+<p><span class="math display">\[\chi^{2} = \sum_{i = 1}^{n}\frac{\left( O_{i} - E_{i} \right)^{2}}{E_{i}}\]</span></p>
+<p>Here <em>O</em><sub>i</sub> represents the <em>i</em><sup>th</sup> observed frequency and <em>E</em><sub>i</sub>
+represents the corresponding expected frequency according to the
+assumption regarding the theory behind the data. Under null hypothesis
+chi-square follows chi-square distribution with <em>n</em>-1 degrees of
+freedom.</p>
+<p><strong>3.1.1 Decision rule for goodness of fit test.</strong></p>
+<p>Let <span class="math inline">\(\chi_{\text{cal}}^{2}\)</span> be the calculated value, degrees of freedom
+= <em>n</em>-1, α be the level of significance, then we reject the null
+hypothesis if <span class="math inline">\(\chi_{\text{cal}}^{2}\)</span> &gt; <span class="math inline">\(\chi_{\text{tab}}^{2}\)</span>; where
+<span class="math inline">\(\chi_{\text{tab}}^{2}\)</span> is the table value of <span class="math inline">\(\chi^{2}\)</span>at <em>n</em>-1 degrees
+of freedom. In case of <span class="math inline">\(\chi^{2}\)</span> test only one tailed test is used.</p>
+<p><strong>Example 15:</strong></p>
+<p>In plant genetics, our interest may be to test whether the observed
+segregation ratios deviate significantly from the mendelian ratios. In
+such situations we want to test the agreement between the observed and
+theoretical frequency, such test is called as test of goodness of fit.
+In a cross between parents of the genetic constitution AAbb and aaBB,
+the phenotypes in the sample is classified as follows:</p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="left">AB</th>
+<th align="left">Ab</th>
+<th align="left">aB</th>
+<th align="left">ab</th>
+<th align="left">Total</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="left">87</td>
+<td align="left">29</td>
+<td align="left">32</td>
+<td align="left">12</td>
+<td align="left">160</td>
+</tr></tbody>
+</table></div>
+<p>They are expected to occur in a 9: 3: 3: 1 ratio. Do the data agree with
+the theoretical ratio?</p>
+<p><strong>Solution:</strong></p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th></th>
+<th align="left">AB</th>
+<th align="left">Ab</th>
+<th align="left">aB</th>
+<th align="left">ab</th>
+<th align="left">Total</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Observed (<em>O</em><sub>i</sub>)</td>
+<td align="left">87</td>
+<td align="left">29</td>
+<td align="left">32</td>
+<td align="left">12</td>
+<td align="left">160</td>
+</tr>
+<tr class="even">
+<td>Expected (<em>E</em><sub>i</sub>)</td>
+<td align="left">
+<span class="math inline">\(\frac{9}{16}\  \times 160 =\)</span><!-- -->90</td>
+<td align="left">
+<span class="math inline">\(\frac{3}{16}\  \times 160 =\)</span><!-- -->30</td>
+<td align="left">
+<span class="math inline">\(\frac{3}{16}\  \times 160 =\)</span><!-- -->30</td>
+<td align="left">
+<span class="math inline">\(\frac{1}{16}\  \times 160 =\)</span><!-- -->10</td>
+<td align="left">160</td>
+</tr>
+<tr class="odd">
+<td><span class="math display">\[\mathbf{O}_{\mathbf{i}}\mathbf{-}\mathbf{E}_{\mathbf{i}}\]</span></td>
+<td align="left">-3</td>
+<td align="left">-1</td>
+<td align="left">2</td>
+<td align="left">2</td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td><span class="math display">\[\left( \mathbf{O}_{\mathbf{i}}\mathbf{-}\mathbf{E}_{\mathbf{i}} \right)^{\mathbf{2}}\]</span></td>
+<td align="left">9</td>
+<td align="left">1</td>
+<td align="left">4</td>
+<td align="left">4</td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td><span class="math display">\[\frac{\left( \mathbf{O}_{\mathbf{i}}\mathbf{-}\mathbf{E}_{\mathbf{i}} \right)^{\mathbf{2}}}{\mathbf{E}_{\mathbf{i}}}\]</span></td>
+<td align="left">0.11</td>
+<td align="left">0.033</td>
+<td align="left">0.133</td>
+<td align="left">0.4</td>
+<td align="left"><strong>0.676</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><span class="math display">\[\chi^{2} = \sum_{i = 1}^{n}\frac{\left( O_{i} - E_{i} \right)^{2}}{E_{i}}\]</span></p>
+<p><span class="math display">\[\chi^{2} = 0.676\]</span></p>
+<p><span class="math inline">\(\chi_{\text{cal}}^{2}\)</span>= 0.676, table value of chi-square for 4-1=3
+degrees of freedom and 5% level of significance is 7.815. We won’t
+reject the null hypothesis, H<sub>0</sub>: There is no significance between the
+theory and experiment. Conclude that data follows 9:3:3:1</p>
+<p><strong>Example 16: Try by yourself</strong></p>
+<p>The number of yeast cells counted in a haemocytometer is compared to the
+theoretical value is given below. Does the experimental result support
+the theory.</p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="left">Yeast per cell</th>
+<th align="left">Observed Frequency</th>
+<th align="left">Expected Frequency</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">0</td>
+<td align="left">103</td>
+<td align="left">106</td>
+</tr>
+<tr class="even">
+<td align="left">1</td>
+<td align="left">143</td>
+<td align="left">141</td>
+</tr>
+<tr class="odd">
+<td align="left">2</td>
+<td align="left">98</td>
+<td align="left">93</td>
+</tr>
+<tr class="even">
+<td align="left">3</td>
+<td align="left">42</td>
+<td align="left">41</td>
+</tr>
+<tr class="odd">
+<td align="left">4</td>
+<td align="left">8</td>
+<td align="left">14</td>
+</tr>
+<tr class="even">
+<td align="left">5</td>
+<td align="left">6</td>
+<td align="left">5</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>3.2 Chi square test (χ<sup>2</sup>) for independence of attributes</strong></p>
+<p>The Chi-square test of independence checks whether two attributes are
+likely to be related or not. For example, chemical treatment and
+germination can be two attributes. If we want to know whether chemical
+treatment has any influence on germination, we can use chi-square test.
+For this purpose, we need the data arranged in the form of a contingency
+table.</p>
+<p><strong>3.2.1 Contingency table</strong></p>
+<p>A contingency table consists of a collection of cells containing counts.
+A contingency table is a tabular representation of categorical data. A
+contingency table usually shows frequencies for particular combinations
+of values of two discrete random variables X and Y. Each cell in the
+table represents a mutually exclusive combination of X-Y values.</p>
+<p><strong>Example 17: Contingency table</strong></p>
+<p>In order to determine the possible effect of a chemical treatment on the
+rate of germination of cotton seeds a pot culture experiment was
+conducted. The results are given below in the form of a contingency
+table is given below. (X = Germination, Y = Chemical Treatment).
+Attribute X has two class X<sub>1</sub> = Germinated, X<sub>2</sub> = Not germinated.
+Attribute Y has two class Y<sub>1</sub> = Treated, Y<sub>2</sub> = Untreated.</p>
+<div class="inline-table"><table class="table table-sm">
+<colgroup>
+<col width="31%">
+<col width="21%">
+<col width="15%">
+<col width="20%">
+<col width="9%">
+</colgroup>
+<thead><tr class="header">
+<th></th>
+<th>X = Germination</th>
+<th></th>
+<th></th>
+<th></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><blockquote>
+<p>Y= Chemical treatment</p>
+</blockquote></td>
+<td>X/Y</td>
+<td>
+<p>Germinated</p>
+<p>(X<sub>1</sub>)</p>
+</td>
+<td>
+<p>Not Germinated</p>
+<p>(X<sub>2</sub>)</p>
+</td>
+<td>Total</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>
+<p>Treated</p>
+<p>(Y<sub>1</sub>)</p>
+</td>
+<td><strong>118</strong></td>
+<td><strong>22</strong></td>
+<td>140</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td>
+<p>Untreated</p>
+<p>(Y<sub>2</sub>)</p>
+</td>
+<td><strong>120</strong></td>
+<td><strong>40</strong></td>
+<td>160</td>
+</tr>
+<tr class="even">
+<td></td>
+<td>Total</td>
+<td>238</td>
+<td>62</td>
+<td>300</td>
+</tr>
+</tbody>
+</table></div>
+<p>Let us consider two attributes A &amp; B, A divided into <em>r</em> classes <em>A</em><sub>1</sub>,
+<em>A</em><sub>2</sub>, ..., <em>A</em><sub>r</sub> and B divided into <em>s</em> classes <em>B</em><sub>1</sub>, <em>B</em><sub>2</sub>,
+..., <em>B</em><sub>s</sub>. The various cell frequencies can be expressed in the form
+of a table (called <em>r</em> × <em>s</em> contingency table) as shown below.</p>
+<div class="inline-table"><table style="width:92%;" class="table table-sm">
+<colgroup>
+<col width="15%">
+<col width="15%">
+<col width="15%">
+<col width="15%">
+<col width="15%">
+<col width="15%">
+</colgroup>
+<thead><tr class="header">
+<th>A/B</th>
+<th><strong>
+<em>A</em><sub>1</sub></strong></th>
+<th><strong>
+<em>A</em><sub>2</sub></strong></th>
+<th><strong>. .
+.</strong></th>
+<th><strong>
+<em>A</em><sub>r</sub></strong></th>
+<th>
+<ul>
+<li>
+</ul>
+*Total**</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><strong>
+<em>B</em><sub>1</sub></strong></td>
+<td>(<em>A</em><sub>1</sub><em>B</em><sub>1</sub>)</td>
+<td>(<em>A</em><sub>2</sub><em>B</em><sub>1</sub>)</td>
+<td>. . .</td>
+<td>(<em>A</em>~r
+<sub><em>B</em></sub>1~)</td>
+<td>(<em>B</em><sub>1</sub>)</td>
+</tr>
+<tr class="even">
+<td><strong>
+<em>B</em><sub>2</sub></strong></td>
+<td>(<em>A</em><sub>1</sub><em>B</em><sub>2</sub>)</td>
+<td>(<em>A</em><sub>2</sub><em>B</em><sub>2</sub>)</td>
+<td>. . .</td>
+<td>(<em>A</em><sub>r</sub><em>B</em><sub>2</sub>)</td>
+<td>(<em>B</em><sub>2</sub>)</td>
+</tr>
+<tr class="odd">
+<td>
+<p><strong>.</strong></p>
+<p><strong>.</strong></p>
+<p><strong>.</strong></p>
+</td>
+<td>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+</td>
+<td>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+</td>
+<td>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+</td>
+<td>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+</td>
+<td>
+<p>.</p>
+<p>.</p>
+<p>.</p>
+</td>
+</tr>
+<tr class="even">
+<td><strong>
+<em>B</em><sub>s</sub></strong></td>
+<td>(<em>A</em><sub>1</sub><em>B</em><sub>s</sub>)</td>
+<td>(<em>A</em><sub>2</sub><em>B</em><sub>s</sub>)</td>
+<td>. . .</td>
+<td>(<em>A</em><sub>r</sub><em>B</em><sub>s</sub>)</td>
+<td>(<em>B</em><sub>s</sub>)</td>
+</tr>
+<tr class="odd">
+<td><ul>
+<li>*Total**</li>
+</ul></td>
+<td>(<em>A</em><sub>1</sub>)</td>
+<td>(<em>A</em><sub>2</sub>)</td>
+<td>. . .</td>
+<td>(<em>A</em><sub>r</sub>)</td>
+<td></td>
+</tr>
+</tbody>
+</table></div>
+<p>(<em>A</em><sub>i</sub><em>B</em><sub>j</sub>) = The number of persons (items) possessing attributes
+<em>A</em><sub>i</sub> (<em>i</em> =1,2,..., <em>r</em>) and <em>B</em><sub>j</sub> (<em>j</em> =1,2,...,<em>s</em>)</p>
+<p>(<em>A</em><sub>i</sub>) = The number of persons (items) possessing attribute <em>A</em><sub>i</sub> (
+<em>i</em> =1,2,..., <em>r</em>)</p>
+<p>(<em>B</em><sub>j</sub>) = The number of persons (items) possessing attribute <em>B</em><sub>j</sub>
+(<em>j</em> =1,2,..., <em>s</em>)</p>
+<p>∑(<em>A</em>)<sub>𝑖</sub> = ∑(<em>B</em>)<sub>𝑗</sub> = 𝑁, is the total frequency.</p>
+<p><strong>3.2.1.1 Expected frequencies</strong></p>
+<p>The expected frequencies corresponding to each observed frequency
+(<em>A</em><sub>i</sub><em>B</em><sub>j</sub>) are calculated from the formula,</p>
+<p><span class="math display">\[E_{\text{ij}} = \frac{\left( A_{i} \right)\left( B_{j} \right)}{N}\]</span></p>
+<p><strong>3.2.1.2 Degrees of freedom</strong></p>
+<p>Degrees of freedom for an <em>r</em> × <em>s</em> contingency table = (<em>r</em> – 1)(<em>s</em>
+– 1)</p>
+<p><strong>Test procedure</strong></p>
+<p>The null hypothesis to be tested is <strong>H<sub>0</sub></strong>: The two attributes under
+consideration are independent.</p>
+<p>The alternative hypothesis is <strong>H<sub>1</sub></strong>: The two attributes under
+consideration are not independent.</p>
+<p>Test statistic used is</p>
+<p><span class="math display">\[\chi^{2} = \sum_{i = 1}^{r}{\sum_{j = 1}^{s}\frac{\left( O_{\text{ij}} - E_{\text{ij}} \right)^{2}}{E_{\text{ij}}}}\]</span></p>
+<p>Where,</p>
+<p><span class="math inline">\(O_{\text{ij}}\)</span> = observed frequencies</p>
+<p><span class="math inline">\(E_{\text{ij}}\ \)</span>= Expected frequencies</p>
+<p><em>s</em> = number of rows</p>
+<p><em>r</em> = number of columns</p>
+<p>It can be verified that
+<span class="math inline">\(\sum_{i = 1}^{r}{\sum_{j = 1}^{s}O_{\text{ij}}} = \sum_{i = 1}^{r}{\sum_{j = 1}^{s}E_{\text{ij}}}\)</span></p>
+<p>Under null hypothesis test statistic follows a chi-square distribution
+with (<em>r</em> – 1)×(<em>s</em> – 1) degrees of freedom. Decision rule is same as
+3.1.1</p>
+<p><strong>Example 18:</strong></p>
+<p>In a survey, a random sample of 198 farms were classified in to three
+classes according to tenure status as: owned, rented and mixed. They
+were also classified according to the level of soil fertility as: high
+fertile, moderately fertile and low fertile farms. The results are given
+below. Test whether tenure status depends on soil fertility</p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th></th>
+<th align="left"><em>Tenure Status</em></th>
+<th></th>
+<th></th>
+<th></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><em>Soil fertility</em></td>
+<td align="left"><strong>Owned</strong></td>
+<td><strong>Rented</strong></td>
+<td><strong>Mixed</strong></td>
+<td>Total</td>
+</tr>
+<tr class="even">
+<td>High</td>
+<td align="left">40</td>
+<td>12</td>
+<td>10</td>
+<td>62</td>
+</tr>
+<tr class="odd">
+<td>Moderate</td>
+<td align="left">22</td>
+<td>10</td>
+<td>14</td>
+<td>46</td>
+</tr>
+<tr class="even">
+<td>Low</td>
+<td align="left">22</td>
+<td>26</td>
+<td>42</td>
+<td>90</td>
+</tr>
+<tr class="odd">
+<td>Total</td>
+<td align="left">84</td>
+<td>48</td>
+<td>66</td>
+<td>198</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>Solution:</strong></p>
+<p>Calculation of expected values (<span class="math inline">\(E_{\text{ij}})\)</span> for each cell by
+multiplying corresponding row total and column total divided by total
+frequency in the above table</p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th></th>
+<th align="left"><strong>Owned</strong></th>
+<th align="left"><strong>Rented</strong></th>
+<th align="left"><strong>Mixed</strong></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><strong>High</strong></td>
+<td align="left">
+<span class="math inline">\(\frac{62\  \times 84}{198} =\)</span><!-- -->26.3</td>
+<td align="left">
+<span class="math inline">\(\frac{62\  \times 48}{198} =\)</span><!-- -->15.0</td>
+<td align="left">
+<span class="math inline">\(\frac{62\  \times 66}{198} =\)</span><!-- -->20.7</td>
+</tr>
+<tr class="even">
+<td><strong>Moderate</strong></td>
+<td align="left">
+<span class="math inline">\(\frac{46\  \times 84}{198} =\)</span><!-- -->19.5</td>
+<td align="left">
+<span class="math inline">\(\frac{46\  \times 48}{198} =\)</span><!-- -->11.2</td>
+<td align="left">
+<span class="math inline">\(\frac{46\  \times 66}{198} =\)</span><!-- -->15.3</td>
+</tr>
+<tr class="odd">
+<td><strong>Low</strong></td>
+<td align="left">
+<span class="math inline">\(\frac{90\  \times 84}{198} =\)</span><!-- -->38.2</td>
+<td align="left">
+<span class="math inline">\(\frac{90\  \times 48}{198} =\)</span><!-- -->21.8</td>
+<td align="left">
+<span class="math inline">\(\frac{90\  \times 66}{198} =\)</span><!-- -->30.0</td>
+</tr>
+</tbody>
+</table></div>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="left"><span class="math display">\[O_{\text{ij}}\]</span></th>
+<th align="left"><span class="math display">\[E_{\text{ij}}\]</span></th>
+<th align="left"><span class="math display">\[O_{\text{ij}} - E_{\text{ij}}\]</span></th>
+<th align="left"><span class="math display">\[\left( O_{\text{ij}} - E_{\text{ij}} \right)^{2}\]</span></th>
+<th align="left"><span class="math display">\[\frac{\left( O_{\text{ij}} - E_{\text{ij}} \right)^{2}}{E_{\text{ij}}}\]</span></th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td align="left">40.0</td>
+<td align="left">26.3</td>
+<td align="left">13.7</td>
+<td align="left">187.6</td>
+<td align="left">7.1</td>
+</tr>
+<tr class="even">
+<td align="left">12.0</td>
+<td align="left">15.0</td>
+<td align="left">-3.0</td>
+<td align="left">9.2</td>
+<td align="left">0.6</td>
+</tr>
+<tr class="odd">
+<td align="left">10.0</td>
+<td align="left">20.7</td>
+<td align="left">-10.7</td>
+<td align="left">113.8</td>
+<td align="left">5.5</td>
+</tr>
+<tr class="even">
+<td align="left">22.0</td>
+<td align="left">19.5</td>
+<td align="left">2.5</td>
+<td align="left">6.2</td>
+<td align="left">0.3</td>
+</tr>
+<tr class="odd">
+<td align="left">10.0</td>
+<td align="left">11.2</td>
+<td align="left">-1.2</td>
+<td align="left">1.3</td>
+<td align="left">0.1</td>
+</tr>
+<tr class="even">
+<td align="left">14.0</td>
+<td align="left">15.3</td>
+<td align="left">-1.3</td>
+<td align="left">1.8</td>
+<td align="left">0.1</td>
+</tr>
+<tr class="odd">
+<td align="left">22.0</td>
+<td align="left">38.2</td>
+<td align="left">-16.2</td>
+<td align="left">261.9</td>
+<td align="left">6.9</td>
+</tr>
+<tr class="even">
+<td align="left">26.0</td>
+<td align="left">21.8</td>
+<td align="left">4.2</td>
+<td align="left">17.5</td>
+<td align="left">0.8</td>
+</tr>
+<tr class="odd">
+<td align="left">42.0</td>
+<td align="left">30.0</td>
+<td align="left">12.0</td>
+<td align="left">144.0</td>
+<td align="left">4.8</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"><span class="math display">\[\chi_{\text{cal}}^{2} =\]</span></td>
+<td align="left"><strong>26.3</strong></td>
+</tr>
+</tbody>
+</table></div>
+<p><span class="math inline">\(\chi_{\text{cal}}^{2}\)</span>= 26.3, table value of chi-square for (3-1)(3-1)
+= 4 degrees of freedom and 5% level of significance is 9.488. Since the
+calculated value is greater than table value, we reject the null
+hypothesis, and conclude that the two attributes under consideration are
+not independent.</p>
+<p><strong>3.2.2 Chi-square test for 2×2 contingency table</strong></p>
+<p><strong>2 x 2 contingency table</strong></p>
+<p>When the number of rows and number of columns are equal to 2; it is
+termed as 2 x 2 contingency table. It will be in the following form as
+shown in example 17. General form can be represented as shown below.
+Consider two attributes <em>A</em> and <em>B</em> with classes <em>A</em><sub>1</sub>, <em>A</em><sub>2</sub> and
+<em>B</em><sub>1</sub>, <em>B</em><sub>2</sub> respectively. a, b, c, d are the frequencies in each cell</p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th></th>
+<th align="left">
+<em>A</em><sub>1</sub>
+</th>
+<th align="left">
+<em>A</em><sub>2</sub>
+</th>
+<th align="left">Row Total</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>
+<em>B</em><sub>1</sub>
+</td>
+<td align="left"><strong><em>a</em></strong></td>
+<td align="left"><strong><em>b</em></strong></td>
+<td align="left">
+<em>R</em><sub>1</sub>= <em>a</em>+<em>b</em>
+</td>
+</tr>
+<tr class="even">
+<td>
+<em>B</em><sub>2</sub>
+</td>
+<td align="left"><strong><em>c</em></strong></td>
+<td align="left"><strong><em>d</em></strong></td>
+<td align="left">
+<em>R</em><sub>2</sub> = <em>c</em>+<em>d</em>
+</td>
+</tr>
+<tr class="odd">
+<td>Column Total</td>
+<td align="left">
+<em>C</em><sub>1</sub>= <em>a</em>+<em>c</em>
+</td>
+<td align="left">
+<em>C</em><sub>2</sub> = <em>b</em>+<em>d</em>
+</td>
+<td align="left">
+<em>n</em> = <em>a</em>+<em>b</em>+<em>c</em>+<em>d</em>
+</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>R</em><sub>1</sub>, <em>R</em><sub>2</sub> and <em>C</em><sub>1</sub>, <em>C</em><sub>2</sub> are row totals and column totals
+respectively. <em>n</em> is the total number of observations.</p>
+<p>In case of 2 x 2 contingency table <span class="math inline">\(\chi^{2}\ \)</span>can be directly found
+using the short cut formula.</p>
+<p>The null hypothesis to be tested is <strong>H<sub>0</sub></strong>: The two attributes under
+consideration are independent.</p>
+<p>The alternative hypothesis is <strong>H<sub>1</sub></strong>: The two attributes under
+consideration are not independent.</p>
+<p><span class="math display">\[\chi^{2} = \frac{n\left( ad - bc \right)^{2}}{C_{1}C_{2}R_{1}R_{2}}\]</span></p>
+<p>Under null hypothesis test statistic follows a chi-square distribution
+with (2 – 1) × (2 – 1) = 1 degrees of freedom.</p>
+<p><strong>3.2.2.1 Yate’s correction for continuity</strong></p>
+<p>In a 2 X 2 contingency table, the number of degrees of freedom is (2-1)
+× (2-1) = 1. If any one of the cell frequencies is less than 5, then,
+use of pooling method results in <span class="math inline">\(\chi^{2}\)</span>with 0 degrees of freedom (1
+degrees of freedom is lost due to pooling) which is meaningless. In this
+case we apply a correction due to Yates which is usually known as Yates’
+correction for continuity. The Yate’s correction is made by adding 0.5
+to the least cell frequency and adjusting the other cell frequencies so
+that the column and row totals remain same. The formula for the test
+statistic in equation (15) is now modified and is given as below.</p>
+<p>Test statistic used is</p>
+<p><span class="math display">\[\chi^{2} = \frac{{n\left( \left| ad - bc \right| - \frac{n}{2} \right)}^{2}}{C_{1}C_{2}R_{1}R_{2}}\]</span></p>
+<p><strong>Solution to Example 17</strong></p>
+<p><strong>H<sub>0</sub></strong>: The treatment does not improve the germination rate of cotton
+seeds. (independent)</p>
+<p><strong>H<sub>1</sub></strong>: The chemical treatment improves the germination rate of cotton
+seeds.</p>
+<p><span class="math display">\[\chi^{2} = \frac{{300\left( \left| 118 \times 40 - 22 \times 120 \right| - \frac{300}{2} \right)}^{2}}{238 \times 62 \times 140 \times 160}\]</span></p>
+<p><span class="math display">\[= 3.927\]</span></p>
+<p><span class="math inline">\(\chi_{\text{cal}}^{2}\)</span>= 3.927, table value of chi-square for (2-1) ×
+(2-1) = 1 degrees of freedom and 5% level of significance is 3.841.
+Since the calculated value is less than table value, we don’t have
+enough evidence to reject the null hypothesis. The chemical treatment
+will not improve the germination rate of cotton seeds significantly.</p>
+<p><strong>Example 19: Try it for yourself</strong></p>
+<p>In an experiment on the effect of a growth regulator on fruit setting in
+muskmelon, the following results were obtained. Test whether the fruit
+setting in muskmelon and the application of growth regulator are
+independent at 5% level.</p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th></th>
+<th align="left">Fruit set</th>
+<th align="left">Fruit not set</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td>Treated</td>
+<td align="left">16</td>
+<td align="left">9</td>
+</tr>
+<tr class="even">
+<td>Control</td>
+<td align="left">4</td>
+<td align="left">21</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>3.3 Chi-square test for a population variance</strong></p>
+<p>Consider there is a normal population with mean, say <em>μ</em> and variance
+<em>σ</em><sup>2</sup>, where <em>μ</em> and <em>σ</em><sup>2</sup> are unknown, we will take a random sample
+of size <em>n</em> from the population. We want to test whether the population
+variance <em>σ</em><sup>2</sup>, which is unknown is equal to some known constant
+<em>σ</em><sup>2</sup><sub>0</sub>, based on the sample variance.</p>
+<p>Null hypothesis H<sub>0</sub>: <em>σ</em><sup>2</sup> = <em>σ</em><sup>2</sup><sub>0</sub></p>
+<p>Against the alternative hypothesis H<sub>1</sub>: <em>σ</em><sup>2</sup> &gt; <em>σ</em><sup>2</sup><sub>0</sub></p>
+<p>The test statistic is</p>
+<p><span class="math display">\[\chi^{2} = \frac{ns^{2}}{\sigma_{0}^{2}}\]</span></p>
+<p>Where
+<span class="math inline">\(s^{2} = \frac{\sum_{i = 1}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n - 1}\)</span>is
+the sample variance</p>
+<p>Under null hypothesis test statistic follows a chi-square distribution
+with <em>n</em>-1 degrees of freedom. Decision rule is same as in section 3.1.1</p>
+<p><strong>Example 20: Try it for yourself</strong></p>
+<p>Test the null hypothesis that <em>σ</em><sup>2</sup> = 0.16 against the alternative
+hypothesis <em>σ</em><sup>2</sup> &gt; 0.16, given that <span class="math inline">\(s^{2}\)</span> = 0.01719 for a random
+sample of size 11 from a normal population.</p>
+<p><strong>4. <em>F</em> - test for testing equality of two population variances</strong></p>
+<p>Let there be two normally distributed populations with means <em>µ</em><sub>1</sub> and
+<em>µ</em><sub>2</sub> and variances be <em>σ</em><sub>1</sub><sup>2</sup> and <em>σ</em><sub>2</sub><sup>2</sup> respectively. Let
+samples of sizes <em>n</em><sub>1</sub> and <em>n</em><sub>2</sub> were taken from these populations. We
+want to test whether these population variances are significantly
+different or not based on the sample variances.</p>
+<p>Null hypothesis H<sub>0</sub>: <em>σ</em><sup>2</sup><sub>1</sub> = <em>σ</em><sup>2</sup><sub>2</sub></p>
+<p>Against the alternative hypothesis H<sub>1</sub>: <em>σ</em><sup>2</sup><sub>1</sub> &gt; <em>σ</em><sup>2</sup><sub>2</sub></p>
+<p>Test statistic is</p>
+<p><span class="math display">\[F = \frac{s_{1}^{2}}{s_{2}^{2}}\]</span></p>
+<p>Under null hypothesis test statistic follows a F distribution with
+<span class="math inline">\(n_{1} - 1\)</span> and <span class="math inline">\(n_{2} - 1\)</span> degrees of freedom.</p>
+<p><strong>4.1 Decision rule for <em>F</em> - test.</strong></p>
+<p>If the calculated value is greater than table value of <em>F</em> at specified
+level of significance and two degrees of freedom (<em>i</em>.<em>e</em>. <span class="math inline">\(n_{1} - 1\)</span>
+and <span class="math inline">\(n_{2} - 1\)</span>) we reject the null hypothesis.</p>
+<p><strong>Note:</strong></p>
+<p>If <span class="math inline">\(s_{2}^{2} &gt;\)</span> <span class="math inline">\(s_{1}^{2}\)</span> the test statistic will be</p>
+<p><span class="math display">\[F = \frac{s_{2}^{2}}{s_{1}^{2}}\]</span></p>
+<p>Under null hypothesis test statistic follows a F distribution with
+<span class="math inline">\(n_{2} - 1\)</span> and <span class="math inline">\(n_{1} - 1\)</span> degrees of freedom.</p>
+<p><strong>Example 20: Try it for yourself</strong></p>
+<p>For a random sample representing one normal population, we have <span class="math inline">\(n_{1}\)</span>
+= 11, and <span class="math inline">\(s_{1}^{2}\)</span> = 21.87. For another random sample representing
+the second normal population, we have<span class="math inline">\(\ n_{2}\)</span>= 8 and <span class="math inline">\(s_{2}^{2}\)</span> =
+15.36. Test the equality of variances.</p>
+
+</div>
+  <div class="chapter-nav">
+<div class="prev"><a href="large-sample-test.html"><span class="header-section-number">12</span> Large sample test</a></div>
+<div class="next"><a href="design-of-experiments.html"><span class="header-section-number">14</span> Design of experiments</a></div>
+</div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
+    <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
+      <ul class="nav navbar-nav"><li><a class="nav-link" href="#small-sample-tests"><span class="header-section-number">13</span> Small sample tests</a></li></ul>
+
+      <div class="book-extra">
+        <ul class="list-unstyled">
+          
+        </ul>
+</div>
+    </nav>
+</div>
+
+</div>
+</div> <!-- .container -->
+
+<footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>"<strong>TEXTBOOK OF AGRICULTURAL STATISTICS</strong>" was written by Dr. Pratheesh P. Gopinath. It was last built on 2022-01-30.</p>
+  </div>
+
+  <div class="col-12 col-md-6 mt-3">
+    <p>This book was built by the <a class="text-light" href="https://bookdown.org">bookdown</a> R package.</p>
+  </div>
+
+</div></div>
+</footer><!-- dynamically load mathjax for compatibility with self-contained --><script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script><script type="text/x-mathjax-config">const popovers = document.querySelectorAll('a.footnote-ref[data-toggle="popover"]');
+for (let popover of popovers) {
+  const div = document.createElement('div');
+  div.setAttribute('style', 'position: absolute; top: 0, left:0; width:0, height:0, overflow: hidden; visibility: hidden;');
+  div.innerHTML = popover.getAttribute('data-content');
+
+  var has_math = div.querySelector("span.math");
+  if (has_math) {
+    document.body.appendChild(div);
+    MathJax.Hub.Queue(["Typeset", MathJax.Hub, div]);
+    MathJax.Hub.Queue(function() {
+      popover.setAttribute('data-content', div.innerHTML);
+      document.body.removeChild(div);
+    })
+  }
+}
+</script>
+</body>
+</html>
