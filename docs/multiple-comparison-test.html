@@ -6,15 +6,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Chapter 17 Multiple comparison test | TEXTBOOK OF AGRICULTURAL STATISTICS</title>
 <meta name="author" content="Dr. Pratheesh P. Gopinath">
-<meta name="description" content="A BOOK FOR UNDERGRADUATE PROGRAMME IN AGRICULTURE">
+<meta name="description" content="ANOVA is an omnibus test. Omnibus test, as a general name, refers to an overall or a global test. Omnibus test means it is implemented on an overall hypothesis that tends to find whether there is...">
 <meta name="generator" content="bookdown 0.24 with bs4_book()">
 <meta property="og:title" content="Chapter 17 Multiple comparison test | TEXTBOOK OF AGRICULTURAL STATISTICS">
 <meta property="og:type" content="book">
 <meta property="og:image" content="/images/cover.PNG">
-<meta property="og:description" content="A BOOK FOR UNDERGRADUATE PROGRAMME IN AGRICULTURE">
+<meta property="og:description" content="ANOVA is an omnibus test. Omnibus test, as a general name, refers to an overall or a global test. Omnibus test means it is implemented on an overall hypothesis that tends to find whether there is...">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Chapter 17 Multiple comparison test | TEXTBOOK OF AGRICULTURAL STATISTICS">
-<meta name="twitter:description" content="A BOOK FOR UNDERGRADUATE PROGRAMME IN AGRICULTURE">
+<meta name="twitter:description" content="ANOVA is an omnibus test. Omnibus test, as a general name, refers to an overall or a global test. Omnibus test means it is implemented on an overall hypothesis that tends to find whether there is...">
 <meta name="twitter:image" content="/images/cover.PNG">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/header-attrs-2.11/header-attrs.js"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
@@ -75,14 +75,116 @@
 <h1>
 <span class="header-section-number">17</span> Multiple comparison test<a class="anchor" aria-label="anchor" href="#multiple-comparison-test"><i class="fas fa-link"></i></a>
 </h1>
+<p>ANOVA is an omnibus test. <em>Omnibus test</em>, as a general name, refers to an overall or a global test. Omnibus test means it is implemented on an overall hypothesis that tends to find whether there is any significant difference between any treatment means (in case of ANOVA) or not.</p>
+<p>ANOVA doesn’t tell which treatment pairs are different; more clearly on rejecting a null hypothesis in ANOVA, we conclude that at least a pair of treatment means are different, it didn’t give any idea on which treatments are different. In order to identify which treatment means are significantly different one need to employ <strong>multiple comparison tests</strong> or <strong>post-hoc tests</strong>.</p>
+<p>Multiple comparison tests are also known as post-hoc tests. A significant omnibus F test in ANOVA procedure, is an in advance requirement before conducting the post-hoc comparison, otherwise those comparisons are not required.</p>
+<p>Post hoc tests (Multiple Comparison tests) or planned tests should be conducted after obtaining a significant F test in ANOVA. There are several methods for performing post hoc tests, few of them are</p>
+<ul>
+<li><p>Fisher’s LSD test (Least Significant Difference test)</p></li>
+<li><p>DMRT (Duncan’s Multiple Range Test)</p></li>
+<li><p>Tukey’s test</p></li>
+<li><p>Bonferroni method</p></li>
+<li><p>Dunnett method</p></li>
+<li><p>Scheffe’s test</p></li>
+<li><p>Newman-Keuls method</p></li>
+</ul>
+<div id="why-do-we-need-a-post-hoc-test." class="section level2" number="17.1">
+<h2>
+<span class="header-section-number">17.1</span> Why do we need a post-hoc test.<a class="anchor" aria-label="anchor" href="#why-do-we-need-a-post-hoc-test."><i class="fas fa-link"></i></a>
+</h2>
+<p>Type I error occurs when H<sub>0</sub> is statistically rejected even though it is actually true, whereas type II error refers to a false negative. We are comparing each of treatment pairs individually in a post-hoc test. For example, consider a situation in which three treatments A, B and C are compared, they may form the following three pairs: A versus B, A
+versus C, and B versus C. A pair for this comparison is called ‘family.’ The type I error that occurs when each family is compared is called the ‘family-wise error’ (FWE).<span class="citation">(<a href="references.html#ref-Lee" role="doc-biblioref">Lee and Lee 2018</a>)</span></p>
+<p>For example, if one performs a pairwise test between two given groups A and B under 5% α level of significance and observed that they are not significantly different, then the chance that a correct decision is made (not to perform a type I error) is 95%. If another pairwise tests between the groups B and C simultaneously and has a non-significant result, then the real probability of a correct decision made between A and B, and B and C is 0.95 × 0.95 = 0.9025, 90.25% and, consequently, the testing α error is 1 − 0.9025 = 0.0975,
+not 0.05. At the same time, if the statistical analysis between groups A and C also has a non significant result, the probability of non-significance of all the three pairs (families) is 0.95 × 0.95 × 0.95
+= 0.857 and the actual testing α error is 1 − 0.857 = 0.143, which is more than 14%. So now the chance of type I error has increased in testing several treatment pairs together. Multiple comparison tests are devised in such a way that a correction is incorporated to control the inflation in <span class="math inline">\(\alpha\)</span>, so that actual level of significance remain at
+the prescribed rate (in our case 0.05).</p>
+<p>Inflated <span class="math inline">\(\alpha = 1 - \left( 1 - \alpha \right)^{N}\)</span>, where <span class="math inline">\(N\)</span> =
+number of hypotheses tested</p>
+<p>The inflation of probability of type I error increases with the increase
+in the number of comparisons.</p>
+</div>
+<div id="fishers-lsd-test" class="section level2" number="17.2">
+<h2>
+<span class="header-section-number">17.2</span> Fisher’s LSD test<a class="anchor" aria-label="anchor" href="#fishers-lsd-test"><i class="fas fa-link"></i></a>
+</h2>
+<p>The first pairwise comparison technique was developed by Fisher in 1935 and is called the least significant difference (LSD) test. This technique can be used only if the ANOVA F statistic is significant. Fisher's least significant difference (LSD) procedure is a two-step
+testing procedure for pairwise comparisons of several treatment groups. In the first step of the procedure, ANOVA is performed. If the null hypothesis can be rejected at the pre-specified level of significance, in ANOVA, then in the second step of the procedure, all pairwise comparisons of treatment means are performed.</p>
+<p>Steps in Fisher’s LSD test</p>
+<ol style="list-style-type: decimal">
+<li><p>ANOVA is performed and if the null hypothesis is rejected proceed to
+step 2</p></li>
+<li><p>An LSD (Least Significant Difference) value will be calculated. For
+each pair of treatments, if the difference between treatment means
+is greater that the LSD value, we conclude that treatment means are
+significantly different.</p></li>
+</ol>
+<blockquote>
+<p>Note among agricultural researchers in India they use the term CD (Critical Difference) instead of LSD, both the terms are same and used interchangeably.</p>
+</blockquote>
+<div id="lsd-least-significant-difference" class="section level3" number="17.2.1">
+<h3>
+<span class="header-section-number">17.2.1</span> LSD (Least Significant Difference)<a class="anchor" aria-label="anchor" href="#lsd-least-significant-difference"><i class="fas fa-link"></i></a>
+</h3>
+<p>Consider two treatments <span class="math inline">\(T_{i}\)</span> and <span class="math inline">\(T_{j}\)</span> with replications <span class="math inline">\(r_{i}\)</span>
+and <span class="math inline">\(r_{j}\)</span>. Then LSD or CD is given by the formula given below</p>
+<p><span class="math display">\[\text{LSD} = \ t_{\frac{\alpha}{2},edf}.SE(d)\]</span></p>
+<p><span class="math display">\[SE(d) = \ \sqrt{\text{MSE}\left( \frac{1}{r_{i}} + \frac{1}{r_{j}} \right)}\]</span></p>
+<p>Where, <span class="math inline">\(\text{MSE}\)</span> is the Mean Square Error from ANOVA.
+<span class="math inline">\(t_{\frac{\alpha}{2},edf}\)</span> is the critical value of two tailed student’s t distribution at <span class="math inline">\(\alpha\)</span> level of significance and error degrees of
+freedom.</p>
+<p>If the replications are same <span class="math inline">\(r_{i} = r_{j} = r\)</span>, then
+<span class="math inline">\(\text{SE}\left( d \right) = \ \sqrt{\text{MSE}\left( \frac{1}{r} + \frac{1}{r} \right)}\  = \ \sqrt{\text{MSE}\left( \frac{2}{r} \right)} = \sqrt{\frac{2\ MSE}{r}}\)</span><em><br></em></p>
+<p><span class="math display">\[LSD = \ t_{\frac{\alpha}{2},edf}.\sqrt{\frac{2\ MSE}{r}}\]</span></p>
+<p>If the difference between the means of two treatments <span class="math inline">\(T_{i}\)</span> and <span class="math inline">\(T_{j}\)</span> is greater than LSD we say that <span class="math inline">\(T_{i}\)</span> and <span class="math inline">\(T_{j}\)</span> are significantly different at specified level of significance (<span class="math inline">\(\alpha)\)</span></p>
+</div>
+<div id="logic-behind-lsd-test" class="section level3" number="17.2.2">
+<h3>
+<span class="header-section-number">17.2.2</span> Logic behind LSD test<a class="anchor" aria-label="anchor" href="#logic-behind-lsd-test"><i class="fas fa-link"></i></a>
+</h3>
+<p>If <span class="math inline">\(\overline{T_{i}}\)</span> and <span class="math inline">\(\overline{T_{j}}\)</span> are the treatment means obtained from the experiment. <span class="math inline">\(\mu_{i}\)</span> and <span class="math inline">\(\mu_{j}\)</span> are corresponding unknown population mean of the treatments, then the null hypothesis for a pairwise comparison is</p>
+<p>H<sub>0</sub>: <span class="math inline">\(\mu_{i} = \ \mu_{j}\)</span></p>
+<p><em>i</em>.<em>e</em>. <span class="math inline">\(\mu_{i} - \ \mu_{j\ } = 0\)</span></p>
+<p>A t-test can be used to test this hypothesis</p>
+<p><span class="math display">\[t = \frac{T_{i} - T_{j}}{SE(d)}\]</span></p>
+<p>The <span class="math inline">\(100\left( 1 - \alpha \right)\%\)</span> confidence interval for the mean difference <span class="math inline">\(T_{i} - T_{j}\)</span> is given by
+<span class="math inline">\(\left( T_{i} - T_{j} \right) \pm t_{\frac{\alpha}{2},edf}SE(d)\)</span>. Which
+can be written as <span class="math inline">\(\left( T_{i} - T_{j} \right) \pm \text{LSD}\)</span>. So, if
+<span class="math inline">\(\left( T_{i} - T_{j} \right) &gt; \text{LSD}\)</span> the
+<span class="math inline">\(100\left( 1 - \alpha \right)\%\)</span> confidence interval does not include 0.
+Then we can reject the null hypothesis, population mean of the treatments are equal with <span class="math inline">\(100\left( 1 - \alpha \right)\%\)</span> confidence.</p>
+</div>
+<div id="advantages-and-disadvantages-of-lsd." class="section level3" number="17.2.3">
+<h3>
+<span class="header-section-number">17.2.3</span> Advantages and disadvantages of LSD.<a class="anchor" aria-label="anchor" href="#advantages-and-disadvantages-of-lsd."><i class="fas fa-link"></i></a>
+</h3>
+<p>LSD test is also known as protected Fisher's LSD test. Protection means that you only perform the calculations described above when the null hypothesis is rejected based on ANOVA. This first step sort of controls the false positive rate (Type I error) for the entire family of
+comparisons <span class="citation">(<a href="references.html#ref-Hayter" role="doc-biblioref">Hayter 1986</a>)</span>.</p>
+<p>While the protected Fisher's LSD test is the first post-hoc test ever developed, it is no longer recommended as it will not correct for <span class="math inline">\(\alpha\)</span> inflation in multiple comparisons effectively when compared to other post-hoc tests. Still LSD is the most common post-hoc
+test used in agricultural research experiments.</p>
+<p>Fisher's LSD procedure is known to preserve the experiment wise type I error rate at the nominal level of significance, if the number of treatments is just three. [@Meier]. So, when the number of treatments is more, it is recommended to conduct DMRT or Tukey’s test.</p>
+<blockquote>
+<p>Note that other multiple comparison tests (Bonferroni, Tukey, etc.) do not require the ANOVA. The results of these multiple comparisons tests are valid even if the null hypothesis is not rejected based on the ANOVA</p>
+</blockquote>
 
+</div>
+</div>
 </div>
   <div class="chapter-nav">
 <div class="prev"><a href="analysis-of-variance-anova.html"><span class="header-section-number">16</span> Analysis of Variance (ANOVA)</a></div>
 <div class="next"><a href="single-factor-experiments.html"><span class="header-section-number">18</span> Single factor experiments</a></div>
 </div></main><div class="col-md-3 col-lg-2 d-none d-md-block sidebar sidebar-chapter">
     <nav id="toc" data-toggle="toc" aria-label="On this page"><h2>On this page</h2>
-      <ul class="nav navbar-nav"><li><a class="nav-link" href="#multiple-comparison-test"><span class="header-section-number">17</span> Multiple comparison test</a></li></ul>
+      <ul class="nav navbar-nav">
+<li><a class="nav-link" href="#multiple-comparison-test"><span class="header-section-number">17</span> Multiple comparison test</a></li>
+<li><a class="nav-link" href="#why-do-we-need-a-post-hoc-test."><span class="header-section-number">17.1</span> Why do we need a post-hoc test.</a></li>
+<li>
+<a class="nav-link" href="#fishers-lsd-test"><span class="header-section-number">17.2</span> Fisher’s LSD test</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#lsd-least-significant-difference"><span class="header-section-number">17.2.1</span> LSD (Least Significant Difference)</a></li>
+<li><a class="nav-link" href="#logic-behind-lsd-test"><span class="header-section-number">17.2.2</span> Logic behind LSD test</a></li>
+<li><a class="nav-link" href="#advantages-and-disadvantages-of-lsd."><span class="header-section-number">17.2.3</span> Advantages and disadvantages of LSD.</a></li>
+</ul>
+</li>
+</ul>
 
       <div class="book-extra">
         <ul class="list-unstyled">
