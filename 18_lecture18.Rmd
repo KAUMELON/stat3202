@@ -38,7 +38,7 @@ number of hypotheses tested
 The inflation of probability of type I error increases with the increase
 in the number of comparisons.
 
-## Fisher's LSD test
+## Fisher's LSD test {#lsd}
 
 The first pairwise comparison technique was developed by Fisher in 1935 and is called the least significant difference (LSD) test. This technique can be used only if the ANOVA F statistic is significant. Fisher\'s least significant difference (LSD) procedure is a two-step
 testing procedure for pairwise comparisons of several treatment groups. In the first step of the procedure, ANOVA is performed. If the null hypothesis can be rejected at the pre-specified level of significance, in ANOVA, then in the second step of the procedure, all pairwise comparisons of treatment means are performed.

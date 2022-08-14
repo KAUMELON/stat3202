@@ -166,11 +166,11 @@ effects.<span class="math inline">\(e_{ij}\)</span> <span class="math inline">\(
 Figure 18.4: ANOVA table of CRD
 </p>
 </div>
-<div id="post-hoc-test-lsd" class="section level4" number="18.1.4.1">
+<div id="postcrd" class="section level4" number="18.1.4.1">
 <h4>
-<span class="header-section-number">18.1.4.1</span> Post hoc test (LSD)<a class="anchor" aria-label="anchor" href="#post-hoc-test-lsd"><i class="fas fa-link"></i></a>
+<span class="header-section-number">18.1.4.1</span> Post hoc test (LSD)<a class="anchor" aria-label="anchor" href="#postcrd"><i class="fas fa-link"></i></a>
 </h4>
-<p>If the null hypothesis is rejected in ANOVA; we proceed to post-hoc test explained in section . Fisher’s Least significant difference (LSD) test explained in section is the commonly employed test in agricultural experiments.<br>
+<p>If the null hypothesis is rejected in ANOVA; we proceed to post-hoc test explained in section <a href="multiple-comparison-test.html#lsd">17.2</a> . Fisher’s Least significant difference (LSD) test explained in section <a href="multiple-comparison-test.html#lsd">17.2</a> is the commonly employed test in agricultural experiments.<br>
 Arrange the treatment means in descending order. Critical difference (CD) is calculated for each treatment pair <span class="math inline">\(T_{i},\ T_{j}\)</span> using the following formula.</p>
 <p><span class="math display">\[C.D. = t_{\left( \frac{\alpha}{2},\ \ \ error\ df \right)}\sqrt{\text{MSE}\left( \frac{1}{r_{i}} + \frac{1}{r_{j}} \right)}\]</span></p>
 <p>Here <span class="math inline">\(t_{\left( \frac{\alpha}{2},\ \ \ error\ df \right)}\)</span> denotes the critical value of Student’s t for a two tailed test at α level of significance and error degrees of freedom. <span class="math inline">\(r_{i}\)</span> and <span class="math inline">\(r_{j}\)</span> are replications of <span class="math inline">\(T_{i},\ T_{j}\)</span> respectively. If the difference of any two treatment means is greater
@@ -485,11 +485,46 @@ If F<sub>2</sub> is not significant, it indicates that there is no significant d
 <p>Formula for error degrees of freedom (<em>edf</em>) in RCBD is <span class="math inline">\((v - 1) (r-1)\)</span>; where <span class="math inline">\(v\)</span> is the number of treatments and <span class="math inline">\(r\)</span> is the number of blocks.</p>
 <p><em>edf</em> should be <span class="math inline">\(\geq\)</span> 12</p>
 <p><em>edf</em> <span class="math inline">\(=(v - 1) (r-1) \geq 12\)</span></p>
-<p>Since <span class="math inline">\(v\)</span> = 4, <em>edf</em> <span class="math inline">\(= 4\left( r - 1 \right) \geq 12\)</span></p>
-<p><span class="math inline">\(= r \geq 4\)</span>, minimum replication required is 4</p>
+<p>Since <span class="math inline">\(v\)</span> = 4, <em>edf</em> <span class="math inline">\(= 3\left( r - 1 \right) \geq 12\)</span></p>
+<p><span class="math inline">\(\implies r \geq 5\)</span>, minimum replication required is 4</p>
 <p>The number of replications required in 4</p>
-
 </div>
+</div>
+<div id="post-hoc-test-in-rcbd" class="section level3" number="18.2.7">
+<h3>
+<span class="header-section-number">18.2.7</span> Post-hoc test in RCBD<a class="anchor" aria-label="anchor" href="#post-hoc-test-in-rcbd"><i class="fas fa-link"></i></a>
+</h3>
+<p>If the null hypothesis for treatments is rejected in ANOVA; we proceed to post-hoc test explained in section <a href="multiple-comparison-test.html#lsd">17.2</a>. Arrange the treatment means in descending order. Critical difference (CD) or LSD (Least Significant Difference) is calculated for each treatment pair <span class="math inline">\(T_{i},\ T_{j}\)</span> using the following formula.</p>
+<p><span class="math display">\[CD = \ t_{\frac{\alpha}{2},edf}.\sqrt{\frac{2\ MSE}{r}}\]</span>
+Where, <span class="math inline">\(\text{MSE}\)</span> is the Mean Square Error from ANOVA.
+<span class="math inline">\(t_{\frac{\alpha}{2},edf}\)</span> is the critical value of two tailed student’s t distribution at <span class="math inline">\(\alpha\)</span> level of significance and error degrees of
+freedom.<span class="math inline">\(r\)</span> is the number of blocks/replication.<br>
+Procedure for grouping using symbols is same as that of CRD explained in section <a href="single-factor-experiments.html#postcrd">18.1.4.1</a>.</p>
+</div>
+<div id="advantages-of-rcbd" class="section level3" number="18.2.8">
+<h3>
+<span class="header-section-number">18.2.8</span> Advantages of RCBD<a class="anchor" aria-label="anchor" href="#advantages-of-rcbd"><i class="fas fa-link"></i></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li><p>Accuracy: RCB design has been shown to be more efficient or accurate than C.R.D. for most types of experimental work.</p></li>
+<li><p>Flexibility: In RCBD no restrictions are placed on the number of treatments or
+the number of replicates.</p></li>
+<li><p>Even if some values are missing, still the analysis can be done by using missing plot
+technique</p></li>
+<li><p>Ease of analysis: Statistical analysis is simple, rapid and straight forward.</p></li>
+</ol>
+</div>
+<div id="disadvantages-of-rcbd" class="section level3" number="18.2.9">
+<h3>
+<span class="header-section-number">18.2.9</span> Disadvantages of RCBD<a class="anchor" aria-label="anchor" href="#disadvantages-of-rcbd"><i class="fas fa-link"></i></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li><p>RCBD may give misleading results if blocks are not homogeneous</p></li>
+<li><p>RCBD is not suitable for large number of treatments because in that case the block size will increase and it may not be possible to keep large blocks
+homogeneous.</p></li>
+<li><p>If the data on more than two plots is missing the statistical analysis becomes
+tedious and complicated.</p></li>
+</ol>
 </div>
 </div>
 </div>
@@ -520,6 +555,9 @@ If F<sub>2</sub> is not significant, it indicates that there is no significant d
 <li><a class="nav-link" href="#statistical-model-for-rcbd"><span class="header-section-number">18.2.4</span> Statistical Model for RCBD</a></li>
 <li><a class="nav-link" href="#analysis-of-rcbd"><span class="header-section-number">18.2.5</span> Analysis of RCBD</a></li>
 <li><a class="nav-link" href="#number-of-replications-in-rcbd"><span class="header-section-number">18.2.6</span> Number of replications in RCBD</a></li>
+<li><a class="nav-link" href="#post-hoc-test-in-rcbd"><span class="header-section-number">18.2.7</span> Post-hoc test in RCBD</a></li>
+<li><a class="nav-link" href="#advantages-of-rcbd"><span class="header-section-number">18.2.8</span> Advantages of RCBD</a></li>
+<li><a class="nav-link" href="#disadvantages-of-rcbd"><span class="header-section-number">18.2.9</span> Disadvantages of RCBD</a></li>
 </ul>
 </li>
 </ul>

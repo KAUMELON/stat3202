@@ -386,7 +386,7 @@ random-effects-model
 mixed-effects-model
 multiple-comparison-test
 why-do-we-need-a-post-hoc-test.
-fishers-lsd-test
+lsd
 lsd-least-significant-difference
 logic-behind-lsd-test
 advantages-and-disadvantages-of-lsd.
@@ -397,7 +397,7 @@ random
 layout-of-crd
 statistical-model-for-crd
 analysis-of-crd
-post-hoc-test-lsd
+postcrd
 advantages-of-a-crd
 disadvantages-of-a-crd
 replical
@@ -410,5 +410,8 @@ layout-of-rcbd
 statistical-model-for-rcbd
 analysis-of-rcbd
 number-of-replications-in-rcbd
+post-hoc-test-in-rcbd
+advantages-of-rcbd
+disadvantages-of-rcbd
 ftable
 generate-critical-value-of-f-using-excel

@@ -77,8 +77,8 @@ knitr::include_graphics(rep("images/crdanova.png"))
 ``` 
 
 
-#### Post hoc test (LSD)  
-If the null hypothesis is rejected in ANOVA; we proceed to post-hoc test explained in section . Fisher's Least significant difference (LSD) test explained in section is the commonly employed test in agricultural experiments.  
+#### Post hoc test (LSD) {#postcrd}  
+If the null hypothesis is rejected in ANOVA; we proceed to post-hoc test explained in section \@ref(lsd) . Fisher's Least significant difference (LSD) test explained in section \@ref(lsd) is the commonly employed test in agricultural experiments.  
 Arrange the treatment means in descending order. Critical difference (CD) is calculated for each treatment pair $T_{i},\ T_{j}$ using the following formula.
 
 $$C.D. = t_{\left( \frac{\alpha}{2},\ \ \ error\ df \right)}\sqrt{\text{MSE}\left( \frac{1}{r_{i}} + \frac{1}{r_{j}} \right)}$$
@@ -318,11 +318,48 @@ Formula for error degrees of freedom (*edf*) in RCBD is $(v - 1) (r-1)$; where $
 
 *edf* $=(v - 1) (r-1) \geq 12$  
 
-Since $v$ = 4, *edf* $= 4\left( r - 1 \right) \geq 12$
+Since $v$ = 4, *edf* $= 3\left( r - 1 \right) \geq 12$
 
-$= r \geq 4$, minimum replication required is 4
+$\implies r \geq 5$, minimum replication required is 4
 
-The number of replications required in 4
+The number of replications required in 4  
+
+### Post-hoc test in RCBD  
+
+If the null hypothesis for treatments is rejected in ANOVA; we proceed to post-hoc test explained in section \@ref(lsd). Arrange the treatment means in descending order. Critical difference (CD) or LSD (Least Significant Difference) is calculated for each treatment pair $T_{i},\ T_{j}$ using the following formula.  
+
+$$CD = \ t_{\frac{\alpha}{2},edf}.\sqrt{\frac{2\ MSE}{r}}$$
+Where, $\text{MSE}$ is the Mean Square Error from ANOVA.
+$t_{\frac{\alpha}{2},edf}$ is the critical value of two tailed student's t distribution at $\alpha$ level of significance and error degrees of
+freedom.$r$ is the number of blocks/replication.  
+Procedure for grouping using symbols is same as that of CRD explained in section \@ref(postcrd).  
+
+### Advantages of RCBD
+
+1.  Accuracy: RCB design has been shown to be more efficient or accurate than C.R.D. for most types of experimental work.  
+
+2.  Flexibility: In RCBD no restrictions are placed on the number of treatments or
+the number of replicates.
+
+3.  Even if some values are missing, still the analysis can be done by using missing plot 
+technique
+
+4.  Ease of analysis: Statistical analysis is simple, rapid and straight forward.  
+
+### Disadvantages of RCBD
+
+1.  RCBD may give misleading results if blocks are not homogeneous
+
+2.  RCBD is not suitable for large number of treatments because in that case the block size will increase and it may not be possible to keep large blocks
+homogeneous.  
+
+3. If the data on more than two plots is missing the statistical analysis becomes
+tedious and complicated.
+
+
+
+
+
 
 
 
