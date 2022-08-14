@@ -47,7 +47,33 @@ knitr::include_graphics(rep("images/crdnumbered.png"))
 
 ```{r sequence, echo=FALSE,fig.cap='Sequence in which labelled lots are drawn',out.width="80%", fig.align='center'}
 knitr::include_graphics(rep("images/sequence.png"))
-```
+```  
+
+### Identifying the number of replications {#replical}
+
+An experimenter is free to choose any number of replications in the experiment. The precision in estimating experimental error variance increases as the number of replications increases. But the design should be such that the number of replications should be optimum, since increasing the replications will increase the experiment cost. So, there
+is a rule of thumb that says, error degrees of freedom should be at least 12 to keep type II error in check. One can easily find the number of replications required in a design by using the formula for error degrees of freedom of that design.
+
+Example.
+
+You have 5 treatments; you are planning to conduct the experiment in CRD. Find the minimum number of replications required.
+
+Formula for error degrees of freedom (*edf*) in CRD is $n - t$; where $n$ is the total number of experimental units and $t$ is the number of treatments. $n = rt$, $r$ is the number of replications.  
+
+*edf* should be $\geq$ 12
+
+*edf* $= n - t = rt - t = t\left( r - 1 \right) \geq 12$  
+
+Since t = 5, *edf* $= 5\left( r - 1 \right) \geq 12$
+
+$= r \geq 3.4$, Since $r$ cannot be a fraction $r =$ 4
+
+The number of replications required in 4
+
+>Why minimum error degrees of freedom required for a design is 12
+
+>The error degrees of freedom have a major role in deciding the critical value of F. You can see from the table of F in section \@ref(ftable) as the error degrees of freedom or the degrees of freedom in the denominator decreases F tends to have larger values, this inflates type II error, *i*.*e*. we will be able to reject the null hypothesis only if there is a considerable difference between the treatments (higher
+Treatment Sum of Square). But towards 12 degrees of freedom in the denominator the F values stabilize for further increase in degrees of freedom.  
 
 ### Layout of CRD
 

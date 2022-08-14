@@ -388,6 +388,7 @@ single-factor-experiments
 crd
 random1
 random
+identifying-the-number-of-replications
 layout-of-crd
 statistical-model-for-crd
 analysis-of-crd

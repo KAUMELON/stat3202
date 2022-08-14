@@ -130,9 +130,31 @@ Figure 18.2: Sequence in which labelled lots are drawn
 </div>
 </div>
 </div>
-<div id="layout-of-crd" class="section level3" number="18.1.2">
+<div id="identifying-the-number-of-replications" class="section level3" number="18.1.2">
 <h3>
-<span class="header-section-number">18.1.2</span> Layout of CRD<a class="anchor" aria-label="anchor" href="#layout-of-crd"><i class="fas fa-link"></i></a>
+<span class="header-section-number">18.1.2</span> Identifying the number of replications<a class="anchor" aria-label="anchor" href="#identifying-the-number-of-replications"><i class="fas fa-link"></i></a>
+</h3>
+<p>An experimenter is free to choose any number of replications in the experiment. The precision in estimating experimental error variance increases as the number of replications increases. But the design should be such that the number of replications should be optimum, since increasing the replications will increase the experiment cost. So, there
+is a rule of thumb that says, error degrees of freedom should be at least 12 to keep type II error in check. One can easily find the number of replications required in a design by using the formula for error degrees of freedom of that design.</p>
+<p>Example.</p>
+<p>You have 5 treatments; you are planning to conduct the experiment in CRD. Find the minimum number of replications required.</p>
+<p>Formula for error degrees of freedom (<em>edf</em>) in CRD is <span class="math inline">\(n - t\)</span>; where <span class="math inline">\(n\)</span> is the total number of experimental units and <span class="math inline">\(t\)</span> is the number of treatments. <span class="math inline">\(n = rt\)</span>, <span class="math inline">\(r\)</span> is the number of replications.</p>
+<p><em>edf</em> should be <span class="math inline">\(\geq\)</span> 12</p>
+<p><em>edf</em> <span class="math inline">\(= n - t = rt - t = t\left( r - 1 \right) \geq 12\)</span></p>
+<p>Since t = 5, <em>edf</em> <span class="math inline">\(= 5\left( r - 1 \right) \geq 12\)</span></p>
+<p><span class="math inline">\(= r \geq 3.4\)</span>, Since <span class="math inline">\(r\)</span> cannot be a fraction <span class="math inline">\(r =\)</span> 4</p>
+<p>The number of replications required in 4</p>
+<blockquote>
+<p>Why minimum error degrees of freedom required for a design is 12</p>
+</blockquote>
+<blockquote>
+<p>The error degrees of freedom have a major role in deciding the critical value of F. You can see from the table of F in section <a href="ftable.html#ftable">19</a> as the error degrees of freedom or the degrees of freedom in the denominator decreases F tends to have larger values, this inflates type II error, <em>i</em>.<em>e</em>. we will be able to reject the null hypothesis only if there is a considerable difference between the treatments (higher
+Treatment Sum of Square). But towards 12 degrees of freedom in the denominator the F values stabilize for further increase in degrees of freedom.</p>
+</blockquote>
+</div>
+<div id="layout-of-crd" class="section level3" number="18.1.3">
+<h3>
+<span class="header-section-number">18.1.3</span> Layout of CRD<a class="anchor" aria-label="anchor" href="#layout-of-crd"><i class="fas fa-link"></i></a>
 </h3>
 <p>After allotting the treatment according to the randomization procedure explained in section <a href="design-of-experiments.html#rand">14.8.1</a>. The final layout will look like in the figure <a href="single-factor-experiments.html#fig:layout">18.3</a>.</p>
 <div class="figure" style="text-align: center">
@@ -142,9 +164,9 @@ Figure 18.3: Layout of Completely Randomized Design
 </p>
 </div>
 </div>
-<div id="statistical-model-for-crd" class="section level3" number="18.1.3">
+<div id="statistical-model-for-crd" class="section level3" number="18.1.4">
 <h3>
-<span class="header-section-number">18.1.3</span> Statistical model for CRD<a class="anchor" aria-label="anchor" href="#statistical-model-for-crd"><i class="fas fa-link"></i></a>
+<span class="header-section-number">18.1.4</span> Statistical model for CRD<a class="anchor" aria-label="anchor" href="#statistical-model-for-crd"><i class="fas fa-link"></i></a>
 </h3>
 <p>Consider a CRD with <em>v</em> treatments with <em>r</em> replications. Statistical model for CRD is same as that of one-way ANOVA (<a href="analysis-of-variance-anova.html#oneway">16.6.1.5</a>).<br><span class="math display">\[Y_{\text{ij}} = \mu + \tau_{i} + e_{\text{ij}}\]</span><br>
 Where <em>i</em> = 1,2, …, <em>v</em> and <em>j</em> =1,2, …, <em>r</em><sub>i</sub>. <span class="math inline">\(Y_{\text{ij}}\)</span> is the observed value of <em>i</em><sup>th</sup>
@@ -152,9 +174,9 @@ treatment from <em>j</em><sup>th</sup> replication, <span class="math inline">\(
 effect which is common for all treatments. <span class="math inline">\(e_{\text{ij}}\)</span> is the error
 effects.<span class="math inline">\(e_{ij}\)</span> <span class="math inline">\(\sim iid\ N(0,\sigma^{2})\)</span></p>
 </div>
-<div id="analysis-of-crd" class="section level3" number="18.1.4">
+<div id="analysis-of-crd" class="section level3" number="18.1.5">
 <h3>
-<span class="header-section-number">18.1.4</span> Analysis of CRD<a class="anchor" aria-label="anchor" href="#analysis-of-crd"><i class="fas fa-link"></i></a>
+<span class="header-section-number">18.1.5</span> Analysis of CRD<a class="anchor" aria-label="anchor" href="#analysis-of-crd"><i class="fas fa-link"></i></a>
 </h3>
 <p>Analysis of CRD is same as that explained in section <a href="analysis-of-variance-anova.html#oneway">16.6.1.5</a> of one-way ANOVA.</p>
 <blockquote>
@@ -166,9 +188,9 @@ effects.<span class="math inline">\(e_{ij}\)</span> <span class="math inline">\(
 Figure 18.4: ANOVA table of CRD
 </p>
 </div>
-<div id="post-hoc-test-lsd" class="section level4" number="18.1.4.1">
+<div id="post-hoc-test-lsd" class="section level4" number="18.1.5.1">
 <h4>
-<span class="header-section-number">18.1.4.1</span> Post hoc test (LSD)<a class="anchor" aria-label="anchor" href="#post-hoc-test-lsd"><i class="fas fa-link"></i></a>
+<span class="header-section-number">18.1.5.1</span> Post hoc test (LSD)<a class="anchor" aria-label="anchor" href="#post-hoc-test-lsd"><i class="fas fa-link"></i></a>
 </h4>
 <p>If the null hypothesis is rejected in ANOVA; we proceed to post-hoc test explained in section . Fisher’s Least significant difference (LSD) test explained in section is the commonly employed test in agricultural experiments.<br>
 Arrange the treatment means in descending order. Critical difference (CD) is calculated for each treatment pair <span class="math inline">\(T_{i},\ T_{j}\)</span> using the following formula.</p>
@@ -178,9 +200,9 @@ than the critical difference, they are significantly different. If the differenc
 symbols or letters, such that treatment means without any common letters or symbols are significantly different at corresponding level of significance (α).</p>
 </div>
 </div>
-<div id="example-10" class="section level3" number="18.1.5">
+<div id="example-10" class="section level3" number="18.1.6">
 <h3>
-<span class="header-section-number">18.1.5</span> Example<a class="anchor" aria-label="anchor" href="#example-10"><i class="fas fa-link"></i></a>
+<span class="header-section-number">18.1.6</span> Example<a class="anchor" aria-label="anchor" href="#example-10"><i class="fas fa-link"></i></a>
 </h3>
 <p>In order to find the yielding abilities of five varieties of sesame an experiment was conducted in the green house using a CRD with four pots per variety. The results are given in the following table below.</p>
 <div class="figure" style="text-align: center">
@@ -189,9 +211,9 @@ symbols or letters, such that treatment means without any common letters or symb
 Figure 18.5: ANOVA table of CRD
 </p>
 </div>
-<div id="solution" class="section level4" number="18.1.5.1">
+<div id="solution" class="section level4" number="18.1.6.1">
 <h4>
-<span class="header-section-number">18.1.5.1</span> Solution<a class="anchor" aria-label="anchor" href="#solution"><i class="fas fa-link"></i></a>
+<span class="header-section-number">18.1.6.1</span> Solution<a class="anchor" aria-label="anchor" href="#solution"><i class="fas fa-link"></i></a>
 </h4>
 <p><strong>Correction Factor</strong>:</p>
 <p><span class="math inline">\(= \frac{G^{2}}{n} = \frac{\left( 397 \right)^{2}}{20}\)</span>=7880.45</p>
@@ -327,10 +349,11 @@ different as they don’t have any common letters.</p>
 <li>
 <a class="nav-link" href="#crd"><span class="header-section-number">18.1</span> Completely Randomized Design (CRD)</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#random1"><span class="header-section-number">18.1.1</span> Randomization procedure</a></li>
-<li><a class="nav-link" href="#layout-of-crd"><span class="header-section-number">18.1.2</span> Layout of CRD</a></li>
-<li><a class="nav-link" href="#statistical-model-for-crd"><span class="header-section-number">18.1.3</span> Statistical model for CRD</a></li>
-<li><a class="nav-link" href="#analysis-of-crd"><span class="header-section-number">18.1.4</span> Analysis of CRD</a></li>
-<li><a class="nav-link" href="#example-10"><span class="header-section-number">18.1.5</span> Example</a></li>
+<li><a class="nav-link" href="#identifying-the-number-of-replications"><span class="header-section-number">18.1.2</span> Identifying the number of replications</a></li>
+<li><a class="nav-link" href="#layout-of-crd"><span class="header-section-number">18.1.3</span> Layout of CRD</a></li>
+<li><a class="nav-link" href="#statistical-model-for-crd"><span class="header-section-number">18.1.4</span> Statistical model for CRD</a></li>
+<li><a class="nav-link" href="#analysis-of-crd"><span class="header-section-number">18.1.5</span> Analysis of CRD</a></li>
+<li><a class="nav-link" href="#example-10"><span class="header-section-number">18.1.6</span> Example</a></li>
 </ul>
 </li>
 </ul>
