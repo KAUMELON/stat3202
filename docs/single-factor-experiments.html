@@ -130,13 +130,87 @@ Figure 18.2: Sequence in which labelled lots are drawn
 </div>
 </div>
 </div>
-<div id="identifying-the-number-of-replications" class="section level3" number="18.1.2">
+<div id="layout-of-crd" class="section level3" number="18.1.2">
 <h3>
-<span class="header-section-number">18.1.2</span> Identifying the number of replications<a class="anchor" aria-label="anchor" href="#identifying-the-number-of-replications"><i class="fas fa-link"></i></a>
+<span class="header-section-number">18.1.2</span> Layout of CRD<a class="anchor" aria-label="anchor" href="#layout-of-crd"><i class="fas fa-link"></i></a>
+</h3>
+<p>After allotting the treatment according to the randomization procedure explained in section <a href="design-of-experiments.html#rand">14.8.1</a>. The final layout will look like in the figure <a href="single-factor-experiments.html#fig:layout">18.3</a>.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:layout"></span>
+<img src="images/layoutcrd.png" alt="Layout of Completely Randomized Design" width="60%"><p class="caption">
+Figure 18.3: Layout of Completely Randomized Design
+</p>
+</div>
+</div>
+<div id="statistical-model-for-crd" class="section level3" number="18.1.3">
+<h3>
+<span class="header-section-number">18.1.3</span> Statistical model for CRD<a class="anchor" aria-label="anchor" href="#statistical-model-for-crd"><i class="fas fa-link"></i></a>
+</h3>
+<p>Consider a CRD with <em>v</em> treatments with <em>r</em> replications. Statistical model for CRD is same as that of one-way ANOVA (<a href="analysis-of-variance-anova.html#oneway">16.6.1.5</a>).<br><span class="math display">\[Y_{\text{ij}} = \mu + \tau_{i} + e_{\text{ij}}\]</span><br>
+Where <em>i</em> = 1,2, …, <em>v</em> and <em>j</em> =1,2, …, <em>r</em><sub>i</sub>. <span class="math inline">\(Y_{\text{ij}}\)</span> is the observed value of <em>i</em><sup>th</sup>
+treatment from <em>j</em><sup>th</sup> replication, <span class="math inline">\(\tau_{i}\)</span> is the effect of <em>i</em><sup>th</sup> treatment. <span class="math inline">\(\mu\)</span> is the general
+effect which is common for all treatments. <span class="math inline">\(e_{\text{ij}}\)</span> is the error
+effects.<span class="math inline">\(e_{ij}\)</span> <span class="math inline">\(\sim iid\ N(0,\sigma^{2})\)</span></p>
+</div>
+<div id="analysis-of-crd" class="section level3" number="18.1.4">
+<h3>
+<span class="header-section-number">18.1.4</span> Analysis of CRD<a class="anchor" aria-label="anchor" href="#analysis-of-crd"><i class="fas fa-link"></i></a>
+</h3>
+<p>Analysis of CRD is same as that explained in section <a href="analysis-of-variance-anova.html#oneway">16.6.1.5</a> of one-way ANOVA.</p>
+<blockquote>
+<p>Note that unequal replication (i.e. each treatment can have different replication) is possible in CRD. So while calculating TSS, each treatment total square is divided by corresponding replication and then sum is taken. If the replication is same for all treatments, to calculate TSS take sum of all the squares of treatment total and then divide it by replication.</p>
+</blockquote>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:crdanova"></span>
+<img src="images/crdanova.png" alt="ANOVA table of CRD" width="90%"><p class="caption">
+Figure 18.4: ANOVA table of CRD
+</p>
+</div>
+<div id="post-hoc-test-lsd" class="section level4" number="18.1.4.1">
+<h4>
+<span class="header-section-number">18.1.4.1</span> Post hoc test (LSD)<a class="anchor" aria-label="anchor" href="#post-hoc-test-lsd"><i class="fas fa-link"></i></a>
+</h4>
+<p>If the null hypothesis is rejected in ANOVA; we proceed to post-hoc test explained in section . Fisher’s Least significant difference (LSD) test explained in section is the commonly employed test in agricultural experiments.<br>
+Arrange the treatment means in descending order. Critical difference (CD) is calculated for each treatment pair <span class="math inline">\(T_{i},\ T_{j}\)</span> using the following formula.</p>
+<p><span class="math display">\[C.D. = t_{\left( \frac{\alpha}{2},\ \ \ error\ df \right)}\sqrt{\text{MSE}\left( \frac{1}{r_{i}} + \frac{1}{r_{j}} \right)}\]</span></p>
+<p>Here <span class="math inline">\(t_{\left( \frac{\alpha}{2},\ \ \ error\ df \right)}\)</span> denotes the critical value of Student’s t for a two tailed test at α level of significance and error degrees of freedom. <span class="math inline">\(r_{i}\)</span> and <span class="math inline">\(r_{j}\)</span> are replications of <span class="math inline">\(T_{i},\ T_{j}\)</span> respectively. If the difference of any two treatment means is greater
+than the critical difference, they are significantly different. If the difference of any two treatment means is less than <span class="math inline">\(\text{C.D}\)</span>. they are said to be on par. (<em>i</em>.<em>e</em>., there is no any statistically significant difference). Those treatments which are at par is given same
+symbols or letters, such that treatment means without any common letters or symbols are significantly different at corresponding level of significance (α).</p>
+</div>
+</div>
+<div id="advantages-of-a-crd" class="section level3" number="18.1.5">
+<h3>
+<span class="header-section-number">18.1.5</span> Advantages of a CRD<a class="anchor" aria-label="anchor" href="#advantages-of-a-crd"><i class="fas fa-link"></i></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li><p>Its layout is very easy.</p></li>
+<li><p>There is complete flexibility in this design <em>i</em>.<em>e</em>. any number of
+treatments and replications for each treatment can be tried.</p></li>
+<li><p>Whole experimental material can be utilized in this design.</p></li>
+<li><p>This design yields maximum degrees of freedom for experimental
+error.</p></li>
+<li><p>The analysis of data is simplest as compared to any other design.</p></li>
+<li><p>Even if some values are missing the analysis can be done.</p></li>
+</ol>
+</div>
+<div id="disadvantages-of-a-crd" class="section level3" number="18.1.6">
+<h3>
+<span class="header-section-number">18.1.6</span> Disadvantages of a CRD<a class="anchor" aria-label="anchor" href="#disadvantages-of-a-crd"><i class="fas fa-link"></i></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li><p>Not suitable for field experiments</p></li>
+<li><p>Relatively low accuracy due to lack of local control. Completely homogeneous experimental units are practically difficult in many situations.</p></li>
+</ol>
+</div>
+<div id="replical" class="section level3" number="18.1.7">
+<h3>
+<span class="header-section-number">18.1.7</span> Number of replications in CRD<a class="anchor" aria-label="anchor" href="#replical"><i class="fas fa-link"></i></a>
 </h3>
 <p>An experimenter is free to choose any number of replications in the experiment. The precision in estimating experimental error variance increases as the number of replications increases. But the design should be such that the number of replications should be optimum, since increasing the replications will increase the experiment cost. So, there
 is a rule of thumb that says, error degrees of freedom should be at least 12 to keep type II error in check. One can easily find the number of replications required in a design by using the formula for error degrees of freedom of that design.</p>
-<p>Example.</p>
+<div id="example-10" class="section level4 unnumbered">
+<h4>Example<a class="anchor" aria-label="anchor" href="#example-10"><i class="fas fa-link"></i></a>
+</h4>
 <p>You have 5 treatments; you are planning to conduct the experiment in CRD. Find the minimum number of replications required.</p>
 <p>Formula for error degrees of freedom (<em>edf</em>) in CRD is <span class="math inline">\(n - t\)</span>; where <span class="math inline">\(n\)</span> is the total number of experimental units and <span class="math inline">\(t\)</span> is the number of treatments. <span class="math inline">\(n = rt\)</span>, <span class="math inline">\(r\)</span> is the number of replications.</p>
 <p><em>edf</em> should be <span class="math inline">\(\geq\)</span> 12</p>
@@ -152,57 +226,10 @@ is a rule of thumb that says, error degrees of freedom should be at least 12 to 
 Treatment Sum of Square). But towards 12 degrees of freedom in the denominator the F values stabilize for further increase in degrees of freedom.</p>
 </blockquote>
 </div>
-<div id="layout-of-crd" class="section level3" number="18.1.3">
+</div>
+<div id="example-11" class="section level3" number="18.1.8">
 <h3>
-<span class="header-section-number">18.1.3</span> Layout of CRD<a class="anchor" aria-label="anchor" href="#layout-of-crd"><i class="fas fa-link"></i></a>
-</h3>
-<p>After allotting the treatment according to the randomization procedure explained in section <a href="design-of-experiments.html#rand">14.8.1</a>. The final layout will look like in the figure <a href="single-factor-experiments.html#fig:layout">18.3</a>.</p>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:layout"></span>
-<img src="images/layoutcrd.png" alt="Layout of Completely Randomized Design" width="60%"><p class="caption">
-Figure 18.3: Layout of Completely Randomized Design
-</p>
-</div>
-</div>
-<div id="statistical-model-for-crd" class="section level3" number="18.1.4">
-<h3>
-<span class="header-section-number">18.1.4</span> Statistical model for CRD<a class="anchor" aria-label="anchor" href="#statistical-model-for-crd"><i class="fas fa-link"></i></a>
-</h3>
-<p>Consider a CRD with <em>v</em> treatments with <em>r</em> replications. Statistical model for CRD is same as that of one-way ANOVA (<a href="analysis-of-variance-anova.html#oneway">16.6.1.5</a>).<br><span class="math display">\[Y_{\text{ij}} = \mu + \tau_{i} + e_{\text{ij}}\]</span><br>
-Where <em>i</em> = 1,2, …, <em>v</em> and <em>j</em> =1,2, …, <em>r</em><sub>i</sub>. <span class="math inline">\(Y_{\text{ij}}\)</span> is the observed value of <em>i</em><sup>th</sup>
-treatment from <em>j</em><sup>th</sup> replication, <span class="math inline">\(\tau_{i}\)</span> is the effect of <em>i</em><sup>th</sup> treatment. <span class="math inline">\(\mu\)</span> is the general
-effect which is common for all treatments. <span class="math inline">\(e_{\text{ij}}\)</span> is the error
-effects.<span class="math inline">\(e_{ij}\)</span> <span class="math inline">\(\sim iid\ N(0,\sigma^{2})\)</span></p>
-</div>
-<div id="analysis-of-crd" class="section level3" number="18.1.5">
-<h3>
-<span class="header-section-number">18.1.5</span> Analysis of CRD<a class="anchor" aria-label="anchor" href="#analysis-of-crd"><i class="fas fa-link"></i></a>
-</h3>
-<p>Analysis of CRD is same as that explained in section <a href="analysis-of-variance-anova.html#oneway">16.6.1.5</a> of one-way ANOVA.</p>
-<blockquote>
-<p>Note that unequal replication (i.e. each treatment can have different replication) is possible in CRD. So while calculating TSS, each treatment total square is divided by corresponding replication and then sum is taken. If the replication is same for all treatments, to calculate TSS take sum of all the squares of treatment total and then divide it by replication.</p>
-</blockquote>
-<div class="figure" style="text-align: center">
-<span style="display:block;" id="fig:crdanova"></span>
-<img src="images/crdanova.png" alt="ANOVA table of CRD" width="90%"><p class="caption">
-Figure 18.4: ANOVA table of CRD
-</p>
-</div>
-<div id="post-hoc-test-lsd" class="section level4" number="18.1.5.1">
-<h4>
-<span class="header-section-number">18.1.5.1</span> Post hoc test (LSD)<a class="anchor" aria-label="anchor" href="#post-hoc-test-lsd"><i class="fas fa-link"></i></a>
-</h4>
-<p>If the null hypothesis is rejected in ANOVA; we proceed to post-hoc test explained in section . Fisher’s Least significant difference (LSD) test explained in section is the commonly employed test in agricultural experiments.<br>
-Arrange the treatment means in descending order. Critical difference (CD) is calculated for each treatment pair <span class="math inline">\(T_{i},\ T_{j}\)</span> using the following formula.</p>
-<p><span class="math display">\[C.D. = t_{\left( \frac{\alpha}{2},\ \ \ error\ df \right)}\sqrt{\text{MSE}\left( \frac{1}{r_{i}} + \frac{1}{r_{j}} \right)}\]</span></p>
-<p>Here <span class="math inline">\(t_{\left( \frac{\alpha}{2},\ \ \ error\ df \right)}\)</span> denotes the critical value of Student’s t for a two tailed test at α level of significance and error degrees of freedom. <span class="math inline">\(r_{i}\)</span> and <span class="math inline">\(r_{j}\)</span> are replications of <span class="math inline">\(T_{i},\ T_{j}\)</span> respectively. If the difference of any two treatment means is greater
-than the critical difference, they are significantly different. If the difference of any two treatment means is less than <span class="math inline">\(\text{C.D}\)</span>. they are said to be on par. (<em>i</em>.<em>e</em>., there is no any statistically significant difference). Those treatments which are at par is given same
-symbols or letters, such that treatment means without any common letters or symbols are significantly different at corresponding level of significance (α).</p>
-</div>
-</div>
-<div id="example-10" class="section level3" number="18.1.6">
-<h3>
-<span class="header-section-number">18.1.6</span> Example<a class="anchor" aria-label="anchor" href="#example-10"><i class="fas fa-link"></i></a>
+<span class="header-section-number">18.1.8</span> Example<a class="anchor" aria-label="anchor" href="#example-11"><i class="fas fa-link"></i></a>
 </h3>
 <p>In order to find the yielding abilities of five varieties of sesame an experiment was conducted in the green house using a CRD with four pots per variety. The results are given in the following table below.</p>
 <div class="figure" style="text-align: center">
@@ -211,9 +238,9 @@ symbols or letters, such that treatment means without any common letters or symb
 Figure 18.5: ANOVA table of CRD
 </p>
 </div>
-<div id="solution" class="section level4" number="18.1.6.1">
+<div id="solution" class="section level4" number="18.1.8.1">
 <h4>
-<span class="header-section-number">18.1.6.1</span> Solution<a class="anchor" aria-label="anchor" href="#solution"><i class="fas fa-link"></i></a>
+<span class="header-section-number">18.1.8.1</span> Solution<a class="anchor" aria-label="anchor" href="#solution"><i class="fas fa-link"></i></a>
 </h4>
 <p><strong>Correction Factor</strong>:</p>
 <p><span class="math inline">\(= \frac{G^{2}}{n} = \frac{\left( 397 \right)^{2}}{20}\)</span>=7880.45</p>
@@ -316,24 +343,151 @@ same letters/symbols are not significantly different.</p>
 <p>So, in our example we can conclude that V2 is the best variety because,
 it is having the highest mean and is significantly different from
 others.</p>
-<p>***************************************************************</p>
 <blockquote>
 <p>Note: in some cases, more than one alphabets can appear against a
 treatment mean, see the hypothetical example below.</p>
 </blockquote>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:groupingcrd"></span>
-<img src="images/groupingcrd.png" alt="A hypothetical example of treatment grouping" width="25%"><p class="caption">
+<img src="images/groupingcrd.png" alt="A hypothetical example of treatment grouping" width="40%"><p class="caption">
 Figure 18.7: A hypothetical example of treatment grouping
 </p>
 </div>
 <blockquote>
-<p>If a lettering like this appears meaning is that those treatments having
-common alphabets are not significantly different. In the above table V2
+<p>If a lettering like this appears meaning is that those treatments having common alphabets are not significantly different. In the above table V2
 and V1 is not significantly different as both of them are having common
 letter <em>a</em>. At the same time you can see V5 and V4 is significantly
 different as they don’t have any common letters.</p>
 </blockquote>
+</div>
+</div>
+</div>
+<div id="randomized-complete-block-designs-rcbd" class="section level2" number="18.2">
+<h2>
+<span class="header-section-number">18.2</span> Randomized Complete Block Designs (RCBD)<a class="anchor" aria-label="anchor" href="#randomized-complete-block-designs-rcbd"><i class="fas fa-link"></i></a>
+</h2>
+<p>In field experiments, the plots on which treatments are applied may not be uniform and there may be difference in plot-to-plot fertility. In such cases CRD cannot be
+recommended. If there is only one source constitutes the difference between the plots then we can recommend randomized block design.</p>
+<p>The randomized complete block (RCB) design is one of the most widely used experimental designs in agricultural research. The design is especially suited for field experiments where the number of treatments is not large and the experimental area has a predictable fertility gradient.</p>
+<p>When the experimental material is heterogeneous, the experimental material is grouped into homogeneous sub-groups called <strong>blocks</strong>. As each block consists of the entire set of treatments a block is equivalent to a replication. For example, in a field with known fertility gradient in one direction, plots perpendicular to this gradient will be considered as a block. In RCBD (Randomized Complete
+Block Design) blocks are of equal size and contains all the treatments. Since the block contains all the treatments, the term ‘complete block design’ is used. See figure @ref(fig: field) and @ref(fig: field2) to see how blocks are formed in a field.</p>
+<blockquote>
+<p>In RCBD number of replications, <span class="math inline">\(r\)</span> = number of blocks; Number of plots within a block = number of treatments, <span class="math inline">\(v\)</span></p>
+</blockquote>
+<div id="blocking-technique" class="section level3" number="18.2.1">
+<h3>
+<span class="header-section-number">18.2.1</span> Blocking technique<a class="anchor" aria-label="anchor" href="#blocking-technique"><i class="fas fa-link"></i></a>
+</h3>
+<p>Blocking or local control, one of the basic principles of design is effectively implemented in RCBD. The primary purpose of blocking is to reduce experimental error by eliminating the contribution of known sources of variation among experimental units. This is achieved by grouping homogeneous units together, so that variability with in blocks is minimized, between blocks is maximized.</p>
+<p>Two important factors to be considered for blocking</p>
+<ul>
+<li><p>The selection of the source of variability to be used as the basis for blocking, in field experiments usually fertility gradient or productivity gradient is used as the identified source of variability.</p></li>
+<li><p>Proper selection of the block shape and orientation. For example, When the gradient is unidirectional use long and narrow blocks. Use square blocks for strong fertility gradient in both directions. An experimenter should use his common sense to identify the shape and orientation of the block after examining the field conditions, suc that plots in a block are homogeneous.</p></li>
+</ul>
+</div>
+<div id="rcbdrandom" class="section level3" number="18.2.2">
+<h3>
+<span class="header-section-number">18.2.2</span> Randomization in RCBD<a class="anchor" aria-label="anchor" href="#rcbdrandom"><i class="fas fa-link"></i></a>
+</h3>
+<p>Consider an experiment involving four treatments A, B, C, D in RCBD. Each treatment is replicated 5 times. Randomization procedure is as explained below. The randomization process for a RCB design is applied separately and independently to each of the blocks.</p>
+<p>STEP 1. Divide the experimental area into <span class="math inline">\(r\)</span> equal blocks, where <span class="math inline">\(r\)</span> is the number of replications. In our example <span class="math inline">\(r =\)</span> 5.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:rcbd1"></span>
+<img src="images/rcbd1.png" alt="Division of an experimental field into five blocks, each consisting of four plots, for a RCBD with four treatments and five replications. Blocking is done such that blocks are rectangular and perpendicular to the direction of the unidirectional fertility gradient" width="60%"><p class="caption">
+Figure 18.8: Division of an experimental field into five blocks, each consisting of four plots, for a RCBD with four treatments and five replications. Blocking is done such that blocks are rectangular and perpendicular to the direction of the unidirectional fertility gradient
+</p>
+</div>
+<p>STEP 2. Subdivide each block into <span class="math inline">\(v\)</span> experimental plots, where <span class="math inline">\(v\)</span> is the number of treatments. Number the <span class="math inline">\(v\)</span> plots consecutively from 1 to <span class="math inline">\(v\)</span>, and assign <span class="math inline">\(v\)</span> treatments at random to the <span class="math inline">\(v\)</span> plots following the randomization scheme for the CRD described in Section <a href="single-factor-experiments.html#random">18.1.1.1</a>. In our example each of the 5 blocks are divided into 4 plots. Plots are numbered 1 to 4 in each block. Now for each block, paper lots of 1 to 4 is prepared. Treatment names are written in order and plot number from each lot is recorded in order as shown below.</p>
+<div class="inline-table"><table class="table table-sm">
+<thead><tr class="header">
+<th align="left">Treatments</th>
+<th align="left">A</th>
+<th align="left">B</th>
+<th align="left">C</th>
+<th align="left">D</th>
+</tr></thead>
+<tbody><tr class="odd">
+<td align="left">Plot number form lot</td>
+<td align="left">2</td>
+<td align="left">1</td>
+<td align="left">4</td>
+<td align="left">3</td>
+</tr></tbody>
+</table></div>
+<p>STEP 3. All the treatments are allotted to the randomly selected plots. Step 2 is repeated in all blocks.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:rcbd2"></span>
+<img src="images/rcbd2.png" alt="Allotment of treatments in all blocks. In RCBD each block will have all the treatments and each treatment appear in a block exactly once. " width="60%"><p class="caption">
+Figure 18.9: Allotment of treatments in all blocks. In RCBD each block will have all the treatments and each treatment appear in a block exactly once.
+</p>
+</div>
+</div>
+<div id="layout-of-rcbd" class="section level3" number="18.2.3">
+<h3>
+<span class="header-section-number">18.2.3</span> Layout of RCBD<a class="anchor" aria-label="anchor" href="#layout-of-rcbd"><i class="fas fa-link"></i></a>
+</h3>
+<p>In RCBD each block will have all the treatments and each treatment appear in a block exactly once. After allotting the treatment according to the randomization procedure explained in section <a href="single-factor-experiments.html#rcbdrandom">18.2.2</a>. The final layout will look like in the figure <a href="single-factor-experiments.html#fig:rcbd3">18.10</a>.</p>
+<blockquote>
+<p>Note:<br>
+In RBD every treatment will have the same number of replications. (All treatments are equally replicated say, <span class="math inline">\(r\)</span> times). So we need a total of <span class="math inline">\(v\)</span> <span class="math inline">\(\times\)</span> <span class="math inline">\(r\)</span> plots for conducting that experiment. Each of <span class="math inline">\(r\)</span> blocks will be containing <span class="math inline">\(v\)</span> plots. So in this design, the number of blocks = number of replication of the treatments = <span class="math inline">\(r\)</span>
+and number of plots within a block = number of treatments = <span class="math inline">\(v\)</span></p>
+</blockquote>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:rcbd3"></span>
+<img src="images/rcbd3.png" alt="Layout of RCBD with four treatments and five replications" width="60%"><p class="caption">
+Figure 18.10: Layout of RCBD with four treatments and five replications
+</p>
+</div>
+</div>
+<div id="statistical-model-for-rcbd" class="section level3" number="18.2.4">
+<h3>
+<span class="header-section-number">18.2.4</span> Statistical Model for RCBD<a class="anchor" aria-label="anchor" href="#statistical-model-for-rcbd"><i class="fas fa-link"></i></a>
+</h3>
+<p>Consider a RCBD with <span class="math inline">\(v\)</span> treatments with <span class="math inline">\(r\)</span> replications (Blocks). Statistical model for RCBD is same as that of two-way ANOVA described in section <a href="analysis-of-variance-anova.html#twoway1">16.6.2.1</a>.</p>
+<p><span class="math display">\[Y_{\text{ij}} = \mu + \tau_{i} +  \gamma_{j}+ e_{\text{ij}}\]</span><br>
+Where <em>i</em> = 1,2, …, <em>v</em> and <em>j</em> =1,2, …, <em>r</em>. <span class="math inline">\(Y_{\text{ij}}\)</span> is the observed value of response under <em>i</em><sup>th</sup> treatment and <em>j</em><sup>th</sup> block, <span class="math inline">\(\tau_{i}\)</span> is the effect of <em>i</em><sup>th</sup> factor,<span class="math inline">\(\gamma_{j}\)</span> is the effect of <em>j</em><sup>th</sup> block . <span class="math inline">\(\mu\)</span> is the general
+effect which is common for all treatments. <span class="math inline">\(e_{\text{ij}}\)</span> is the error
+effects.<span class="math inline">\(e_{ij}\)</span> <span class="math inline">\(\sim iid\ N(0,\sigma^{2})\)</span></p>
+</div>
+<div id="analysis-of-rcbd" class="section level3" number="18.2.5">
+<h3>
+<span class="header-section-number">18.2.5</span> Analysis of RCBD<a class="anchor" aria-label="anchor" href="#analysis-of-rcbd"><i class="fas fa-link"></i></a>
+</h3>
+<p>Analysis of RCBD is same as that explained in section <a href="analysis-of-variance-anova.html#twoway">16.6.2.3</a> of two-way ANOVA.</p>
+<p>Observation from <span class="math inline">\(v\)</span> treatments in <span class="math inline">\(r\)</span> blocks is arranged as shown below.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:rcbd4"></span>
+<img src="images/rcbd4.png" alt="Two-way arrangement of observations in RCBD" width="70%"><p class="caption">
+Figure 18.11: Two-way arrangement of observations in RCBD
+</p>
+</div>
+The anova table following the calculations as in section <a href="analysis-of-variance-anova.html#twoway">16.6.2.3</a> is<br><div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:rcbd5"></span>
+<img src="images/rcbd5.png" alt="ANOVA table of RCBD" width="70%"><p class="caption">
+Figure 18.12: ANOVA table of RCBD
+</p>
+</div>
+<p>F<sub>1</sub> ~ F <sub>(<span class="math inline">\(v\)</span>–1), (<span class="math inline">\(v\)</span>–1)(<span class="math inline">\(r\)</span>–1)</sub> and F<sub>2</sub> ~ F ~(<span class="math inline">\(r\)</span>–1), (<span class="math inline">\(v\)</span>–1)(<span class="math inline">\(r\)</span>–1) are two F values one for Treatment and one for blocks respectively. Decisions on the null hypothesis is made by comparing corresponding F value to the table value as explained in section <a href="ftable.html#ftable">19</a>.</p>
+<blockquote>
+<p>What if F<sub>2</sub> is not significant
+If F<sub>2</sub> is not significant, it indicates that there is no significant difference between blocks, means blocking is not effective. Blocking is considered effective in reducing the experimental error if F<sub>2</sub> is significant.</p>
+</blockquote>
+</div>
+<div id="number-of-replications-in-rcbd" class="section level3" number="18.2.6">
+<h3>
+<span class="header-section-number">18.2.6</span> Number of replications in RCBD<a class="anchor" aria-label="anchor" href="#number-of-replications-in-rcbd"><i class="fas fa-link"></i></a>
+</h3>
+<p>As explained in section <a href="single-factor-experiments.html#replical">18.1.7</a> number of replications is RCBD is found out using the formula of error degrees of freedom (<em>edf</em>).</p>
+<div id="example-12" class="section level4 unnumbered">
+<h4>Example<a class="anchor" aria-label="anchor" href="#example-12"><i class="fas fa-link"></i></a>
+</h4>
+<p>You have 4 treatments; you are planning to conduct the experiment in RCBD. Find the minimum number of replications required.</p>
+<p>Formula for error degrees of freedom (<em>edf</em>) in RCBD is <span class="math inline">\((v - 1) (r-1)\)</span>; where <span class="math inline">\(v\)</span> is the number of treatments and <span class="math inline">\(r\)</span> is the number of blocks.</p>
+<p><em>edf</em> should be <span class="math inline">\(\geq\)</span> 12</p>
+<p><em>edf</em> <span class="math inline">\(=(v - 1) (r-1) \geq 12\)</span></p>
+<p>Since <span class="math inline">\(v\)</span> = 4, <em>edf</em> <span class="math inline">\(= 4\left( r - 1 \right) \geq 12\)</span></p>
+<p><span class="math inline">\(= r \geq 4\)</span>, minimum replication required is 4</p>
+<p>The number of replications required in 4</p>
 
 </div>
 </div>
@@ -349,11 +503,23 @@ different as they don’t have any common letters.</p>
 <li>
 <a class="nav-link" href="#crd"><span class="header-section-number">18.1</span> Completely Randomized Design (CRD)</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#random1"><span class="header-section-number">18.1.1</span> Randomization procedure</a></li>
-<li><a class="nav-link" href="#identifying-the-number-of-replications"><span class="header-section-number">18.1.2</span> Identifying the number of replications</a></li>
-<li><a class="nav-link" href="#layout-of-crd"><span class="header-section-number">18.1.3</span> Layout of CRD</a></li>
-<li><a class="nav-link" href="#statistical-model-for-crd"><span class="header-section-number">18.1.4</span> Statistical model for CRD</a></li>
-<li><a class="nav-link" href="#analysis-of-crd"><span class="header-section-number">18.1.5</span> Analysis of CRD</a></li>
-<li><a class="nav-link" href="#example-10"><span class="header-section-number">18.1.6</span> Example</a></li>
+<li><a class="nav-link" href="#layout-of-crd"><span class="header-section-number">18.1.2</span> Layout of CRD</a></li>
+<li><a class="nav-link" href="#statistical-model-for-crd"><span class="header-section-number">18.1.3</span> Statistical model for CRD</a></li>
+<li><a class="nav-link" href="#analysis-of-crd"><span class="header-section-number">18.1.4</span> Analysis of CRD</a></li>
+<li><a class="nav-link" href="#advantages-of-a-crd"><span class="header-section-number">18.1.5</span> Advantages of a CRD</a></li>
+<li><a class="nav-link" href="#disadvantages-of-a-crd"><span class="header-section-number">18.1.6</span> Disadvantages of a CRD</a></li>
+<li><a class="nav-link" href="#replical"><span class="header-section-number">18.1.7</span> Number of replications in CRD</a></li>
+<li><a class="nav-link" href="#example-11"><span class="header-section-number">18.1.8</span> Example</a></li>
+</ul>
+</li>
+<li>
+<a class="nav-link" href="#randomized-complete-block-designs-rcbd"><span class="header-section-number">18.2</span> Randomized Complete Block Designs (RCBD)</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#blocking-technique"><span class="header-section-number">18.2.1</span> Blocking technique</a></li>
+<li><a class="nav-link" href="#rcbdrandom"><span class="header-section-number">18.2.2</span> Randomization in RCBD</a></li>
+<li><a class="nav-link" href="#layout-of-rcbd"><span class="header-section-number">18.2.3</span> Layout of RCBD</a></li>
+<li><a class="nav-link" href="#statistical-model-for-rcbd"><span class="header-section-number">18.2.4</span> Statistical Model for RCBD</a></li>
+<li><a class="nav-link" href="#analysis-of-rcbd"><span class="header-section-number">18.2.5</span> Analysis of RCBD</a></li>
+<li><a class="nav-link" href="#number-of-replications-in-rcbd"><span class="header-section-number">18.2.6</span> Number of replications in RCBD</a></li>
 </ul>
 </li>
 </ul>

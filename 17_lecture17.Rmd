@@ -282,7 +282,7 @@ Here equal number of observations are taken from all treatments, so *r*~1~ = *r*
 ```{r onewayanovaex1, echo=FALSE,fig.cap='One-way ANOVA calculation',out.width="90%", fig.align='center'}
 knitr::include_graphics(rep("images/onewayex1.png"))
 ```  
-```{r onewayresult, echo=FALSE,fig.cap='One-way table',out.width="90%", fig.align='center'}
+```{r onewayresult, echo=FALSE,fig.cap='One-way ANOVA table',out.width="90%", fig.align='center'}
 knitr::include_graphics(rep("images/anovaresult.png"))
 ```  
 Here you can see the calculated value is greater than table value of F. So the null hypothesis is rejected and we conclude that at least a pair of treatments are significantly different at 5% level of significance.
@@ -298,7 +298,7 @@ Here two independent factors might have an effect on the response variable of in
 
 In a two-way classification, the data are classified according to two different criteria or factors. The procedure for analysis of variance is somewhat different than the one followed earlier. One can also study interaction between the two factors, if interaction effect is included in two-way ANOVA model.  
 
-#### Two-way ANOVA model  
+#### Two-way ANOVA model {#twoway1}  
 
 $$Y_{\text{ij}} = \mu + \tau_{i} +  \gamma_{j}+ e_{\text{ij}}$$  
 Where *i* = 1,2, ..., *t* and *j* =1,2, ..., *r*. $Y_{\text{ij}}$ is the observed value of response under *i*^th^ level of
@@ -329,7 +329,7 @@ knitr::include_graphics(rep("images/twoway.png"))
 >Error D.F.=  
 $vr - 1 - \left( v - 1 \right) - \left( r - 1 \right) = vr - 1 - v + 1 - r + 1 = vr - v - r + 1 = (v - 1)(r - 1)$   
 
-```{r twowaytable, echo=FALSE,fig.cap='Two way ANOVA table',out.width="80%", fig.align='center'}
+```{r twowaytable, echo=FALSE,fig.cap='Two way ANOVA table',out.width="90%", fig.align='center'}
 knitr::include_graphics(rep("images/twowayanovatable.png"))
 ```  
 Here there are two F values one for factor A and one for Factor B. F~A~ \~ F ~(v-1),\ (v-1)(r-1)~ and F~B~ \~ F ~(r-1),\ (v-1)(r-1)
@@ -374,7 +374,7 @@ Sum of squares of Error
 
 $\text{SSE} = \text{TSS} - (\text{SST} + \text{SSB}) = \text{27.3}$  
 
-```{r twowayanovatable, echo=FALSE,fig.cap='ANOVA table for chemicals and breeds',out.width="80%", fig.align='center'}
+```{r twowayanovatable, echo=FALSE,fig.cap='ANOVA table for chemicals and breeds',out.width="90%", fig.align='center'}
 knitr::include_graphics(rep("images/twowayanovatable.png"))
 ```  
 

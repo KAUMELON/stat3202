@@ -49,32 +49,6 @@ knitr::include_graphics(rep("images/crdnumbered.png"))
 knitr::include_graphics(rep("images/sequence.png"))
 ```  
 
-### Identifying the number of replications {#replical}
-
-An experimenter is free to choose any number of replications in the experiment. The precision in estimating experimental error variance increases as the number of replications increases. But the design should be such that the number of replications should be optimum, since increasing the replications will increase the experiment cost. So, there
-is a rule of thumb that says, error degrees of freedom should be at least 12 to keep type II error in check. One can easily find the number of replications required in a design by using the formula for error degrees of freedom of that design.
-
-Example.
-
-You have 5 treatments; you are planning to conduct the experiment in CRD. Find the minimum number of replications required.
-
-Formula for error degrees of freedom (*edf*) in CRD is $n - t$; where $n$ is the total number of experimental units and $t$ is the number of treatments. $n = rt$, $r$ is the number of replications.  
-
-*edf* should be $\geq$ 12
-
-*edf* $= n - t = rt - t = t\left( r - 1 \right) \geq 12$  
-
-Since t = 5, *edf* $= 5\left( r - 1 \right) \geq 12$
-
-$= r \geq 3.4$, Since $r$ cannot be a fraction $r =$ 4
-
-The number of replications required in 4
-
->Why minimum error degrees of freedom required for a design is 12
-
->The error degrees of freedom have a major role in deciding the critical value of F. You can see from the table of F in section \@ref(ftable) as the error degrees of freedom or the degrees of freedom in the denominator decreases F tends to have larger values, this inflates type II error, *i*.*e*. we will be able to reject the null hypothesis only if there is a considerable difference between the treatments (higher
-Treatment Sum of Square). But towards 12 degrees of freedom in the denominator the F values stabilize for further increase in degrees of freedom.  
-
 ### Layout of CRD
 
 After allotting the treatment according to the randomization procedure explained in section \@ref(rand). The final layout will look like in the figure \@ref(fig:layout).  
@@ -112,6 +86,54 @@ $$C.D. = t_{\left( \frac{\alpha}{2},\ \ \ error\ df \right)}\sqrt{\text{MSE}\lef
 Here $t_{\left( \frac{\alpha}{2},\ \ \ error\ df \right)}$ denotes the critical value of Student's t for a two tailed test at α level of significance and error degrees of freedom. $r_{i}$ and $r_{j}$ are replications of $T_{i},\ T_{j}$ respectively. If the difference of any two treatment means is greater
 than the critical difference, they are significantly different. If the difference of any two treatment means is less than $\text{C.D}$. they are said to be on par. (*i*.*e*., there is no any statistically significant difference). Those treatments which are at par is given same
 symbols or letters, such that treatment means without any common letters or symbols are significantly different at corresponding level of significance (α).  
+
+### Advantages of a CRD
+
+1.  Its layout is very easy.
+
+2.  There is complete flexibility in this design *i*.*e*. any number of
+    treatments and replications for each treatment can be tried.
+
+3.  Whole experimental material can be utilized in this design.
+
+4.  This design yields maximum degrees of freedom for experimental
+    error.
+
+5.  The analysis of data is simplest as compared to any other design.
+
+6.  Even if some values are missing the analysis can be done.
+
+### Disadvantages of a CRD
+
+1.  Not suitable for field experiments
+
+2.  Relatively low accuracy due to lack of local control. Completely homogeneous experimental units are practically difficult in many situations.  
+
+### Number of replications in CRD {#replical}
+
+An experimenter is free to choose any number of replications in the experiment. The precision in estimating experimental error variance increases as the number of replications increases. But the design should be such that the number of replications should be optimum, since increasing the replications will increase the experiment cost. So, there
+is a rule of thumb that says, error degrees of freedom should be at least 12 to keep type II error in check. One can easily find the number of replications required in a design by using the formula for error degrees of freedom of that design.
+
+#### Example {-}
+
+You have 5 treatments; you are planning to conduct the experiment in CRD. Find the minimum number of replications required.
+
+Formula for error degrees of freedom (*edf*) in CRD is $n - t$; where $n$ is the total number of experimental units and $t$ is the number of treatments. $n = rt$, $r$ is the number of replications.  
+
+*edf* should be $\geq$ 12
+
+*edf* $= n - t = rt - t = t\left( r - 1 \right) \geq 12$  
+
+Since t = 5, *edf* $= 5\left( r - 1 \right) \geq 12$
+
+$= r \geq 3.4$, Since $r$ cannot be a fraction $r =$ 4
+
+The number of replications required in 4
+
+>Why minimum error degrees of freedom required for a design is 12
+
+>The error degrees of freedom have a major role in deciding the critical value of F. You can see from the table of F in section \@ref(ftable) as the error degrees of freedom or the degrees of freedom in the denominator decreases F tends to have larger values, this inflates type II error, *i*.*e*. we will be able to reject the null hypothesis only if there is a considerable difference between the treatments (higher
+Treatment Sum of Square). But towards 12 degrees of freedom in the denominator the F values stabilize for further increase in degrees of freedom.  
 
 ### Example  
 In order to find the yielding abilities of five varieties of sesame an experiment was conducted in the green house using a CRD with four pots per variety. The results are given in the following table below.  
@@ -184,17 +206,124 @@ So, in our example we can conclude that V2 is the best variety because,
 it is having the highest mean and is significantly different from
 others.  
 
-\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*  
 
 >Note: in some cases, more than one alphabets can appear against a
 treatment mean, see the hypothetical example below.  
 
-```{r groupingcrd, echo=FALSE,fig.cap='A hypothetical example of treatment grouping',out.width="25%", fig.align='center'}
+```{r groupingcrd, echo=FALSE,fig.cap='A hypothetical example of treatment grouping',out.width="40%", fig.align='center'}
 knitr::include_graphics(rep("images/groupingcrd.png"))
 ```  
 
->If a lettering like this appears meaning is that those treatments having
-common alphabets are not significantly different. In the above table V2
+>If a lettering like this appears meaning is that those treatments having common alphabets are not significantly different. In the above table V2
 and V1 is not significantly different as both of them are having common
 letter *a*. At the same time you can see V5 and V4 is significantly
-different as they don't have any common letters.
+different as they don't have any common letters.  
+
+## Randomized Complete Block Designs (RCBD)
+
+In field experiments, the plots on which treatments are applied may not be uniform and there may be difference in plot-to-plot fertility. In such cases CRD cannot be
+recommended. If there is only one source constitutes the difference between the plots then we can recommend randomized block design.
+
+The randomized complete block (RCB) design is one of the most widely used experimental designs in agricultural research. The design is especially suited for field experiments where the number of treatments is not large and the experimental area has a predictable fertility gradient.
+
+When the experimental material is heterogeneous, the experimental material is grouped into homogeneous sub-groups called **blocks**. As each block consists of the entire set of treatments a block is equivalent to a replication. For example, in a field with known fertility gradient in one direction, plots perpendicular to this gradient will be considered as a block. In RCBD (Randomized Complete
+Block Design) blocks are of equal size and contains all the treatments. Since the block contains all the treatments, the term 'complete block design' is used. See figure \@ref(fig: field) and \@ref(fig: field2) to see how blocks are formed in a field.
+
+>In RCBD number of replications, $r$ = number of blocks; Number of plots within a block = number of treatments, $v$
+
+### Blocking technique
+
+Blocking or local control, one of the basic principles of design is effectively implemented in RCBD. The primary purpose of blocking is to reduce experimental error by eliminating the contribution of known sources of variation among experimental units. This is achieved by grouping homogeneous units together, so that variability with in blocks is minimized, between blocks is maximized.  
+
+Two important factors to be considered for blocking
+
+-   The selection of the source of variability to be used as the basis for blocking, in field experiments usually fertility gradient or productivity gradient is used as the identified source of variability.
+
+-   Proper selection of the block shape and orientation. For example, When the gradient is unidirectional use long and narrow blocks. Use square blocks for strong fertility gradient in both directions. An experimenter should use his common sense to identify the shape and orientation of the block after examining the field conditions, suc that plots in a block are homogeneous.
+
+### Randomization in RCBD {#rcbdrandom}
+
+Consider an experiment involving four treatments A, B, C, D in RCBD. Each treatment is replicated 5 times. Randomization procedure is as explained below. The randomization process for a RCB design is applied separately and independently to each of the blocks.
+
+STEP 1. Divide the experimental area into $r$ equal blocks, where $r$ is the number of replications. In our example $r =$ 5.  
+
+```{r rcbd1, echo=FALSE,fig.cap='Division of an experimental field into five blocks, each consisting of four plots, for a RCBD with four treatments and five replications. Blocking is done such that blocks are rectangular and perpendicular to the direction of the unidirectional fertility gradient',out.width="60%", fig.align='center'}
+knitr::include_graphics(rep("images/rcbd1.png"))
+``` 
+
+STEP 2. Subdivide each block into $v$ experimental plots, where $v$ is the number of treatments. Number the $v$ plots consecutively from 1 to $v$, and assign $v$ treatments at random to the $v$ plots following the randomization scheme for the CRD described in Section \@ref(random). In our example each of the 5 blocks are divided into 4 plots. Plots are numbered 1 to 4 in each block. Now for each block, paper lots of 1 to 4 is prepared. Treatment names are written in order and plot number from each lot is recorded in order as shown below.
+
+  Treatments             A   B   C   D
+  ---------------------- --- --- --- ---
+  Plot number form lot   2   1   4   3
+
+STEP 3. All the treatments are allotted to the randomly selected plots. Step 2 is repeated in all blocks.  
+
+```{r rcbd2, echo=FALSE,fig.cap='Allotment of treatments in all blocks. In RCBD each block will have all the treatments and each treatment appear in a block exactly once. ',out.width="60%", fig.align='center'}
+knitr::include_graphics(rep("images/rcbd2.png"))
+``` 
+
+### Layout of RCBD
+
+In RCBD each block will have all the treatments and each treatment appear in a block exactly once. After allotting the treatment according to the randomization procedure explained in section \@ref(rcbdrandom). The final layout will look like in the figure \@ref(fig:rcbd3).  
+
+>Note:  
+In RBD every treatment will have the same number of replications. (All treatments are equally replicated say, $r$ times). So we need a total of $v$ $\times$ $r$ plots for conducting that experiment. Each of $r$ blocks will be containing $v$ plots. So in this design, the number of blocks = number of replication of the treatments = $r$ 
+and number of plots within  a block = number of treatments = $v$
+
+
+
+```{r rcbd3, echo=FALSE,fig.cap='Layout of RCBD with four treatments and five replications',out.width="60%", fig.align='center'}
+knitr::include_graphics(rep("images/rcbd3.png"))
+``` 
+
+### Statistical Model for RCBD
+
+Consider a RCBD with $v$ treatments with $r$ replications (Blocks). Statistical model for RCBD is same as that of two-way ANOVA described in section \@ref(twoway1).  
+
+$$Y_{\text{ij}} = \mu + \tau_{i} +  \gamma_{j}+ e_{\text{ij}}$$  
+Where *i* = 1,2, ..., *v* and *j* =1,2, ..., *r*. $Y_{\text{ij}}$ is the observed value of response under *i*^th^ treatment and *j*^th^ block, $\tau_{i}$ is the effect of *i*^th^ factor,$\gamma_{j}$ is the effect of *j*^th^ block . $\mu$ is the general
+effect which is common for all treatments. $e_{\text{ij}}$ is the error
+effects.$e_{ij}$ $\sim iid\ N(0,\sigma^{2})$  
+
+### Analysis of RCBD  
+Analysis of RCBD is same as that explained in section \@ref(twoway) of two-way ANOVA.
+
+Observation from $v$ treatments in $r$ blocks is arranged as shown below.  
+
+```{r rcbd4, echo=FALSE,fig.cap='Two-way arrangement of observations in RCBD',out.width="70%", fig.align='center'}
+knitr::include_graphics(rep("images/rcbd4.png"))
+```  
+
+The anova table following the calculations as in section \@ref(twoway) is  
+```{r rcbd5, echo=FALSE,fig.cap='ANOVA table of RCBD',out.width="70%", fig.align='center'}
+knitr::include_graphics(rep("images/rcbd5.png"))
+```
+F~1~ \~ F ~($v$--1),\ ($v$--1)($r$--1)~ and F~2~ \~ F ~($r$--1),\ ($v$--1)($r$--1) are two F values one for Treatment and one for blocks respectively. Decisions on the null hypothesis is made by comparing corresponding F value to the table value as explained in section \@ref(ftable).  
+
+> What if F~2~ is not significant
+> If F~2~ is not significant, it indicates that there is no significant difference between blocks, means blocking is not effective. Blocking is considered effective in reducing the experimental error if F~2~ is significant.  
+
+### Number of replications in RCBD  
+
+As explained in section \@ref(replical) number of replications is RCBD is found out using the formula of error degrees of freedom (*edf*).  
+
+#### Example {-}
+
+You have 4 treatments; you are planning to conduct the experiment in RCBD. Find the minimum number of replications required.
+
+Formula for error degrees of freedom (*edf*) in RCBD is $(v - 1) (r-1)$; where $v$ is the number of treatments and $r$ is the number of blocks.  
+
+*edf* should be $\geq$ 12
+
+*edf* $=(v - 1) (r-1) \geq 12$  
+
+Since $v$ = 4, *edf* $= 4\left( r - 1 \right) \geq 12$
+
+$= r \geq 4$, minimum replication required is 4
+
+The number of replications required in 4
+
+
+
+

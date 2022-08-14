@@ -254,11 +254,16 @@ knitr::include_graphics(rep("images/field.png"))
 
 Homogeneity can be achieved by dividing the field in to groups as shown in figure 1.9. Now each vertical strips can be considered as a block. Plots are formed with in each block, where each treatment is allotted randomly. Here randomization is performed with in blocks. You can see that in this example replication is equal to number of blocks, which is equal to 5. Randomization is achieved with in blocks. Local control is achieved by grouping treatments in homogeneous blocks, where fertilizer gradient is same. This is a typical example of Randomized Block Design (RBD), which will be discussed in chapter  
 
-```{r field2, echo=FALSE,fig.cap='A field with fertility gradient from left to right',out.width="70%", fig.align='center'}
+```{r field2, echo=FALSE,fig.cap='Plots are grouped into blocks',out.width="70%", fig.align='center'}
 knitr::include_graphics(rep("images/field2.png"))
 ```  
 
-## Other methods of error control
+## Other methods of error control  
+
+### Border effect  
+
+Plants which are in the outer areas or the borders of the plot will get the influence of the treatment that is applied in the adjacent plot, this may alter the response of the character of interest in these plants (for example yield of these plants may be higher), this phenomenon is called as border effect. For example, if in a plot a particular fertilizer is applied as treatment and in the adjacent one another fertilizer is applied, due to seepage plants in the boarder areas will have the influence of the fertilizer in the adjacent plot, this may affect the yield or some other attributes of the border plants. Usually while taking observations, these border plants are discarded.
+
 
 ### Proper Plot Technique  
 
