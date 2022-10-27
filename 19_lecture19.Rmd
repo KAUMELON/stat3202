@@ -229,7 +229,8 @@ The randomized complete block (RCB) design is one of the most widely used experi
 When the experimental material is heterogeneous, the experimental material is grouped into homogeneous sub-groups called **blocks**. As each block consists of the entire set of treatments a block is equivalent to a replication. For example, in a field with known fertility gradient in one direction, plots perpendicular to this gradient will be considered as a block. In RCBD (Randomized Complete
 Block Design) blocks are of equal size and contains all the treatments. Since the block contains all the treatments, the term 'complete block design' is used. See figure \@ref(fig: field) and \@ref(fig: field2) to see how blocks are formed in a field.
 
->In RCBD number of replications, $r$ = number of blocks; Number of plots within a block = number of treatments, $v$
+>In RCBD number of replications, $r$ = number of blocks  
+>Number of plots within a block = number of treatments, $v$
 
 ### Blocking technique
 
