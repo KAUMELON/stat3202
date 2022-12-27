@@ -54,19 +54,19 @@ one variable increases while the other increases.
 
 Examples of positive correlation: consider two variables *x* and *y*
 
--   The more time you spend running on a treadmill \[Running time
-    (*x*)\], the more calories you will burn \[calories burned (*y*)\].
-    Here you can see as *x* increases *y* also increases
+-   The more time you spend running on a treadmill, (Running time
+    (*x*)), the more calories you will burn, (calories burned (*y*)).
+    Here you can see as *x* increases *y* also increases.
 
--   Shorter people \[Height (*x*)\] have smaller shoe sizes \[shoe size
-    (*y*)\]. Here you can see as *x* decreases *y* also decreases.
+-   Shorter people (Height (*x*)) have smaller shoe sizes (shoe size
+    (*y*)). Here you can see as *x* decreases *y* also decreases.
 
--   The more hours you spend in direct sunlight \[Hours in sunlight
-    (*x*)\], the more is your tan \[melanin content(*y*)\]. Here you can
+-   The more hours you spend in direct sunlight (Hours in sunlight
+    (*x*)), the more is your tan (melanin content(*y*)). Here you can
     see as *x* increases *y* also increases
 
--   As the temperature goes up \[Temperature (*x*)\], ice cream sales
-    \[sales (*y*)\], also go up.
+-   As the temperature goes up (Temperature (*x*)), ice cream sales
+    (sales (*y*)), also go up.
 
 ### Negative correlation  
 Negative correlation is a relationship between two variables in
@@ -74,17 +74,17 @@ which one variable increases as the other decreases, and vice versa.
 
 Examples of negative correlation: consider two variables *x* and *y*
 
--   A student who has many absences \[No. of days absent (*x*)\] has a
-    decrease in grades \[grades (*x*)\]. Here you can see as *x*
+-   A student who has many absences (No. of days absent (*x*)) has a
+    decrease in grades (grades (*x*)). Here you can see as *x*
     increases *y* decreases.
 
--   As weather gets colder \[Average monthly temperature (*x*)\], air
-    conditioning costs decrease \[Price of A.C (*y*)\].
+-   As weather gets colder (Average monthly temperature (*x*)), air
+    conditioning costs decrease (Price of A.C (*y*)).
 
--   If a chicken increases in age \[chicken age (*x*)\], the number of
-    eggs it produces \[No. of eggs produced (*y*)\] decreases.
+-   If a chicken increases in age (chicken age (*x*)), the number of
+    eggs it produces (No. of eggs produced (*y*)) decreases.
 
--   If a car decreases speed \[average car speed(*x*)\], travel time
+-   If a car decreases speed (average car speed(*x*)), travel time
     (*y*) to a destination increases.
 
 ## Other types of correlation
