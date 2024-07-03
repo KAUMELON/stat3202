@@ -1,10 +1,18 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Design of experiments  
 
 ## Introduction  
+<style>
+body {
+text-align: justify}
+</style>
+Design of Experiments is an integral component of agricultural research. A scientifically designed experiment is a valuable tool in advancement in gaining new knowledge and technology development. “It is the effective use of the tools of statistical design of experiments that paved the way for the green revolution” – these words of the father of green revolution in India, Dr. M.S. Swaminathan, itself shows how important is design and analysis of experiments as well as statistical science is for agricultural experiments. A carefully designed experiment is able to answer all the queries of a researcher with accuracy and reliability with efficient use of available resources of the experimenters. Thus, for successful experimentation, it is highly desirable that scientists and researchers of scientific disciplines, including agricultural sciences, understand the basic principles of designing an experiment and analysis of resultant data from the completed experiment. It may be emphasized that a researcher should always consult a statistician before, during and after experimentation, if he is not convinced enough about using a design for his experiment or an analysis technique for his data.   
 
-Design of Experiments is an integral component of agricultural research. A scientifically designed experiment is a valuable tool in advancement in gaining new knowledge and technology development. “It is the effective use of the tools of statistical design of experiments that paved the way for the green revolution” – these words of the father of green revolution in India, Dr. M.S. Swaminathan, itself shows how important is Design and analysis of experiments as well as statistical science is for agricultural experiments. A carefully designed experiment is able to answer all the queries of a researcher with accuracy and reliability with efficient use of available resources of the experimenters. Thus, for successful experimentation, it is highly desirable that scientists and researchers of scientific disciplines, including agricultural sciences, understand the basic principles of designing an experiment and analysis of resultant data from the completed experiment. It may be emphasized that a researcher should always consult a statistician before, during and after experimentation, if he is not convinced enough about using a design for his experiment or an analysis technique for his data.   
-
-Any scientific investigation involves formulation of certain assertions (or hypotheses) whose validity is examined through the data generated from an experiment conducted for the purpose. The term '*experiment*'is defined as the systematic procedure carried out under controlled conditions in order to discover an unknown effect, to test or establish a hypothesis, or to illustrate a known effect.  
+Any scientific investigation involves formulation of certain assertions (or hypotheses) whose validity is examined through the data generated from an experiment conducted for the purpose. The term '*experiment*' is defined as the systematic procedure carried out under controlled conditions in order to discover an unknown effect, to test or establish a hypothesis, or to illustrate a known effect.  
 
 Experiments can be designed in many different ways to collect information. **Design of experiments** (DOE) is a systematic method to determine the relationship between factors affecting a process and the output of that process. In other words, it is used to find cause-and-effect relationships.  
 
@@ -47,7 +55,7 @@ Answer to this question gives the importance of proper designing of experiments.
 Design of experiment means how to design an experiment. In the sense that how the observations or measurements should be obtained to answer a query in a valid, efficient and economical way. The designing of experiment and the analysis of obtained data are inseparable. If the experiment is designed properly keeping in mind the question, then the data generated is valid and proper analysis of data provides the valid statistical inferences. If the experiment is not well designed, the validity of the statistical inferences is questionable and may be invalid.  
 
 ## Importance of DoE  
-* Reduce, control and provides an estimate of the experimental Error  
+* Reduce, control and provides an estimate of the experimental error  
 
 * Gives a structured approach  
 
@@ -124,7 +132,7 @@ A control treatment is a standard treatment that is used as a baseline or basis 
 
 ### Experimental units  
 
-Experimental units are the subjects or objects on which the treatments are applied. For example, plots of land receiving fertilizer, groups of animals receiving different feeds, or batches of chemicals receiving different temperatures, pots in glasshouse experiments, Petri dishes or tissues to culture bacteria or micro-organisms in laboratory experiments, etc  
+Experimental units are the subjects or objects on which the treatments are applied. For example, plots of land receiving fertilizer, groups of animals receiving different feeds, or batches of chemicals receiving different temperatures, pots in glasshouse experiments, Petri dishes or tissues to culture bacteria or micro-organisms in laboratory experiments, etc.  
 
 ### Response  
 
@@ -133,7 +141,7 @@ in the experiment. In an experiment, there may be more than one response. Some e
 
 ### Factors  
 
-Factors are the variables whose influence on a response variable is being studied in the experiment. If only one factor is being studied in an experiment then such an experiment is called a single factor experiment. If more than one factor is being studied simultaneously in an experiment, then such an experiment is called multi-factor or factorial experiment. The term factor is commonly used in the case of factorial experiments. For example, temperature and concentration of chemicals in a chemical experiment are two factors, Nitrogen, Phosphorus and Potassium fertilizers are three factors in an agronomic experiment.Dose and time of application of a chemical formulation are two factors in a laboratory experiment.  
+Factors are the variables whose influence on a response variable is being studied in the experiment. If only one factor is being studied in an experiment then such an experiment is called a single factor experiment. If more than one factor is being studied simultaneously in an experiment, then such an experiment is called multi-factor or factorial experiment. The term factor is commonly used in the case of factorial experiments. For example, temperature and concentration of chemicals in a chemical experiment are two factors, Nitrogen, Phosphorus and Potassium fertilizers are three factors in an agronomic experiment. Dose and time of application of a chemical formulation are two factors in a laboratory experiment.  
 
 ### Factor levels  
 
@@ -146,8 +154,7 @@ An observational unit is a unit on which the response variables are measured. Ob
 
 ## Experimental error  
 
-To explain experimental error consider the example given by [@gomez].  
-Consider a plant breeder who wishes to compare the yield of a new rice variety A to that of a standard variety B of known and tested properties. He lays out two plots of equal size, side by side, and sows one to variety A and the other to variety B. Grain yield for each plot is then measured and the variety with higher yield is judged as better. Despite the simplicity and common-sense appeal of the procedure just outlined, it has one important flaw. It presumes that any difference between the yields of the two plots is caused by the varieties and nothing else. This certainly is not true. Even if the same variety were planted on both plots, the yield would differ. Other factors, such as soil fertility, moisture, and damage by insects, diseases, and birds also affect rice yields. Because these other factors affect yields, a satisfactory evaluation of the two varieties must involve a procedure that can separate varietal difference from other sources of variation. That is, the plant breeder must be able to design an experiment that allows him to decide whether the difference observed is caused by varietal difference or by other factors.  
+To explain experimental error consider the example given by [@gomez]. Consider a plant breeder who wishes to compare the yield of a new rice variety A to that of a standard variety B of known and tested properties. He lays out two plots of equal size, side by side, and sows one to variety A and the other to variety B. Grain yield for each plot is then measured and the variety with higher yield is judged as better. Despite the simplicity and common-sense appeal of the procedure just outlined, it has one important flaw. It presumes that any difference between the yields of the two plots is caused by the varieties and nothing else. This certainly is not true. Even if the same variety were planted on both plots, the yield would differ. Other factors, such as soil fertility, moisture, and damage by insects, diseases, and birds also affect rice yields. Because these other factors affect yields, a satisfactory evaluation of the two varieties must involve a procedure that can separate varietal difference from other sources of variation. That is, the plant breeder must be able to design an experiment that allows him to decide whether the difference observed is caused by varietal difference or by other factors.  
 
 >The logic behind the decision is simple. Two rice varieties planted in two adjacent plots will be considered different in their yielding ability only if the observed yield difference is larger than that expected, if both plots were planted to the same variety.  
 
@@ -189,7 +196,7 @@ experimental error. Estimate of experimental error permits statistical
 inference; for example, performing tests of significance or obtaining
 confidence interval, etc. If there is no replication, then the
 researcher would not be able to estimate the experimental error. And as
-will be seen in the later Chapters, it is against this estimated
+will be seen in the later chapters, it is against this estimated
 experimental error the null hypotheses are tested.  
 
 Consider an example where two chemicals A and B are applied to a crop.
@@ -252,7 +259,7 @@ You have a field experiment with 4 treatments and 5 replications. Consider a fie
 knitr::include_graphics(rep("images/field.png"))
 ```  
 
-Homogeneity can be achieved by dividing the field in to groups as shown in figure 1.9. Now each vertical strips can be considered as a block. Plots are formed with in each block, where each treatment is allotted randomly. Here randomization is performed with in blocks. You can see that in this example replication is equal to number of blocks, which is equal to 5. Randomization is achieved with in blocks. Local control is achieved by grouping treatments in homogeneous blocks, where fertilizer gradient is same. This is a typical example of Randomized Block Design (RBD), which will be discussed in chapter  
+Homogeneity can be achieved by dividing the field in to groups as shown in figure 1.9. Now each vertical strips can be considered as a block. Plots are formed with in each block, where each treatment is allotted randomly. Here randomization is performed with in blocks. You can see that in this example replication is equal to number of blocks, which is equal to 5. Randomization is achieved with in blocks. Local control is achieved by grouping treatments in homogeneous blocks, where fertilizer gradient is same. This is a typical example of Randomized Block Design (RBD), which will be discussed in chapter.  
 
 ```{r field2, echo=FALSE,fig.cap='Plots are grouped into blocks',out.width="70%", fig.align='center'}
 knitr::include_graphics(rep("images/field2.png"))
@@ -273,16 +280,15 @@ It is essential that all other factors, which are not treatments should be maint
 
 Proper choice of data analysis helps in controlling error, where blocking is not so effective. Covariance analysis is most commonly used for this purpose. By measuring one or more covariates- the characters whose functional relationships to the character of primary interest are known, the analysis of covariance (ANCOVA) can reduce the variability among experimental units by adjusting their values to a common value of the covariates.  
 
-For example, in an animal feeding trial, the initial weight of the animals usually differs. Using this initial weight as the covariate, final weight after the animals are subjected to various feeds (i.e., treatments) can be adjusted to the values that would have been attained had all experimental animals started with the same body weight. Or, in a rice field experiment where rats damaged some of the test plots, covariance analysis with rat damage as the covariate can adjust plot yields to the levels that they should have been with no rat damage in any plot.
+For example, in an animal feeding trial, the initial weight of the animals usually differs. Using this initial weight as the covariate, final weight after the animals are subjected to various feeds (i.e., treatments) can be adjusted to the values that would have been attained had all experimental animals started with the same body weight. Or, in a rice field experiment where rats damaged some of the test plots, covariance analysis with rat damage as the covariate can adjust plot yields to the levels that they should have been with no rat damage in any plot.  
 
 
 
 
- 
+ \
+ \
+ 
 
-
-
-
- 
-
-
+::: {#hello .greeting .message style="color: #c9c6c5;"}
+<center>**"Randomization is too important to be left to chance”:- J. D. Petruccelli**</center>
+:::

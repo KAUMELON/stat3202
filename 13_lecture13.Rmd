@@ -1,7 +1,15 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Large sample test
 
-The sample for which sample size $n$ is greater than 30 ($n$ ≥ 30) is known as large sample. The study of sampling distribution of statistic for large sample is known as large sample theory  
-
+The sample for which sample size $n$ is greater than 30 ($n$ ≥ 30) is known as large sample. The study of sampling distribution of statistic for large sample is known as large sample theory . 
+<style>
+body {
+text-align: justify}
+</style>
 ## Large Sample Tests  
 
 In this section we shall discuss the application of $Z$-test. The test statistic $Z$ calculated from the large sample follows a standard normal distribution. $Z$ $\sim N(0,1)$
@@ -16,6 +24,8 @@ In this section we shall discuss the application of $Z$-test. The test statistic
 
 -   Test for equality of two standard deviations  
 
+-   Test for significance of correlation coefficient
+
 ### Decision rule for Z test {#decision}  
 
 Let $Z$ be the calculated value and α be the level of significance, then we reject the null hypothesis if
@@ -28,15 +38,15 @@ Let $Z$ be the calculated value and α be the level of significance, then we rej
 
 Table values (critical values) of Z for specified level of significance is shown below
 
-  **α**     $Z$
+   $α$     $Z$
   ------- -------
-  0.10    1.282
-  0.05    1.645
-  0.025   1.960
-  0.01    2.326
-  0.005   2.576  
+  0.10    1.645
+  0.05    1.960
+  0.025   2.241
+  0.01    2.576
+  0.005   2.807  
   
-### Test for a single population proportion  
+## Test for a single population proportion  
 
 Consider there is a population with proportion value, say $P$; $P$ is
 unknown, we will take a random sample of size $n$ from the population
@@ -63,7 +73,7 @@ H~1~ : $P$ ≠ $P$~0~ (called two tailed alternative)
 For this test, we will calculate test statistic, $Z$ using the following
 formula.
 
-$$Z = \frac{p - P_{0}}{\sqrt{\text{pq}}}$$
+$$Z = \frac{p - P_{0}}{\sqrt{\text{pq/n}}}$$
 
 Where $q$ = 1 - $p$
 
@@ -102,13 +112,13 @@ Level of significance is given at 5% , so α=0.05
 
 Now we calculate $Z$
 
-$Z = \frac{p - P_{0}}{\sqrt{\text{pq}}}$
+$Z = \frac{p - P_{0}}{\sqrt{\text{pq/n}}}$
 
-$Z = \frac{0.12 - 0.1}{\sqrt{0.12 \times 0.88}}$
+$Z = \frac{0.12 - 0.1}{\sqrt{0.12 \times 0.88/500}}$
 
-$= 0.0615$
+$= 1.428$
 
-Here in our case table value of Z is 1.645, as it is a right tailed test. The calculated value of Z is less than the table value. So, we conclude that, we don't have enough evidence to reject the null hypothesis. So, it can be stated that proportion of bad apples in the population is 0.1.
+Here in our case table value of Z is 1.96, as it is a right tailed test. The calculated value of Z is less than the table value. So, we conclude that, we don't have enough evidence to reject the null hypothesis. So, it can be stated that proportion of bad apples in the population is 0.1.
 
  
 
@@ -157,7 +167,7 @@ in the adoption behaviour of the two groups of farmers (Take α = 0.01)
 **Solution:**
 
 Sample size of first population, framers with large land holding
-$n$~1~) = 80
+($n$~1~) = 80
 
 Sample size of first population, framers with small land holding
 ($n$~2~) = 250
@@ -179,13 +189,13 @@ H~1~ : $P$~1~ ≠ $P$~2~
 
 So, it is a two tailed test
 
-$\widehat{P} = \frac{n_{1}p_{1} + n_{1}p_{1}}{n_{1} + n_{2}}$
+$$\widehat{P} = \frac{n_{1}p_{1} + n_{1}p_{1}}{n_{1} + n_{2}}$$
 
-$\widehat{P} = \frac{80 \times 0.625 + 250 \times 0.312}{80 + 250}$
+$$\widehat{P} = \frac{80 \times 0.625 + 250 \times 0.312}{80 + 250}$$
 
-$= 0.3879$
+$$= 0.3879$$
 
-$\widehat{Q} = 1 - 0.3879 = 0.6121$
+$$\widehat{Q} = 1 - 0.3879 = 0.6121$$
 
 So that if null hypothesis is rejected, we accept this alternative hypothesis
 
@@ -193,13 +203,13 @@ Level of significance is given at 1% , so α=0.01
 
 Now we calculate $Z$ using the formula
 
-$Z = \frac{p_{1} - p_{2}}{\sqrt{\widehat{P}\widehat{Q}\left( \frac{1}{n_{1}} + \frac{1}{n_{2}} \right)}}$
+$$Z = \frac{p_{1} - p_{2}}{\sqrt{\widehat{P}\widehat{Q}\left( \frac{1}{n_{1}} + \frac{1}{n_{2}} \right)}}$$
 
-$= \frac{0.625 - 0.312}{\sqrt{0.3879 \times 0.6121\left( \frac{1}{80} + \frac{1}{250} \right)}}$
+$$= \frac{0.625 - 0.312}{\sqrt{0.3879 \times 0.6121\left( \frac{1}{80} + \frac{1}{250} \right)}}$$
 
-$= \frac{0.313}{\sqrt{0.2374 \times 0.0165}}$
+$$= \frac{0.313}{\sqrt{0.2374 \times 0.0165}}$$
 
-$= 5.008$
+$$= 5.008$$
 
 Since it is a two tailed test, we have to look for the critical value of $Z$ at α/2. Here in this case so we have to look for the value of $Z$ at α/2 = 0.01/2 = 0.005, which is 2.576 (see section \@ref(decision)). Since the
 calculated value (5.008) is greater than the table value (2.576) we reject the null hypothesis and conclude that there is a significant difference between two population proportions.
@@ -333,7 +343,7 @@ When the null hypothesis is true this $Z$ will follow a standard normal distribu
 
 Null hypothesis, $H$~0~ : $μ$~1~ = $μ$~2~
 
-Alternate hypothesis, H~1~ : : $μ$~1~≠ $μ$~2~; two tailed test
+Alternate hypothesis, $H$~1~ : $μ$~1~≠ $μ$~2~; two tailed test
 
 Sample size ($n$~1~) = 2000
 
@@ -357,6 +367,13 @@ Since it is a two tailed test, we have to look for the critical value of $Z$ at 
 
 ### Self exercise {-}
 
->3. Two random samples were drawn from two populations and the following data were obtained. Test whether the population means are equal. $n$~1~ = 400, $n$~2~ = 400, $\overline{x}_{1}$ = 250, $\overline{x}_{2}$ = 220, $\overline{x}_{1}, $s$~1~ = 40, $s$~2~ = 55
+>3. Two random samples were drawn from two populations and the following data were obtained. Test whether the population means are equal. $n$~1~ = 400, $n$~2~ = 400, $\overline{x}_{1}$ = 250, $\overline{x}_{2}$ = 220, $s$~1~ = 40, $s$~2~ = 55  
 
 
+ \
+ \
+ 
+
+::: {#hello .greeting .message style="color: #c9c6c5;"}
+<center>**"It is a capital mistake to theorize before one has data”:- Sir Arthur Conan Doyle**</center>
+:::

@@ -1,5 +1,13 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Probability  
-
+<style>
+body {
+text-align: justify}
+</style>
 Many events can't be predicted with total certainty. The best we can say is how likely they are to happen, using the idea of probability.  
 
 ## Tossing a Coin  
@@ -14,7 +22,7 @@ We say that the probability of the coin landing **H** is ½ and the probabili
 ## Throwing Dice  
 
 When a single die is thrown, there are six possible
-outcomes: 1, 2, 3, 4, 5, and 6. The probability of getting any one of them is $\frac{1}{6}$  
+outcomes: 1, 2, 3, 4, 5, and 6. The probability of getting any one of them is $\frac{1}{6}$  
 
 ```{r dice, echo=FALSE,fig.cap='Image of dice (plural)',out.width="10%", fig.align='center'}
 knitr::include_graphics(rep("images/dice.png"))  
@@ -99,7 +107,7 @@ If a die is tossed
 4.	What is the probability of getting a 7?   
   
 ```  
-Answers given in section \@ref(answer)
+Answers given in section \@ref(answer)  
 
 ```{r dicepoints, echo=FALSE,fig.cap='Sample space in throwing a die',out.width="50%", fig.align='center'}
 knitr::include_graphics(rep("images/dicesamplepoints.jpg"))  
@@ -179,7 +187,7 @@ Examples:
 
 -   Kings and Aces are Mutually Exclusive
 
-What isn\'t Mutually Exclusive
+What isn\'t Mutually Exclusive?
 
 Kings and Hearts are not Mutually Exclusive, because we can have a King of Hearts!
 
@@ -188,7 +196,7 @@ Kings and Hearts are not Mutually Exclusive, because we can have a King of Heart
 A set of events is called exhaustive if all the events together make the
 entire sample space.
 
-For example
+For example,
 
 Sample space of tossing a die is $S$= {1, 2, 3, 4, 5, 6}
 
@@ -291,10 +299,10 @@ Whole field of probability theory is based on the following three axioms
 
 ## Some interesting facts on probability {-}
 
--   Probability $p$ of the happening of an event is known as the probability of success and the probability $q$' of the
+-   Probability $p$ of the happening of an event is known as the probability of success and the probability $q$ of the
 non-happening of the event as the probability of failure.
 
--   $p$ as well as $q$ are non-negative and cannot exceed unity. *i*.*e*., 0 ≤ $p$ ≤ 1 and 0 ≤ $q$ ≤ 1. Thus, the probability of occurrence of an event lies between 0 and 1\[including 0 and 1\]
+-   $p$ as well as $q$ are non-negative and cannot exceed unity. *i*.*e*., 0 ≤ $p$ ≤ 1 and 0 ≤ $q$ ≤ 1. Thus, the probability of occurrence of an event lies between 0 and 1 [including 0 and 1].
 
 -   Probability of an impossible event is 0 and that of a sure event is 1. If $p(A)$ = 1, the event A is certainly going to happen and if $p(A)$ = 0, the event is certainly not going to happen.
 
@@ -306,15 +314,15 @@ knitr::include_graphics(rep("images/probshow.jpg"))
 
 ## Additional Problems {-}  
 
->1. In a simultaneous toss of two coins, find the probability of \(i\) getting 2 heads. (ii) exactly 1 head ?
+>1. In a simultaneous toss of two coins, find the probability of (i) getting 2 heads. (ii) exactly 1 head?
 
 **Solution**  
 
 Here, the possible outcomes are HH, HT, TH, TT. *i*.*e*., Total number of possible outcomes = 4.  
 
-\(i\) Number of outcomes favorable to the event (2 heads) = 1 (i.e.,HH). *i*.*e*.$p$(2 heads) = 1/4 .
+\(i)\) Number of outcomes favorable to the event (2 heads) = 1 (i.e.,HH). *i*.*e*.$p$(2 heads) = 1/4 .
 
-\(ii\) Now the event consisting of exactly one head has two favourable cases, namely HT and TH
+\(ii)\) Now the event consisting of exactly one head has two favourable cases, namely HT and TH
 
 $p$(exactly one head) = 2 /4 = 1/ 2
 
@@ -324,17 +332,17 @@ $p$(exactly one head) = 2 /4 = 1/ 2
 
 The number of possible outcomes is 6 × 6 = 36.
 
-1,1 1,2 1,3 1,4 1,5 1.6
+(1,1) (1,2) (1,3) (1,4) (1,5) (1,6)
 
-2,1 2,2 2,3 2,4 2,5 2,6
+(2,1) (2,2) (2,3) (2,4) (2,5) (2,6)
 
-3,1 3,2 3,3 3,4 3,5 3,6
+(3,1) (3,2) (3,3) (3,4) (3,5) (3,6)
 
-4,1 4,2 4,3 4,4 4,5 4,6
+(4,1) (4,2) (4,3) (4,4) (4,5) (4,6)
 
-5,1 5,2 5,3 5,4 5,5 5,6
+(5,1) (5,2) (5,3) (5,4) (5,5) (5,6)
 
-6,1 6,2 6,3 6,4 6,5 6,6
+(6,1) (6,2) (6,3) (6,4) (6,5) (6,6)
 
 Event A: sum is 9
 
@@ -346,15 +354,15 @@ Probability (sum is 9) = 4/36= 1/9
 
 There are 20 balls in all. So, the total number of possible outcomes is 20
 
-\(i\) Number of red balls = 10,
+\(i)\) Number of red balls = 10
 
-$p$(getting a red ball ) = 10/20 = ½
+$p$(getting a red ball ) = 10/20 = 1/2
 
-\(ii\) Number of blue balls = 4
+\(ii)\) Number of blue balls = 4
 
 $p$(getting a blue ball ) = 4/20 = 1/5
 
-\(iii\) Number of balls which are not black = 14
+\(iii)\) Number of balls which are not black = 14
 
 $p$(not a black ball ) = 14/20 = 7/10
 
@@ -403,7 +411,7 @@ For any two events A and B of a sample space S,
 
 > $p$(AꓴB) = $p$(A)+$p$(B) − $p$(AꓵB)
 
-For mutually exclusive case $p$P(AꓵB)=0; in that case $p$(AꓴB )= $p$(A )+$p$(B ).  
+For mutually exclusive case $p$(AꓵB)=0; in that case $p$(AꓴB )= $p$(A )+$p$(B ).  
 
 ### Example {-}  
 
@@ -425,11 +433,11 @@ Let the events A= a total of 9 and B= a total of 11.
 
 Events are mutually exclusive A ꓵ B = 0
 
-Now $p$(A) = $p$ \[(3, 6), (4, 5), (5, 4), (6, 3)\] = 4 /36
+Now $p$(A) = $p [(3, 6), (4, 5), (5, 4), (6, 3)] = 4 /36$
 
-$p$(B) = $p$\[ (5, 6), (6, 5)\] = 2 /36
+$p$(B) = $p[(5, 6), (6, 5)] = 2 /36$
 
-Thus, $p$( AꓴB) = 4 /36 +2/36 =6/36=1/6  
+Thus, $p(AꓴB) = 4/36 +2/36 = 6/36 = 1/6$  
 
 ## Multiplication law of probability
 
@@ -499,4 +507,15 @@ Hence $p$(both red balls ) = ^5^C~2~ / ^9^C~2~ = 5/18
 
 4.  0
 
-\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*
+
+ \
+ \
+ 
+
+
+::: {#hello .greeting .message style="color: #c9c6c5;"}
+<center>**"By a small sample, we may judge of the whole piece":- Miguel de Cervantes**</center>
+:::
+
+
+

@@ -1,15 +1,28 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
 # Measures of Dispersion
 
-We discussed in previous lectures, how a set of data can be summarized
+We discussed in previous chapters, how a set of data can be summarized
 by a single representative value which describes the central value of
-the data. Consider the two sets of data A & B below  
+the data. Consider the two sets of data A & B below\
 
-
-| Data sets |    |   |   |   |   |   |
-|-----------|----|---|---|---|---|---|
-| **A**         | 1  | 2 | 3 | 3 | 4 | 5 |
-| **B**         | -1 | 0 | 3 | 3 | 5 | 8 |  
-
+```{=html}
+<style>
+body {
+text-align: justify}
+</style>
+```
+| Data sets |     |     |     |     |     |     |
+|-----------|-----|-----|-----|-----|-----|-----|
+| **A**     | 1   | 2   | 3   | 3   | 4   | 5   |
+| **B**     | -1  | 0   | 3   | 3   | 5   | 8   |
 
 You can see mean, median and mode for both the sets **A** & **B** is 3
 
@@ -32,12 +45,12 @@ data.
 Statistical dispersion means the extent to which a numerical data is
 likely to vary about an average value.
 
-## Characteristics of a good measure of dispersion  
+## Characteristics of a good measure of dispersion
 
 An ideal measure of dispersion is expected to possess the following
 properties
 
-1.  It should be rigidly defined
+1.  It should be rigidly defined.
 
 2.  It should be based on all the items.
 
@@ -45,10 +58,11 @@ properties
 
 4.  It should lend itself for algebraic manipulation.
 
-5.  It should be simple to understand and easy to calculate
+5.  It should be simple to understand and easy to calculate.
 
-The most important measures of dispersion are the **Range**, the
-**Inter-quartile range**, **Mean Absolute Deviation (MAD)**and the **standard deviation**.
+The most important measures of dispersion are **Range**, **Quartile
+deviation**, **Variance**, **Inter-quartile range**, **Mean Absolute
+Deviation (MAD)**and **standard deviation**.
 
 ## The Range
 
@@ -74,11 +88,7 @@ L = Upper boundary of the highest class
 
 S = Lower boundary of the lowest class.
 
-### Method 2
-
-L = Mid-value of the highest class.
-
-S = Mid-value of the lowest class.
+$$Range = L - S$$
 
 **Example 5.1**: The marks obtained by 8 students in Mathematics and
 Physics examinations are as follows:
@@ -105,9 +115,9 @@ Mathematics marks are therefore more dispersed than the Physics marks.
 
 **Example 5.2**: Calculate range from the following distribution
 
-  Size     60-63   63-66   66-69   69-72   72-75
-  -------- ------- ------- ------- ------- -------
-  Number   5       18      42      27      8
+| Size   | 60-63 | 63-66 | 66-69 | 69-72 | 72-75 |
+|:-------|:------|:------|:------|:------|:------|
+| Number | 5     | 18    | 42    | 27    | 8     |
 
 **Solution**
 
@@ -117,9 +127,9 @@ S = Lower boundary of the lowest class = 60
 
 Range = L -- S = 75 -- 60 = 15
 
-### Merits and Demerits of Range  
+### Merits and Demerits of Range
 
-**[Merits]{.ul}**
+[**Merits**]{.underline}
 
 1.  It is simple to understand.
 
@@ -128,7 +138,7 @@ Range = L -- S = 75 -- 60 = 15
 3.  In certain types of problems like quality control, weather
     forecasts, share price analysis, etc.
 
-**[Demerits]{.ul}**
+[**Demerits**]{.underline}
 
 1.  It is very much affected by the extreme items.
 
@@ -138,7 +148,7 @@ Range = L -- S = 75 -- 60 = 15
 
 4.  It is not suitable for mathematical treatment.
 
-5.  It is a very rarely used measure.  
+5.  It is a very rarely used measure.
 
 ## The Inter-Quartile Range (IQR) or Midspread
 
@@ -152,7 +162,7 @@ inter-quartile range. A robust measure of dispersion is the
 inter-quartile range. The inter-quartile range of a set of data is the
 difference between the upper and lower quartiles of the data. Thus,
 
-**Inter-Quartile Range (IQR)** = *Q*~3~ -- *Q*~1~.
+$$Inter-Quartile Range (IQR) = Q_3 - Q_1$$
 
 The inter-quartile range of a set of data is therefore not affected by
 values of the data outside *Q*~1~ and *Q*~3~. The inter-quartile range
@@ -164,8 +174,8 @@ is sometimes used as a measure of dispersion.
 
 **B**: 3, 8, 8, 9, 9, 9, 10, 10, 15
 
-For data set A, *Q*~1~ = 5, *Q*~3~ = 10; so Inter-Quartile Range =10 --
-5 = 5
+For data set A, *Q*~1~ = 4.5, *Q*~3~ = 11; so Inter-Quartile Range =11
+-- 4.5 = 6.5
 
 For data set B, *Q*~1~ = 8, *Q*~3~ = 10; so Inter-Quartile Range =10 --
 8 = 2
@@ -173,7 +183,6 @@ For data set B, *Q*~1~ = 8, *Q*~3~ = 10; so Inter-Quartile Range =10 --
 Since the inter-quartile range of data set A is greater than that of
 data set B, these results confirm that data set A is more dispersed than
 data set B. You can also see Range is same for both the sets.
-
 
 ## Mean Absolute Deviation (MAD)
 
@@ -199,46 +208,52 @@ Here is how to calculate the mean absolute deviation.
 
 $$MAD = \frac{\sum_{i = 1}^{n}\left| x_{i} - \overline{x} \right|}{n}$$
 
-**Example 5.4**: find the mean absolute deviation of the following 10, 15,
-15, 17, 18, 21
+**Example 5.4**: find the mean absolute deviation of the following 10,
+15, 15, 17, 18, 21
 
-  Sl.No.   $$x_{i}$$             $$x_{i} - \overline{x}$$   $$\left| x_{i} - \overline{x} \right|$$
-  -------- --------------------- -------------------------- ------------------------------------------------------------
-  1        10                    -6                         6
-  2        15                    -1                         1
-  3        15                    -1                         1
-  4        17                    1                          1
-  5        18                    2                          2
-  6        21                    5                          5
-           $\overline{x} =$ 16                              $\sum_{i = 1}^{n}\left| x_{i} - \overline{x} \right|$ = 16
+| Sl.No. |      $$x_{i}$$      | $$x_{i} - \overline{x}$$ |          $$\left| x_{i} - \overline{x} \right|$$           |
+|----------------|:--------------:|:--------------:|:----------------------:|
+| 1      |         10          |            -6            |                             6                              |
+| 2      |         15          |            -1            |                             1                              |
+| 3      |         15          |            -1            |                             1                              |
+| 4      |         17          |            1             |                             1                              |
+| 5      |         18          |            2             |                             2                              |
+| 6      |         21          |            5             |                             5                              |
+|        | $\overline{x} =$ 16 |                          | $\sum_{i = 1}^{n}\left| x_{i} - \overline{x} \right|$ = 16 |
 
 Here n = 6 and $\sum_{i = 1}^{n}\left| x_{i} - \overline{x} \right|$ =
-16 therefore MAD = $\frac{16}{6} = 2.67$  
+16 therefore MAD = $\frac{16}{6} = 2.67$
 
-### Merits and Demerits of MAD 
+### Merits and Demerits of MAD
 
-**[Merits]{.ul}**
+[**Merits**]{.underline}
 
-1.  Simple And Easy
+1.  Mean deviation is simple and easy.
 
-2.  Different items of observations can be easily compared with mean deviation  
+2.  Different items of observations can be easily compared with mean
+    deviation.
 
-3.  Mean deviation is better than quartile deviation and range because it is based on all the observations of the series.  
+3.  Mean deviation is better than quartile deviation and range because
+    it is based on all the observations of the series.
 
-4. Mean deviation is less affected by the extreme values in the series while comparing to standard deviation.  
+4.  Mean deviation is less affected by the extreme values in the series
+    while comparing to standard deviation.
 
-5. Mean deviation is rigidly defined. So, it has fixed value.  
+5.  Mean deviation is rigidly defined. So, it has fixed value.
 
+6.  Mean deviation about median will be least.
 
-**[Demerits]{.ul}**
+[**Demerits**]{.underline}
 
-1. It becomes difficult to compute mean deviation in case of fractions.  
+1.  Mean deviation becomes difficult to compute mean deviation in case
+    of fractions.
 
-2.  Mean deviation is not applicable for algebraic calculations.  
+2.  It is not applicable for algebraic calculations.
 
 3.  It cannot be calculated from open-end class intervals.
 
-4.  Mean deviation is not a good measure as it ignores negative signs of deviations.  
+4.  Mean deviation is not a good measure as it ignores negative signs of
+    deviations.
 
 ## The variance and standard deviation
 
@@ -261,60 +276,59 @@ than *s*~B~, the standard deviation of data set B, then data set A is
 more dispersed than data set B. It should be noted that the standard
 deviation of a set of data is a non-negative number.
 
-**Example 5.4**: Consider the two sets of data A & B below; find standard
-deviation?
+**Example 5.4**: Consider the two sets of data A & B below; find
+standard deviation?
 
-  **A**   1    2   3   3   4   5
-  ------- ---- --- --- --- --- ---
-  **B**   -1   0   3   3   5   8  
-  
-  **Solution**:    
-  
+| **A** | 1   | 2   | 3   | 3   | 4   | 5   |
+|:------|:----|:----|:----|:----|:----|:----|
+| **B** | -1  | 0   | 3   | 3   | 5   | 8   |
 
-  **Set A**                                                                                                             
-  ----------- ----------------------------- --------------------------------------------------------------------------- ----------------------------------------------------------------------------------------
-              $$\mathbf{x}_{\mathbf{i}}$$   $$\left( \mathbf{x}_{\mathbf{i}}\mathbf{-}\overline{\mathbf{x}} \right)$$   $$\left( \mathbf{x}_{\mathbf{i}}\mathbf{-}\overline{\mathbf{x}} \right)^{\mathbf{2}}$$
-              1                             -2                                                                          4
-              2                             -1                                                                          1
-              3                             0                                                                           0
-              3                             0                                                                           0
-              4                             1                                                                           1
-              5                             2                                                                           4
-  **Sum**     **18**                        **0**                                                                       **10**
+**Solution**:
+
+| **Set A** |                             |                                                                         |                                                                                      |
+|:---------------:|:---------------:|:----------------:|:-------------------:|
+|           | $$\mathbf{x}_{\mathbf{i}}$$ | $$\left(\mathbf{x}_{\mathbf{i}}\mathbf{-}\overline{\mathbf{x}}\right)$$ | $$\left(\mathbf{x}_{\mathbf{i}}\mathbf{-}\overline{\mathbf{x}}\right)^{\mathbf{2}}$$ |
+|           |              1              |                                   -2                                    |                                          4                                           |
+|           |              2              |                                   -1                                    |                                          1                                           |
+|           |              3              |                                    0                                    |                                          0                                           |
+|           |              3              |                                    0                                    |                                          0                                           |
+|           |              4              |                                    1                                    |                                          1                                           |
+|           |              5              |                                    2                                    |                                          4                                           |
+|  **Sum**  |           **18**            |                                  **0**                                  |                                        **10**                                        |
 
 Mean ($\overline{x}$) =$\ \frac{18}{6} = 3$
 
-$${Sample\ variane,\ s}_{A}^{2} = \frac{\sum_{i = 1}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n - 1} = \frac{10}{5} = 2$$
+$${sample\ variance,\ s}_{A}^{2} = \frac{\sum_{i = 1}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n - 1} = \frac{10}{5} = 2$$
 
 $$\text{sample standard deviation,}\ s_{A} = \ \sqrt{s_{A}^{2}} = \ \sqrt{2} = 1.414$$
 
-  **Set B**                                                                                                             
-  ----------- ----------------------------- --------------------------------------------------------------------------- ----------------------------------------------------------------------------------------
-              $$\mathbf{x}_{\mathbf{i}}$$   $$\left( \mathbf{x}_{\mathbf{i}}\mathbf{-}\overline{\mathbf{x}} \right)$$   $$\left( \mathbf{x}_{\mathbf{i}}\mathbf{-}\overline{\mathbf{x}} \right)^{\mathbf{2}}$$
-              -1                            -4                                                                          16
-              0                             -3                                                                          9
-              3                             0                                                                           0
-              3                             0                                                                           0
-              5                             2                                                                           4
-              8                             5                                                                           25
-  **Sum**     **18**                        **0**                                                                       **54**
+| **Set B** |                             |                                                                           |                                                                                        |
+|:---------------:|:---------------:|:----------------:|:-------------------:|
+|           | $$\mathbf{x}_{\mathbf{i}}$$ | $$\left( \mathbf{x}_{\mathbf{i}}\mathbf{-}\overline{\mathbf{x}} \right)$$ | $$\left( \mathbf{x}_{\mathbf{i}}\mathbf{-}\overline{\mathbf{x}} \right)^{\mathbf{2}}$$ |
+|           |             -1              |                                    -4                                     |                                           16                                           |
+|           |              0              |                                    -3                                     |                                           9                                            |
+|           |              3              |                                     0                                     |                                           0                                            |
+|           |              3              |                                     0                                     |                                           0                                            |
+|           |              5              |                                     2                                     |                                           4                                            |
+|           |              8              |                                     5                                     |                                           25                                           |
+|  **Sum**  |           **18**            |                                   **0**                                   |                                         **54**                                         |
 
 Mean ($\overline{x}$) =$\ \frac{18}{6} = 3$
 
-$${Sample\ variane,\ s}_{B}^{2} = \frac{\sum_{i = 1}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n - 1} = \frac{54}{5} = 10.8$$
+$${Sample\ variance,\ s}_{B}^{2} = \frac{\sum_{i = 1}^{n}\left( x_{i} - \overline{x} \right)^{2}}{n - 1} = \frac{54}{5} = 10.8$$
 
-$$sample\ standard\ deviation,\ s_{B} = \ \sqrt{s_{B}^{2}} = \ \sqrt{10.8} = 3.29$$
+$$Sample\ standard\ deviation,\ s_{B} = \ \sqrt{s_{B}^{2}} = \ \sqrt{10.8} = 3.29$$
 
-It can be seen that $s_{B} > s_{A}\ $, confirming that data set B is
-more dispersed than data set A (see the dot diagrams)
+It can be seen that $s_{B} > s_{A}$, confirming that data set B is more
+dispersed than data set A (see the dot diagrams)
 
->**Note**: The unit of measurement of the sample variance is the square
-of the unit of measurement of the data. Sample standard deviation has
-same unit of measurement as of the data. Thus, if *x* is measured in
-centimetres (cm), then the unit of measurement of the sample variance is
-cm^2^ and that of sample standard deviation is cm. The standard
-deviation has the desirable property of measuring variability in the
-same unit as the data.
+> **Note**: The unit of measurement of the sample variance is the square
+> of the unit of measurement of the data. Sample standard deviation has
+> same unit of measurement as of the data. Thus, if *x* is measured in
+> centimetres (cm), then the unit of measurement of the sample variance
+> is cm^2^ and that of sample standard deviation is cm. The standard
+> deviation has the desirable property of measuring variability in the
+> same unit as the data.
 
 **An alternative formula for computing the variance**
 
@@ -330,24 +344,24 @@ $s^{2} = \frac{1}{n - 1}\left\{ \sum_{i = 1}^{n}{x_{i}^{2} - \frac{1}{n}}\left( 
 
 **Example 5.5**: Consider the data set below; find standard deviation?
 
-  --- --- --- --- --- --- ---- ---- ----
-  3   4   5   6   8   9   10   12   15
-  --- --- --- --- --- --- ---- ---- ----  
-  
-**Solution**:  
+|     |     |     |     |     |     |     |     |     |
+|:----|:----|:----|:----|:----|:----|:----|:----|:----|
+| 3   | 4   | 5   | 6   | 8   | 9   | 10  | 12  | 15  |
 
-            $$\mathbf{x}_{\mathbf{i}}$$   $$\mathbf{x}_{\mathbf{i}}^{\mathbf{2}}$$
-  --------- ----------------------------- ------------------------------------------
-            3                             9
-            4                             16
-            5                             25
-            6                             36
-            8                             64
-            9                             81
-            10                            100
-            12                            144
-            15                            225
-  **Sum**   **72**                        **700**
+**Solution**:
+
+|         | $$\mathbf{x}_{\mathbf{i}}$$ | $$\mathbf{x}_{\mathbf{i}}^{\mathbf{2}}$$ |
+|:----------------:|:--------------------:|:------------------------------:|
+|         |              3              |                    9                     |
+|         |              4              |                    16                    |
+|         |              5              |                    25                    |
+|         |              6              |                    36                    |
+|         |              8              |                    64                    |
+|         |              9              |                    81                    |
+|         |             10              |                   100                    |
+|         |             12              |                   144                    |
+|         |             15              |                   225                    |
+| **Sum** |           **72**            |                 **700**                  |
 
 $s^{2} = \frac{1}{n - 1}\left\{ \sum_{i = 1}^{n}{x_{i}^{2} - \frac{1}{n}}\left( \sum_{i = 1}^{n}x_{i} \right)^{2} \right\}$
 ; here *n* = 9
@@ -357,7 +371,7 @@ $s^{2} = \frac{1}{8}\left\{ 700 - {\frac{1}{9}\left( 72 \right)}^{2} \right\}$
 
 $s = \ \sqrt{15.5} = 3.94$
 
-### Variance and standard deviation for grouped data  
+### Variance and standard deviation for grouped data
 
 #### For discrete grouped data
 
@@ -368,21 +382,20 @@ where $f_{i}$ is the frequency of *i*^th^ observation
 **Example 5.6**: The frequency distributions of seed yield of 50 sesamum
 plants are given below. Find the standard deviation.
 
-  Seed yield in gms (*x*)   **3**   **4**   **5**    **6**    **7**
-  ------------------------- ------- ------- -------- -------- --------
-  Frequency (*f*)           **4**   **6**   **15**   **15**   **10**
+| Seed yield in gms (*x*) | 3   | 4   | 5   | 6   | 7   |
+|:------------------------|:----|:----|:----|:----|:----|
+| Frequency (*f*)         | 4   | 6   | 15  | 15  | 10  |
 
-**Solution**:  
+**Solution**:
 
-
-  ***x***     ***f***   ***fx***   ***fx^2^***
-  ----------- --------- ---------- -------------
-  3           4         12         36
-  4           6         24         96
-  5           15        75         375
-  6           15        90         540
-  7           10        70         490
-  **Total**   **50**    **271**    **1537**
+| ***x***   | ***f*** | ***fx*** | ***fx^2^*** |
+|:----------|:--------|:---------|:------------|
+| 3         | 4       | 12       | 36          |
+| 4         | 6       | 24       | 96          |
+| 5         | 15      | 75       | 375         |
+| 6         | 15      | 90       | 540         |
+| 7         | 10      | 70       | 490         |
+| **Total** | **50**  | **271**  | **1537**    |
 
 $$s^{2} = \frac{1}{n - 1}\left\{ \sum_{i = 1}^{n}{{f_{i}x}_{i}^{2} - \frac{1}{n}}\left( \sum_{i = 1}^{n}{f_{i}x}_{i} \right)^{2} \right\}$$
 
@@ -401,23 +414,22 @@ is the class mark with the highest frequency
 **Example 5.7**: The frequency distributions of seed yield of 50 sesamum
 plants are given below. Find the standard deviation
 
-  Seed yield in gms (*x*)   2.5-3.5   3.5-4.5   4.5-5.5   5.5-6.5   6.5-7.5
-  ------------------------- --------- --------- --------- --------- ---------
-  Frequency (*f*)           4         6         15        15        10
+| Seed yield in gms (*x*) | 2.5-3.5 | 3.5-4.5 | 4.5-5.5 | 5.5-6.5 | 6.5-7.5 |
+|:------------------------|:--------|:--------|:--------|:--------|:--------|
+| Frequency (*f*)         | 4       | 6       | 15      | 15      | 10      |
 
-**Solution**:   
-
+**Solution**:
 
 Here *n* =50; *c* =1
 
-  **Seed yield**   *f*      *x*      $$d_{i} = \frac{x_{i} - A}{c}$$   *fd*     *f d^2^*
-  ---------------- -------- -------- --------------------------------- -------- ----------
-  2.5-3.5          4        3        -2                                -8       16
-  3.5-4.5          6        4        -1                                -6       6
-  4.5-5.5          15       5        0                                 0        0
-  6.5-7.5          15       6        1                                 15       15
-  7.5-8.5          10       7        2                                 20       40
-  **Total**        **50**   **25**   **0**                             **21**   **77**
+| **Seed yield** |  *f*   |  *x*   | $$d_{i} = \frac{x_{i} - A}{c}$$ |  *fd*  | *f d^2^* |
+|:----------:|:----------:|:----------:|:----------:|:----------:|:----------:|
+|    2.5-3.5     |   4    |   3    |               -2                |   -8   |    16    |
+|    3.5-4.5     |   6    |   4    |               -1                |   -6   |    6     |
+|    4.5-5.5     |   15   |   5    |                0                |   0    |    0     |
+|    6.5-7.5     |   15   |   6    |                1                |   15   |    15    |
+|    7.5-8.5     |   10   |   7    |                2                |   20   |    40    |
+|   **Total**    | **50** | **25** |              **0**              | **21** |  **77**  |
 
 *A* = 5
 
@@ -427,12 +439,12 @@ $${sample\ variance,\ s}^{2} = \frac{1}{49}\left( 77 - \frac{\left( 21 \right)^{
 
 $standard\ deviation,\ s = \sqrt{1.3914}$ = 1.179
 
-### Merits and Demerits of Standard Deviation  
+### Merits and Demerits of Standard Deviation
 
-**[Merits]{.ul}**
+[**Merits**]{.underline}
 
 1.  It is rigidly defined and its value is always definite and based on
-    all the observations
+    all the observations.
 
 2.  As it is based on arithmetic mean, it has all the merits of
     arithmetic mean.
@@ -447,7 +459,7 @@ $standard\ deviation,\ s = \sqrt{1.3914}$ = 1.179
 6.  It is the basis for measuring the coefficient of correlation and
     other measures.
 
-**[Demerits]{.ul}**
+[**Demerits**]{.underline}
 
 1.  It is not easy to understand and it is difficult to calculate.
 
@@ -494,9 +506,15 @@ variation.
 
 For yield, CV=$\ \frac{10}{50} \times 100 =$ 20%
 
-For plant height, CV=
-$\frac{5}{55} \times 100 = \ $`<!-- -->`{=html}9.1%
+For plant height, CV= $\frac{5}{55} \times 100 =$ 9.1%
 
-The yield is subject to more variation than the plant height.
+The yield is subject to more variation than the plant height.  
 
-**\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\*\***
+ \
+ \
+ 
+
+::: {#hello .greeting .message style="color: #c9c6c5;"}
+<center>**"The object of our being statistical is to learn how to improve the whole health of humanity" -- Florence nightingale**</center>
+:::
+

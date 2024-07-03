@@ -1,5 +1,14 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Analysis of Variance (ANOVA)
 
+<style>
+body {
+text-align: justify}
+</style>
 Consider an example where three chemical fertilizers A, B, C are tested
 on potted plants. Experimenter would like to identify, which among the
 fertilizer among A, B and C gives the highest yield. Potted plants are
@@ -36,8 +45,8 @@ by the statistician Sir Ronald A. Fisher.
 ## Null hypothesis in ANOVA
 
 Null hypothesis in ANOVA is that population means are equal, which is
-denoted as H~0~: µ~1~ = µ~2~ =µ~3~ = ...., = µ~k~ . Alternate
-hypothesis is that atleast a pair of treatment are not equal, H~1~: µ~i~ ≠ µ~j~, where *i* ≠ *j*; *i*, *j* = 1,2, ..., k. Where µ~1~, µ~2~, µ~3~, ..., µ~k~ are *k* population means
+denoted as H~0~: µ~1~ = µ~2~ =µ~3~ = ..., = µ~k~ . Alternate
+hypothesis is that atleast a pair of treatment are not equal, H~1~: µ~i~ ≠ µ~j~, where *i* ≠ *j*; *i*, *j* = 1,2, ..., k. where µ~1~, µ~2~, µ~3~, ..., µ~k~ are *k* population means
 
 ## Degrees of freedom
 
@@ -53,7 +62,7 @@ around, you still have a choice between 2 hats that you haven't worn yet
 that week. But after you choose your hat for day 6, you have no choice
 for the hat that you wear on Day 7. You must wear the one remaining hat.
 You had 7-1 = 6 days of "hat" freedom---in which the hat you wore could
-vary!
+vary.
 
 Degrees of freedom can also be defined as the number of independent
 values, which were included into calculation of an estimate. An estimate
@@ -69,7 +78,7 @@ mean is 6. Here two values are free to vary but the third value depends
 on other two under the constraint that their mean should be 6. *i*.*e*.
 if other two values are changed third value will also change.
 
-Now consider the height of 7 students
+Now consider the plant height of 7 plants
 
 164, 173, 158, 179, 168, 187, 167.
 
@@ -115,7 +124,7 @@ variability along with within group and between group sum of squares,
 that gives idea on with in (error) and between group (between
 treatments) variability respectively. Mean sum of squares or mean
 squares are obtained by dividing sum of squares by corresponding degrees
-of freedom. Mean square provides unbiassed estimate of variance. For
+of freedom. Mean square provides unbiased estimate of variance. For
 example, in ANOVA error mean square (MSE) given by
 $\frac{\text{with in group sum of squares}}{\text{error degrees of freedom}}$
 provides unbiased estimate of error variance  
@@ -131,7 +140,7 @@ is F.
 
 F-statistic is the ratio of two variances and it was named after Sir
 Ronald A. Fisher. It is proved that when null hypothesis H~0~: µ~1~ =
-µ~2~ =µ~3~ = ...., = µ~k~ is true the ratio of mean square treatment and
+µ~2~ =µ~3~ = ..., = µ~k~ is true the ratio of mean square treatment and
 mean square error follows F distribution.The F distribution is a right-skewed distribution. In general, if your calculated
 F value in ANOVA is larger than your F critical value, you can reject
 the null hypothesis.  
@@ -141,15 +150,15 @@ knitr::include_graphics(rep("images/fdist.png"))
 ```   
 
 ## Assumptions of ANOVA  
--   Observations under each treatment group is drawn randomly from a normally distributed population
+-   Observations under each treatment group is drawn randomly from a normally distributed population.
 
--   All the populations from which observations are drawn have a common variance :- Homogeneity of variance
+-   All the populations from which observations are drawn have a common variance :- Homogeneity of variance.
 
--   All the samples are drawn independently of each other
+-   All the samples are drawn independently of each other.
 
--   Treatment and environmental effects are additive
+-   Treatment and environmental effects are additive.
 
->As a result of above assumptions. The experimental errors are independent and identically distributed (iid) with a Normal distribution of mean 0 and variance σ^2^. In other word we can say $e_{i}$ $\sim iid\ N(0,\sigma^{2})$.  
+As a result of above assumptions. The experimental errors are independent and identically distributed (iid) with a Normal distribution of mean 0 and variance σ^2^. In other word we can say $e_{i}$ $\sim iid\ N(0,\sigma^{2})$.  
 
 ## Types of ANOVA  
 
@@ -193,7 +202,7 @@ $\frac{G^{2}}{n}$ is known as the correction factor (C.F.).
 
 ##### Proof  
 
-= $\sum_{i = 1}^{v}\sum_{j = 1}^{r}\left( Y_{\text{ij}} - \bar{Y} \right)^{2}$  
+$\sum_{i = 1}^{v}\sum_{j = 1}^{r}\left( Y_{\text{ij}} - \bar{Y} \right)^{2}$  
 = $\sum_{i = 1}^{v}\sum_{j = 1}^{r}\left( Y_{\text{ij}}^{2} - 2Y_{\text{ij}}\bar{Y} + {\bar{Y}}^{2} \right)$  
 = $\sum_{i = 1}^{v}\sum_{j = 1}^{r}\left( Y_{\text{ij}}^{2} - 2n{\bar{Y}}^{2} + n{\bar{Y}}^{2} \right)$  
 
@@ -366,8 +375,8 @@ Sum of Squares between Breeds (SSA)
 $= \sum_{i=1}^{v}\frac{T_{i}^{2}}{r} - \text{CF}$
 $= \frac{1}{4}\left\lbrack \left( \text{179} \right)^{2} + \text{...} + \left( \text{172} \right)^{2} \right\rbrack - \text{CF} = \text{34.7}$
 
-Sum of Squares between
-chemicals (SSB)
+Sum of Squares between chemicals (SSB)
+
 $= \sum_{j=1}^{r}\frac{B_{j}^{2}}{v} - \text{CF} = \frac{1}{5}\left\lbrack \left( \text{217} \right)^{2} + \text{...} + \left( \text{212} \right)^{2} \right\rbrack - \text{CF} = \text{32.2}$
 
 Sum of squares of Error  
@@ -447,3 +456,11 @@ distribution.
 A mixed model, mixed-effects model or mixed error-component model is a
 statistical model containing both fixed effects and random effects.  
 
+
+ \
+ \
+ 
+
+::: {#hello .greeting .message style="color: #c9c6c5;"}
+<center>**“Errors using inadequate date are much less than those using no data at all”:- Charles Babbage **</center>
+:::

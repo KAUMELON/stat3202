@@ -1,5 +1,13 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # How to use F table {#ftable}  
-
+<style>
+body {
+text-align: justify}
+</style>
 The table below gives a model critical values table of F (also known as statistical table of F) at the $\alpha$ = 0.05 level of significance. Critical values of F can be generated now a days using softwares (Microsoft Excel, R) 
 
 1.	Obtain your F-ratio from ANOVA or using the formula. 
@@ -22,4 +30,15 @@ To find the F critical value in Excel, you can use the F.INV.RT() function, whic
 = F.INV.RT(probability, deg_freedom1, deg_freedom2).  
 
 for example for F(2, 24) at $\alpha$=0.05, Excel function will be 
-> = F.INV.RT(0.05, 2, 24).   
+> = F.INV.RT(0.05, 2, 24). 
+
+
+
+ \
+ \
+ 
+
+::: {#hello .greeting .message style="color: #c9c6c5;"}
+<center>**"The experimenter who does not know what he is looking for will not understand what he finds":-  Leonard Jimmie Savage**</center>
+:::
+

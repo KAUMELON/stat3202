@@ -1,5 +1,13 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Multiple comparison test  
-
+<style>
+body {
+text-align: justify}
+</style>
 ANOVA is an omnibus test. *Omnibus test*, as a general name, refers to an overall or a global test. Omnibus test means it is implemented on an overall hypothesis that tends to find whether there is any significant difference between any treatment means (in case of ANOVA) or not.
 
 ANOVA doesn't tell which treatment pairs are different; more clearly on rejecting a null hypothesis in ANOVA, we conclude that at least a pair of treatment means are different, it didn't give any idea on which treatments are different. In order to identify which treatment means are significantly different one need to employ **multiple comparison tests** or **post-hoc tests**.
@@ -68,9 +76,7 @@ Where, $\text{MSE}$ is the Mean Square Error from ANOVA.
 $t_{\frac{\alpha}{2},edf}$ is the critical value of two tailed student's t distribution at $\alpha$ level of significance and error degrees of
 freedom.
 
-If the replications are same $r_{i} = r_{j} = r$, then
-$\text{SE}\left( d \right) = \ \sqrt{\text{MSE}\left( \frac{1}{r} + \frac{1}{r} \right)}\  = \ \sqrt{\text{MSE}\left( \frac{2}{r} \right)} = \sqrt{\frac{2\ MSE}{r}}$*\
-*
+If the replications are same $r_{i} = r_{j} = r$, then   $$\text{SE}\left( d \right) = \ \sqrt{\text{MSE}\left( \frac{1}{r} + \frac{1}{r} \right)}\  = \ \sqrt{\text{MSE}\left( \frac{2}{r} \right)} = \sqrt{\frac{2\ MSE}{r}}$$
 
 $$LSD = \ t_{\frac{\alpha}{2},edf}.\sqrt{\frac{2\ MSE}{r}}$$
 
@@ -103,7 +109,32 @@ comparisons [@Hayter].
 While the protected Fisher\'s LSD test is the first post-hoc test ever developed, it is no longer recommended as it will not correct for $\alpha$ inflation in multiple comparisons effectively when compared to other post-hoc tests. Still LSD is the most common post-hoc
 test used in agricultural research experiments. 
 
-Fisher\'s LSD procedure is known to preserve the experiment wise type I error rate at the nominal level of significance, if the number of treatments is just three. \[\@Meier\]. So, when the number of treatments is more, it is recommended to conduct DMRT or Tukey's test.
+Fisher\'s LSD procedure is known to preserve the experiment wise type I error rate at the nominal level of significance, if the number of treatments is just three. [@Meier]. So, when the number of treatments is more, it is recommended to conduct DMRT or Tukey's test.
 
 >Note that other multiple comparison tests (Bonferroni, Tukey, etc.) do not require the ANOVA. The results of these multiple comparisons tests are valid even if the null hypothesis is not rejected based on the ANOVA
 
+## Duncan's Multuiple Range Test (DMRT)
+ In a set of treatments if comparison of all possible pairs of treatment means is required we can use DMRT. It is useful when the number to be compared is large. The standard error of mean is multiplied by table values (r~p~) for different values of p (the number of treatment means involved) and comparison is made.
+ 
+  (i) Arrange the treatment means in decreasing or increasing order along with the ranks.
+  
+  (ii) Calculate the standard error of a mean as $SE(\overline{Y})=\sqrt{\frac{\ MSE}{r}}$
+  
+  (iii) From statistical tables (known as Studentised Ranges) note the (r~p~) values for p=2,3... v treatments corresponding to error degrees of freedom.
+  
+  (iv) Calculate the shortest significant ranges (R~p~) where $R_p=r_p.SE(\overline{Y})$
+  
+  (v) From the largest mean subtract the R~p~ (for largest p). Declare the means less than this value as significantly different from the largest mean. For the remaining treatments whose values are larger than the difference (Largest Mean- Largest R~p~), compare the differences with the appropriate R~p~ value.(If two treatments are remaining compare with R~2~, for three treatments with R~3~ and so on).
+  
+  (vi) From the second largest mean subtract the second largest R~p~ and compare the treatments as in step.
+  
+  (vii) Present the results by using either a line notation (separate line under each homogeneous group) or by an alphabet notation (same alphabet representing homogeneous group) to indicate the treatments that are on par or those are significantly different.  
+  
+  
+ \
+ \
+ 
+
+::: {#hello .greeting .message style="color: #c9c6c5;"}
+<center>**"The method of difference is the most potent of all methods in experimental inquiry.":-  John Stuart Mill**</center>
+:::
