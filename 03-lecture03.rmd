@@ -548,7 +548,7 @@ distribution is the abscissa of the point of intersection of the line
 segments $\overline{\text{AE}}$ and $\overline{\text{BF}}$ in the
 figure.
 
-```{r cf1, echo=FALSE,fig.cap='Median from a cumulative frequency curve for Example 3.10',out.width="60%", fig.align='center'}
+```{r cf1, echo=FALSE,fig.cap='Finding mode from histogram',out.width="60%", fig.align='center'}
 knitr::include_graphics(rep("images/l2m1.jpeg"))
 ```
 
