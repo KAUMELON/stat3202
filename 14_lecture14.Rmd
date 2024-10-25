@@ -118,7 +118,11 @@ There are two cases under this situation
 
 2.  Population variances are unequal
 
+<<<<<<< HEAD
 Before proceeding to t-test a F test is performed to test homogeneity of population variance (See section 14.6).
+=======
+Before proceeding to t-test a F test is performed to test homogeneity of population variance (See section).
+>>>>>>> d548f399770035f7bb22948635d0f655d0551b09
 
 ### Case when the population variances are equal (homogenous)
 
@@ -142,9 +146,15 @@ We will calculate test statistic, $t$ using the following formula.
 
 $$t = \frac{{\overline{x}}_{1} - {\overline{x}}_{2}}{s\sqrt{\left( \frac{1}{n_{1}} + \frac{1}{n_{2}} \right)}}$$
 
+<<<<<<< HEAD
 Where, $s^{2} = \frac{(n_{1}-1)s_{1}^2+(n_{2}-1)s_{2}^2}{n_{1} + n_{2} - 2}$; ${\overline{x}}_{1}$ and ${\overline{x}}_{2}$ are sample means from population 1 & 2, respectively.
 
 Under null hypothesis *t* follows a *t* distribution with $n_{1} + n_{2} - 2$degrees of freedom. Decision rule is same as that of previous t- test (section 14.1.2).
+=======
+Where, $s^{2} = \frac{(n_{1}-1)s_{1}^2+(n_{2}-1)s_{2}^2}{n_{1} + n_{2} - 2}$, $x_{1i}$ and $x_{2i}$ are sample observations from population 1 & 2, respectively.
+
+Under null hypothesis *t* follows a *t* distribution with $n_{1} + n_{2} - 2$degrees of freedom. Decision rule is same as that of previous t- test (section 2.1.2).
+>>>>>>> d548f399770035f7bb22948635d0f655d0551b09
 
 ### Case when the population variances are unequal
 
@@ -170,13 +180,21 @@ We will calculate test statistic, $t$ using the following formula.
 
 $$t = \frac{{\overline{x}}_{1} - {\overline{x}}_{2}}{\sqrt{\left( \frac{s_{1}^{2}}{n_{1}} + \frac{s_{2}^{2}}{n_{2}} \right)}}$$
 
+<<<<<<< HEAD
 $s_{1}$and${s}_{2}$ are the sample standard deviations from two populations, respectively.
+=======
+$s_{1}$and$\text{s}_{2}$ are the sample standard deviations from two populations, respectively.
+>>>>>>> d548f399770035f7bb22948635d0f655d0551b09
 
 The degrees of freedom of Welch t-test is calculated as follows:
 
 $$\frac{\left( \frac{s_{1}^{2}}{n_{1}} + \frac{s_{2}^{2}}{n_{2}} \right)^{2}}{\frac{s_{1}^{4}}{n_{1}^{2}\left( n_{1} - 1 \right)} + \frac{s_{2}^{4}}{n_{2}^{2}\left( n_{2} - 1 \right)}}$$
 
+<<<<<<< HEAD
 Once the t value is determined, you have to read in the t table the critical value of Student's t distribution corresponding to the significance level. Decision rule is same as that of previous t- test (section 14.1.2).
+=======
+Once the t value is determined, you have to read in the t table the critical value of Student's t distribution corresponding to the significance level. Decision rule is same as that of previous t- test (section 2.1.2).
+>>>>>>> d548f399770035f7bb22948635d0f655d0551b09
 
 **Example 11:**
 
@@ -214,9 +232,15 @@ We will calculate test statistic, $t$ using the following formula.
 
 $$t = \frac{|d^̅|}{\frac{s}{\sqrt{n}}}$$
 
+<<<<<<< HEAD
 Where  $\overline{d} = \frac{\sum_{i = 1}^{n}d_{i}}{n}$,$d_{i} = x_{i} - y_{i}$, $s^{2} = \frac{\sum_{i = 1}^{n}\left( d_{i} - \overline{d} \right)^{2}}{n - 1}$
 
 Under null hypothesis *t* follows a *t* distribution with $n - 1$ degrees of freedom. Decision rule is same as that of previous t- test (section 14.1.2).
+=======
+Where $d_{i} = x_{i} - y_{i}$, $\overline{d} = \frac{\sum_{i = 1}^{n}d_{i}}{n}$, $s^{2} = \frac{\sum_{i = 1}^{n}\left( d_{i} - \overline{d} \right)^{2}}{n - 1}$
+
+Under null hypothesis *t* follows a *t* distribution with $n - 1$ degrees of freedom. Decision rule is same as that of previous t- test (section 2.1.2).
+>>>>>>> d548f399770035f7bb22948635d0f655d0551b09
 
 **Example 12:**
 
@@ -264,7 +288,11 @@ A certain stimulus administered to each of 12 patients resulted in the following
 
 ## Testing the significance of correlation coefficient
 
+<<<<<<< HEAD
 Let there be two normally distributed populations with means *µ*~1~ and *µ*~2~ and standard deviations be *σ*~1~ and *σ*~2~ respectively. Let the correlation between two populations be *ρ*. We want to test the null hypothesis that population correlation coefficient is zero (*ρ* =0). We can use t- test for the purpose. If we don't have enough evidence from our sample to reject the null hypothesis, we may conclude that there is a significant correlation between populations (*ρ* ≠ 0).
+=======
+Let there be two normally distributed populations with means *µ*~1~ and *µ*~2~ and standard deviations be *σ*~1~ and *σ*~2~ respectively. Let the correlation between two populations be *ρ*. We want to test the null hypothesis that population correlation coefficient is zero (*ρ* =0). We can use t- test for the purpose. If we don't have enough evidence from our sample to reject the null hypothesis, we may conclude that there is a significant correlation between populations ((*ρ* ≠ 0).
+>>>>>>> d548f399770035f7bb22948635d0f655d0551b09
 
 The null hypothesis to be tested is
 
@@ -276,7 +304,11 @@ H~1~ : *ρ* ≠ 0 (two tailed alternative)
 
 $$t = \frac{r\sqrt{n - 2}}{\sqrt{1 - r^{2}}}$$
 
+<<<<<<< HEAD
 Under null hypothesis *t* follows a *t* distribution with $n - 2$ degrees of freedom. We reject the null hypothesis, if the calculated value is greater than table value of *t* corresponding to $n - 2$ degrees of freedom and level of significance (α). our case α = 0.05
+=======
+Under null hypothesis *t* follows a *t* distribution with $n - 2$degrees of freedom. We reject the null hypothesis, if the calculated value is greater than table value of *t* corresponding to $n - 2$degrees of freedom and level of significance (α). our case α = 0.05
+>>>>>>> d548f399770035f7bb22948635d0f655d0551b09
 
 **Example 14:**
 
@@ -308,7 +340,11 @@ Chi-square tests are based on the sampling distribution called chi-square distri
 
 3.  The theoretical cell frequencies should not be less than 5. If any theoretical cell frequency is less than 5, then for the application χ^2^tests, it is pooled with the preceding or succeeding frequencies so that the pooled frequency is more than 5 and finally adjust the degrees of freedom lost in pooling.
 
+<<<<<<< HEAD
 4.  Constraints on the cell frequencies should be linear. (eg., ∑ 𝑂~𝑖~ = ∑ 𝐸~𝑖~ (where *O~i~* and *E~i~* represents the observed and expected frequencies)
+=======
+4.  Constraints on the cell frequencies should be linear. (eg., ∑ 𝑂𝑖 = ∑ 𝐸𝑖 (where *O* and *E* represents the observed and expected frequencies)
+>>>>>>> d548f399770035f7bb22948635d0f655d0551b09
 
 Note:
 
@@ -318,7 +354,11 @@ Degrees of freedom in χ^2^ tests: Degrees of freedom in χ^2^ tests refers to t
 
 Three important chi-square tests:
 
+<<<<<<< HEAD
 -   Chi-square test for goodness of fit.
+=======
+-   Chi-square test for goodness of fit
+>>>>>>> d548f399770035f7bb22948635d0f655d0551b09
 
 -   Chi-square test for independence of attributes.
 
@@ -326,7 +366,11 @@ Three important chi-square tests:
 
 ### Chi square test (χ^2^) for goodness of fit
 
+<<<<<<< HEAD
 A very powerful test for testing the significance of the discrepancy between theory and experiment was given by Prof. Karl Pearson in 1900 and is known as "χ^2^ tests for goodness of fit".
+=======
+A very powerful test for testing the significance of the discrepancy between theory and experiment was given by Prof. Karl Pearson in 1900 and is known as "χ^2^ tests of goodness of fit".
+>>>>>>> d548f399770035f7bb22948635d0f655d0551b09
 
 We want to test the null hypothesis, H~0~: There is no significance between the theory and experiment
 
@@ -367,7 +411,11 @@ $$\chi^{2} = \sum_{i = 1}^{n}\frac{\left( O_{i} - E_{i} \right)^{2}}{E_{i}}$$
 
 $$\chi^{2} = 0.676$$
 
+<<<<<<< HEAD
 $\chi_{\text{cal}}^{2}$= 0.676, table value of chi-square for 4-1=3 degrees of freedom and 5% level of significance is 7.815. We won't reject the null hypothesis, H~0~: There is no significance between the theory and experiment. Conclude that data follows 9:3:3:1 ratio.
+=======
+$\chi_{\text{cal}}^{2}$= 0.676, table value of chi-square for 4-1=3 degrees of freedom and 5% level of significance is 7.815. We won't reject the null hypothesis, H~0~: There is no significance between the theory and experiment. Conclude that data follows 9:3:3:1
+>>>>>>> d548f399770035f7bb22948635d0f655d0551b09
 
 **Example 16: Try by yourself**
 

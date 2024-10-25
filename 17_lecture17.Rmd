@@ -462,5 +462,9 @@ statistical model containing both fixed effects and random effects.
  
 
 ::: {#hello .greeting .message style="color: #c9c6c5;"}
+<<<<<<< HEAD
 <center>**“Errors using inadequate data are much less than those using no data at all”:- Charles Babbage **</center>
+=======
+<center>**“Errors using inadequate date are much less than those using no data at all”:- Charles Babbage **</center>
+>>>>>>> d548f399770035f7bb22948635d0f655d0551b09
 :::

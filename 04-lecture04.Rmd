@@ -61,9 +61,15 @@ number of classes
 Here *n* =5
 
 Geometric mean=\
+<<<<<<< HEAD
 $$\text{Antilog}\left( \frac{\sum_{i = 1}^{n}{\log x_{i}}}{n} \right) $$\
 $$=\text{Antilog}\left( \frac{8.926}{5} \right) $$\
 $$ =\text{Antilog}(1.785) = 60.95$$ note: here
+=======
+$$\text{Antilog}\left( \frac{\sum_{i = 1}^{n}{\log x_{i}}}{n} \right) =$$\
+$$Antilog\left( \frac{8.926}{5} \right) =$$\
+$$ Antilog(1.785) = 60.95$$ note: here
+>>>>>>> d548f399770035f7bb22948635d0f655d0551b09
 $\text{Antilog}\left( x \right) = 10^{x}$ *i*.*e*.
 $$\text{Antilog}\left( 1.785 \right) = \ 10^{1.785} = 60.95$$
 
