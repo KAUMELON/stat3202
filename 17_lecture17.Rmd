@@ -1,5 +1,14 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Analysis of Variance (ANOVA)
 
+<style>
+body {
+text-align: justify}
+</style>
 Consider an example where three chemical fertilizers A, B, C are tested
 on potted plants. Experimenter would like to identify, which among the
 fertilizer among A, B and C gives the highest yield. Potted plants are
@@ -36,8 +45,8 @@ by the statistician Sir Ronald A. Fisher.
 ## Null hypothesis in ANOVA
 
 Null hypothesis in ANOVA is that population means are equal, which is
-denoted as H~0~: µ~1~ = µ~2~ =µ~3~ = ...., = µ~k~ . Alternate
-hypothesis is that atleast a pair of treatment are not equal, H~1~: µ~i~ ≠ µ~j~, where *i* ≠ *j*; *i*, *j* = 1,2, ..., k. Where µ~1~, µ~2~, µ~3~, ..., µ~k~ are *k* population means
+denoted as H~0~: µ~1~ = µ~2~ =µ~3~ = ..., = µ~k~ . Alternate
+hypothesis is that atleast a pair of treatment are not equal, H~1~: µ~i~ ≠ µ~j~, where *i* ≠ *j*; *i*, *j* = 1,2, ..., k. where µ~1~, µ~2~, µ~3~, ..., µ~k~ are *k* population means
 
 ## Degrees of freedom
 
@@ -53,7 +62,7 @@ around, you still have a choice between 2 hats that you haven't worn yet
 that week. But after you choose your hat for day 6, you have no choice
 for the hat that you wear on Day 7. You must wear the one remaining hat.
 You had 7-1 = 6 days of "hat" freedom---in which the hat you wore could
-vary!
+vary.
 
 Degrees of freedom can also be defined as the number of independent
 values, which were included into calculation of an estimate. An estimate
@@ -69,7 +78,7 @@ mean is 6. Here two values are free to vary but the third value depends
 on other two under the constraint that their mean should be 6. *i*.*e*.
 if other two values are changed third value will also change.
 
-Now consider the height of 7 students
+Now consider the plant height of 7 plants
 
 164, 173, 158, 179, 168, 187, 167.
 
@@ -115,7 +124,7 @@ variability along with within group and between group sum of squares,
 that gives idea on with in (error) and between group (between
 treatments) variability respectively. Mean sum of squares or mean
 squares are obtained by dividing sum of squares by corresponding degrees
-of freedom. Mean square provides unbiassed estimate of variance. For
+of freedom. Mean square provides unbiased estimate of variance. For
 example, in ANOVA error mean square (MSE) given by
 $\frac{\text{with in group sum of squares}}{\text{error degrees of freedom}}$
 provides unbiased estimate of error variance  
@@ -131,7 +140,7 @@ is F.
 
 F-statistic is the ratio of two variances and it was named after Sir
 Ronald A. Fisher. It is proved that when null hypothesis H~0~: µ~1~ =
-µ~2~ =µ~3~ = ...., = µ~k~ is true the ratio of mean square treatment and
+µ~2~ =µ~3~ = ..., = µ~k~ is true the ratio of mean square treatment and
 mean square error follows F distribution.The F distribution is a right-skewed distribution. In general, if your calculated
 F value in ANOVA is larger than your F critical value, you can reject
 the null hypothesis.  
@@ -141,15 +150,15 @@ knitr::include_graphics(rep("images/fdist.png"))
 ```   
 
 ## Assumptions of ANOVA  
--   Observations under each treatment group is drawn randomly from a normally distributed population
+-   Observations under each treatment group is drawn randomly from a normally distributed population.
 
--   All the populations from which observations are drawn have a common variance :- Homogeneity of variance
+-   All the populations from which observations are drawn have a common variance :- Homogeneity of variance.
 
--   All the samples are drawn independently of each other
+-   All the samples are drawn independently of each other.
 
--   Treatment and environmental effects are additive
+-   Treatment and environmental effects are additive.
 
->As a result of above assumptions. The experimental errors are independent and identically distributed (iid) with a Normal distribution of mean 0 and variance σ^2^. In other word we can say $e_{i}$ $\sim iid\ N(0,\sigma^{2})$.  
+As a result of above assumptions. The experimental errors are independent and identically distributed (iid) with a Normal distribution of mean 0 and variance σ^2^. In other word we can say $e_{i}$ $\sim iid\ N(0,\sigma^{2})$.  
 
 ## Types of ANOVA  
 
@@ -161,9 +170,9 @@ Based on the model used and sources of variation studied ANOVA can be classified
 
 ### One-way ANOVA  
 
-The simplest type of analysis of variance is known as one way analysis of variance, in which only one source of variation or factor of interest is controlled and its effect on the elementary units is observed. See the example in section \@ref(fix) is an example where one-way ANOVA can be employed. Here only one source of variation is assumed to be causing variance other than error that is field.  
+The simplest type of analysis of variance is known as one way analysis of variance, in which only one source of variation or factor of interest is controlled and its effect on the elementary units is observed. See the example in section **17.6.1.6** where one-way ANOVA can be employed. Here only one source of variation is assumed to be causing variance other than error that is field.  
 
-#### One -way ANOVA model {oneway} 
+#### One-way ANOVA model {oneway} 
 
 $$Y_{\text{ij}} = \mu + \tau_{i} + e_{\text{ij}}$$  
 Where *i* = 1,2, ..., *t* and *j* =1,2, ..., *r*. $Y_{\text{ij}}$ is the observed value of *i*^th^
@@ -177,7 +186,6 @@ Consider an experiment with *v* treatments with *r* replications each. Observati
 ```{r oneway, echo=FALSE,fig.cap='One way classification of Data',out.width="60%", fig.align='center'}
 knitr::include_graphics(rep("images/oneway.png"))
 ```  
-
 #### Total sum of squares partitioning  
 
 ANOVA consists of partitioning the total variation in Y~ij~ values
@@ -193,7 +201,7 @@ $\frac{G^{2}}{n}$ is known as the correction factor (C.F.).
 
 ##### Proof  
 
-= $\sum_{i = 1}^{v}\sum_{j = 1}^{r}\left( Y_{\text{ij}} - \bar{Y} \right)^{2}$  
+$\sum_{i = 1}^{v}\sum_{j = 1}^{r}\left( Y_{\text{ij}} - \bar{Y} \right)^{2}$  
 = $\sum_{i = 1}^{v}\sum_{j = 1}^{r}\left( Y_{\text{ij}}^{2} - 2Y_{\text{ij}}\bar{Y} + {\bar{Y}}^{2} \right)$  
 = $\sum_{i = 1}^{v}\sum_{j = 1}^{r}\left( Y_{\text{ij}}^{2} - 2n{\bar{Y}}^{2} + n{\bar{Y}}^{2} \right)$  
 
@@ -270,7 +278,8 @@ $\sqrt{\frac{\text{MSE}}{r}}$ is the standard error of a treatment mean.
 
 #### Example of One-way ANOVA  
 
-The data on tiller count after transplanting were recorded from 4 hill sampling units for a fertilizer trial involving 6 treatments. Test for the significant difference between the treatments. The treatments are labeled as T1, T2, T3, T4, T5 and T6.  
+The data on tiller count after transplanting were recorded from 4 hill sampling units for a fertilizer trial involving 6 treatments. Test for the significant difference between the treatments. The treatments are labeled as T~1~, T~2~, T~3~, T~4~, T~5~ and T~6~.  
+
 Data is arranged as shown below:  
 
 ```{r onewayanovaex, echo=FALSE,fig.cap='One-way classified data on tiller count',out.width="60%", fig.align='center'}
@@ -332,7 +341,7 @@ $vr - 1 - \left( v - 1 \right) - \left( r - 1 \right) = vr - 1 - v + 1 - r + 1 =
 ```{r twowaytable, echo=FALSE,fig.cap='Two way ANOVA table',out.width="90%", fig.align='center'}
 knitr::include_graphics(rep("images/twowayanovatable.png"))
 ```  
-Here there are two F values one for factor A and one for Factor B. F~A~ \~ F ~(v-1),\ (v-1)(r-1)~ and F~B~ \~ F ~(r-1),\ (v-1)(r-1)
+Here there are two F values one for factor A and one for Factor B. F~A~ \~ F ~(v-1),\ (v-1)(r-1)~ and F~B~ \~ F ~(r-1),\ (v-1)(r-1)~
 
 > Here in Two-way ANOVA there are two null hypotheses one for factor A and other for factor B. For example for Factor A.  
 H~0~: $\mu$~1~ = $\mu$~2~ =$\mu$~3~ = ...., = $\mu$~v~; where $\mu$~i~ is the population mean of *i*^th^ level of factor A.
@@ -345,7 +354,7 @@ Decisions on the null hypothesis is made by comparing corresponding F value to t
 
 #### Example of Two-way ANOVA  
 
-Four chemicals S1, S2, S3, and S4 were administered in 5 cow breeds (A, B, C, D, E). observations were taken during peak lactation period. Average yield over the period is taken. Is there any significant difference between chemicals? Is there any significant difference between milk yield of the breeds? Considering chemicals and breeds are independent.  
+Four chemicals S~1~, S~2~, S~3~, and S~4~ were administered in 5 cow breeds (A, B, C, D, E). observations were taken during peak lactation period. Average yield over the period is taken. Is there any significant difference between chemicals? Is there any significant difference between milk yield of the breeds? Considering chemicals and breeds are independent.  
 
 ```{r twowayex, echo=FALSE,fig.cap='Two way classification of observations for chemicals and breeds',out.width="70%", fig.align='center'}
 knitr::include_graphics(rep("images/twowayex.png"))
@@ -366,16 +375,16 @@ Sum of Squares between Breeds (SSA)
 $= \sum_{i=1}^{v}\frac{T_{i}^{2}}{r} - \text{CF}$
 $= \frac{1}{4}\left\lbrack \left( \text{179} \right)^{2} + \text{...} + \left( \text{172} \right)^{2} \right\rbrack - \text{CF} = \text{34.7}$
 
-Sum of Squares between
-chemicals (SSB)
+Sum of Squares between chemicals (SSB)
+
 $= \sum_{j=1}^{r}\frac{B_{j}^{2}}{v} - \text{CF} = \frac{1}{5}\left\lbrack \left( \text{217} \right)^{2} + \text{...} + \left( \text{212} \right)^{2} \right\rbrack - \text{CF} = \text{32.2}$
 
 Sum of squares of Error  
 
 $\text{SSE} = \text{TSS} - (\text{SST} + \text{SSB}) = \text{27.3}$  
 
-```{r twowayanovatable, echo=FALSE,fig.cap='ANOVA table for chemicals and breeds',out.width="90%", fig.align='center'}
-knitr::include_graphics(rep("images/twowayanovatable.png"))
+```{r anovatabletwoway, echo=FALSE,fig.cap='ANOVA table for chemicals and breeds',out.width="90%", fig.align='center'}
+knitr::include_graphics(rep("images/anovatabletwoway.png"))
 ```  
 
 For both chemicals and breeds there is significance difference at 5% level. Because both F values calculated are greater than table values.    
@@ -395,7 +404,7 @@ Analysis of variance is based on a linear statistical model. This linear model m
 Fixed effects model is a statistical model in which the model parameters
 are fixed or non-random quantities. In using fixed effect model in
 agricultural experiments, we assume treatment effect are unknown
-constants
+constants.
 
 Fixed effects model can be explained using an example. Consider an
 experiment where experimenter wants to know whether three fields had any
@@ -403,9 +412,9 @@ impact on the yield of a particular strain of wheat. Observations where
 taken from 12 plots from each fields (replication). The AOV (Analysis of
 Variance) model is
 
-$Y_{\text{ij}} = \mu + \tau_{i} + e_{\text{ij}}$; where $e_{ij}$ $\sim iid\ N(0,\sigma^{2})$ 
+$$Y_{\text{ij}} = \mu + \tau_{i} + e_{\text{ij}};$$ $$e_{ij}\sim iid\ N(0,\sigma^{2})$$ 
 
-Where *i* = 1,2, ..., *t* and *j* =1,2, ..., *r*. Here in our example
+where, *i* = 1,2, ..., *t* and *j* =1,2, ..., *r*. Here in our example
 *t* =3 and *r* =12. $Y_{\text{ij}}$ is the observed value of *i*^th^
 field from *j*^th^ plot, $\tau_{i}$ is the effect of *i*^th^ treatment,
 which is considered to be an unknown constant. $\mu$ is the general
@@ -425,11 +434,11 @@ is used then, fields are assumed to be randomly sampled from a
 population of fields in that area and the AOV (Analysis of Variance)
 model is
 
-$Y_{\text{ij}} = \mu + \tau_{i} + e_{\text{ij}}$;  
+$$Y_{\text{ij}} = \mu + \tau_{i} + e_{\text{ij}};$$  
 
-$e_{ij}$ $\sim iid\ N(0,\sigma^{2})$ and $\tau_{i}\sim N(0,\ \sigma_{\tau}^{2})$  
+$$e_{ij}\sim iid\ N(0,\sigma^{2}); \tau_{i}\sim N(0,\ \sigma_{\tau}^{2})$$  
 
-Where *i* = 1,2, ..., *t* and *j* =1,2, ..., *r*. Here $\tau_{i}$ is
+where, *i* = 1,2, ..., *t* and *j* =1,2, ..., *r*. Here $\tau_{i}$ is
 considered as a random variable,
 $\tau_{i}\sim N(0,\ \sigma_{\tau}^{2})$; and
 $e_{ij}\sim N(0,\ \sigma^{2})$. In this model, field is a "random
@@ -447,3 +456,11 @@ distribution.
 A mixed model, mixed-effects model or mixed error-component model is a
 statistical model containing both fixed effects and random effects.  
 
+
+ \
+ \
+ 
+
+::: {#hello .greeting .message style="color: #c9c6c5;"}
+<center>**“Errors using inadequate data are much less than those using no data at all”:- Charles Babbage **</center>
+:::

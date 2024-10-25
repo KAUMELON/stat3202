@@ -1,5 +1,13 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Hypothesis Testing  
-
+<style>
+body {
+text-align: justify}
+</style>
 Statistical analysis is an integral part of any scientific
 investigation. Before any statistical analysis can be conducted, a researcher must generate a guess, or **hypothesis** about what is going on.
 
@@ -7,7 +15,7 @@ The process begins with a *working hypothesis*. Working hypothesis is a direct s
 
 ## The Falsification Principle {-}  
 
-The falsification principle was Proposed by Karl Popper, is a way of demarcating science from non-science. It suggests that for a theory to be considered scientific it must be able to be tested and proven **false**. For example, the hypothesis that \"all swans are white,\" can be falsified by observing a black swan. According to Popper, science should attempt to disprove a theory, rather than attempt to continually support theoretical hypotheses.  
+The falsification principle was proposed by Karl Popper, is a way of demarcating science from non-science. It suggests that for a theory to be considered scientific it must be able to be tested and proven **false**. For example, the hypothesis that \"all swans are white,\" can be falsified by observing a black swan. According to Popper, science should attempt to disprove a theory, rather than attempt to continually support theoretical hypotheses.  
 
 ## Null hypothesis  
 
@@ -169,15 +177,15 @@ A Type I error occurs if the researcher rejects the null hypothesis and conclude
 Type II error occurs when the researcher concludes that the medications are the same when, in fact, they are different.
 This error is potentially life-threatening, if the less-effective medication is sold to the public instead of the more effective one.
 
-Now the other example, where you are diagnosing cancer
+Now the other example, where you are diagnosing cancer.
 
 Null hypothesis (H~0~): Patient has no cancer
 
 Alternative hypothesis (H~1~): Patient has cancer
 
-A Type I error occurs if the researcher rejects the null hypothesis andconcludes that patient has cancer, actually when he is healthy
+A Type I error occurs if the researcher rejects the null hypothesis and concludes that patient has cancer, actually when he is healthy.
 
-Type II error occurs when the researcher concludes that the patient has no cancer when he has cancer
+Type II error occurs when the researcher concludes that the patient has no cancer when he has cancer.
 
 Here both errors can have serious consequences
 
@@ -195,6 +203,7 @@ Consider a person accused of a crime waiting for judgement to be hanged.
 **H~1~**: He should be hanged
 
 What if the judge makes a Type I error?  
+
 The innocent will be hanged!!!!  
 
 What if the judge makes a Type II error?  
@@ -379,4 +388,12 @@ Don't panic, these things take a little time to digest. I have gone too much on 
 8.  Write down the steps in hypothesis testing
 
 ```
+ \
+ \
+ 
+
+::: {#hello .greeting .message style="color: #c9c6c5;"}
+<center>**"Statistics are the heart of democracy”:- Simeon Strunsky**</center>
+:::
+
 
