@@ -279,11 +279,9 @@ $b)$ 4, 7, 9, 10, 5, 1, 3, 4, 12, 10
 **Solution 3.4**
 
 $a)$ Arranging the data in an increasing order of magnitude, we obtain
-<<<<<<< HEAD
-12, 12, 15, 17, 20, 22, 22, 26, 26. Here, N = 9 is odd, and so, median
-=======
+
 12, 12, 15, 17, 20, 22, 22, 26, 26. Here, N (= 9) is odd, and so, median
->>>>>>> d548f399770035f7bb22948635d0f655d0551b09
+
 =$\left( \frac{9 + 1}{2} \right)^{\text{th}}$= 5^th^ ordered observation
 = 20.
 
@@ -291,11 +289,9 @@ Note: If a number is repeated, we still count it the number of times it
 appears when we calculate the median.
 
 $b)$ Arranging the data in an increasing order of magnitude, we obtain
-<<<<<<< HEAD
-1, 3, 4, 4, 5, 7, 9, 10, 10, 12. Here, N = 10 is an even number and so
-=======
+
 1, 3, 4, 4, 5, 7, 9, 10, 10, 12. Here, N(=10) is an even number and so
->>>>>>> d548f399770035f7bb22948635d0f655d0551b09
+
 median = $\frac{1}{2}${5^th^ ordered observation + 6^th^ ordered
 observation} = $\frac{1}{2}\left( 5 + 7 \right) = 6$.
 
@@ -495,11 +491,9 @@ $b)$ The modes of 2, 3, 4, 4, 5, 5 are 4 and 5.
 
 $c)$ The mode does not exist when every observation has the same
 frequency. For example, the following sets of data have no modes: (i) 3,
-<<<<<<< HEAD
-6, 8, 9; (ii) 4, 4, 4, 7, 7, 7, 9, 9, 9.
-=======
+
 6, 8, 9; (ii) 4, 7, 9, 6, 8.
->>>>>>> d548f399770035f7bb22948635d0f655d0551b09
+
 
 Note: It can be seen that the mode of a distribution may not exist, and
 even if it exists, it may not be unique. Distributions with a single
@@ -525,22 +519,16 @@ to describe both quantitative and qualitative data.
 
 ### Mode of Grouped frequency distribution
 
-<<<<<<< HEAD
-$$mode = L + \left( \frac{f_{m}-f_{p}}{2f_{m}-f_{p} - f_{s}} \right)C$$
-=======
+
 $$mode = L + \left( \frac{f_{m}-f_{p}}{2f_{m} - f_{p}- f_{s}} \right)C$$
->>>>>>> d548f399770035f7bb22948635d0f655d0551b09
+
 
 Locate the highest frequency the class corresponding to that frequency
 is called the **modal class**.
 
-<<<<<<< HEAD
-Where $L$ = lower limit of the modal class; $f_{m}$ = the frequency of modal class; $f_{p}$= the frequency of
-=======
+
 Where $L$ = lower limit of the modal class; $f_{m}$= the frequency of
-the modal class; $f_{p}$= the frequency of
->>>>>>> d548f399770035f7bb22948635d0f655d0551b09
-the class preceding the modal class; $f_{s}$= the frequency of the class
+the modal class; $f_{p}$= the frequency of the class preceding the modal class; $f_{s}$= the frequency of the class
 succeeding the modal class and $C$ = class interval
 
 **Example 3.10** For the frequency distribution of weights of sorghum
@@ -558,11 +546,9 @@ ear-heads given in table below. Calculate the mode.
 
 Modal class is **100-120**
 
-<<<<<<< HEAD
-$mode = 100 + \left( \frac{45-35}{90-38-35} \right)20 =$ 111.76
-=======
+
 $mode = 100 + \left( \frac{45-38}{2\times45-38 - 35} \right)20 =$ 108.235
->>>>>>> d548f399770035f7bb22948635d0f655d0551b09
+
 
 ### **Mode using Histogram**
 
@@ -572,11 +558,8 @@ distribution is the abscissa of the point of intersection of the line
 segments $\overline{\text{AE}}$ and $\overline{\text{BF}}$ in the
 figure.
 
-<<<<<<< HEAD
-```{r cf1, echo=FALSE,fig.cap='Median from a cumulative frequency curve for Example 3.10',out.width="60%", fig.align='center'}
-=======
+
 ```{r cf1, echo=FALSE,fig.cap='Finding mode from histogram',out.width="60%", fig.align='center'}
->>>>>>> d548f399770035f7bb22948635d0f655d0551b09
 knitr::include_graphics(rep("images/l2m1.jpeg"))
 ```
 

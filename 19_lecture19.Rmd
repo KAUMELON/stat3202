@@ -307,11 +307,7 @@ knitr::include_graphics(rep("images/rcbd4.png"))
 ```  
 
 The anova table following the calculations as in section \@ref(twoway) is  
-<<<<<<< HEAD
 ```{r rcbd5, echo=FALSE,fig.cap='ANOVA table of RCBD',out.width="90%", fig.align='center'}
-=======
-```{r rcbd5, echo=FALSE,fig.cap='ANOVA table of RCBD',out.width="80%", fig.align='center'}
->>>>>>> d548f399770035f7bb22948635d0f655d0551b09
 knitr::include_graphics(rep("images/rcbd5.png"))
 ```
 F~1~ \~ F ~($v$--1),\ ($v$--1)($r$--1)~ and F~2~ \~ F ~($r$--1),($v$--1)($r$--1)~ are two F values, one for treatment and one for blocks respectively. Decisions on the null hypothesis is made by comparing corresponding F value to the table value as explained in section \@ref(ftable).  
@@ -373,11 +369,8 @@ tedious and complicated.
 
 ## Latin Square Design (LSD) 
 
-<<<<<<< HEAD
 In this design, variations in the field in two different directions (or  variations 
-=======
-In this design, variations in the field in two different directions ( or  variations 
->>>>>>> d548f399770035f7bb22948635d0f655d0551b09
+
 due to two different factors)  are controlled simultaneously from affecting the 
 treatment comparisons.  A layout in RBD controls only one source of external 
 variation affecting the treatment comparisons by the construction of homogeneous
@@ -392,7 +385,6 @@ column are equal, both equal to the number of treatments to be compared.
 
 ### Layout and Randaomization
 
-<<<<<<< HEAD
 A Latin square of $v$ treatments (usually called as side $v$) is an arrangement of 
 $v$ treatments into $v$ rows  and $v$ columns such that every treatment is replicated in each 
 row and each column exactly once. 
@@ -400,15 +392,7 @@ row and each column exactly once.
 Latin squares of various sides are available in Statistical tables. If there are $v$ 
 treatments to be compared, chose a Latin square of side $v$ from the statistical tables. In 
 the Fisher and Yates (1948) tables for Statisticians and Biometricians these squares 
-=======
-A Latin square of $v$ treatments ( usually called as side $v$) is an arrangement of 
-$v$ treatments into $v$ rows  and $v$ columns such that every treatment is replicated in each 
-row and each column exactly once. 
 
-Latin squares of various sides are available in Statistical tables. If there are v 
-treatments to be compared, chose a Latin square of side v from the statistical tables. In 
-the Fisher and Yates (1948) Tables for Statisticians and Biometricians these squares 
->>>>>>> d548f399770035f7bb22948635d0f655d0551b09
 are presented for a given standard order of alphabets in the first row. Choose one of 
 these squares for a given $v$ and carryout the randomization in the following way.
 
@@ -425,21 +409,12 @@ Blocks are represented in two directions as rows and columns and their number is
 = $v$ 
  
 **Randomization**  
-If there are  $v$ treatments take a square of order $v$ at random 
-<<<<<<< HEAD
-from the statistical tables. 
-=======
-from the Statistical tables. 
->>>>>>> d548f399770035f7bb22948635d0f655d0551b09
+If there are  $v$ treatments take a square of order $v$ at random from the statistical tables. 
  
 Number the rows of the square from 1 to $v$. Keeping the first row fixed, the 
 remaining rows are arranged randomly by using random numbers to develop another 
 square. 
-<<<<<<< HEAD
 So the above square can be randomised in many ways like
-=======
-( So the above square can be randomised in many ways like
->>>>>>> d548f399770035f7bb22948635d0f655d0551b09
 
 ```{r lsdlayout1, echo=FALSE,fig.cap='Randomization of LSD with six treatments and six replications',out.width="90%", fig.align='center'}
 knitr::include_graphics(rep("images/lsdlayout1.png"))
@@ -457,7 +432,7 @@ The data collected from experiments in LSD are classified according to the
 levels of three factors. So it is called three way classified design. The two types of 
 blockings (Rows and columns) and treatments will make up the three factors. 
 The  linear model for analysis as : 
-<<<<<<< HEAD
+
 $$Y_{\text{ijk}} = \mu + \tau_{i} + R_{j}+ C_{k}+e_{\text{ijk}}$$ 
 where i,j, k = 1,2,3,... $v$
 
@@ -468,18 +443,6 @@ subtracting the correction factor  $C.F.  = \frac{(\sum{y_{ijk}})^2} {v^2}$). Th
 To calculate the sum of squares, arrange the data according to the rows, columns and treatments and obtain the respective totals. Let the treatment totals be T~1~,T~2~, .... T~v~; Block totals be B~1~, B~2~, B~3~, ..., B~v~ and Column totals be C~1~, C~2~, C~3~, ... C~v~. 
 ```{r lsdanova, echo=FALSE,fig.cap='ANOVA of LSD',out.width="90%", fig.align='center'}
 knitr::include_graphics(rep("images/lsdanova.jpg"))
-=======
-$$Y_{\text{ij}} = \mu + \tau_{i} + R_{j}+ C_{k}+e_{\text{ijk}}$$ 
-where i,j, k = 1,2,3,... $v$
-
-i.e. The response ( yield $y_{ijk}$)  of each plot  =  A general mean effect (μ) +  Effect due to the $i^{th}$  treatment $\tau_{i}$  + Effect of the $j^{th}$ Row ( $R_{j}$ ) + Effect due to the $k^{th}$ Column ( $C_{k}$) + Random error terms associated with each plot  ( $e_{ijk}$ ).
-The effect of the general mean  is subtracted from  each sum of squares ( by 
-subtracting the correction factor  $C.F.  = \frac{(\sum{y_{ijk}})^2} {v^2}$The total sum of squares is split into four components  (i) variation between the treatments  as treatment Sum of squares (ii) variation between the rows (iii) variation between the columns and (iv) Variation within the factors: i.e. Error Sum of squares. 
- 
-To calculate the sum of squares, arrange the data according to the rows, columns and treatments and obtain the respective totals. Let the treatment totals be T~1~,T~2~, .... T~v~; Block totals be B~1~,B~2~,B~3~,...,B~v~ and Column totals be C~1~, C~2~, C~3~,... C~v~. 
-```{r lsdanova, echo=FALSE,fig.cap='ANOVA of LSD',out.width="90%", fig.align='center'}
-knitr::include_graphics(rep("images/lsdanova.png"))
->>>>>>> d548f399770035f7bb22948635d0f655d0551b09
 ``` 
 All these computed F values are compared with F table values for (v-1)  and     (v-1)(v-2) degrees of freedom. If the treatments turns out to be significant then the means are compared pair wise by using 
  $$C.D. = t_{\left( \frac{\alpha}{2},\ \ \ error\ df \right)}\sqrt{2MSE/v}$$ 
@@ -491,11 +454,8 @@ directions or when there are two factors contributing to experimental error.
 **Disadvantages**  
 In RBD there is no restriction like  number of replications = Number 
 of treatments.  The error degrees of freedom in this design is $(v-1)(v-2)$. For  number 
-<<<<<<< HEAD
+
 of treatments like $v$ = 2  , 3 and 4  this value is 0  , 2 and 6. ( *ie.,* very small- hence we cannot carryout the experiment as such for these values of  $v$).  
-=======
-of treatments like $v$ = 2  , 3 and 4  this value is 0  , 2 and 6. ( ie. very small- hence we cannot carryout the experiment as such for these values of  $v$).  
->>>>>>> d548f399770035f7bb22948635d0f655d0551b09
 
 Similarly when $v>10$ the total number of plots required is $v^2$ > 100. So there 
 will be difficulty in getting large number of homogeneous plots.  So LSD is 
@@ -503,10 +463,7 @@ commonly used for 5 to 10 treatments only.
 
 ### Example
 Consider a 5x5 LSD experimental setup as follows
-<<<<<<< HEAD
 
-=======
->>>>>>> d548f399770035f7bb22948635d0f655d0551b09
 ```{r LSDE1, echo=FALSE,out.width="90%", fig.align='center'}
 knitr::include_graphics(rep("images/LSDE1.png"))
 ``` 
@@ -527,7 +484,6 @@ knitr::include_graphics(rep("images/LSDE2.png"))
 **Correction Factor(C.F)**
 $= \frac{G^{2}}{n} = \frac{\left( 829 \right)^{2}}{25}$= 27489.64  
 
-<<<<<<< HEAD
 **Total Sum of Squares(TSS)**= $(28^2+36^2+18^2+...+31^2)-27489.64$  
                              $=29243-27489.64 = 1753.36$  
                              
@@ -540,37 +496,18 @@ $= \frac{G^{2}}{n} = \frac{\left( 829 \right)^{2}}{25}$= 27489.64
 **Treatment Sum of Squares(SSt)**=$\frac{1}{5}(188^{2} + 171^{2} + 142^{2}+210^{2}+118^{2}) - CF$ 
                              $= 28554.6 - 27489.64 = 1064.96$   
 **Error Sum of Squares** $= 1753.36 - 253.76- 272.56-1064.96 = 162.08$
-=======
-**Total Sum of Squares(TSS)**= $28^2+36^2+18^2+...+31^2-27489.64$  
-                             =29243-27489.64 = 1753.36  
-                             
-**Row Sum of Squares(RSS)**=$\frac{1}{5}(159^{2} + 163^{2} + 197^{2}+157^{2}+153^{2}) - CF$   
-                           =27743.4-27489.64 = 253.76  
-                           
-**Column Sum of Squares(CSS)**=$\frac{1}{5}(177^{2} + 165^{2} + 138^{2}+162^{2}+187^{2}) - CF$ 
-                             = 27762.2-27489.64 = 272.56  
-                             
-**Treatment Sum of Squares(SSt)**=$\frac{1}{5}(188^{2} + 171^{2} + 142^{2}+210^{2}+118^{2}) - CF$ 
-                             = 28554.6 - 27489.64 = 1064.96  
-                             
-**Error Sum of Squares** = 1753.36 - 253.76- 272.56-1064.96 = 162.08
->>>>>>> d548f399770035f7bb22948635d0f655d0551b09
+
 
 ```{r LSDE3, echo=FALSE,fig.cap='ANOVA',out.width="90%", fig.align='center'}
 knitr::include_graphics(rep("images/LSDE3.png"))
 ``` 
 
 Since the F cal is greater than the F table value, All the null hypotheses are rejected.
-<<<<<<< HEAD
 
 $C.D. = t_{\left( \frac{\alpha}{2},\ \ \ error\ df \right)}\sqrt{2MSE/v}$  
 
 $C.D. = 2.18\sqrt{2x13.51/5}$  
 
-=======
-$C.D. = t_{\left( \frac{\alpha}{2},\ \ \ error\ df \right)}\sqrt{2MSE/v}$ 
-$C.D. = 2.18\sqrt{2*13.51/5}$
->>>>>>> d548f399770035f7bb22948635d0f655d0551b09
 $C.D=5.06$
 
 Mean of treatment D is maximum which is statistically at par with A. Mean of E is 
@@ -586,15 +523,10 @@ orthogonal data’ which is highly computer based (ii) Method of substitution by
 
 **Covariance Method by Bartlett's**  
 Assume an imaginary covariate X taking values zero for every plot except the 
-<<<<<<< HEAD
+
 missing plot for which it will take the value 1 (or –1) . Now the value of the main variate, Y = 0 for the missing plot, and the actual values for the remaining plots. The data will be analysed as per the ANCOVA technique of the respective design used.  
 In missing plot analysis the degrees of freedom for error and total will be 
 based on the existing number of observations only. By this method also the degrees of freedom of adjusted error sum of squares will be less by one (when there is one missing value). 
-=======
-missing plot for which it will take the value 1 (or –1) . Now the value of the main variate Y = 0 for the missing plot, and the actual values for the remaining plots. The data will be analysed as per the ANCOVA technique of the respective design used.  
-In missing plot analysis the degrees of freedom for error and total will be 
-based on the existing number of observations only. By this method also the degrees of freedom of adjusted error sum of squares will be less by one ( when there is one missing value). 
->>>>>>> d548f399770035f7bb22948635d0f655d0551b09
 
 **Method of Substitution**  
 $(i)$ In this method we will calculate with the aid of a formula an estimate of the missing value. The formula will vary from design to design and actually it will not supply the exact missing value.  But the procedure permits the researcher to complete the analysis without resorting to more complex procedures.  
@@ -616,11 +548,8 @@ G = Grand total of all existing observations.
 $(ii)$ This estimate of the missing value is placed in its position and the analysis is carried out based on the procedure of RBD. Subtract one degree of freedom from the total and error degrees of freedom.  
 
 This method provides a proper estimate of the error variance per plot but there 
-<<<<<<< HEAD
+
 is an inflation in treatment sum of squares; (the treatment sum of squares is positively biased). If the treatments turn out to be not significant we can ignore the bias and the results are accepted. But if the treatments turns out to be just significant it may be due to this bias. In that case an actual treatment sum of squares is obtained by a suitable formula. 
-=======
-is an inflation in treatment sum of squares; ( the treatment sum of squares is positively biased). If the treatments turn out to be not significant we can ignore the bias and the results are accepted. But if the treatments turns out to be just significant it may be due to this bias. In that case an actual treatment sum of squares is obtained by a suitable formula. 
->>>>>>> d548f399770035f7bb22948635d0f655d0551b09
 
 $(iii)$ Estimate of Bias in the case of RBD
 $$Bias=\frac{(B+vT-G)^2}{v(v-1)(r-1)^2}$$
@@ -629,12 +558,7 @@ treatment mean square against the Mean Square for error:  and make the conclusio
 $(iv)$ Pair comparison  
 $(a)$ For comparing two treatment means in which one of them contain a missing observation 
 $$C.D. = t_{\alpha}\sqrt{MSE(\frac{2}{r}+\frac{v}{r(r-1)(v-1)})}$$  
-$(b)$  For comparing other pairs of  treatment means: (in which none of 
-<<<<<<< HEAD
-them contain any missing observation)   
-=======
-them contain any missing observation )   
->>>>>>> d548f399770035f7bb22948635d0f655d0551b09
+$(b)$  For comparing other pairs of  treatment means: (in which none of them contain any missing observation)   
 $$C.D. = t_{\alpha}\sqrt{2MSE/r}$$ 
 where, $t_{\alpha}$ denote the t value (r-1)(v-1)-1 degrees of freedom.  
 
@@ -648,11 +572,7 @@ $(i)$ The missing value in LSD is obtained as
 $$x=\frac{v(R+C+T)-2G}{(v-1)(v-2)}$$
 where,  
 x = estimate of the missing data  
-<<<<<<< HEAD
 v = number of treatments/rows/blocks/columns    
-=======
-v = number of treatments/rows or blocks/columns    
->>>>>>> d548f399770035f7bb22948635d0f655d0551b09
 R = Total of the observed values of the row that contain the missing data   
 C = Total of the observed values of the column that contain the missing data  
 T = Total of the observed values of the treatment that contain the missing data  

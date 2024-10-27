@@ -320,15 +320,9 @@ knitr::include_graphics(rep("images/probshow.jpg"))
 
 Here, the possible outcomes are HH, HT, TH, TT. *i*.*e*., Total number of possible outcomes = 4.  
 
-<<<<<<< HEAD
-\(i)\) Number of outcomes favorable to the event (2 heads) = 1 (*i*.*e*.,HH). 
-
-  $p$(2 heads) = 1/4 .
-=======
 \(i)\) Number of outcomes favorable to the event (2 heads) = 1 (i.e.,HH). *i*.*e*.$p$(2 heads) = 1/4 .
 
 \(ii)\) Now the event consisting of exactly one head has two favourable cases, namely HT and TH
->>>>>>> d548f399770035f7bb22948635d0f655d0551b09
 
 \(ii)\) Now the event consisting of exactly one head has two favourable cases, namely HT and TH
 

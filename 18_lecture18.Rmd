@@ -126,12 +126,9 @@ Fisher\'s LSD procedure is known to preserve the experiment wise type I error ra
   
   (v) From the largest mean subtract the R~p~ (for largest p). Declare the means less than this value as significantly different from the largest mean. For the remaining treatments whose values are larger than the difference (Largest Mean- Largest R~p~), compare the differences with the appropriate R~p~ value.(If two treatments are remaining compare with R~2~, for three treatments with R~3~ and so on).
   
-<<<<<<< HEAD
+
   (vi) From the second largest mean subtract the second largest R~p~ and compare the treatments as in step v.
-=======
-  (vi) From the second largest mean subtract the second largest R~p~ and compare the treatments as in step.
->>>>>>> d548f399770035f7bb22948635d0f655d0551b09
-  
+
   (vii) Present the results by using either a line notation (separate line under each homogeneous group) or by an alphabet notation (same alphabet representing homogeneous group) to indicate the treatments that are on par or those are significantly different.  
   
   
