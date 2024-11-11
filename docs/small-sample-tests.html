@@ -10,7 +10,7 @@
 <meta name="author" content="Dr. Adarsh V.S.">
 <meta name="author" content="Mohammed Hisham">
 <meta name="description" content="If the sample size n is less than 30 (n &lt; 30) it is known as small sample. For small samples the sampling distributions of statistic commonly used are χ2 (Chi-square), F and t distribution. A...">
-<meta name="generator" content="bookdown 0.36 with bs4_book()">
+<meta name="generator" content="bookdown 0.40.3 with bs4_book()">
 <meta property="og:title" content="Chapter 14 Small sample tests | TEXTBOOK OF AGRICULTURAL STATISTICS">
 <meta property="og:type" content="book">
 <meta property="og:image" content="/images/cover.png">
@@ -21,7 +21,7 @@
 <meta name="twitter:image" content="/images/cover.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.7.0/transition.js"></script><script src="libs/bs3compat-0.7.0/tabs.js"></script><script src="libs/bs3compat-0.7.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
@@ -32,6 +32,7 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
+          margin-bottom: 0em;
         }
     .hanging div.csl-entry {
       margin-left:2em;
@@ -360,7 +361,7 @@ NA
 </table></div>
 <p><span class="math display">\[t = \frac{\overline{x} - \mu_{0}}{\frac{s}{\sqrt{n - 1}}}\]</span></p>
 <p><span class="math display">\[t = \frac{12.63 - 12}{\frac{1.085306}{\sqrt{10 - 1}}} = \frac{0.63}{0.3432} = 1.835\]</span></p>
-<p>Table value for <em>t</em> corresponding to 5% level of significance and 9 degrees of freedom is 2.262 (two tailed test) – see table 1.1 at the end of this chapter.</p>
+<p>Table value for <em>t</em> corresponding to 5% level of significance and 9 degrees of freedom is 2.262 (two tailed test) – see t table (Fig: 14.1) at the end of this chapter.</p>
 <p>Since the calculated value (1.835) is less than the table value (2.262), we conclude that, we don’t have enough evidence to reject the null hypothesis. So, it can be stated that mean is 12 quintals per hectare.</p>
 <p><strong>Example 10: Try it by yourself</strong></p>
 <p>The mean weekly sales of soap bars in departmental stores were 146.3 bars per store. After an advertising campaign the mean weekly sales in 22 stores for a typical week was 153.7 and showed a standard deviation of 17.2. Was the advertisement campaign successful?</p>
@@ -376,7 +377,7 @@ NA
 <li><p>Population variances are equal</p></li>
 <li><p>Population variances are unequal</p></li>
 </ol>
-<p>Before proceeding to t-test a F test is performed to test homogeneity of population variance (See section).</p>
+<p>Before proceeding to t-test a F test is performed to test homogeneity of population variance (See section 14.6).</p>
 <div id="case-when-the-population-variances-are-equal-homogenous" class="section level3" number="14.2.1">
 <h3>
 <span class="header-section-number">14.2.1</span> Case when the population variances are equal (homogenous)<a class="anchor" aria-label="anchor" href="#case-when-the-population-variances-are-equal-homogenous"><i class="fas fa-link"></i></a>
@@ -391,8 +392,8 @@ NA
 <p>H<sub>1</sub> : <em>μ</em><sub>1</sub>≠ <em>μ</em><sub>2</sub> (called two tailed alternative)</p>
 <p>We will calculate test statistic, <span class="math inline">\(t\)</span> using the following formula.</p>
 <p><span class="math display">\[t = \frac{{\overline{x}}_{1} - {\overline{x}}_{2}}{s\sqrt{\left( \frac{1}{n_{1}} + \frac{1}{n_{2}} \right)}}\]</span></p>
-<p>Where, <span class="math inline">\(s^{2} = \frac{(n_{1}-1)s_{1}^2+(n_{2}-1)s_{2}^2}{n_{1} + n_{2} - 2}\)</span>, <span class="math inline">\(x_{1i}\)</span> and <span class="math inline">\(x_{2i}\)</span> are sample observations from population 1 &amp; 2, respectively.</p>
-<p>Under null hypothesis <em>t</em> follows a <em>t</em> distribution with <span class="math inline">\(n_{1} + n_{2} - 2\)</span>degrees of freedom. Decision rule is same as that of previous t- test (section 2.1.2).</p>
+<p>Where, <span class="math inline">\(s^{2} = \frac{(n_{1}-1)s_{1}^2+(n_{2}-1)s_{2}^2}{n_{1} + n_{2} - 2}\)</span>; <span class="math inline">\({\overline{x}}_{1}\)</span> and <span class="math inline">\({\overline{x}}_{2}\)</span> are sample means from population 1 &amp; 2, respectively.</p>
+<p>Under null hypothesis <em>t</em> follows a <em>t</em> distribution with <span class="math inline">\(n_{1} + n_{2} - 2\)</span> degrees of freedom. Decision rule is same as that of previous t- test (section 14.1.2).</p>
 </div>
 <div id="case-when-the-population-variances-are-unequal" class="section level3" number="14.2.2">
 <h3>
@@ -409,10 +410,10 @@ NA
 <p>H<sub>1</sub> : <em>μ</em><sub>1</sub>≠ <em>μ</em><sub>2</sub> (called two tailed alternative)</p>
 <p>We will calculate test statistic, <span class="math inline">\(t\)</span> using the following formula.</p>
 <p><span class="math display">\[t = \frac{{\overline{x}}_{1} - {\overline{x}}_{2}}{\sqrt{\left( \frac{s_{1}^{2}}{n_{1}} + \frac{s_{2}^{2}}{n_{2}} \right)}}\]</span></p>
-<p><span class="math inline">\(s_{1}\)</span>and<span class="math inline">\(\text{s}_{2}\)</span> are the sample standard deviations from two populations, respectively.</p>
+<p><span class="math inline">\(s_{1}\)</span>and<span class="math inline">\({s}_{2}\)</span> are the sample standard deviations from two populations, respectively.</p>
 <p>The degrees of freedom of Welch t-test is calculated as follows:</p>
-<p><span class="math display">\[\frac{\left( \frac{s_{1}^{2}}{n_{1}} + \frac{s_{2}^{2}}{n_{2}} \right)^{2}}{\frac{s_{1}^{4}}{n_{1}^{2}\left( n_{2} - 1 \right)} + \frac{s_{2}^{4}}{n_{2}^{2}\left( n_{1} - 1 \right)}}\]</span></p>
-<p>Once the t value is determined, you have to read in the t table the critical value of Student’s t distribution corresponding to the significance level. Decision rule is same as that of previous t- test (section 2.1.2).</p>
+<p><span class="math display">\[\frac{\left( \frac{s_{1}^{2}}{n_{1}} + \frac{s_{2}^{2}}{n_{2}} \right)^{2}}{\frac{s_{1}^{4}}{n_{1}^{2}\left( n_{1} - 1 \right)} + \frac{s_{2}^{4}}{n_{2}^{2}\left( n_{2} - 1 \right)}}\]</span></p>
+<p>Once the t value is determined, you have to read in the t table the critical value of Student’s t distribution corresponding to the significance level. Decision rule is same as that of previous t- test (section 14.1.2).</p>
 <p><strong>Example 11:</strong></p>
 <p>In order to compare the effectiveness of two sources of nitrogen, namely ammonium chloride and urea on grain yield of paddy, an experiment was conducted. The results on the grain yield of paddy (kg/plot) under the two treatments are given below.</p>
 <p><strong>Ammonium chloride</strong>: 13.4, 10.9, 11.2, 11.8, 14, 15.3, 14.2, 12.6, 17, 16.2, 16.5, 15.7</p>
@@ -436,8 +437,8 @@ NA
 <p>H<sub>1</sub> : <em>μ</em><sub>1</sub>≠ <em>μ</em><sub>2</sub> (called two tailed alternative)</p>
 <p>We will calculate test statistic, <span class="math inline">\(t\)</span> using the following formula.</p>
 <p><span class="math display">\[t = \frac{|d^̅|}{\frac{s}{\sqrt{n}}}\]</span></p>
-<p>Where <span class="math inline">\(d_{i} = x_{i} - y_{i}\)</span>, <span class="math inline">\(\overline{d} = \frac{\sum_{i = 1}^{n}d_{i}}{n}\)</span>, <span class="math inline">\(s^{2} = \frac{\sum_{i = 1}^{n}\left( d_{i} - \overline{d} \right)^{2}}{n - 1}\)</span></p>
-<p>Under null hypothesis <em>t</em> follows a <em>t</em> distribution with <span class="math inline">\(n - 1\)</span> degrees of freedom. Decision rule is same as that of previous t- test (section 2.1.2).</p>
+<p>Where <span class="math inline">\(\overline{d} = \frac{\sum_{i = 1}^{n}d_{i}}{n}\)</span>; <span class="math inline">\(d_{i} = x_{i} - y_{i}\)</span>, <span class="math inline">\(s^{2} = \frac{\sum_{i = 1}^{n}\left( d_{i} - \overline{d} \right)^{2}}{n - 1}\)</span></p>
+<p>Under null hypothesis <em>t</em> follows a <em>t</em> distribution with <span class="math inline">\(n - 1\)</span> degrees of freedom. Decision rule is same as that of previous t- test (section 14.1.2).</p>
 <p><strong>Example 12:</strong></p>
 <p>In an experiment the plots were divided into two equal parts. One part received soil treatment A and the second part received soil treatment B each plot was planted with sorghum. The sorghum yield (kg/plot) was observed as shown below. Test the effectiveness of soil treatments on sorghum yield</p>
 <div class="inline-table"><table class="table table-sm">
@@ -723,13 +724,13 @@ NA
 <h2>
 <span class="header-section-number">14.4</span> Testing the significance of correlation coefficient<a class="anchor" aria-label="anchor" href="#testing-the-significance-of-correlation-coefficient"><i class="fas fa-link"></i></a>
 </h2>
-<p>Let there be two normally distributed populations with means <em>µ</em><sub>1</sub> and <em>µ</em><sub>2</sub> and standard deviations be <em>σ</em><sub>1</sub> and <em>σ</em><sub>2</sub> respectively. Let the correlation between two populations be <em>ρ</em>. We want to test the null hypothesis that population correlation coefficient is zero (<em>ρ</em> =0). We can use t- test for the purpose. If we don’t have enough evidence from our sample to reject the null hypothesis, we may conclude that there is a significant correlation between populations ((<em>ρ</em> ≠ 0).</p>
+<p>Let there be two normally distributed populations with means <em>µ</em><sub>1</sub> and <em>µ</em><sub>2</sub> and standard deviations be <em>σ</em><sub>1</sub> and <em>σ</em><sub>2</sub> respectively. Let the correlation between two populations be <em>ρ</em>. We want to test the null hypothesis that population correlation coefficient is zero (<em>ρ</em> =0). We can use t- test for the purpose. If we don’t have enough evidence from our sample to reject the null hypothesis, we may conclude that there is a significant correlation between populations (<em>ρ</em> ≠ 0).</p>
 <p>The null hypothesis to be tested is</p>
 <p>H<sub>0</sub> : <em>ρ</em> = 0</p>
 <p>The alternative hypothesis</p>
 <p>H<sub>1</sub> : <em>ρ</em> ≠ 0 (two tailed alternative)</p>
 <p><span class="math display">\[t = \frac{r\sqrt{n - 2}}{\sqrt{1 - r^{2}}}\]</span></p>
-<p>Under null hypothesis <em>t</em> follows a <em>t</em> distribution with <span class="math inline">\(n - 2\)</span>degrees of freedom. We reject the null hypothesis, if the calculated value is greater than table value of <em>t</em> corresponding to <span class="math inline">\(n - 2\)</span>degrees of freedom and level of significance (α). our case α = 0.05</p>
+<p>Under null hypothesis <em>t</em> follows a <em>t</em> distribution with <span class="math inline">\(n - 2\)</span> degrees of freedom. We reject the null hypothesis, if the calculated value is greater than table value of <em>t</em> corresponding to <span class="math inline">\(n - 2\)</span> degrees of freedom and level of significance (α). our case α = 0.05</p>
 <p><strong>Example 14:</strong></p>
 <p>A coefficient of correlation of 0.2 is derived from a random sample of 625 pairs of observations. Test whether the population correlation coefficient is significant or not.</p>
 <p>Solution:</p>
@@ -750,22 +751,22 @@ NA
 <li><p>The sample observations are independent.</p></li>
 <li><p>The total frequency should be reasonably large, say, greater than 50.</p></li>
 <li><p>The theoretical cell frequencies should not be less than 5. If any theoretical cell frequency is less than 5, then for the application χ<sup>2</sup>tests, it is pooled with the preceding or succeeding frequencies so that the pooled frequency is more than 5 and finally adjust the degrees of freedom lost in pooling.</p></li>
-<li><p>Constraints on the cell frequencies should be linear. (eg., ∑ 𝑂𝑖 = ∑ 𝐸𝑖 (where <em>O</em> and <em>E</em> represents the observed and expected frequencies)</p></li>
+<li><p>Constraints on the cell frequencies should be linear. (eg., ∑ 𝑂<sub>𝑖</sub> = ∑ 𝐸<sub>𝑖</sub> (where <em>O<sub>i</sub></em> and <em>E<sub>i</sub></em> represents the observed and expected frequencies)</p></li>
 </ol>
 <p>Note:</p>
 <p>The χ<sup>2</sup> tests do not make any assumptions regarding the parent population from which the observations are taken. Such tests do not involve any population parameter. Hence these tests are known as non-parametric tests or distribution free tests.</p>
 <p>Degrees of freedom in χ<sup>2</sup> tests: Degrees of freedom in χ<sup>2</sup> tests refers to the number of independent variates which make up the statistic. The degrees of freedom in general is the total number of observations less the number of independent constraints imposed on the observations. For example, if <em>k</em> is the number of independent constraints in a set of data on <em>n</em> observations, then degrees of freedom = <em>n</em>-<em>k</em>.</p>
 <p>Three important chi-square tests:</p>
 <ul>
-<li><p>Chi-square test for goodness of fit</p></li>
-<li><p>Chi-square test for independence of attributes</p></li>
+<li><p>Chi-square test for goodness of fit.</p></li>
+<li><p>Chi-square test for independence of attributes.</p></li>
 <li><p>Chi-square test for a variance.</p></li>
 </ul>
 <div id="chi-square-test-χ2-for-goodness-of-fit" class="section level3" number="14.5.1">
 <h3>
 <span class="header-section-number">14.5.1</span> Chi square test (χ<sup>2</sup>) for goodness of fit<a class="anchor" aria-label="anchor" href="#chi-square-test-%CF%872-for-goodness-of-fit"><i class="fas fa-link"></i></a>
 </h3>
-<p>A very powerful test for testing the significance of the discrepancy between theory and experiment was given by Prof. Karl Pearson in 1900 and is known as “χ<sup>2</sup> tests of goodness of fit”.</p>
+<p>A very powerful test for testing the significance of the discrepancy between theory and experiment was given by Prof. Karl Pearson in 1900 and is known as “χ<sup>2</sup> tests for goodness of fit”.</p>
 <p>We want to test the null hypothesis, H<sub>0</sub>: There is no significance between the theory and experiment</p>
 <p>Against the alternative hypothesis H<sub>1</sub>: There is significance between the theory and experiment</p>
 <p>If <em>O</em><sub>i</sub> (<em>i</em>=1,2,...,<em>n</em>) is a set of observed frequencies and <em>E</em><sub>i</sub> (<em>i</em>=1,2,...,<em>n</em>) is the corresponding set of expected (theoretical) frequencies, then Karl Pearson’s chi-square test statistic is given by</p>
@@ -922,7 +923,7 @@ NA
 </table></div>
 <p><span class="math display">\[\chi^{2} = \sum_{i = 1}^{n}\frac{\left( O_{i} - E_{i} \right)^{2}}{E_{i}}\]</span></p>
 <p><span class="math display">\[\chi^{2} = 0.676\]</span></p>
-<p><span class="math inline">\(\chi_{\text{cal}}^{2}\)</span>= 0.676, table value of chi-square for 4-1=3 degrees of freedom and 5% level of significance is 7.815. We won’t reject the null hypothesis, H<sub>0</sub>: There is no significance between the theory and experiment. Conclude that data follows 9:3:3:1</p>
+<p><span class="math inline">\(\chi_{\text{cal}}^{2}\)</span>= 0.676, table value of chi-square for 4-1=3 degrees of freedom and 5% level of significance is 7.815. We won’t reject the null hypothesis, H<sub>0</sub>: There is no significance between the theory and experiment. Conclude that data follows 9:3:3:1 ratio.</p>
 <p><strong>Example 16: Try by yourself</strong></p>
 <p>The number of yeast cells counted in a haemocytometer is compared to the theoretical value is given below. Does the experimental result support the theory.</p>
 <div class="inline-table"><table class="table table-sm">
@@ -1616,7 +1617,7 @@ NA
 </tbody>
 </table></div>
 <p><em>R</em><sub>1</sub>, <em>R</em><sub>2</sub> and <em>C</em><sub>1</sub>, <em>C</em><sub>2</sub> are row totals and column totals respectively. <em>n</em> is the total number of observations.</p>
-<p>In case of 2 x 2 contingency table <span class="math inline">\(\chi\^{2}\)</span>can be directly found using the short cut formula.</p>
+<p>In case of 2 x 2 contingency table <span class="math inline">\(\chi^{2}\)</span> can be directly found using the short cut formula.</p>
 <p>The null hypothesis to be tested is <strong>H<sub>0</sub></strong>: The two attributes under consideration are independent.</p>
 <p>The alternative hypothesis is <strong>H<sub>1</sub></strong>: The two attributes under consideration are not independent.</p>
 <p><span class="math display">\[\chi^{2} = \frac{n\left( ad - bc \right)^{2}}{C_{1}C_{2}R_{1}R_{2}}\]</span></p>
@@ -1625,7 +1626,7 @@ NA
 <h4>
 <span class="header-section-number">14.5.3.1</span> Yate’s correction for continuity<a class="anchor" aria-label="anchor" href="#yates-correction-for-continuity"><i class="fas fa-link"></i></a>
 </h4>
-<p>In a 2 X 2 contingency table, the number of degrees of freedom is (2-1) × (2-1) = 1. If any one of the cell frequencies is less than 5, then, use of pooling method results in <span class="math inline">\(\chi^{2}\)</span>with 0 degrees of freedom (1 degrees of freedom is lost due to pooling) which is meaningless. In this case we apply a correction due to Yates which is usually known as Yates’ correction for continuity. The Yate’s correction is made by adding 0.5 to the least cell frequency and adjusting the other cell frequencies so that the column and row totals remain same. The formula for the test statistic in equation (15) is now modified and is given as below.</p>
+<p>In a 2 X 2 contingency table, the number of degrees of freedom is (2-1) × (2-1) = 1. If any one of the cell frequencies is less than 5, then, use of pooling method results in <span class="math inline">\(\chi^{2}\)</span> with 0 degrees of freedom (1 degrees of freedom is lost due to pooling) which is meaningless. In this case we apply a correction due to Yates which is usually known as Yates’ correction for continuity. The Yate’s correction is made by adding 0.5 to the least cell frequency and adjusting the other cell frequencies so that the column and row totals remain same. The formula for the test statistic in equation (15) is now modified and is given as below.</p>
 <p>Test statistic used is</p>
 <p><span class="math display">\[\chi^{2} = \frac{{n\left( \left| ad - bc \right| - \frac{n}{2} \right)}^{2}}{C_{1}C_{2}R_{1}R_{2}}\]</span></p>
 <p><strong>Solution to Example 17</strong></p>
@@ -1693,6 +1694,12 @@ NA
 <p>Under null hypothesis test statistic follows a F distribution with <span class="math inline">\(n_{2} - 1\)</span> and <span class="math inline">\(n_{1} - 1\)</span> degrees of freedom.</p>
 <p><strong>Example 20: Try it for yourself</strong></p>
 <p>For a random sample representing one normal population, we have <span class="math inline">\(n_{1}\)</span> = 11, and <span class="math inline">\(s_{1}^{2}\)</span> = 21.87. For another random sample representing the second normal population, we have<span class="math inline">\(\ n_{2}\)</span>= 8 and <span class="math inline">\(s_{2}^{2}\)</span> = 15.36. Test the equality of variances.</p>
+<div class="figure" style="text-align: center">
+<span style="display:block;" id="fig:ttable"></span>
+<img src="images/ttable.png" alt="t table" width="85%"><p class="caption">
+Figure 14.1: t table
+</p>
+</div>
 <p> <br>
  <br>
  </p>

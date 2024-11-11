@@ -61,9 +61,9 @@ number of classes
 Here *n* =5
 
 Geometric mean=\
-$$\text{Antilog}\left( \frac{\sum_{i = 1}^{n}{\log x_{i}}}{n} \right) =$$\
-$$Antilog\left( \frac{8.926}{5} \right) =$$\
-$$ Antilog(1.785) = 60.95$$ note: here
+$$\text{Antilog}\left( \frac{\sum_{i = 1}^{n}{\log x_{i}}}{n} \right) $$\
+$$=\text{Antilog}\left( \frac{8.926}{5} \right) $$\
+$$ =\text{Antilog}(1.785) = 60.95$$ note: here
 $\text{Antilog}\left( x \right) = 10^{x}$ *i*.*e*.
 $$\text{Antilog}\left( 1.785 \right) = \ 10^{1.785} = 60.95$$
 
@@ -104,7 +104,7 @@ $$GM = \ Antilog\left( \frac{\sum_{i = 1}^{k}{{f_{i}\log}x_{i}}}{n} \right)$$
 
 $${\sum_{i = 1}^{k}{{f_{i}\log}x_{i}} = 65.787}$$
 $${\text{GM} = \ Antilog\left( \frac{65.787}{32} \right)}$$
-$${= Antilog\left( 2.0558 \right) = 10^{2.0558} = 113.72}$$
+$${= Antilog\left( 2.0558 \right) = 10^{2.0558} = 113.71}$$
 
 ### Merits and Demerits of Geometric mean
 

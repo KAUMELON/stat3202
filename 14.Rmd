@@ -100,7 +100,7 @@ $$t = \frac{\overline{x} - \mu_{0}}{\frac{s}{\sqrt{n - 1}}}$$
 
 $$t = \frac{12.63 - 12}{\frac{1.085306}{\sqrt{10 - 1}}} = \frac{0.63}{0.3432} = 1.835$$
 
-Table value for *t* corresponding to 5% level of significance and 9 degrees of freedom is 2.262 (two tailed test) -- see table 1.1 at the end of this chapter.
+Table value for *t* corresponding to 5% level of significance and 9 degrees of freedom is 2.262 (two tailed test) -- see t table (Fig: 14.1) at the end of this chapter.
 
 Since the calculated value (1.835) is less than the table value (2.262), we conclude that, we don't have enough evidence to reject the null hypothesis. So, it can be stated that mean is 12 quintals per hectare.
 
@@ -118,7 +118,7 @@ There are two cases under this situation
 
 2.  Population variances are unequal
 
-Before proceeding to t-test a F test is performed to test homogeneity of population variance (See section).
+Before proceeding to t-test a F test is performed to test homogeneity of population variance (See section 14.6).
 
 ### Case when the population variances are equal (homogenous)
 
@@ -142,9 +142,9 @@ We will calculate test statistic, $t$ using the following formula.
 
 $$t = \frac{{\overline{x}}_{1} - {\overline{x}}_{2}}{s\sqrt{\left( \frac{1}{n_{1}} + \frac{1}{n_{2}} \right)}}$$
 
-Where, $s^{2} = \frac{(n_{1}-1)s_{1}^2+(n_{2}-1)s_{2}^2}{n_{1} + n_{2} - 2}$, $x_{1i}$ and $x_{2i}$ are sample observations from population 1 & 2, respectively.
+Where, $s^{2} = \frac{(n_{1}-1)s_{1}^2+(n_{2}-1)s_{2}^2}{n_{1} + n_{2} - 2}$; ${\overline{x}}_{1}$ and ${\overline{x}}_{2}$ are sample means from population 1 & 2, respectively.
 
-Under null hypothesis *t* follows a *t* distribution with $n_{1} + n_{2} - 2$degrees of freedom. Decision rule is same as that of previous t- test (section 2.1.2).
+Under null hypothesis *t* follows a *t* distribution with $n_{1} + n_{2} - 2$ degrees of freedom. Decision rule is same as that of previous t- test (section 14.1.2).
 
 ### Case when the population variances are unequal
 
@@ -170,13 +170,13 @@ We will calculate test statistic, $t$ using the following formula.
 
 $$t = \frac{{\overline{x}}_{1} - {\overline{x}}_{2}}{\sqrt{\left( \frac{s_{1}^{2}}{n_{1}} + \frac{s_{2}^{2}}{n_{2}} \right)}}$$
 
-$s_{1}$and$\text{s}_{2}$ are the sample standard deviations from two populations, respectively.
+$s_{1}$and${s}_{2}$ are the sample standard deviations from two populations, respectively.
 
 The degrees of freedom of Welch t-test is calculated as follows:
 
-$$\frac{\left( \frac{s_{1}^{2}}{n_{1}} + \frac{s_{2}^{2}}{n_{2}} \right)^{2}}{\frac{s_{1}^{4}}{n_{1}^{2}\left( n_{2} - 1 \right)} + \frac{s_{2}^{4}}{n_{2}^{2}\left( n_{1} - 1 \right)}}$$
+$$\frac{\left( \frac{s_{1}^{2}}{n_{1}} + \frac{s_{2}^{2}}{n_{2}} \right)^{2}}{\frac{s_{1}^{4}}{n_{1}^{2}\left( n_{1} - 1 \right)} + \frac{s_{2}^{4}}{n_{2}^{2}\left( n_{2} - 1 \right)}}$$
 
-Once the t value is determined, you have to read in the t table the critical value of Student's t distribution corresponding to the significance level. Decision rule is same as that of previous t- test (section 2.1.2).
+Once the t value is determined, you have to read in the t table the critical value of Student's t distribution corresponding to the significance level. Decision rule is same as that of previous t- test (section 14.1.2).
 
 **Example 11:**
 
@@ -214,9 +214,9 @@ We will calculate test statistic, $t$ using the following formula.
 
 $$t = \frac{|d^̅|}{\frac{s}{\sqrt{n}}}$$
 
-Where $d_{i} = x_{i} - y_{i}$, $\overline{d} = \frac{\sum_{i = 1}^{n}d_{i}}{n}$, $s^{2} = \frac{\sum_{i = 1}^{n}\left( d_{i} - \overline{d} \right)^{2}}{n - 1}$
+Where  $\overline{d} = \frac{\sum_{i = 1}^{n}d_{i}}{n}$; $d_{i} = x_{i} - y_{i}$, $s^{2} = \frac{\sum_{i = 1}^{n}\left( d_{i} - \overline{d} \right)^{2}}{n - 1}$
 
-Under null hypothesis *t* follows a *t* distribution with $n - 1$ degrees of freedom. Decision rule is same as that of previous t- test (section 2.1.2).
+Under null hypothesis *t* follows a *t* distribution with $n - 1$ degrees of freedom. Decision rule is same as that of previous t- test (section 14.1.2).
 
 **Example 12:**
 
@@ -264,7 +264,7 @@ A certain stimulus administered to each of 12 patients resulted in the following
 
 ## Testing the significance of correlation coefficient
 
-Let there be two normally distributed populations with means *µ*~1~ and *µ*~2~ and standard deviations be *σ*~1~ and *σ*~2~ respectively. Let the correlation between two populations be *ρ*. We want to test the null hypothesis that population correlation coefficient is zero (*ρ* =0). We can use t- test for the purpose. If we don't have enough evidence from our sample to reject the null hypothesis, we may conclude that there is a significant correlation between populations ((*ρ* ≠ 0).
+Let there be two normally distributed populations with means *µ*~1~ and *µ*~2~ and standard deviations be *σ*~1~ and *σ*~2~ respectively. Let the correlation between two populations be *ρ*. We want to test the null hypothesis that population correlation coefficient is zero (*ρ* =0). We can use t- test for the purpose. If we don't have enough evidence from our sample to reject the null hypothesis, we may conclude that there is a significant correlation between populations (*ρ* ≠ 0).
 
 The null hypothesis to be tested is
 
@@ -276,7 +276,7 @@ H~1~ : *ρ* ≠ 0 (two tailed alternative)
 
 $$t = \frac{r\sqrt{n - 2}}{\sqrt{1 - r^{2}}}$$
 
-Under null hypothesis *t* follows a *t* distribution with $n - 2$degrees of freedom. We reject the null hypothesis, if the calculated value is greater than table value of *t* corresponding to $n - 2$degrees of freedom and level of significance (α). our case α = 0.05
+Under null hypothesis *t* follows a *t* distribution with $n - 2$ degrees of freedom. We reject the null hypothesis, if the calculated value is greater than table value of *t* corresponding to $n - 2$ degrees of freedom and level of significance (α). our case α = 0.05
 
 **Example 14:**
 
@@ -308,7 +308,7 @@ Chi-square tests are based on the sampling distribution called chi-square distri
 
 3.  The theoretical cell frequencies should not be less than 5. If any theoretical cell frequency is less than 5, then for the application χ^2^tests, it is pooled with the preceding or succeeding frequencies so that the pooled frequency is more than 5 and finally adjust the degrees of freedom lost in pooling.
 
-4.  Constraints on the cell frequencies should be linear. (eg., ∑ 𝑂𝑖 = ∑ 𝐸𝑖 (where *O* and *E* represents the observed and expected frequencies)
+4.  Constraints on the cell frequencies should be linear. (eg., ∑ 𝑂~𝑖~ = ∑ 𝐸~𝑖~ (where *O~i~* and *E~i~* represents the observed and expected frequencies)
 
 Note:
 
@@ -318,15 +318,15 @@ Degrees of freedom in χ^2^ tests: Degrees of freedom in χ^2^ tests refers to t
 
 Three important chi-square tests:
 
--   Chi-square test for goodness of fit
+-   Chi-square test for goodness of fit.
 
--   Chi-square test for independence of attributes
+-   Chi-square test for independence of attributes.
 
 -   Chi-square test for a variance.
 
 ### Chi square test (χ^2^) for goodness of fit
 
-A very powerful test for testing the significance of the discrepancy between theory and experiment was given by Prof. Karl Pearson in 1900 and is known as "χ^2^ tests of goodness of fit".
+A very powerful test for testing the significance of the discrepancy between theory and experiment was given by Prof. Karl Pearson in 1900 and is known as "χ^2^ tests for goodness of fit".
 
 We want to test the null hypothesis, H~0~: There is no significance between the theory and experiment
 
@@ -367,7 +367,7 @@ $$\chi^{2} = \sum_{i = 1}^{n}\frac{\left( O_{i} - E_{i} \right)^{2}}{E_{i}}$$
 
 $$\chi^{2} = 0.676$$
 
-$\chi_{\text{cal}}^{2}$= 0.676, table value of chi-square for 4-1=3 degrees of freedom and 5% level of significance is 7.815. We won't reject the null hypothesis, H~0~: There is no significance between the theory and experiment. Conclude that data follows 9:3:3:1
+$\chi_{\text{cal}}^{2}$= 0.676, table value of chi-square for 4-1=3 degrees of freedom and 5% level of significance is 7.815. We won't reject the null hypothesis, H~0~: There is no significance between the theory and experiment. Conclude that data follows 9:3:3:1 ratio.
 
 **Example 16: Try by yourself**
 
@@ -509,7 +509,7 @@ When the number of rows and number of columns are equal to 2; it is termed as 2 
 
 *R*~1~, *R*~2~ and *C*~1~, *C*~2~ are row totals and column totals respectively. *n* is the total number of observations.
 
-In case of 2 x 2 contingency table $\chi\^{2}$can be directly found using the short cut formula.
+In case of 2 x 2 contingency table $\chi^{2}$ can be directly found using the short cut formula.
 
 The null hypothesis to be tested is **H~0~**: The two attributes under consideration are independent.
 
@@ -521,7 +521,7 @@ Under null hypothesis test statistic follows a chi-square distribution with (2 -
 
 #### Yate's correction for continuity
 
-In a 2 X 2 contingency table, the number of degrees of freedom is (2-1) × (2-1) = 1. If any one of the cell frequencies is less than 5, then, use of pooling method results in $\chi^{2}$with 0 degrees of freedom (1 degrees of freedom is lost due to pooling) which is meaningless. In this case we apply a correction due to Yates which is usually known as Yates' correction for continuity. The Yate's correction is made by adding 0.5 to the least cell frequency and adjusting the other cell frequencies so that the column and row totals remain same. The formula for the test statistic in equation (15) is now modified and is given as below.
+In a 2 X 2 contingency table, the number of degrees of freedom is (2-1) × (2-1) = 1. If any one of the cell frequencies is less than 5, then, use of pooling method results in $\chi^{2}$ with 0 degrees of freedom (1 degrees of freedom is lost due to pooling) which is meaningless. In this case we apply a correction due to Yates which is usually known as Yates' correction for continuity. The Yate's correction is made by adding 0.5 to the least cell frequency and adjusting the other cell frequencies so that the column and row totals remain same. The formula for the test statistic in equation (15) is now modified and is given as below.
 
 Test statistic used is
 
@@ -598,6 +598,9 @@ Under null hypothesis test statistic follows a F distribution with $n_{2} - 1$ a
 
 For a random sample representing one normal population, we have $n_{1}$ = 11, and $s_{1}^{2}$ = 21.87. For another random sample representing the second normal population, we have$\ n_{2}$= 8 and $s_{2}^{2}$ = 15.36. Test the equality of variances.  
 
+```{r ttable, echo=FALSE,fig.cap='t table',out.width="85%", fig.align='center'}
+knitr::include_graphics(rep("images/ttable.png"))
+```
 
  \
  \

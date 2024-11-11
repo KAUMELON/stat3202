@@ -10,7 +10,7 @@
 <meta name="author" content="Dr. Adarsh V.S.">
 <meta name="author" content="Mohammed Hisham">
 <meta name="description" content="body { text-align: justify} Many events can’t be predicted with total certainty. The best we can say is how likely they are to happen, using the idea of probability.  9.1 Tossing a Coin When a...">
-<meta name="generator" content="bookdown 0.36 with bs4_book()">
+<meta name="generator" content="bookdown 0.40.3 with bs4_book()">
 <meta property="og:title" content="Chapter 9 Probability | TEXTBOOK OF AGRICULTURAL STATISTICS">
 <meta property="og:type" content="book">
 <meta property="og:image" content="/images/cover.png">
@@ -21,7 +21,7 @@
 <meta name="twitter:image" content="/images/cover.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.7.0/transition.js"></script><script src="libs/bs3compat-0.7.0/tabs.js"></script><script src="libs/bs3compat-0.7.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
@@ -32,6 +32,7 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
+          margin-bottom: 0em;
         }
     .hanging div.csl-entry {
       margin-left:2em;
@@ -211,9 +212,7 @@ of cards; Tossing a die.</p>
 <p>Eg: Throwing a coin generates the sample space; <strong>S</strong>={H,T},Throwing a die: <strong>S</strong>= {1,2,3,4,5,6}</p>
 <p><strong>Sample point</strong>: Just one of the possible outcomes. Eg: heads, the 5 of Clubs in cards. There are 6 different sample points in the sample space of throwing a
 die.</p>
-
-<div class="rmdnote">
-<p>Exercise1: Check yourself</p>
+<p><u>Exercise1: Check yourself</u></p>
 <p>If a die is tossed</p>
 <ol style="list-style-type: decimal">
 <li>What is the sample space?<br>
@@ -221,12 +220,9 @@ die.</p>
 <li>What is the probability of getting a 1?<br>
 </li>
 <li>What is the probability of obtaining a even number?</li>
-<li>What is the probability of getting a 7?<br>
-</li>
+<li>What is the probability of getting a 7?</li>
 </ol>
-</div>
-Answers given in section <a href="probability.html#answer">9.9</a>
-
+<p>Answers given in section <a href="probability.html#answer">9.9</a></p>
 <div class="figure" style="text-align: center">
 <span style="display:block;" id="fig:dicepoints"></span>
 <img src="images/dicesamplepoints.jpg" alt="Sample space in throwing a die" width="50%"><p class="caption">
@@ -406,7 +402,8 @@ Figure 9.7: Sample space in throwing a die
 </blockquote>
 <p><strong>Solution</strong></p>
 <p>Here, the possible outcomes are HH, HT, TH, TT. <em>i</em>.<em>e</em>., Total number of possible outcomes = 4.</p>
-<p><span class="math inline">\(i)\)</span> Number of outcomes favorable to the event (2 heads) = 1 (i.e.,HH). <em>i</em>.<em>e</em>.<span class="math inline">\(p\)</span>(2 heads) = 1/4 .</p>
+<p><span class="math inline">\(i)\)</span> Number of outcomes favorable to the event (2 heads) = 1 (<em>i</em>.<em>e</em>.,HH).</p>
+<p><span class="math inline">\(p\)</span>(2 heads) = 1/4 .</p>
 <p><span class="math inline">\(ii)\)</span> Now the event consisting of exactly one head has two favourable cases, namely HT and TH</p>
 <p><span class="math inline">\(p\)</span>(exactly one head) = 2 /4 = 1/ 2</p>
 <blockquote>
@@ -526,7 +523,7 @@ Figure 9.8: Venn diagram showing intersection
 <h2>Probability using combinations<a class="anchor" aria-label="anchor" href="#probability-using-combinations"><i class="fas fa-link"></i></a>
 </h2>
 <p>Knowledge of combinations can be applied to find total number of possible outcomes.</p>
-<p><sup>n</sup><em>C</em><sub>r</sub><span class="math inline">\(= \frac{n!}{r!(n - 1)!}\)</span></p>
+<p><sup>n</sup><em>C</em><sub>r</sub><span class="math inline">\(= \frac{n!}{r!(n - r)!}\)</span></p>
 <p>For example
 <sup>3</sup><em>C</em><sub>2</sub><span class="math inline">\(= \frac{3!}{2!(3 - 2)!} = \frac{3 \times 2 \times 1}{2 \times 1(1)} = 3\)</span></p>
 <p>Now let us see with example how this is used in probability</p>

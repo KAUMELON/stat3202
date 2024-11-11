@@ -73,6 +73,7 @@ fig:tailed3
 fig:hypo
 fig:hypo2
 fig:samplemethod
+fig:ttable
 fig:org1
 fig:org2
 fig:org3
@@ -105,7 +106,7 @@ fig:onewayresult
 fig:twoway
 fig:twowaytable
 fig:twowayex
-fig:twowayanovatable
+fig:anovatabletwoway
 fig:crdnumbered
 fig:sequence
 fig:layout
@@ -413,7 +414,7 @@ test-statistic-f
 assumptions-of-anova
 types-of-anova
 one-way-anova
-one--way-anova-model-oneway
+one-way-anova-model-oneway
 one-way-classification
 total-sum-of-squares-partitioning
 proof
@@ -435,7 +436,7 @@ why-do-we-need-a-post-hoc-test.
 lsd
 lsd-least-significant-difference
 logic-behind-lsd-test
-advantages-and-disadvantages-of-lsd.
+advantages-and-disadvantages-of-lsd
 duncans-multuiple-range-test-dmrt
 single-factor-experiments
 crd

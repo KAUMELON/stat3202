@@ -12,9 +12,9 @@ ANOVA is an omnibus test. *Omnibus test*, as a general name, refers to an overal
 
 ANOVA doesn't tell which treatment pairs are different; more clearly on rejecting a null hypothesis in ANOVA, we conclude that at least a pair of treatment means are different, it didn't give any idea on which treatments are different. In order to identify which treatment means are significantly different one need to employ **multiple comparison tests** or **post-hoc tests**.
 
-Multiple comparison tests are also known as post-hoc tests. A significant omnibus F test in ANOVA procedure, is an in advance requirement before conducting the post-hoc comparison, otherwise those comparisons are not required.
+Multiple comparison tests are also known as post-hoc tests. A significant omnibus F test in ANOVA procedure, is an advance requirement before conducting the post-hoc comparison, otherwise those comparisons are not required.
 
-Post hoc tests (Multiple Comparison tests) or planned tests should be conducted after obtaining a significant F test in ANOVA. There are several methods for performing post hoc tests, few of them are
+Post hoc tests (Multiple Comparison tests) or planned tests should be conducted after obtaining a significant F test in ANOVA. There are several methods for performing post hoc tests, few of them are:-
 
 -   Fisher's LSD test (Least Significant Difference test)
 
@@ -80,7 +80,7 @@ If the replications are same $r_{i} = r_{j} = r$, then   $$\text{SE}\left( d \ri
 
 $$LSD = \ t_{\frac{\alpha}{2},edf}.\sqrt{\frac{2\ MSE}{r}}$$
 
-If the difference between the means of two treatments $T_{i}$ and $T_{j}$ is greater than LSD we say that $T_{i}$ and $T_{j}$ are significantly different at specified level of significance ($\alpha)$
+If the difference between the means of two treatments $T_{i}$ and $T_{j}$ is greater than LSD we say that $T_{i}$ and $T_{j}$ are significantly different at specified level of significance ($\alpha)$.
 
 ### Logic behind LSD test
 
@@ -101,7 +101,7 @@ $\left( T_{i} - T_{j} \right) > \text{LSD}$ the
 $100\left( 1 - \alpha \right)\%$ confidence interval does not include 0.
 Then we can reject the null hypothesis, population mean of the treatments are equal with $100\left( 1 - \alpha \right)\%$ confidence.
 
-### Advantages and disadvantages of LSD.
+### Advantages and disadvantages of LSD
 
 LSD test is also known as protected Fisher\'s LSD test. Protection means that you only perform the calculations described above when the null hypothesis is rejected based on ANOVA. This first step sort of controls the false positive rate (Type I error) for the entire family of
 comparisons [@Hayter].  
@@ -111,7 +111,7 @@ test used in agricultural research experiments.
 
 Fisher\'s LSD procedure is known to preserve the experiment wise type I error rate at the nominal level of significance, if the number of treatments is just three. [@Meier]. So, when the number of treatments is more, it is recommended to conduct DMRT or Tukey's test.
 
->Note that other multiple comparison tests (Bonferroni, Tukey, etc.) do not require the ANOVA. The results of these multiple comparisons tests are valid even if the null hypothesis is not rejected based on the ANOVA
+>Note that other multiple comparison tests (Bonferroni, Tukey, etc.) do not require the ANOVA. The results of these multiple comparisons tests are valid even if the null hypothesis is not rejected based on the ANOVA.
 
 ## Duncan's Multuiple Range Test (DMRT)
  In a set of treatments if comparison of all possible pairs of treatment means is required we can use DMRT. It is useful when the number to be compared is large. The standard error of mean is multiplied by table values (r~p~) for different values of p (the number of treatment means involved) and comparison is made.
@@ -126,7 +126,7 @@ Fisher\'s LSD procedure is known to preserve the experiment wise type I error ra
   
   (v) From the largest mean subtract the R~p~ (for largest p). Declare the means less than this value as significantly different from the largest mean. For the remaining treatments whose values are larger than the difference (Largest Mean- Largest R~p~), compare the differences with the appropriate R~p~ value.(If two treatments are remaining compare with R~2~, for three treatments with R~3~ and so on).
   
-  (vi) From the second largest mean subtract the second largest R~p~ and compare the treatments as in step.
+  (vi) From the second largest mean subtract the second largest R~p~ and compare the treatments as in step v.
   
   (vii) Present the results by using either a line notation (separate line under each homogeneous group) or by an alphabet notation (same alphabet representing homogeneous group) to indicate the treatments that are on par or those are significantly different.  
   

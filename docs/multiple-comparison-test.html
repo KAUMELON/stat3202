@@ -10,7 +10,7 @@
 <meta name="author" content="Dr. Adarsh V.S.">
 <meta name="author" content="Mohammed Hisham">
 <meta name="description" content="body { text-align: justify} ANOVA is an omnibus test. Omnibus test, as a general name, refers to an overall or a global test. Omnibus test means it is implemented on an overall hypothesis that...">
-<meta name="generator" content="bookdown 0.36 with bs4_book()">
+<meta name="generator" content="bookdown 0.40.3 with bs4_book()">
 <meta property="og:title" content="Chapter 18 Multiple comparison test | TEXTBOOK OF AGRICULTURAL STATISTICS">
 <meta property="og:type" content="book">
 <meta property="og:image" content="/images/cover.png">
@@ -21,7 +21,7 @@
 <meta name="twitter:image" content="/images/cover.png">
 <!-- JS --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://kit.fontawesome.com/6ecbd6c532.js" crossorigin="anonymous"></script><script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <link href="libs/bootstrap-4.6.0/bootstrap.min.css" rel="stylesheet">
-<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.7.0/transition.js"></script><script src="libs/bs3compat-0.7.0/tabs.js"></script><script src="libs/bs3compat-0.7.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><script src="libs/bs3compat-0.8.0/transition.js"></script><script src="libs/bs3compat-0.8.0/tabs.js"></script><script src="libs/bs3compat-0.8.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="libs/kePrint-0.0.1/kePrint.js"></script><link href="libs/lightable-0.0.1/lightable.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
@@ -32,6 +32,7 @@
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
+          margin-bottom: 0em;
         }
     .hanging div.csl-entry {
       margin-left:2em;
@@ -110,8 +111,8 @@ text-align: justify}
 </style>
 <p>ANOVA is an omnibus test. <em>Omnibus test</em>, as a general name, refers to an overall or a global test. Omnibus test means it is implemented on an overall hypothesis that tends to find whether there is any significant difference between any treatment means (in case of ANOVA) or not.</p>
 <p>ANOVA doesn’t tell which treatment pairs are different; more clearly on rejecting a null hypothesis in ANOVA, we conclude that at least a pair of treatment means are different, it didn’t give any idea on which treatments are different. In order to identify which treatment means are significantly different one need to employ <strong>multiple comparison tests</strong> or <strong>post-hoc tests</strong>.</p>
-<p>Multiple comparison tests are also known as post-hoc tests. A significant omnibus F test in ANOVA procedure, is an in advance requirement before conducting the post-hoc comparison, otherwise those comparisons are not required.</p>
-<p>Post hoc tests (Multiple Comparison tests) or planned tests should be conducted after obtaining a significant F test in ANOVA. There are several methods for performing post hoc tests, few of them are</p>
+<p>Multiple comparison tests are also known as post-hoc tests. A significant omnibus F test in ANOVA procedure, is an advance requirement before conducting the post-hoc comparison, otherwise those comparisons are not required.</p>
+<p>Post hoc tests (Multiple Comparison tests) or planned tests should be conducted after obtaining a significant F test in ANOVA. There are several methods for performing post hoc tests, few of them are:-</p>
 <ul>
 <li><p>Fisher’s LSD test (Least Significant Difference test)</p></li>
 <li><p>DMRT (Duncan’s Multiple Range Test)</p></li>
@@ -167,7 +168,7 @@ and <span class="math inline">\(r_{j}\)</span>. Then LSD or CD is given by the f
 freedom.</p>
 <p>If the replications are same <span class="math inline">\(r_{i} = r_{j} = r\)</span>, then <span class="math display">\[\text{SE}\left( d \right) = \ \sqrt{\text{MSE}\left( \frac{1}{r} + \frac{1}{r} \right)}\  = \ \sqrt{\text{MSE}\left( \frac{2}{r} \right)} = \sqrt{\frac{2\ MSE}{r}}\]</span></p>
 <p><span class="math display">\[LSD = \ t_{\frac{\alpha}{2},edf}.\sqrt{\frac{2\ MSE}{r}}\]</span></p>
-<p>If the difference between the means of two treatments <span class="math inline">\(T_{i}\)</span> and <span class="math inline">\(T_{j}\)</span> is greater than LSD we say that <span class="math inline">\(T_{i}\)</span> and <span class="math inline">\(T_{j}\)</span> are significantly different at specified level of significance (<span class="math inline">\(\alpha)\)</span></p>
+<p>If the difference between the means of two treatments <span class="math inline">\(T_{i}\)</span> and <span class="math inline">\(T_{j}\)</span> is greater than LSD we say that <span class="math inline">\(T_{i}\)</span> and <span class="math inline">\(T_{j}\)</span> are significantly different at specified level of significance (<span class="math inline">\(\alpha)\)</span>.</p>
 </div>
 <div id="logic-behind-lsd-test" class="section level3" number="18.2.2">
 <h3>
@@ -185,9 +186,9 @@ can be written as <span class="math inline">\(\left( T_{i} - T_{j} \right) \pm \
 <span class="math inline">\(100\left( 1 - \alpha \right)\%\)</span> confidence interval does not include 0.
 Then we can reject the null hypothesis, population mean of the treatments are equal with <span class="math inline">\(100\left( 1 - \alpha \right)\%\)</span> confidence.</p>
 </div>
-<div id="advantages-and-disadvantages-of-lsd." class="section level3" number="18.2.3">
+<div id="advantages-and-disadvantages-of-lsd" class="section level3" number="18.2.3">
 <h3>
-<span class="header-section-number">18.2.3</span> Advantages and disadvantages of LSD.<a class="anchor" aria-label="anchor" href="#advantages-and-disadvantages-of-lsd."><i class="fas fa-link"></i></a>
+<span class="header-section-number">18.2.3</span> Advantages and disadvantages of LSD<a class="anchor" aria-label="anchor" href="#advantages-and-disadvantages-of-lsd"><i class="fas fa-link"></i></a>
 </h3>
 <p>LSD test is also known as protected Fisher's LSD test. Protection means that you only perform the calculations described above when the null hypothesis is rejected based on ANOVA. This first step sort of controls the false positive rate (Type I error) for the entire family of
 comparisons <span class="citation">(<a href="references.html#ref-Hayter">Hayter 1986</a>)</span>.</p>
@@ -195,7 +196,7 @@ comparisons <span class="citation">(<a href="references.html#ref-Hayter">Hayter 
 test used in agricultural research experiments.</p>
 <p>Fisher's LSD procedure is known to preserve the experiment wise type I error rate at the nominal level of significance, if the number of treatments is just three. <span class="citation">(<a href="references.html#ref-Meier">Meier 2006</a>)</span>. So, when the number of treatments is more, it is recommended to conduct DMRT or Tukey’s test.</p>
 <blockquote>
-<p>Note that other multiple comparison tests (Bonferroni, Tukey, etc.) do not require the ANOVA. The results of these multiple comparisons tests are valid even if the null hypothesis is not rejected based on the ANOVA</p>
+<p>Note that other multiple comparison tests (Bonferroni, Tukey, etc.) do not require the ANOVA. The results of these multiple comparisons tests are valid even if the null hypothesis is not rejected based on the ANOVA.</p>
 </blockquote>
 </div>
 </div>
@@ -210,7 +211,7 @@ test used in agricultural research experiments.</p>
 <li><p>From statistical tables (known as Studentised Ranges) note the (r<sub>p</sub>) values for p=2,3… v treatments corresponding to error degrees of freedom.</p></li>
 <li><p>Calculate the shortest significant ranges (R<sub>p</sub>) where <span class="math inline">\(R_p=r_p.SE(\overline{Y})\)</span></p></li>
 <li><p>From the largest mean subtract the R<sub>p</sub> (for largest p). Declare the means less than this value as significantly different from the largest mean. For the remaining treatments whose values are larger than the difference (Largest Mean- Largest R<sub>p</sub>), compare the differences with the appropriate R<sub>p</sub> value.(If two treatments are remaining compare with R<sub>2</sub>, for three treatments with R<sub>3</sub> and so on).</p></li>
-<li><p>From the second largest mean subtract the second largest R<sub>p</sub> and compare the treatments as in step.</p></li>
+<li><p>From the second largest mean subtract the second largest R<sub>p</sub> and compare the treatments as in step v.</p></li>
 <li><p>Present the results by using either a line notation (separate line under each homogeneous group) or by an alphabet notation (same alphabet representing homogeneous group) to indicate the treatments that are on par or those are significantly different.</p></li>
 </ol>
 <p> <br>
@@ -236,7 +237,7 @@ test used in agricultural research experiments.</p>
 <a class="nav-link" href="#lsd"><span class="header-section-number">18.2</span> Fisher’s LSD test</a><ul class="nav navbar-nav">
 <li><a class="nav-link" href="#lsd-least-significant-difference"><span class="header-section-number">18.2.1</span> LSD (Least Significant Difference)</a></li>
 <li><a class="nav-link" href="#logic-behind-lsd-test"><span class="header-section-number">18.2.2</span> Logic behind LSD test</a></li>
-<li><a class="nav-link" href="#advantages-and-disadvantages-of-lsd."><span class="header-section-number">18.2.3</span> Advantages and disadvantages of LSD.</a></li>
+<li><a class="nav-link" href="#advantages-and-disadvantages-of-lsd"><span class="header-section-number">18.2.3</span> Advantages and disadvantages of LSD</a></li>
 </ul>
 </li>
 <li><a class="nav-link" href="#duncans-multuiple-range-test-dmrt"><span class="header-section-number">18.3</span> Duncan’s Multuiple Range Test (DMRT)</a></li>

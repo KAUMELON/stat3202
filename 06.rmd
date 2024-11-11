@@ -102,9 +102,9 @@ kable_styling(position="center",bootstrap_options = c("striped"))%>%
 
 Mean, $\overline{x} = \frac{\sum_{i = 1}^{n}{f_{i}x_{i}}}{\sum_{i = 1}^{n}f_{i}}$ = $\frac{11482}{187} = 61.40$
 
-${sample\ variance,\ s}^{2} = \frac{1}{n - 1}\left\{ \sum_{i = 1}^{n}{{f_{i}x}_{i}^{2} - \frac{1}{n}}\left( \sum_{i = 1}^{n}{f_{i}x}_{i} \right)^{2} \right\}$= $\frac{705588 - \frac{\left( 11482 \right)^{2}}{187}}{186} = 3.123$
+${sample\ variance,\ s}^{2} = \frac{1}{n - 1}\left\{ \sum_{i = 1}^{n}{{f_{i}x}_{i}^{2} - \frac{1}{n}}\left( \sum_{i = 1}^{n}{f_{i}x}_{i} \right)^{2} \right\}$= $\frac{705588 - \frac{\left( 11482 \right)^{2}}{187}}{186} = 3.0976$
 
-$standard\ deviation,\ s = \sqrt{3.123} = 1.179$
+$standard\ deviation,\ s = \sqrt{3.0976} = 1.76$
 
 Median: See in the cumulative frequencies, the value just greater than$\ \left( \frac{n + 1}{2} \right)$ , then the corresponding value of $x$ is $Q_{2}$, median
 
@@ -123,7 +123,7 @@ $\left( \frac{n + 1}{2} \right) = \frac{187 + 1}{2}= \frac{188}{2}$ = 94
 
 $$S_{k} = \frac{3(mean - median)}{\text{standard deviation}}$$
 
-$$S_{k} = \frac{3(61.40 - 61)}{1.179} = \frac{1.2}{1.179} = 1.017$$
+$$S_{k} = \frac{3(61.40 - 61)}{1.179} = \frac{1.2}{1.179} = 0.68$$
 
 Hence, the Karl Pearson's coefficient of skewness $S_{k}$=$1.017$, Thus the distribution is positively skewed.
 

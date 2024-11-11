@@ -1,7 +1,7 @@
 ---
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 # Probability  
 <style>
@@ -96,8 +96,8 @@ Eg: Throwing a coin generates the sample space; **S**={H,T},Throwing a die: **S*
 **Sample point**: Just one of the possible outcomes. Eg: heads, the 5 of Clubs in cards. There are 6 different sample points in the sample space of throwing a
 die.  
 
-```{block2 itemsprob, type='rmdnote'}
-Exercise1: Check yourself  
+
+[Exercise1: Check yourself]{.ul}  
 
 If a die is tossed  
 
@@ -105,8 +105,7 @@ If a die is tossed
 2.	What is the probability of getting a 1?  
 3.	What is the probability of obtaining a even number? 
 4.	What is the probability of getting a 7?   
-  
-```  
+
 Answers given in section \@ref(answer)  
 
 ```{r dicepoints, echo=FALSE,fig.cap='Sample space in throwing a die',out.width="50%", fig.align='center'}
@@ -320,11 +319,13 @@ knitr::include_graphics(rep("images/probshow.jpg"))
 
 Here, the possible outcomes are HH, HT, TH, TT. *i*.*e*., Total number of possible outcomes = 4.  
 
-\(i)\) Number of outcomes favorable to the event (2 heads) = 1 (i.e.,HH). *i*.*e*.$p$(2 heads) = 1/4 .
+\(i)\) Number of outcomes favorable to the event (2 heads) = 1 (*i*.*e*.,HH). 
+
+  $p$(2 heads) = 1/4 .
 
 \(ii)\) Now the event consisting of exactly one head has two favourable cases, namely HT and TH
 
-$p$(exactly one head) = 2 /4 = 1/ 2
+  $p$(exactly one head) = 2 /4 = 1/ 2
 
 >2. In a single throw of two dice, what is the probability that the sum is 9?  
 
@@ -463,7 +464,7 @@ Hence, $p$(A and B) = $p$(AꓵB) = $p$(A).$p$(B) = 1 /3 ×1 /3 = 1/9
 
 Knowledge of combinations can be applied to find total number of possible outcomes.
 
-^n^*C*~r~$= \frac{n!}{r!(n - 1)!}$
+^n^*C*~r~$= \frac{n!}{r!(n - r)!}$
 
 For example
 ^3^*C*~2~$= \frac{3!}{2!(3 - 2)!} = \frac{3 \times 2 \times 1}{2 \times 1(1)} = 3$

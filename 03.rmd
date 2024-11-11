@@ -279,7 +279,7 @@ $b)$ 4, 7, 9, 10, 5, 1, 3, 4, 12, 10
 **Solution 3.4**
 
 $a)$ Arranging the data in an increasing order of magnitude, we obtain
-12, 12, 15, 17, 20, 22, 22, 26, 26. Here, N (= 9) is odd, and so, median
+12, 12, 15, 17, 20, 22, 22, 26, 26. Here, N = 9 is odd, and so, median
 =$\left( \frac{9 + 1}{2} \right)^{\text{th}}$= 5^th^ ordered observation
 = 20.
 
@@ -287,7 +287,7 @@ Note: If a number is repeated, we still count it the number of times it
 appears when we calculate the median.
 
 $b)$ Arranging the data in an increasing order of magnitude, we obtain
-1, 3, 4, 4, 5, 7, 9, 10, 10, 12. Here, N(=10) is an even number and so
+1, 3, 4, 4, 5, 7, 9, 10, 10, 12. Here, N = 10 is an even number and so
 median = $\frac{1}{2}${5^th^ ordered observation + 6^th^ ordered
 observation} = $\frac{1}{2}\left( 5 + 7 \right) = 6$.
 
@@ -513,12 +513,12 @@ to describe both quantitative and qualitative data.
 
 ### Mode of Grouped frequency distribution
 
-$$mode = L + \left( \frac{f_{s}}{f_{p} + f_{s}} \right)C$$
+$$mode = L + \left( \frac{f_{m}-f_{p}}{2f_{m}-f_{p} - f_{s}} \right)C$$
 
 Locate the highest frequency the class corresponding to that frequency
 is called the **modal class**.
 
-Where $L$ = lower limit of the modal class; $f_{p}$= the frequency of
+Where $L$ = lower limit of the modal class; $f_{m}$ = the frequency of modal class; $f_{p}$= the frequency of
 the class preceding the modal class; $f_{s}$= the frequency of the class
 succeeding the modal class and $C$ = class interval
 
@@ -537,7 +537,7 @@ ear-heads given in table below. Calculate the mode.
 
 Modal class is **100-120**
 
-$mode = 100 + \left( \frac{35}{38 + 35} \right)20 =$ 109.589
+$mode = 100 + \left( \frac{45-35}{90-38-35} \right)20 =$ 111.76
 
 ### **Mode using Histogram**
 
@@ -572,7 +572,7 @@ knitr::include_graphics(rep("images/l2m1.jpeg"))
 1.  The mode is not unique. That is, there can be more than one mode for
     a given set of data.
 
-2.  The mode of a set of data may not exist
+2.  The mode of a set of data may not exist.
 
 3.  It is not based upon all the observation.
 
